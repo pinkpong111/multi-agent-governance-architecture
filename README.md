@@ -41,19 +41,19 @@ Direct interaction between these layers produces false positives (exploration mi
 Governance is distributed across three structural levels.
 
 ```
-┌─────────────────────────────────────────────┐
+┌──────────────────────────────────────────────┐
 │         TOP LAYER — Invariant Governance     │
 │  Define boundaries · Validate integrity      │
 │  Rarely intervene · Maintain invariants      │
-├─────────────────────────────────────────────┤
+├──────────────────────────────────────────────┤
 │      MIDDLE LAYER — Resolution Mediation     │
 │  Detect conflict · Translate abstraction     │
 │  Prevent misclassification · Stage correction│
-├─────────────────────────────────────────────┤
+├──────────────────────────────────────────────┤
 │      BOTTOM LAYER — Operational Diversity    │
 │  Local exploration · Task specialization     │
-│  Adapt to environment · Preserve autonomy   │
-└─────────────────────────────────────────────┘
+│  Adapt to environment · Preserve autonomy    │
+└──────────────────────────────────────────────┘
 ```
 
 ### Top Layer — Invariant Governance
@@ -79,12 +79,12 @@ Governance distinguishes between three types of structural distortion.
 │  Boundary or structural rule corruption  │
 ├──────────────────────────────────────────┤
 │  Metadata Distortion                     │  ← Middle Layer
-│  Interpretation mismatch,               │
-│  threshold miscalibration,              │
-│  protocol misalignment                  │
+│  Interpretation mismatch,                │
+│  threshold miscalibration,               │
+│  protocol misalignment                   │
 ├──────────────────────────────────────────┤
 │  Data Distortion                         │  ← Bottom Layer
-│  Raw operational deviation              │
+│  Raw operational deviation               │
 └──────────────────────────────────────────┘
                     │
                     ▼  Purification
@@ -100,7 +100,7 @@ Governance operates through staged intervention.
 
 ```
   ┌────────┐    ┌─────────┐    ┌───────────────┐    ┌────────────────┐    ┌─────────────┐
-  │  MARK  │ → │ CONTAIN │ → │ SOFT CORRECT  │ → │ HARD CORRECT   │ → │ RE-ALIGN    │
+  │  MARK  │ →  │ CONTAIN │ →  │ SOFT CORRECT  │ →  │ HARD CORRECT   │ →  │ RE-ALIGN    │
   └────────┘    └─────────┘    └───────────────┘    └────────────────┘    └─────────────┘
   Divergence    Boundary       Reflective signal     Resource restriction  Projection back
   detected      tightened      injected              or rollback           to stable space
