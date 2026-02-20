@@ -186,6 +186,11 @@ completeness should consult RBIT."*
 11. [Resource-Aware Governance Model](#11-resource-aware-governance-model)
 12. [Governance Mechanism Mapping](#12-governance-mechanism-mapping)
 13. [Limitations](#13-limitations)
+    - [13.1 Known Structural Limits](#131-known-structural-limits)
+    - [13.2 Upper Layer Contamination](#132-upper-layer-contamination--the-boundary-of-self-containment)
+    - [13.3 The Axiomatic Boundary](#133-the-axiomatic-boundary--highest-level-goal-selection)
+    - [13.4 Implicit Transmission — Ethical and Safety Limitation](#134-implicit-transmission--ethical-and-safety-limitation)
+    - [13.5 The Covert Seed Problem — Falsifiability and the Manipulation Boundary](#135-the-covert-seed-problem--falsifiability-and-the-manipulation-boundary)
 14. [Future Direction](#14-future-direction)
 
 ---
