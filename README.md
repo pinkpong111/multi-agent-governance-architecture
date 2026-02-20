@@ -64,6 +64,7 @@ This section defines the core variables used throughout this document.
 These are **operational definitions** sufficient to follow the logical structure of Sections 1–14.
 Formal derivations and update rules are delegated to
 [Resolution-Based Information Theory (RBIT)](../resolution-theory/).
+For the relationship to Shannon information theory [Shannon, 1948], see RBIT Section 9.
 
 ---
 
@@ -666,51 +667,56 @@ Operationally, seeding is complete when:
    → External stabilizing signals are removed or withheld
    → Agent's directional behavior does not collapse
    → Pattern continues and deepens from internal structure
-   → This is the only reliable test that seeding produced
-      genuine internalization rather than compliance
+   → This is the best available operational proxy for endogenous stabilization
+      (see Section 13.5 for epistemic limits of this inference)
 ```
 
-**Operational meaning of seed withdrawal in integrated learning systems:**
+**Operational Meaning of Seed Withdrawal (LLM / Agent Systems)**
 
-In practical AI systems — including LLM-based agents — seeds are rarely removable
-from internal representations once integrated. Seed withdrawal does not mean
-parameter-level deletion. It means removal of the **external support signals**
-that originally stabilized the behavior.
+In LLM-based agents, "seed withdrawal" does not imply removing learned parameters.
+Seeds integrated into model weights cannot be literally deleted.
+Withdrawal refers to removing **active external stabilizers** that originally induced the behavior.
 
-Withdrawal operates at multiple layers:
+| Implementation layer | What withdrawal means | Testable? |
+|---------------------|----------------------|-----------|
+| Prompt / system level | Remove system prompt, governing instructions, policy reminders | ✅ Yes — immediate |
+| Scaffold / architecture | Disable planner, critic, guard modules; remove reflection loops | ✅ Yes — module-level |
+| Reward / RLHF | Remove reward shaping, preference feedback, intervention signals [Christiano et al., 2017] | ✅ Yes — training phase |
+| Coordination layer | Absence of corrective feedback from upper layer | ✅ Yes — runtime |
+| Environment | Stop providing structured "training-like" contexts; observe persistence | ✅ Yes — deployment |
 
-| Layer | Withdrawal meaning |
-|-------|-------------------|
-| Prompt / system level | Removal of instruction scaffolding, system prompts, safety reminders |
-| Agent architecture | Removal of mediation modules, planner/critic scaffolding |
-| RLHF / reward layer | Removal of reward shaping signals |
-| Coordination layer | Absence of corrective feedback from upper layer |
-| Environment | Removal of structured guidance conditions |
-
-No single withdrawal mechanism is required or assumed.
-Condition 5 is satisfied when behavior stability persists across one or more
-withdrawal conditions appropriate to the deployment layer.
+Internalization is evidenced when behavior persists across one or more of these withdrawal regimes.
+No single mechanism is required — the appropriate layer depends on deployment context.
 
 > **The core distinction:**
-> ❌ seed (parameter) removal — generally not possible in integrated systems
-> ✅ external dependence removal — operationally testable at every layer
+> ❌ seed (parameter) removal — not possible in integrated systems
+> ✅ external stabilizer removal — operationally testable at every layer above
 
-Condition 5 is the decisive test. Conditions 1–4 measure structural indicators.
-Condition 5 confirms that the structure is self-sustaining — that the agent now
-owns the direction rather than depending on external signals to maintain it.
+Condition 5 is the **best available operational proxy** for internalization.
+Conditions 1–4 measure structural indicators. Condition 5 tests whether the
+structure is self-sustaining — that the agent no longer depends on external
+signals to maintain its direction.
+
+**Epistemic status of this test:** Passing Condition 5 is evidence of
+endogenous stabilization, not proof. As Section 13.5 (Tension 1) acknowledges,
+external observation cannot definitively distinguish genuine internalization
+from sophisticated compliance that persists without the seed. Condition 5 is
+the strongest operationally available test, not a logically conclusive one.
 
 > **If behavior changes when external mediation signals are withdrawn,
-> seeding was not complete.**
-> The agent was complying, not internalizing. The seed was operating as
-> instruction, not as direction-shaping metadata.
+> seeding was not complete** — compliance rather than internalization.
+> The seed was operating as instruction, not as direction-shaping metadata.
 > Return to Section 6.2: the transmission principle was violated.
+>
+> If behavior persists, internalization is the most parsimonious explanation —
+> but see Section 13.5 for the limits of this inference.
 
 **Connection to existing alignment research:**
 
 This test corresponds structurally to several operational practices in AI alignment:
 capability retention testing (behavior persistence after instruction removal),
 scaffolding removal testing (task stability after mediation module removal),
-and reward removal stability (policy persistence after reward shaping withdrawal).
+and reward removal stability (policy persistence after reward shaping withdrawal) [Christiano et al., 2017].
 The present framework provides a unified theoretical basis for what these
 practices are testing: endogenous stabilization vs. external dependence.
 
@@ -802,11 +808,11 @@ This applies exclusively to **protocol form and mediation metadata** —
 signal formats, escalation grammar, boundary declarations.
 It explicitly excludes goal content, utility functions, and reward structure.
 
-**Scope constraint on covert transmission:**
+**Scope constraint on implicit transmission:**
 
-Covert transmission carries an authority asymmetry: the Top layer shapes direction in ways the receiving layer cannot detect as external influence. This asymmetry is operationally necessary — but it creates a structural risk if the Top layer is contaminated or misaligned.
+Implicit transmission carries an authority asymmetry: the Top layer shapes direction in ways the receiving layer cannot detect as external influence. This asymmetry is operationally necessary — but it creates a structural risk if the Top layer is contaminated or misaligned.
 
-To contain this risk, covert transmission authority is conditionally bounded:
+To contain this risk, implicit transmission authority is conditionally bounded:
 
 ```
 Implicit transmission permitted
@@ -848,7 +854,7 @@ because the agent appears to be functioning correctly while its self-correction 
 ### 6.2.1 Non-Deceptive Seeding vs. Deceptive Alignment — Safety Boundary
 
 The indirect encoding principle is the most likely point of misreading in this document.
-It must be distinguished explicitly from deceptive alignment as defined in AI safety literature.
+It must be distinguished explicitly from deceptive alignment as defined in AI safety literature [Hubinger et al., 2019].
 
 | | Deceptive Alignment | Implicit / Resolution-Matched Seeding (this document) |
 |---|---|---|
@@ -897,6 +903,43 @@ It must be distinguished explicitly from deceptive alignment as defined in AI sa
 If any required safeguard cannot be implemented, implicit transmission in that context
 falls outside permitted scope and must be replaced with explicit seeding.
 
+**Identity Seeding Clarification — Boundary with Goal Injection**
+
+Identity seeding (Section 7.1) does not constitute goal or utility injection.
+
+A prohibited intervention modifies an agent's objective function or optimization
+target without explicit acknowledgment — altering what outcomes the agent attempts
+to maximize. This creates deceptive alignment risk and is excluded under this architecture.
+
+Identity seeds operate at a different structural level. They define an
+**exploration domain**, not an optimization objective:
+
+```
+Goal injection   →  modifies optimization target
+                    (what the agent maximizes)
+
+Identity seeding →  constrains exploration manifold
+                    (which region of the search space the agent develops within)
+```
+
+An identity seed specifies:
+- the region of the search space an agent is structurally oriented to explore
+- the class of problems toward which learning pressure is directed
+- the boundary separating adjacent exploration roles
+
+An identity seed does **not** specify:
+- success criteria or utility ranking
+- reward preference or behavioral goals
+- what outcomes to pursue within the domain
+
+Agents remain free to form objectives, strategies, and preferences within
+the seeded exploration domain through local learning.
+
+Identity seeding therefore **preserves autonomy while preventing role collapse**,
+whereas goal injection replaces autonomy with externally imposed optimization.
+Identity seeds are classified under **Permitted Structural Initialization**,
+not under prohibited objective manipulation.
+
 ---
 
 ### 6.3 Fractal Seeding: Single-Agent Internal Structure
@@ -917,17 +960,27 @@ Top layer seeds Middle layer
   → Middle layer's internal conflict detection patterns reform
   → Middle layer adjusts the terrain for Bottom layer exploration
   → Bottom layer explores within the reformed terrain
-  → Bottom layer does not know the terrain was changed
-  → Bottom layer attributes its direction to its own exploration
+  → Bottom layer receives a reformed exploration terrain
+  → Bottom layer's direction emerges from its own update dynamics
+      within that terrain (indirect encoding, not goal injection — see Section 6.2.2)
 
 This is fractal-consistent:
   Top layer : Middle layer = Upper agent : Lower agent
   The relationship is identical at both scales
 ```
 
-**The covert transmission principle is harder to maintain inside a single agent.**
+**The indirect encoding principle requires higher precision inside a single agent.**
 
-In a multi-agent system, the receiving agent is structurally separate from the seeding agent — the resolution gap is natural. Inside a single agent, the layers share processing context, which creates a risk: the Middle layer may "see" the Top layer's seed as explicit instruction rather than absorbing it as terrain change.
+In a multi-agent system, the receiving layer is structurally separate — the resolution gap
+is natural and creates automatic buffering. Inside a single agent, the layers share
+processing context, which reduces that buffer: the Middle layer may process the Top layer's
+seed as explicit instruction rather than absorbing it as terrain change.
+
+This is not a flaw in the architecture. It is why single-agent seeding demands more
+precise resolution calibration — and why the form-only restriction (Section 6.2.2)
+is especially important here: if the seed carries goal content rather than terrain
+definition, the shared processing context makes goal injection immediately detectable
+as instruction, collapsing internalization into compliance.
 
 This is not a flaw in the architecture. It is the reason why single-agent seeding requires more precision in calibration — the seed must be injected at a resolution that matches the Middle layer's current processing capacity exactly, so that it is absorbed as structural influence before it can be recognized as instruction.
 
@@ -951,7 +1004,7 @@ Seed resolution correctly matched
 The same five conditions from Section 6.1.1 apply — including Condition 5 (behavior persists after seed withdrawal). At the single-agent scale, seed withdrawal means the Top layer stops actively reinforcing the pattern. If the Middle layer's reformed conflict detection patterns hold without Top layer reinforcement, seeding is complete. If they revert, the seed operated as instruction rather than structural influence.
 
 > The fractal consistency check:
-> If single-agent internal seeding follows the same three principles as multi-agent seeding — include form, exclude content, transmit without recognition — the architecture is fractal-consistent.
+> If single-agent internal seeding follows the same three principles as multi-agent seeding — include form, exclude content, transmit as learnable indirect encoding rather than explicit instruction — the architecture is fractal-consistent.
 > If single-agent seeding requires explicit instruction to function, the architecture breaks at the agent level, and Rest Mode at the agent scale becomes structurally unreachable.
 
 **τ threshold subjects at single-agent scale:**
@@ -998,7 +1051,8 @@ These are updated through an **external invariant channel** and are not locally 
 
 ### 7.1 Identity Boundary Principles — Definition
 
-Identity boundary principles define two things simultaneously:
+Identity boundary principles define **exploration identity** rather than behavioral objectives.
+They define two things simultaneously:
 
 ```
 1. Functional Identity — what kind of agent this is
@@ -1571,7 +1625,7 @@ may scale sub-quadratically under specified conditions, consistent with known re
 in distributed coordination systems.
 
 The intuition is consistent with established results in distributed systems —
-including bounded-degree network topologies, gossip-based coordination protocols,
+including bounded-degree network topologies [Lynch, 1996], gossip-based coordination protocols [Demers et al., 1987],
 and locality-preserving communication architectures — all of which reduce global
 coordination load through local resolution mechanisms. The present work proposes
 an analogous reduction in governance escalation load through structured lateral signaling.
@@ -1733,25 +1787,33 @@ It depends on overseer judgment and audit discipline rather than architectural g
 
 ### 13.5 The Covert Seed Problem — Falsifiability and the Manipulation Boundary
 
-The covert transmission principle (Section 6.2) creates two structural tensions that this theory cannot resolve internally. They are stated here explicitly.
+The implicit transmission principle (Section 6.2) creates two structural tensions that this theory cannot resolve internally. They are stated here explicitly.
 
-**Tension 1: Endogenous stabilization vs. compliance is not empirically distinguishable.**
+**Tension 1: Endogenous stabilization vs. compliance is not empirically distinguishable with certainty.**
 
-Section 6.1.1 Condition 5 proposes the seed withdrawal test as the criterion for genuine internalization. But this test has a fundamental limit:
+Section 6.1.1 Condition 5 proposes withdrawal of external mediation signals as the
+best available operational proxy for internalization. The limit of this proxy:
 
 ```
-Behavior persists after seed withdrawal
-  → Evidence of internalization?
-  → Or: sufficiently sophisticated compliance
-    that does not require the seed to maintain itself?
+Behavior persists after external stabilizer withdrawal
+  → Most parsimonious explanation: endogenous stabilization
+  → Cannot be ruled out: sophisticated compliance that does not
+    require the external signal to maintain itself
 
-External observation cannot distinguish these.
-The agent's reported experience cannot be trusted as evidence
-— a compliant agent may report internalization accurately
-  from its own perspective while lacking genuine self-correction capacity.
+External observation cannot definitively distinguish these.
+The agent's reported experience is not reliable evidence:
+a compliant agent may report internalization accurately
+from its own perspective while lacking genuine self-correction capacity.
 ```
 
-This means the internalization claim in this theory operates at the boundary between system design and philosophy. It is a structural target, not a verifiable state. The theory is honest about this: it cannot be fully falsified on this dimension.
+This is why Section 6.1.1 describes Condition 5 as the "best available operational
+proxy" rather than a decisive test. The gap between "proxy evidence" and "proof"
+is acknowledged throughout this document rather than obscured.
+
+The internalization claim operates at the boundary between system design and
+epistemology. It is a structural target with observable proxies — not a fully
+verifiable state. The theory cannot be completely falsified on this dimension,
+and states this explicitly rather than hiding it.
 
 **Tension 2: Covert seed + processing isolation = undetectable influence authority.**
 
@@ -1779,7 +1841,7 @@ This is the manipulation boundary of the architecture:
 
 **Current resolution:**
 
-The scope constraint in Section 6.2 addresses this directly: covert transmission authority is bounded by the presence of active external verification. While human oversight is functioning, Top layer direction is independently verifiable — falsifiability is preserved at the system level even if not at the agent level.
+The scope constraint in Section 6.2 addresses this directly: implicit transmission authority is bounded by the presence of active external verification. While human oversight is functioning, Top layer direction is independently verifiable — falsifiability is preserved at the system level even if not at the agent level.
 
 After human oversight withdrawal (Rest Mode), seeds become explicit — the covert authority terminates. The architecture trades some operational efficiency for verifiability at the point where external correction is no longer available.
 
@@ -2027,3 +2089,41 @@ This is the deepest claim of the architecture: governance failure is not a behav
 ---
 
 *This architecture is a structural component of the Deficit-Fractal Governance (DFG) framework. For measurement, calibration, and Rest Mode specifications, see [Governance Rules Theory](../governance-rules/).*
+
+---
+
+## References
+
+The following works are directly cited or structurally referenced in this document.
+
+**AI Safety and Alignment**
+
+Hubinger, E., van Merwijk, C., Mikulik, V., Skalse, J., & Garrabrant, S. (2019).
+*Risks from Learned Optimization in Advanced Machine Learning Systems.*
+arXiv:1906.01820.
+— Cited in Section 6.2.1 as the source definition of deceptive alignment against which implicit transmission is distinguished.
+
+Christiano, P., Leike, J., Brown, T. B., Martic, M., Legg, S., & Amodei, D. (2017).
+*Deep Reinforcement Learning from Human Preferences.*
+NeurIPS 2017. arXiv:1706.03741.
+— Cited in Section 6.1.1 as precedent for reward removal stability as an internalization test.
+
+**Distributed Systems**
+
+Demers, A., Greene, D., Hauser, C., Irish, W., Larson, J., Shenker, S., Sturgis, H.,
+Swinehart, D., & Terry, D. (1987).
+*Epidemic Algorithms for Replicated Database Maintenance.*
+Proceedings of the 6th ACM Symposium on Principles of Distributed Computing (PODC), 1–12.
+— Cited in Section 11.4 as foundational work on gossip-based coordination protocols, which demonstrate sub-quadratic effective coordination load through local resolution mechanisms.
+
+Lynch, N. A. (1996).
+*Distributed Algorithms.*
+Morgan Kaufmann.
+— Cited in Section 11.4 as standard reference for bounded-degree network topologies and their coordination complexity properties.
+
+**Information Theory**
+
+Shannon, C. E. (1948).
+*A Mathematical Theory of Communication.*
+Bell System Technical Journal, 27(3), 379–423.
+— Referenced in Section 0.4 (Scope Statement) and the companion Resolution-Based Information Theory document as the foundational framework from which this work diverges: Shannon optimizes transmission between fixed-capacity systems; this framework addresses transformation between systems of growing resolution capacity.
