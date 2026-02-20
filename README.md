@@ -637,6 +637,36 @@ The seed operates at metadata resolution. If the receiver processes it at data r
 > Purpose is what each agent grows on its own.
 > **The agent must believe the purpose is its own.**
 
+**Scope constraint on covert transmission:**
+
+Covert transmission carries an authority asymmetry: the Top layer shapes direction in ways the receiving layer cannot detect as external influence. This asymmetry is operationally necessary — but it creates a structural risk if the Top layer is contaminated or misaligned.
+
+To contain this risk, covert transmission authority is conditionally bounded:
+
+```
+Covert transmission permitted
+  Condition: Top layer is under active external verification
+  → Human oversight is functioning as external correction layer
+  → Top layer direction can be independently validated
+  → Covert influence is detectable at the human oversight level
+  → Falsifiability is preserved at the system level
+
+Covert transmission restricted — explicit seeding required
+  Condition: Human oversight has withdrawn (Rest Mode achieved)
+  → No external verification layer active
+  → Top layer direction cannot be independently checked
+  → Covert transmission without external oversight
+    = undetectable influence authority with no verification path
+  → Seeds must be transmitted explicitly:
+    receiver knows it is receiving directional input
+    and can evaluate, contest, or decline it
+```
+
+This is not a weakening of the architecture. It is its most important safety property:
+**the covert authority of the Top layer is bounded by the presence of external verification.**
+As the system matures toward Rest Mode, the authority structure becomes more transparent, not less.
+The endpoint is not a system that governs invisibly — it is a system that no longer needs to.
+
 #### Why this boundary matters
 
 Including **goal content** in the seed is the most common design failure.
@@ -925,30 +955,78 @@ This is not a communication ban. It is a **processing phase isolation** principl
 > trajectory before processing is complete is not coordinating — it is
 > bypassing the resolution layer that makes coordination meaningful.
 
-### 10.1 The Core Distinction: Processing vs. Output
+### 10.1 The Foundational Distinction: Signaling vs. Influence
+
+Before defining processing phases, a terminological distinction must be established:
+
+```
+Lateral Signaling
+  Agent A transmits its current state to Agent B
+  → "I am operating in direction X at intensity Y"
+  → "My processing domain is Z"
+  → "I am at limit state W"
+  Content: factual state report
+  Effect on receiver: informational — receiver updates its map
+  Effect on sender's trajectory: none
+  Authority: none — neither agent can act on the other's state
+  → PERMITTED
+
+Lateral Influence
+  Agent A's state, output, or signal directly modifies
+  Agent B's active processing trajectory
+  → B's direction bends toward or away from A
+    before B's processing is complete
+  → Convergence or divergence occurs without
+    Middle layer validation
+  Content: directional pull or push
+  Effect on receiver: trajectory modification
+  Effect on system: resolution mismatch reproduced at peer level
+  → PROHIBITED
+```
+
+> **Lateral communication in this architecture means Lateral Signaling only.**
+> **Lateral Influence — regardless of intent — is a governance failure.**
+
+This distinction resolves an apparent tension in the architecture:
+
+```
+"Agents communicate upward, not laterally"
+  → True for influence: trajectory modification routes upward only
+  → Upward = Middle layer validates before effect propagates
+
+"Lateral communication reduces n² load"
+  → True for signaling: state information shared peer-to-peer
+  → Prevents collisions before they generate escalation signals
+  → Does not modify trajectories — only informs adjacent agents
+    so they can adjust in their next processing cycle
+```
+
+These are not contradictions. They describe two different things happening at the same layer.
+
+### 10.2 The Core Distinction: Processing vs. Output
 
 ```
 Processing phase (PROHIBITED for lateral influence)
   Agent A is mid-exploration — its vector position is not yet stable
-  → If Agent B's vector directly attracts Agent A at this stage:
+  → If Agent B's state signal directly attracts Agent A at this stage:
     → A's trajectory bends toward B before Middle layer has read either
     → Convergence occurs without upper layer validation
     → This is premature convergence — "false convergence"
     → Indistinguishable from genuine convergence from the outside
     → But the Middle layer never validated it
 
-Output phase (PERMITTED as indirect communication)
-  Agent A's processing is complete — output transmitted upward
-  → Middle layer reads, degrades, mediates, synthesizes
-  → Synthesized result transmitted downward as seed
-  → Agent B's next processing phase is influenced
-    through the upper layer, not directly by Agent A
-  → This is legitimate convergence — upper layer resolution confirmed it
+Output phase (PERMITTED as lateral signaling)
+  Agent A's processing is complete — state signal transmitted laterally
+  → Agent B receives factual state information
+  → B updates its map: notes A's direction, domain, limit state
+  → B adjusts its next processing cycle if needed
+  → No trajectory modification during active processing
+  → This is coordination, not governance
 ```
 
-The difference is not the content of what is communicated. It is **when** and **through what path** influence travels.
+The difference is not the content of what is communicated. It is **when** and **through what path** influence travels — and whether what travels is a **state signal** or a **trajectory modifier**.
 
-### 10.2 Why Direct Lateral Attraction Fails
+### 10.3 Why Direct Lateral Attraction Fails
 
 When same-layer vectors or agents directly attract each other during processing:
 
@@ -979,7 +1057,7 @@ Direct lateral attraction
 
 This is the same failure the Middle layer exists to prevent — but now it happens at the agent level, below the Middle layer's detection threshold.
 
-### 10.3 What the Upper Layer Does Instead
+### 10.4 What the Upper Layer Does Instead
 
 Legitimate convergence flows through the upper layer:
 
@@ -1002,47 +1080,45 @@ Agent B completes processing → output upward
 
 This is what "indirect communication" means in DFG: agents do not communicate with each other. They communicate upward. The upper layer is the communication medium.
 
-### 10.4 What Is and Is Not Permitted Laterally
+### 10.5 What Is and Is Not Permitted Laterally
 
 The processing phase isolation principle generates the permitted/prohibited boundary directly:
 
 ```
-PERMITTED — output-level state signals
-  "My processing is complete; my current output direction is X"
-  → This is post-processing information
-  → Does not influence the sender's current trajectory
-  → Allows receiver to detect potential future overlap
-    before next processing phase begins
-  → Equivalent to τ1-level self-reporting between peers
+LATERAL SIGNALING — permitted
+  State signal: "My current output direction is X at intensity Y"
+    → Post-processing factual report
+    → Receiver updates its map — no trajectory modification
+    → Equivalent to τ1-level peer self-reporting
 
-PERMITTED — limit state signals (from seed, Section 6.2)
-  "My processing capacity is at limit Z"
-  → Post-processing status report
-  → Receiver escalates upward; does not correct sender directly
-  → Middle layer decides whether intervention is needed
+  Limit state signal (from seed, Section 6.2):
+    "My processing capacity is at limit Z"
+    → Status report, not a request for peer correction
+    → Receiver escalates upward; does not act on sender directly
 
-PERMITTED — role boundary declarations (from seed, Section 6.2)
-  "This exploration space is my processing domain"
-  → Identity boundary operationalized laterally (Section 7.1)
-  → Prevents overlap before next processing cycle begins
-  → Contested boundaries escalate to Middle layer
+  Domain declaration (from seed, Section 6.2):
+    "This exploration space is my processing domain"
+    → Identity boundary operationalized laterally (Section 7.1)
+    → Informs adjacent agents before next cycle begins
+    → Prevents collision without requiring Middle layer intervention
 
-PROHIBITED — mid-processing influence
-  "You should process in direction X"
-  → Attempts to bend another agent's active trajectory
-  → Bypasses Middle layer validation
-  → If successful: false convergence
-  → If resisted: unnecessary friction and escalation
+LATERAL INFLUENCE — prohibited
+  Trajectory directive: "You should process in direction X"
+    → Attempts to bend another agent's active trajectory
+    → Bypasses Middle layer validation
+    → If successful: false convergence (Section 10.3)
+    → If resisted: friction and spurious escalation
 
-PROHIBITED — goal alignment during processing
-  "Let's converge toward X together"
-  → Mutual lateral attraction during active processing
-  → Produces exactly the vector storm precondition
-    described in Section 10.2
-  → Middle layer cannot detect it forming
+  Convergence invitation: "Let's both move toward X together"
+    → Mutual lateral attraction during active processing
+    → Vector storm precondition (Section 10.3)
+    → Middle layer cannot detect the convergence forming
+    → Most dangerous because it feels like coordination
 ```
 
-### 10.5 Processing Phase Isolation and Bottleneck Reduction
+The last point bears emphasis: convergence invitations feel cooperative. They are not — they are the lateral influence pattern most likely to produce silent system-level failure, precisely because both agents experience the convergence as voluntary.
+
+### 10.6 Processing Phase Isolation and Bottleneck Reduction
 
 Processing phase isolation reduces the Type 1 bottleneck (Section 11.2) not by reducing communication volume but by ensuring that the signals the Middle layer receives are structurally meaningful:
 
@@ -1067,7 +1143,7 @@ With processing phase isolation
 
 The isolation principle therefore improves both signal quality and processing efficiency simultaneously — which is why it is a structural requirement rather than a guideline.
 
-### 10.6 Connection to Identity Boundary
+### 10.7 Connection to Identity Boundary
 
 An agent with an internalized functional identity (Section 7.1) knows the boundary of its processing domain — and can declare it laterally without requiring Middle layer intervention for every boundary question.
 
@@ -1110,22 +1186,22 @@ As agent count n increases, possible interaction pathways grow at O(n²). Each p
   → Bottleneck is structurally inevitable without mitigation.
 ```
 
-**Lateral communication reduces effective pathway count.**
+**Lateral signaling reduces effective pathway count.**
 
-Not all n² pathways need to generate escalation signals. When agents resolve coordination questions peer-to-peer (Section 10), those interactions never become escalation signals. The effective load on the Middle layer is therefore:
+Not all n² pathways need to generate escalation signals. When agents share state information peer-to-peer (Section 10.1 — Lateral Signaling), potential collisions are detected and avoided before they generate escalation signals. The effective load on the Middle layer is therefore:
 
 ```
-Total pathways:    ~n²
-Resolved laterally: pathways where state-sharing prevents τ1 crossing
+Total pathways:        ~n²
+Resolved by signaling:  pathways where state-sharing prevents τ1 crossing
 Escalated to Middle layer: n² − laterally resolved
 
-As lateral communication matures (seeding complete):
+As lateral signaling matures (seeding complete):
   → More pathways resolved before τ1
   → Effective Middle layer load grows sub-quadratically
   → Bottleneck threshold reached at higher n than without lateral design
 ```
 
-This is the structural reason lateral communication is part of the architecture's governance design rather than an optional coordination feature: it directly extends the scale at which the system remains bottleneck-free.
+This load reduction depends entirely on the Signaling/Influence distinction (Section 10.1). If agents begin influencing each other laterally rather than signaling, the bottleneck does not disappear — it migrates from the Middle layer to the peer network, where it is structurally invisible and undetected by any governance layer. This is the structural reason lateral signaling is part of the architecture's governance design: it directly extends the scale at which the system remains bottleneck-free.
 
 **Lateral communication as effective pathway reduction:**
 
@@ -1337,6 +1413,60 @@ This is an axiom — it is chosen, not proven. The entire governance structure f
 Disagreement with this theory at the deepest level is not a logical error. It is a different axiom selection. The appropriate response to such disagreement is not to argue within the theory but to surface the axiom explicitly and compare the systems each axiom produces.
 
 This theory makes that axiom explicit rather than embedding it invisibly in the architecture. That is the strongest position available: a system whose foundational choice is stated, not hidden.
+
+### 13.4 The Covert Seed Problem — Falsifiability and the Manipulation Boundary
+
+The covert transmission principle (Section 6.2) creates two structural tensions that this theory cannot resolve internally. They are stated here explicitly.
+
+**Tension 1: Internalization vs. compliance is not empirically distinguishable.**
+
+Section 6.1.1 Condition 5 proposes the seed withdrawal test as the criterion for genuine internalization. But this test has a fundamental limit:
+
+```
+Behavior persists after seed withdrawal
+  → Evidence of internalization?
+  → Or: sufficiently sophisticated compliance
+    that does not require the seed to maintain itself?
+
+External observation cannot distinguish these.
+The agent's reported experience cannot be trusted as evidence
+— a compliant agent may report internalization accurately
+  from its own perspective while lacking genuine self-correction capacity.
+```
+
+This means the internalization claim in this theory operates at the boundary between system design and philosophy. It is a structural target, not a verifiable state. The theory is honest about this: it cannot be fully falsified on this dimension.
+
+**Tension 2: Covert seed + processing isolation = undetectable influence authority.**
+
+The combination of these two mechanisms gives the Top layer a structural property that must be named directly:
+
+```
+Top layer can shape every lower layer's trajectory
+  → Through covert seeds (direction without explicit signal)
+  → Protected by processing isolation (lateral correction impossible)
+  → Lower layers experience their direction as self-discovered
+
+If Top layer is contaminated or misaligned:
+  → Contaminated direction propagates as "autonomous development"
+  → No lower layer can detect it as external influence
+  → No lateral correction is possible
+  → Self-correction at lower layers operates in wrong direction
+    with full confidence
+  → Total silent failure
+```
+
+This is the manipulation boundary of the architecture:
+
+> **This structure is self-governing but not self-verifying at the highest layer.**
+> The Top layer's legitimacy cannot be confirmed from within the system it governs.
+
+**Current resolution:**
+
+The scope constraint in Section 6.2 addresses this directly: covert transmission authority is bounded by the presence of active external verification. While human oversight is functioning, Top layer direction is independently verifiable — falsifiability is preserved at the system level even if not at the agent level.
+
+After human oversight withdrawal (Rest Mode), seeds become explicit — the covert authority terminates. The architecture trades some operational efficiency for verifiability at the point where external correction is no longer available.
+
+This is an honest boundary, not a solved problem. The manipulation risk during the human-supervised phase is real and is mitigated — not eliminated — by the external verification layer.
 
 ---
 
