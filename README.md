@@ -6,7 +6,14 @@
 >
 > **Companion theories:** [Vector Storm Theory](../vector-storm/) · [Network Architecture Theory](../network-architecture/) · [Governance Rules Theory](../governance-rules/)
 >
-> **Version: v1.6** (February 2026)
+> **Version: v1.7** (February 2026)
+>
+> v1.7 additions (Recovery Theory integrated-edition deep-pass):
+> - **Four Structural Risks (Section 14.1.1):** complete failure taxonomy — ①Exploration Collapse ②Runaway Amplification ③Geometry Mismatch ④Coordination Breakdown + fractal cycle + formal VCZ balance as four-risk equilibrium
+> - **Three Irreversibility Conditions (Section 14.1.2):** calibration capacity collapse, geometry loss beyond reconstruction, trust topology fragmentation — theory boundary definition
+> - **Scale Transition Constraints (Section 14.1.2):** fractal invariants (loop structure, VCZ conditions) vs. non-invariants (latency, coupling cost, propagation speed, precision)
+> - **Energy Substrate of Recovery (Section 14.1.2):** reserve capacity as finite budget — VCZ accumulates, recovery depletes; depleted reserves = recovery impossibility
+> - **Extended Open Problems Catalog (Section 14.2.2):** RT's 28-item open problems indexed with resolution status and dependencies
 >
 > v1.6 additions (GRT deep-pass — second GRT loop):
 > - **Three Structural Operations (Section 3):** Separation/Friction minimization/Noise cultivation — fractal governance logic repeating at every scale
@@ -5734,6 +5741,106 @@ As fractal depth increases, each layer internalizes governance principles that p
 
 The open question is the rate of fractal depth increase: how quickly can a layer develop sufficient internal structure to reduce its dependency on the layer above it? This rate determines the practical timeline from human-supervised initial deployment to autonomous fractal operation. It is currently unquantified.
 
+### 14.1.1 Four Structural Risks — Complete Failure Taxonomy (RT §Four Structural Risks)
+
+All system failures are expressions of the same underlying imbalance: Exploration ↔ Stability balance failure. Four structural risks exhaust the ways this balance fails:
+
+```
+① Exploration Collapse (stability excess):
+  stability ↑ → exploration ↓ → adaptability ↓
+  → sensor atrophy → change detection failure
+  Covered by: Silent Criticality, SSS/NAF, SEDL
+
+② Runaway Amplification (exploration excess):
+  amplification > damping → feedback loops → polarization
+  Covered by: Vector Storm Theory, S-equation dynamics
+
+③ Geometry Mismatch (perception risk):
+  internal map ≠ reality structure
+  → appears correct but direction wrong
+  Covered by: CW/SCM, T3/T4, Reference Frame
+
+④ Coordination Breakdown (network risk):
+  partial maps exist but integration fails
+  → each party correct in isolation, collision when combined
+  Covered by: Trust Bandwidth, Lreinf collapse, Fragmented Perception
+```
+
+**The four risks form a fractal cycle:** ①→③→④→②→forced stabilization→① (repeats at every scale). **They compress to one:** all four = Exploration↔Stability balance failure at different angles.
+
+**VCZ as four-risk balance:**
+
+```
+VCZ condition (all four within bounds simultaneously):
+  E ∈ [E_min, E_max]   (controlled instability range)
+  S ∈ [S_min, S_max]   (recoverable stability range)
+  R > R_threshold       (geometry calibration maintained)
+  N > N_threshold       (integration channel functional)
+
+Governance = prevent all four from reaching extremes simultaneously.
+```
+
+### 14.1.2 Boundary Conditions — Where Recovery Fails (RT §Boundary Conditions)
+
+**Three Irreversibility Conditions — when recovery permanently fails:**
+
+```
+Condition 1 — Calibration Capacity Collapse:
+  C(t) below minimum viable → corrections amplify distortion
+  Formal: dC/dt < -C(t)/τ_recovery
+  Signature: every intervention makes the system worse
+
+Condition 2 — Geometry Loss Beyond Reconstruction:
+  Shared interpretive geometry lost below minimum viable complexity
+  → no reference frame for re-synchronization
+  Formal: d(x, VCZ) > d_max (reconstruction horizon)
+  Signature: seed transmission impossible (nothing to seed into)
+
+Condition 3 — Trust Topology Irreversible Fragmentation:
+  Network connectivity below Erdős–Rényi threshold for giant component
+  → corrections issued but not received
+  Signature: system formally intact but informationally severed
+```
+
+**Recovery impossibility vs. slow recovery:**
+  Slow recovery: each intervention → small positive signal
+  Impossibility: each intervention → neutral or negative signal
+
+Beyond this boundary, Recovery Theory's prescriptions no longer apply. A different framework governs reconstruction from zero.
+
+**Scale Transition Constraints — What the Fractal Preserves vs. Doesn't:**
+
+```
+Invariant across scales:
+  exploration-recovery loop structure, calibration dynamics (form),
+  VCZ boundary conditions (type), three irreversibility conditions
+
+Non-invariant across scales:
+  Recovery latency:   days(individual) → decades(organizational) → centuries(civilizational)
+  Coupling cost:      linear(individual) → polynomial(team) → exponential(institution)
+  Collapse propagation speed: increases with connectivity density
+  Intervention precision: increases with scale (coarse→impossible)
+```
+
+**Energy Substrate of Recovery — Reserve Capacity:**
+
+```
+Recovery consumes reserve capacity accumulated during stable phases.
+  Reserve = attention bandwidth + trust inventory + computational slack
+            + institutional flexibility
+
+  During VCZ: C_gov low → freed capacity → reserve accumulates
+  During recovery: reserve depletes across all dimensions
+
+  Depleted-reserve system attempting recovery:
+    every recovery attempt → immediately exhausted
+    system oscillates between apparent improvement and collapse
+    Diagnosis: reserve depletion, not governance failure
+    Treatment: reserve restoration FIRST, then recovery governance
+```
+
+*(Cross-theory derivation: RT §Four Structural Risks + §Boundary Conditions + §Energy Substrate)*
+
 ### 14.2 Formalization Priorities
 
 Three open problems from Section 13 are now grounded in the Resolution-Based Information Theory (RBIT) framework. Each has a defined approach; none is fully solved.
@@ -5936,6 +6043,36 @@ Measurement dependency order:
   Remaining open:
     α absolute, β absolute, C absolute → formal calibration
     f(A_t, D_t) exact form → boundary conditions exist, exact form open
+
+  Extended Open Problems (RT §Open Problems, 28 items):
+    Layer 1 (Core): minimum disruption calculation (OP1),
+      upper layer resolution measurement (OP2, partially resolved)
+    Layer 2 (Extension): contamination propagation speed (OP3),
+      unrecoverable vector formal criterion (OP4),
+      upper layer self-contamination boundary (OP5),
+      α/β/C formal calibration (OP6, partially resolved v1.4),
+      φ unit definition (OP7, role corrected — "reusable capability" boundary open),
+      VCZ distance function beyond d_v0.1 (OP8),
+      N-step window formal calibration (OP9),
+      d(x,A) basin definition protocol (OP10),
+      geometry layer formal measurement (OP11),
+      SCM external reference geometry (OP12 — OP28 connects),
+      SR/RDE/NCR threshold calibration (OP13),
+      Safe Instability Window calibration (OP14-15),
+      Constraint Rotation axis selection (OP14b),
+      G_real accessibility at scale (OP16, resolved v2.3),
+      residual instability minimum threshold (OP17),
+      failure_cost/recovery_capacity ratio (OP18),
+      Storm as VCZ-seeking empirical validation (OP19),
+      suppressed vs dissipated discrimination (OP20),
+      Storm Scale Law exponent calibration (OP21),
+      VCZ governance incentive design (OP22, resolved v3.0),
+      Boundary Agent evaluation decoupling (OP23),
+      T6 threshold intelligence level (OP24),
+      pattern combination validation (OP25),
+      RLD standardized perturbation battery (OP26),
+      NAF-to-CW transition threshold (OP27),
+      upper layer contamination detection (OP28 — alignment's final question)
 ```
 
 *(Cross-theory derivation: RBIT v1.2 §Measurement Interface + NAT §10.1 + Recovery Theory §Operationalization v0.1)*
@@ -6025,6 +6162,11 @@ Recovery Theory
     → 6 T6-resistant Boundary Structural Embedding patterns (Section 13.2.1)
   → Rational CW Convergence: 6-step mechanism for incentive-driven SCM entry
     → Explains why governance must invert incentives, not prohibit behavior (Section 13.2.1)
+  → Four Structural Risks: complete failure taxonomy (Section 14.1.1)
+  → Three Irreversibility Conditions: theory boundary definition (Section 14.1.2)
+  → Scale Transition Constraints: invariant vs non-invariant properties (Section 14.1.2)
+  → Energy Substrate of Recovery: reserve capacity dynamics (Section 14.1.2)
+  → 28 Open Problems with dependencies (Section 14.2.2)
   → SCM Recovery Protocol: 4 CW-breaking methods (Meta-Reference Injection)
     → Prediction Failure, Cross-Scale, Constraint Rotation, Safe Instability Window
     → Severity-matched selection guide for operational deployment (Section 13.2.1)
