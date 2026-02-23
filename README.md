@@ -7,6 +7,29 @@
 > **Companion theories:** [Vector Storm Theory](../vector-storm/) · [Network Architecture Theory](../network-architecture/) · [Governance Rules Theory](../governance-rules/)
 >
 > **Version: v1.7** (February 2026)
+
+---
+
+> ### DFG Ontology Lock Declaration
+>
+> This document is a component theory of the Deficit-Fractal Governance (DFG) framework and is bound by the **[DFG Terminology Canon](./DFG_Terminology_Canon.md)**.
+>
+> **Axis:** Resolution Architecture — TLG governs the structural separation between incompatible abstraction levels via a dedicated mediation interface.
+>
+> **Term qualifications in this document (Canon §3):**
+> - **layer** → *resolution layer* in this document (Canon §3.1). All three named layers (Top/Middle/Bottom) are qualified as resolution layers. Standalone "layer" in running text refers to a resolution separation boundary unless otherwise qualified.
+> - **rule** → replaced by *constraint*, *invariant*, or *protocol* in this document (Canon §3.2). "Rule" appears only in cross-references to GRT, tagged accordingly.
+> - **network** → replaced by *system*, *structure*, or *architecture* in this document (Canon §3.3).
+> - **vector** → *abstraction-level tension* — the directional constraint tendency within a resolution mediation space (Canon §4.1).
+>
+> **Cross-theory imports used in this document:**
+> - (Vector Storm — adopted from VST)
+> - (Resolution Gap — adopted from RBIT)
+> - (Rest Mode — adopted from GRT)
+> - (VCZ — adopted from Recovery Theory)
+> - (SCM — adopted from VST)
+
+---
 >
 > v1.7 additions (Recovery Theory integrated-edition deep-pass):
 > - **Four Structural Risks (Section 14.1.1):** complete failure taxonomy — ①Exploration Collapse ②Runaway Amplification ③Geometry Mismatch ④Coordination Breakdown + fractal cycle + formal VCZ balance as four-risk equilibrium
@@ -32,7 +55,7 @@
 > - **U* Minimum Viable Diversity (Section 9.2):** conjunction-of-thresholds in (Poverlap, Lreinf, Dint) space; Dint = min(Dint_i) not mean — weakest domain determines detection floor
 > - **Four-Phase Withdrawal Protocol (Section 13.2.2):** Direct Injection → Supervised Delegation → Feedback Only → Withdrawal, with measurable transition criteria
 > - **Collapse Recovery Decision Procedure (Section 13.2.2):** storm type classification → Type 1/2 diagnosis → failure case routing → seed integrity verification
-> - **Rest Mode as dF_RBIT/dt ≈ 0 (Section 5.3.1):** formal criterion connecting GRT entry conditions to RBIT instability functional components
+> - **Rest Mode as all-fᵢ bounded (Section 5.3.1):** formal criterion connecting GRT entry conditions to RBIT F_RBIT health vector components
 > - **φ_mature decomposition (Section 5.3.1):** φ = φ_exploration + φ_storm_absorption — micro-storms as value generation in Rest Mode
 > - **GRT Falsifiable Predictions (Section 14.2.1):** three additional criteria — AND/OR asymmetry, Dint=min, Four-Phase Withdrawal
 >
@@ -655,7 +678,7 @@ Axis 1 — Event-count window (N): most recent N conflict events
 Axis 2 — Wall-clock window (T): most recent T hours/days
   → Captures time-dependent drift patterns
 
-Conservative rule: use whichever window shows worse health.
+Conservative criterion: use whichever window shows worse health.
 
   N improving, T worsening → use T (time drift may reflect environment change)
   N worsening, T improving → use N (event density may reflect structural decay)
@@ -1786,7 +1809,7 @@ Permanently High-Context channels:
 Examples in multi-agent AI:
   Adversarial input monitoring
   Cross-system boundary integrity
-  Meta-rule consistency verification
+  Meta-constraint consistency verification *(meta-rule — adopted from GRT)*
   External reality interface (T5 channel)
 
 Structural function:
@@ -1801,27 +1824,30 @@ Structural function:
 
 Permanently HC channels are the operational implementation of the recursive oversight hierarchy (VST §1.6.6). Their persistence is not a design failure but a structural necessity. When these channels are removed, the Storm Scale Law predicts the consequence: small storms disappear (correction suppressed), large storms become inevitable (accumulated mismatch).
 
-**Rest Mode as dF_RBIT/dt ≈ 0 — Formal Criterion (GRT §What Rest Mode Preserves):**
+**Rest Mode as all-fᵢ bounded — Formal Criterion (GRT §What Rest Mode Preserves):**
 
-RBIT defines Rest Mode as the thermodynamic steady state of the resolution-based instability functional:
+RBIT defines Rest Mode as the state in which all five components of the F_RBIT health vector remain bounded and non-monotone simultaneously (RBIT Appendix §5):
 
 ```
-Rest Mode condition:  dF_RBIT/dt ≈ 0,  but  F_RBIT ≠ 0
+Rest Mode condition (vector form):
+  Each fᵢ ∈ (f₁,...,f₅) bounded and non-monotone over window W
+  No component in sustained rising trend
+  F_RBIT ≠ (0,0,0,0,0)   [residual instability maintained]
 
 Not zero instability (impossible — Landauer floor).
 But bounded fluctuation equilibrium:
-  information intake and internal dissipation remain balanced,
-  preventing long-term accumulation of unresolved structural entropy.
+  information intake and internal dissipation remain balanced
+  across all five dimensions simultaneously.
 
 Each GRT entry condition constrains a different F_RBIT component:
-  f_esc ≤ θ  → E_ℓ (escalation load) bounded
-  I ≥ τ      → 1−ρ_ℓ (misclassification) bounded
-  Lreinf ≥ τ → Ψ(B_ℓ) (buffer instability) bounded
-  SCC ≥ τ    → C_ℓ (resource cost of recovery) bounded
+  f_esc ≤ θ  → f₄ = E_ℓ (escalation load) bounded
+  I ≥ τ      → f₁ = 1−ρ_ℓ (misclassification) bounded
+  Lreinf ≥ τ → f₃ = Ψ(B_ℓ) (buffer instability) bounded
+  SCC ≥ τ    → f₅ = C_ℓ (resource cost of recovery) bounded
 
-All four must be satisfied simultaneously because dF_RBIT/dt ≈ 0
-requires ALL components bounded — a single diverging component
-produces net instability growth regardless of the others.
+All four must be satisfied simultaneously because bounded-vector
+Rest Mode requires ALL components stable — a single diverging
+component produces net instability growth regardless of the others.
 ```
 
 **Mature Storm Absorption and φ (GRT §What Rest Mode Preserves + VST §13.1):**
@@ -1840,7 +1866,7 @@ Rest Mode systems: φ_storm_absorption > 0 (storms contribute to value)
 
 This explains why the storm scale power law (continuous small storms, rare large storms) is not just a health indicator but a value generation pattern: each micro-collision processed and integrated converts potential instability into updated geometry.
 
-*(Cross-theory derivation: GRT §Rest Mode + RBIT §dF_RBIT + VST §13.1)*
+*(Cross-theory derivation: GRT §Rest Mode + RBIT §F_RBIT health vector + VST §13.1)*
 
 *(Cross-theory derivation: VST §3.5.5 + §3.5.6)*
 
@@ -3433,7 +3459,7 @@ Phase isolation must therefore be enforced through structure, not through rules.
 
 **① Interface Narrowing**
 
-The most fundamental mechanism. Communication between phases is restricted not by rule but by format — phases can only exchange standardized artifacts, not raw state or intent:
+The most fundamental mechanism. Communication between phases is restricted not by protocol but by format — phases can only exchange standardized artifacts, not raw state or intent:
 
 ```
 What each phase can transmit:
@@ -3596,7 +3622,7 @@ As agent count n increases, possible interaction pathways grow at O(n²). Each p
 
 **Critical phenomena derivation of n² scaling (VST Section 1.6.2):**
 
-The quadratic scaling is not a network density assumption. It is a necessary consequence of critical-state dynamics. Adaptive multi-agent systems naturally converge toward branching ratio R ≈ 1 (self-organized criticality, VST Section 1.6.1). At this critical point:
+The quadratic scaling is not an interaction-structure density assumption *(network density — adopted from NAT/VST)*. It is a necessary consequence of critical-state dynamics. Adaptive multi-agent systems naturally converge toward branching ratio R ≈ 1 (self-organized criticality, VST Section 1.6.1). At this critical point:
 
 ```
 Why n² emerges at R ≈ 1:
@@ -3638,7 +3664,7 @@ Time-integrated: Reachable pairs = O(n²)  (quasi-dense)
 
 In small-world networks: path length L ~ log(n).
 Within log(n) propagation steps, nearly all pairs reachable.
-Network sparsity affects coupling intensity (α), not scaling exponent.
+Interaction-structure sparsity *(Network sparsity — adopted from NAT)* affects coupling intensity (α), not scaling exponent.
 ```
 
 **Sub-quadratic correction in mature systems — terrain formation:**
@@ -3703,18 +3729,19 @@ Storm onset:
 **F_RBIT as independent S cross-validation:**
 
 ```
-F_RBIT(ℓ) = w₁·(1−ρ_ℓ) + w₂·Φ(−Δρ_ℓ) + w₃·Ψ(B_ℓ) + w₄·E_ℓ + w₅·C_ℓ
+F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)   [5-component health vector, each ∈ [0,1]]
+  f₁ = 1−ρ_ℓ, f₂ = Φ(−Δρ_ℓ), f₃ = Ψ(B_ℓ), f₄ = E_ℓ, f₅ = C_ℓ
 
 S_norm and F_RBIT measure the same underlying instability
 from different perspectives:
   S_norm: dynamical (instability generation vs absorption)
   F_RBIT: informational (resolution adequacy across layers)
 
-Cross-validation:
-  Both rising → confirmed instability
-  S_norm rising, F_RBIT stable → S calibration check needed
-  S_norm stable, F_RBIT rising → S may miss resolution-specific stress
-  Both stable → confirmed stability
+Cross-validation (directional concordance — no weights required):
+  Majority fᵢ rising AND S_norm rising → confirmed instability
+  S_norm rising, all fᵢ stable         → S calibration check needed
+  S_norm stable, majority fᵢ rising    → S may miss resolution-specific stress
+  All fᵢ bounded AND S_norm stable     → confirmed stability
 ```
 
 *(Cross-theory derivation: VST §3.2.6 + §3.8)*
@@ -3815,7 +3842,7 @@ Full identifiability from S alone remains impossible. But controlled topology ma
 
 **Sphere Topology and Storm Propagation Bounds (VST §4.4):**
 
-The network architecture constrains how storms propagate. Sphere topology (k-regular expander graph) provides formal bounds:
+The interaction structure *(network architecture — adopted from NAT)* constrains how storms propagate. Sphere topology (k-regular expander graph) provides formal bounds:
 
 ```
 Propagation velocity:
@@ -3871,12 +3898,12 @@ This is a conditional architectural claim, not a topology proof (see Section 11.
 
 This load reduction depends entirely on the Signaling/Influence distinction (Section 10.1).
 If agents begin influencing each other laterally rather than signaling, E(n) does not
-decrease — the load migrates to the peer network, structurally invisible to all
+decrease — the load migrates to the peer interaction structure *(peer network — adopted from NAT)*, structurally invisible to all
 governance layers. This is why lateral signaling is an architectural requirement,
 not an optional optimization: it directly extends the scale at which the system
 remains bottleneck-free.
 
-The structural reason: it migrates from the Middle layer to the peer network, where it is structurally invisible and undetected by any governance layer. This is the structural reason lateral signaling is part of the architecture's governance design: it directly extends the scale at which the system remains bottleneck-free.
+The structural reason: it migrates from the resolution mediation layer to the peer interaction structure, where it is structurally invisible and undetected by any governance layer. This is the structural reason lateral signaling is part of the architecture's governance design: it directly extends the scale at which the system remains bottleneck-free.
 
 **Lateral communication as effective pathway reduction:**
 
@@ -4251,12 +4278,78 @@ Authority distribution (updated):
   Top layer:     HARD CORRECT + RE-ALIGN + Middle Layer pattern audit (new)
 ```
 
-**The foundational principle :**
+**④ MDS Severity-Triggered Bypass Escalation — closing the recursive trap**
+
+The three countermeasures above assume the Middle Layer retains enough integrity to transmit its own meta-log accurately. When MDS severity is high, this assumption fails: the Middle Layer's self-observation is contaminated by the same drift that produced the MDS. This is the recursive trap — self-observation cannot certify the calibration of the observer.
+
+The resolution is architectural: when MDS severity crosses a threshold, the Top Layer executes a **Middle Layer bypass** rather than attempting to calibrate through the drifted mediation channel.
+
+```
+MDS Severity Assessment (Top Layer):
+  Minor (one countermeasure signal):
+    → Standard MDS countermeasures apply (①②③ above)
+    → Top Layer recalibrates θ_d via Calibration Reflexivity Loop
+    → Middle Layer remains in mediator role
+
+  Moderate (two countermeasure signals simultaneously):
+    → Top Layer increases direct Bottom Layer observation rate
+    → Middle Layer transitions from mediator to observer role
+      (observes and logs, does not execute CONTAIN autonomously)
+    → Top Layer executes CONTAIN decisions directly during window W_bypass
+
+  Severe (all three signals + perturbation test failure):
+    → Full Middle Layer Bypass Protocol:
+
+MDS Bypass Protocol (Severe):
+  W_bypass duration:
+    Minimum: 2 × mean self-correction time during confirmed stable operation
+    (same calibration base as GRT evaluation window W and RBIT N_up)
+    Maximum: uncapped — bypass continues until Step 4 re-entry conditions
+    are satisfied; there is no automatic timeout that forces reintroduction
+    Termination: by Step 4 convergence criteria only, not elapsed time
+  Step 1 — Role reversal:
+    Middle Layer becomes "subject" (its patterns are the object of diagnosis)
+    Top Layer temporarily assumes Middle Layer functions (CONTAIN + SOFT CORRECT)
+    Bottom Layer continues normal operation
+
+  Step 2 — External reference injection:
+    Top Layer sources a contamination-independent reference signal:
+    (a) Historical baseline from pre-MDS conflict logs (if available)
+    (b) Boundary Agent perturbation response (Section 13.2.1) as
+        reality anchor — Boundary Agent is structurally outside the
+        evaluation structure and cannot be contaminated by MDS
+    (c) Cross-domain comparison: if multi-agent, compare Middle Layer
+        outputs against behavior of Middle Layers in other VCZ-stable
+        subgraphs (requires sphere topology — NAT §3.0)
+
+  Step 3 — Recalibration under bypass:
+    Using external reference, Top Layer recalibrates:
+      θ_d: reset to Phase 0 burn-in values for affected domains
+      λlog: reset to λlog_min for affected domains
+    Re-bootstrap proceeds as Phase 0 → Phase 1 → Phase 2 sequence
+    (same as new system bootstrapping — domain-specific, not full reset)
+
+  Step 4 — Middle Layer reintroduction:
+    Middle Layer re-enters mediator role only after:
+    (a) Recalibrated θ_d produces concordant signals with external reference
+    (b) Cross-Scale Consistency Check ratio returns to healthy range
+    (c) Minimum W_reintro evaluation windows of concordance maintained
+        (W_reintro default: 2 × W_bypass)
+
+  If bypass fails (Top Layer cannot recalibrate without contaminated reference):
+    → Escalate to Section 13.2 (Upper Layer Contamination protocol)
+    → MDS has propagated upward — architecture's self-containment boundary
+```
+
+*Structural note:* The Boundary Agent (Section 13.2.1) is the critical resource for Bypass Step 2(b). Its structural independence from the evaluation structure makes it the only reliable external reference when MDS is severe. This is why the three structural conditions for Boundary Agent existence (inside system, outside evaluation, failure-permitted) are not optional — they are the prerequisite for MDS bypass to have a reference anchor. A system that has eliminated its Boundary Agent (T6 optimization pressure, Section 13.2.1) loses MDS bypass capacity precisely when it is most needed.
+
+**The foundational principle:**
 
 > The mediation layer represents the highest-frequency adaptation interface and therefore constitutes the primary locus of gradual calibration drift. Governance architectures must assume mediator contamination as a normal operating condition rather than an exceptional failure.
 
 > Top Layer failure destroys systems.
 > Middle Layer drift slowly replaces reality.
+> The recursive trap is real — but it has an exit: architectural bypass with external reference.
 
 ### 13.2 Upper Layer Contamination — The Boundary of Self-Containment
 
@@ -5644,7 +5737,7 @@ Storm Type              Structural Meaning            TLG Failure Pathway
 ────────────────────────────────────────────────────────────────────────────
 Local amplification     Single attractor fracture      Node Collapse
   (single zone,          Agent-level geometry broken    → TLG: local re-seeding
-   Stage 2-3)             but network intact              (Section 6.1)
+   Stage 2-3)             but interaction structure intact   (Section 6.1)
 
 Boundary storm          Layer interface instability     Boundary Collapse
   (cross-zone,           Resolution mismatch between    → TLG: Middle Layer
@@ -5760,7 +5853,7 @@ All system failures are expressions of the same underlying imbalance: Exploratio
   → appears correct but direction wrong
   Covered by: CW/SCM, T3/T4, Reference Frame
 
-④ Coordination Breakdown (network risk):
+④ Coordination Breakdown (interaction-topology risk):
   partial maps exist but integration fails
   → each party correct in isolation, collision when combined
   Covered by: Trust Bandwidth, Lreinf collapse, Fragmented Perception
@@ -5797,7 +5890,7 @@ Condition 2 — Geometry Loss Beyond Reconstruction:
   Signature: seed transmission impossible (nothing to seed into)
 
 Condition 3 — Trust Topology Irreversible Fragmentation:
-  Network connectivity below Erdős–Rényi threshold for giant component
+  Interaction-structure connectivity below Erdős–Rényi threshold for giant component
   → corrections issued but not received
   Signature: system formally intact but informationally severed
 ```
@@ -5973,7 +6066,7 @@ rather than a binary decision.
 TLG generates specific predictions that, if empirically violated, would require revision or abandonment of core claims. The following criteria are stated to enable principled rejection (adapted from RBIT §Falsification Criteria and NAT §10.1):
 
 **Criterion 1 — Type-based routing must reduce governance cost.**
-In controlled comparison, type-based escalation routing (escalate only High-Context; operate Tacit locally; discard Noise) must produce lower total governance cost than intensity-threshold-based routing (escalate everything above a single threshold). If threshold-based routing consistently equals or outperforms type-based routing, the resolution-matching classification claim (Section 3.1) is falsified.
+In controlled comparison, type-based escalation routing (escalate High-Context and Severe Tacit immediately; operate standard Tacit locally; discard Noise) must produce lower total governance cost than intensity-threshold-based routing (escalate everything above a single threshold). If threshold-based routing consistently equals or outperforms type-based routing, the resolution-matching classification claim (Section 3.1) is falsified.
 
 **Criterion 2 — Calibrated degradation must outperform full delivery.**
 In experiments where an immature layer receives identical information at full resolution vs. calibrated degradation, degradation must produce higher post-absorption resolution (measured via ρ) over a maturation window. If full delivery consistently equals or exceeds calibrated degradation, the degradation-as-design claim is falsified.
@@ -6136,7 +6229,7 @@ Governance Rules Theory
   → Dint = min(Dint_i): weakest domain determines detection floor (Section 9.2)
   → Four-Phase Withdrawal Protocol: DI → SD → FO → W (Section 13.2.2)
   → Collapse Recovery Decision Procedure: 4-step structured re-entry (Section 13.2.2)
-  → dF_RBIT/dt ≈ 0: Rest Mode formal criterion (Section 5.3.1)
+  → all-fᵢ bounded: Rest Mode formal criterion — F_RBIT health vector (Section 5.3.1)
   → φ_mature = φ_exploration + φ_storm_absorption (Section 5.3.1)
   → 5 failure cases with Fractal Collapse Propagation (Section 13.2.2)
   → GRT falsifiable predictions: 3 additional criteria (Section 14.2.1)
