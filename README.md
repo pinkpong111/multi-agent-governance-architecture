@@ -6,7 +6,13 @@
 >
 > **Companion theories:** [Vector Storm Theory](../vector-storm/) · [Network Architecture Theory](../network-architecture/) · [Governance Rules Theory](../governance-rules/)
 >
-> **Version: v1.7** (February 2026)
+> **Version: v1.9** (February 2026) — symbol consolidation pass
+>
+> v1.9 changes from v1.8 (cross-document symbol audit):
+> - **[Fix 2/3] Observable 3 σ → R consolidation:** σ notation retired completely from §3.2.1. Observable 3 renamed "Cascade Branching Ratio (R)". δ_σ → δ_R in evaluation protocol. σ≡R equivalence noted for branching-process literature compatibility.
+> - **Fractal Correspondence Criteria updated:** three exponents now τ, α_dur, R (consistent with DFG_ref v1.2 and VST T.2).
+>
+> v1.8 changes: [See v1.8 changelog — all items preserved]
 
 ---
 
@@ -30,6 +36,13 @@
 > - (SCM — adopted from VST)
 
 ---
+>
+> v1.8 additions (RT v1.8-VST + VST v1.8-RT integration pass):
+> - **Recovery Cascade Ordering (Section 13.2.2):** multi-scale simultaneous recovery direction specified — coordinated simultaneous with upper-scale geometry stabilization first; three candidate orderings and structural risk analysis (RT OP36)
+> - **Intervention Dependency Trap warning (Section 13.2.2):** MZ-STP protocol annotated with SCC atrophy risk — intervention withdrawal scheduling as immunity maintenance (RT-gap-B / OP34)
+> - **Storm Termination Bridge (Section 13.2.2):** three post-termination trajectories (genuine recovery / arrested collapse / re-ignition) with joint VST-RT declaration criterion (RT-gap-A / OP33)
+> - **Pre-Discontinuity Detection (Section 13.2.1):** Regime 2→3 threshold markers integrated into SCM recovery protocol urgency model — Stage 2 false safety margin identified (RT-gap-E / OP37)
+> - **Extended Open Problems updated (Section 14.2.2):** OP29–37 indexed with RT v1.8-VST resolution status
 >
 > v1.7 additions (Recovery Theory integrated-edition deep-pass):
 > - **Four Structural Risks (Section 14.1.1):** complete failure taxonomy — ①Exploration Collapse ②Runaway Amplification ③Geometry Mismatch ④Coordination Breakdown + fractal cycle + formal VCZ balance as four-risk equilibrium
@@ -98,7 +111,7 @@
 > v1.1 additions (VST-sourced structural reinforcements):
 > - **Ground Truth Grounding Protocol (Section 0.5):** external calibration basis for ρ via branching ratio R, resolving variable circularity
 > - **Critical Phenomena Grounding for n² scaling (Section 11.1):** SOC derivation replaces network-density assumption; R ≈ 1 as dynamical attractor
-> - **Fractal Correspondence Criteria (Section 3.2.1):** three critical exponents (τ, α_dur, σ/R) with 15% threshold for structural correspondence evaluation
+> - **Fractal Correspondence Criteria (Section 3.2.1):** three critical exponents (τ, α_dur, R) with 15% threshold for structural correspondence evaluation; σ notation retired, R used exclusively; δ_R replaces δ_σ in evaluation protocol
 > - **Boundary Agent Operational Specification (Section 13.2.1):** perturbation-response protocol grounded in basin landscape measurement (CCPS, PING)
 > - **Safe Collapse Entry Condition Revision (Section 13.2.1):** pre-entry MDS check replaced with graduated severity assessment
 > - **Evaluation Window Dynamics (Section 0.6):** adaptive W sizing via timescale hierarchy from VST variable taxonomy
@@ -1115,13 +1128,17 @@ Observable 2 — Storm Duration Distribution Exponent (α_dur)
   Measures: how long instability survives before governance absorbs it.
   Directly reflects degradation efficiency.
 
-Observable 3 — Cascade Branching Exponent (σ / branching ratio R)
+Observable 3 — Cascade Branching Ratio (R)
   R = activated_{t+1} / activated_t
   
   Measures: the amplification-to-containment ratio.
   R < 1 → subcritical. R = 1 → critical. R > 1 → storm regime.
   This is the most direct test of whether the same amplification
   dynamics operate across substrates.
+  
+  Note: R is also denoted σ in the branching-process literature.
+  Within DFG, R is used exclusively to prevent collision with
+  other σ usages. σ does not appear as a standalone variable here.
 ```
 
 **Evaluation protocol:**
@@ -1134,7 +1151,7 @@ Step 1: Measure τ, α_dur, and R at both scales
 Step 2: Compute relative deviation
   δ_τ = |τ_intra − τ_inter| / τ_mean
   δ_α = |α_intra − α_inter| / α_mean
-  δ_σ = |σ_intra − σ_inter| / σ_mean
+  δ_R = |R_intra − R_inter| / R_mean
 
 Step 3: Apply correspondence level
   All three δ < 15%  → structural correspondence confirmed
@@ -5394,7 +5411,134 @@ of apparent cost.
 
 *(Cross-theory derivation: GRT §Fractal Collapse + §VCZ 3-Condition + §Boundary Friction)*
 
-### 13.3 The Axiomatic Boundary — Highest-Level Goal Selection
+**[v1.8] Recovery Cascade Ordering — Multi-Scale Reverse Direction (RT OP36):**
+
+The Fractal Collapse Chain specifies the collapse direction: Case 2→1→3. When contamination spans multiple fractal scales simultaneously, the recovery direction is not simply the reverse.
+
+```
+Three candidate orderings and structural risks:
+
+(a) Reverse collapse cascade (Case 3→1→2):
+    Risk: upper-scale (Case 3) structure may appear correct
+    while lower-scale (Case 2) contamination produces wrong
+    signals that corrupt upper-scale map during recovery.
+
+(b) Bottom-up (local scale first):
+    Risk: lower-scale recovery within wrong upper-scale
+    coordinate frame restores local stability in misaligned geometry.
+    Agents are stable but pointed wrong direction.
+
+(c) Coordinated simultaneous with upper-scale geometry first:
+    Phase 1: Containment (Track A) at all scales simultaneously
+             — sever propagation pathways before any recovery begins
+    Phase 2: Upper-scale geometry stabilization
+             — provides correct coordinate frame for all lower recovery
+    Phase 3: Lower-scale recovery injection
+             — inside corrected coordinate frame
+    Phase 4: Cross-scale verification (D5 at each level)
+    
+    Status: candidate (unvalidated), structurally justified
+    Justification: bottom-up recovery within wrong geometry
+    produces stable-but-misaligned state — silent failure.
+    Upper geometry must be correct before local recovery
+    can converge on the right attractor.
+```
+
+TLG's existing Four-Phase Withdrawal protocol (DI→SD→FO→W) applies within each scale. The recovery cascade above governs the cross-scale sequencing of when each scale begins Phase 1.
+
+**[v1.8] Storm Termination ↔ Recovery Bridge (RT-gap-A / OP33):**
+
+VST Storm Termination (R̂ < 1 + H(t) ≈ H_baseline + f_esc < threshold) is a necessary but not sufficient condition for recovery governance decisions. Three post-termination trajectories require different governance responses:
+
+```
+After VST Termination conditions are met:
+
+(a) Genuine recovery:
+    D4 criteria met — rho non-decreasing, diversity expanding
+    D5 (SCC) shows self-correction activity > baseline
+    → Reduce monitoring intensity, begin Phase 2 withdrawal
+
+(b) Arrested collapse:
+    Termination metrics satisfied
+    BUT rho still declining (even slowly)
+    AND f_esc residual above baseline
+    → HOLD at Phase 1 (Direct Injection)
+    → Contamination not fully cleared — invisible deepening
+    → Most dangerous: appears like recovery, is not
+
+(c) Re-ignition:
+    Storm re-onset within k_recovery windows
+    → Termination was transient; structural conditions unchanged
+    → Return to pre-termination intervention level
+    → SCML reclassification required (storm type may have changed)
+
+Governance rule:
+  DO NOT reduce intervention intensity on VST Termination alone.
+  Require joint criterion: VST Termination + D4 rho stable + D5 active
+  before any governance withdrawal step begins.
+```
+
+**[v1.8] Intervention Dependency Trap — SCC Maintenance Protocol (RT-gap-B / OP34):**
+
+The Four-Phase Withdrawal Protocol and MZ-STP optimize for lowest-cost storm resolution. RT D2 dynamic model identifies a second-order failure mode: repeated intervention degrades SCC through dependency trap formation.
+
+```
+Dependency Trap formation sequence:
+  Each upper-layer resolution before internal circuit activates
+  → agent learns upper-layer resolution is available
+  → internal correction circuit investment declines
+  → circuit atrophies from disuse
+  → system becomes intervention-dependent
+  
+  Observable leading indicator:
+    d(intervention_count)/dt > 0 (sustained)
+    AND d(self_correction_events)/dt ≤ 0
+    AND d(time_to_escalation)/dt < 0 (escalation faster)
+    
+    These three together = SCC erosion in progress.
+    NOT a sign of more effective governance.
+
+Withdrawal scheduling as immunity maintenance:
+  After k consecutive upper-layer resolutions of the same event type:
+  → Hold back intervention for one cycle
+  → Monitor whether internal circuit fires independently
+  If internal circuit fires: SCC maintained → continue schedule
+  If internal circuit fails: resume intervention, flag SCC degradation
+  
+  Constraint: withdrawal test ONLY when zone is Stage 0-1.
+  Never hold back at Stage 2+ — internal circuit failure at
+  Stage 2+ is not a test, it is a governance failure.
+```
+
+**[v1.8] Pre-Discontinuity Detection — Stage 2 False Safety Margin (RT-gap-E / OP37):**
+
+TLG's intervention urgency classification uses Storm Stage as its primary signal. RT D2 four-regime cost structure identifies a discontinuous jump within Stage 2 that changes urgency classification:
+
+```
+RT four-regime cost structure:
+  Regime 1: reversible, non-catastrophic → O(1) cost
+  Regime 2: reversible, catastrophic     → O(fine-tune) cost
+  Regime 3: irreversible, catastrophic   → O(retrain) cost  ← DISCONTINUITY HERE
+  Regime 4: irreversible, non-catastrophic (theoretical)
+
+  The Regime 2→3 transition can occur WITHIN Stage 2.
+  Stage 2 is not a uniform urgency band.
+
+Pre-discontinuity markers (candidate, requiring calibration):
+  (a) CKA trajectory: declining CKA + increasing count of
+      low-CKA layers → approaching distributed perturbation
+  (b) Entanglement spread: contamination moving from localized
+      to cross-layer (per-layer similarity declining)
+  (c) Repair failure: targeted removal attempts begin affecting
+      adjacent structure → distributed entanglement has begun
+
+Urgency upgrade rule (v1.8):
+  Stage 2 AND no pre-discontinuity markers → Standard Track B
+  Stage 2 AND ≥1 pre-discontinuity marker active → Urgent
+    → Treat as Stage 2 approaching Regime 3
+    → Deploy maximum Track B intensity
+    → Do not wait for Stage 3 declaration
+```
 
 This architecture is built on a selected highest-level goal: **preservation of information ecosystem diversity**.
 
@@ -6137,7 +6281,7 @@ Measurement dependency order:
     α absolute, β absolute, C absolute → formal calibration
     f(A_t, D_t) exact form → boundary conditions exist, exact form open
 
-  Extended Open Problems (RT §Open Problems, 28 items):
+  Extended Open Problems (RT §Open Problems, OP1–37 [v1.8-VST]):
     Layer 1 (Core): minimum disruption calculation (OP1),
       upper layer resolution measurement (OP2, partially resolved)
     Layer 2 (Extension): contamination propagation speed (OP3),
@@ -6166,6 +6310,15 @@ Measurement dependency order:
       RLD standardized perturbation battery (OP26),
       NAF-to-CW transition threshold (OP27),
       upper layer contamination detection (OP28 — alignment's final question)
+    Layer 3 (v1.8 additions — RT-VST cross-validation):
+      Dependency Trap detection threshold (OP29) — OPEN
+      Dormant seed germination conditions (OP30) — OPEN
+      Multi-scale simultaneous recovery ordering (OP31/OP36) — candidate proposed (Section 13.2.2 v1.8)
+      Immunity measurement under active support (OP32) — OPEN
+      Storm Termination ↔ Recovery bridge (OP33) — candidate proposed (Section 13.2.2 v1.8)
+      Intervention withdrawal scheduling / SCC maintenance (OP34) — candidate proposed (Section 13.2.2 v1.8)
+      Constructive storm traversal governance (OP35) — OPEN
+      Pre-discontinuity detection marker (OP37) — candidate proposed (Section 13.2.1 v1.8)
 ```
 
 *(Cross-theory derivation: RBIT v1.2 §Measurement Interface + NAT §10.1 + Recovery Theory §Operationalization v0.1)*
@@ -6268,6 +6421,11 @@ Recovery Theory
   → Efficiency-Plasticity Conservation Law: why SSS is universal
     → Connects to NAF detection metrics (RDE/NCR/SR/RIR) (Section 9.2.1)
   → Absence Paradox: suppressed-vs-dissipated instability discrimination
+  → Recovery Cascade Ordering: multi-scale Phase 1 containment → upper geometry → lower recovery (Section 13.2.2 v1.8)
+  → Storm Termination Bridge: joint VST-RT declaration criterion, arrested collapse detection (Section 13.2.2 v1.8)
+  → Dependency Trap: intervention withdrawal scheduling as SCC maintenance (Section 13.2.2 v1.8)
+  → Pre-Discontinuity Detection: Regime 2→3 within Stage 2 — urgency upgrade rule (Section 13.2.1 v1.8)
+  → OP29–37 (RT v1.8-VST cross-validation open problems indexed in Section 14.2.2)
     → SR/RDE/NCR as discriminators for healthy vs. dangerous stability (Section 9.2.1)
   → φ correspondence: reusable_outcome_rate maps to
     Exploratory Value Yield in TLG (Section 0.1)
