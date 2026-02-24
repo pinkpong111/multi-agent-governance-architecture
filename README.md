@@ -5446,6 +5446,47 @@ Three candidate orderings and structural risks:
 
 TLG's existing Four-Phase Withdrawal protocol (DI→SD→FO→W) applies within each scale. The recovery cascade above governs the cross-scale sequencing of when each scale begins Phase 1.
 
+**[v1.8-TLG/GRT/NAT] RT reverse mapping — zone-dependent recovery sensitivity and contamination redistribution:**
+
+```
+RT v1.8-TLG/GRT/NAT extends the four-phase cascade (above) to five phases
+and adds two structural principles:
+
+(1) Zone-dependent recovery sensitivity — S_rec(z):
+    Recovery response gain is anisotropic across structural zones.
+    S_rec(local) >> S_rec(hub) >> S_rec(geometry)
+    
+    TLG implication: the Failure Cycle Cost Scaling open problem
+    (§13.6 — "topology-dependent" cost function) is partially resolved.
+    S_rec(z) provides the structural basis: cost is not merely monotonic
+    but zone-dependent — same intervention costs differently by zone.
+    
+    Connects to: TLG §13.6 cost scaling, VST §3.4.2 MZ-STP Rule 2,
+    VST App.A.5 zone-differentiated sensitivity.
+
+(2) Contamination Redistribution Principle:
+    Healthy recovery repositions contamination into absorbable zones
+    (buffers) — it does not eliminate contamination.
+    Purification locally creates pressure gradients globally.
+    
+    TLG implication: explains WHY Track A containment must precede
+    Track B recovery — uncontained recovery creates redistribution
+    pathways that amplify rather than resolve contamination.
+    Recovery-phase instability is expected and healthy;
+    operators must not interpret it as failure.
+
+(3) Five-phase extension of candidate (c):
+    Phase 0: Containment (all scales simultaneously) — NEW
+    Phase 1: Upper-scale geometry stabilization
+    Phase 2: Hub/mediation zone purification — NEW (S_rec minimum)
+    Phase 3: Lower-scale recovery injection (S_rec maximum)
+    Phase 4: Immunity verification + D5 forced self-correction test — NEW
+    
+    Phase 4 prevents Dependency Trap (RT D2 dynamic model):
+    recovery declared complete without immunity test
+    → apparent stability → SCC atrophy → next event catastrophic.
+```
+
 **[v1.8] Storm Termination ↔ Recovery Bridge (RT-gap-A / OP33):**
 
 VST Storm Termination (R̂ < 1 + H(t) ≈ H_baseline + f_esc < threshold) is a necessary but not sufficient condition for recovery governance decisions. Three post-termination trajectories require different governance responses:
