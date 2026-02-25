@@ -6481,6 +6481,101 @@ or designing for its irreducible remainder.
 
 ---
 
+## 15. Paper-Specific Additions (v1.0 Academic Paper Content)
+
+> *The following sections summarize content formalized in the v1.0 academic paper (TLG_v1_0.docx) that was not previously present in this README as standalone sections. They complement existing README content with the paper's condensed formulations.*
+
+### 15.1 Intervention Cascade Mechanism
+
+A standard assumption in governance design is that intervention reduces error. In adaptive multi-layer systems, this assumption is incomplete. Intervention reduces error at the target layer but induces compensatory adaptations at adjacent layers, which may introduce secondary distortions requiring further intervention. The result is not error reduction but error relocation — an intervention cascade.
+
+**Compensatory Intervention Loop.** When L3 applies a coarse-grained correction (inherently low-resolution due to its abstraction level), L2 must buffer the impact to make it compatible with L1 operational diversity. This buffering introduces interpretation bias and processing delay. L1, in turn, develops local compensatory adaptations — workarounds that preserve local function under the modified constraints. These adaptations create implicit local rules that diverge from the governance structure, producing structural drift. The accumulated drift generates new instability signals, which escalate upward, potentially triggering further L3 intervention and restarting the cycle.
+
+**Formal statement.** Stability degradation may arise not from insufficient intervention, but from cascaded compensatory responses across governance layers. This produces a positive feedback loop: frequent high-layer intervention → increased mid-layer buffering → increased local workaround → increased structural drift → increased escalation signal → further high-layer intervention.
+
+#### Success and Failure Conditions
+
+The same cascade structure produces divergent outcomes depending on a single discriminating condition: whether compensatory adaptation reduces disturbance magnitude (energy dissipation) or reduces observability (signal suppression).
+
+| Condition | Success (Energy Dissipation) | Failure (Signal Suppression) |
+|---|---|---|
+| L1 micro-error | Present — sensing maintained | Eliminated — sensing lost |
+| L2 buffering | Transparent — no distortion accumulation | Opaque — reality loss accumulates |
+| L3 intervention | Rare — no overshoot | Frequent — cascade acceleration |
+| Upward feedback | Open — drift correctable | Blocked — drift invisible |
+
+**Discriminating rule.** A layered governance system functions correctly when compensatory adaptations reduce escalation frequency across layers. Failure occurs when compensation reduces observability instead of disturbance magnitude.
+
+#### Cross-Domain Evidence
+
+The intervention cascade pattern is observable across operationally distinct domains:
+
+- **Large-scale service operations.** Google's SRE error budget deliberately permits bounded operational failure, maintaining L1 sensing. Zero-incident targets produce alert suppression cascades ending in major outages.
+- **Safety-critical automation.** CRM in aviation preserves L1 upward feedback. The Boeing 737 MAX MCAS failure exhibits the opposite: L2 concealed L3 design errors from L1, producing cascade amplification.
+- **Machine learning alignment.** Moderate regularization preserves local variance (L1 micro-error). Aggressive RLHF produces signal suppression cascade: reward mediator (L2) eliminates uncertainty signals, producing refusal inflation, reasoning degradation, and mode collapse.
+
+These systems differ in domain, scale, and implementation, but exhibit identical layered compensation dynamics. The intervention cascade mechanism provides the structural explanation for the Intervention Frequency Law: monotonically decreasing intervention frequency across layers is required precisely because frequency inversion triggers the positive feedback loop from energy dissipation to signal suppression.
+
+### 15.2 Single-Agent Failure Mapping
+
+Observed single-agent failure modes exhibit structural signatures consistent with the multi-layer governance dynamics described above:
+
+| TLG Failure | Single-Agent Proxy | Empirical Reference |
+|---|---|---|
+| Signal Starvation | Catastrophic forgetting — detection pathways lost through overwriting | Li et al. (EMNLP 2024) |
+| Interpretation Capture (MDS) | RLHF over-optimization — reward mediator suppresses exploration | Guo et al. (TACL 2025) |
+| Epistemic Convergence | Self-consistent misalignment — all metrics healthy within wrong frame | Rath (2026) |
+| Stability Saturation | Mode collapse — output diversity collapses under optimization | GAN mode collapse; LLM sampling collapse (Guo et al., 2025) |
+| Immunity Decay | Spurious forgetting — unused capabilities degrade silently | ICLR 2025 |
+| MDS (Tier 2 drift) | Hallucination in RAG — retrieval layer drifts from source fidelity | Lin et al. (2025) |
+
+These mappings treat single-agent internal subsystems as implicit multi-agent systems — a framing consistent with current mechanistic interpretability research.
+
+### 15.3 Architecture Constraints Summary
+
+| Constraint | Mechanism | Prevents |
+|---|---|---|
+| No layer exempt from observation | Calibration Reflexivity Loop | MDS at any layer |
+| Disagreement as health signal | Disagreement rate monitoring | Epistemic Convergence |
+| Periodic controlled perturbation | Perturbation test protocol | SSS / Silent Criticality |
+| Minimum exploration breadth | Exploration floor even when exploitation more efficient | Immunity Decay |
+| freq(L1) > freq(L2) > freq(L3) | Intervention frequency monitoring | Dependency Trap |
+| Processing phase isolation | Interface Narrowing + Temporal Decoupling + Write-Asymmetry | Lateral contamination |
+
+### 15.4 Comparison with Existing Frameworks
+
+| Framework | What It Provides | What TLG Adds |
+|---|---|---|
+| **Beer VSM (1972)** | 5-system recursive viability model | Unifies coordination+adaptation with ρ measurement; formal failure dynamics via MDS |
+| **Ostrom (1990)** | Polycentric governance design principles | Derives structure from resolution mismatch; adds staged escalation + failure topology |
+| **CTDE / MARL** | Centralized training, decentralized execution | Runtime governance for post-deployment; addresses reward signal drift |
+| **Constitutional AI / RLHF** | Training-time alignment | Runtime architecture when alignment drifts; immunity decay + frequency law |
+| **MAST (Cemri et al. 2025)** | Empirical failure classification | Predictive framework: failure topology + cycle interruption strategy |
+
+### 15.5 Structural Validation Without Simulation
+
+TLG does not validate outcomes; it validates explanatory necessity. The claim is not that TLG predicts novel failures, but that independently observed failure invariants across unrelated domains require a structural model to become mutually intelligible. Without a layered governance model, the following observations remain disconnected: SRE error budgets succeed by permitting micro-failures; CRM succeeds by enabling lower-authority agents to override higher-authority decisions; moderate RLHF produces alignment while aggressive RLHF produces reasoning collapse. TLG provides the minimal structural model consistent with these independently observed failure invariants.
+
+The validation strategy follows three steps: domain-independent recurrence (same failure topology across unrelated domains), topology equivalence (success and failure conditions map to the same structural positions), and mechanism alignment (countermeasures that work correspond to the same structural interventions).
+
+### 15.6 Non-Commutativity of Spatial and Temporal Axes
+
+Intervention topology (TLG's domain) and rule evolution dynamics (GRT's domain) interact but are analytically non-commutative: changing where intervention occurs alters how rules evolve, and changing how rules evolve alters where intervention is needed — but the two transformations do not produce the same result in either order. This non-commutativity is why separate formal treatment is required rather than a single unified model. Mediator Drift Syndrome, for example, is a topological phenomenon (L2-specific) that produces rule lifecycle consequences (degraded calibration), but it cannot be reduced to rule dynamics alone; similarly, rule over-convergence is a lifecycle phenomenon that disrupts intervention routing, but cannot be reduced to topology alone.
+
+### 15.7 Scope and Limitations
+
+TLG does not claim to replace existing alignment techniques; it adds an intervention topology layer. TLG does not claim three layers are the only possible architecture; it claims three layers constitute the minimal sufficient architecture satisfying invariant preservation, local adaptive freedom, and resolution translation simultaneously. This is a structural argument, not a proof of optimality. All metrics remain at the theoretical stage without empirical validation. Threshold values (τ1–τ3) require system-specific operational history. Tier 3 resolution (design resolution) has no formal measure — this is an open frontier. The single-agent failure mappings are structural correspondences, not proofs of multi-agent applicability. Cascade convergence is characterized qualitatively; formal convergence bounds require system-specific damping parameters and remain future work.
+
+### 15.8 Reproducibility Protocol
+
+To facilitate empirical testing, the following protocol specifies what must be measured: (1) per-layer activity counts (MARK events at L1, containment events at L2, correction events at L3) logged with timestamps; (2) escalation frequency per evaluation window (event-count and wall-clock dual windows); (3) classification accuracy at L2 measured against held-out ground truth; (4) perturbation response: controlled input injection at L1 with measurement of escalation latency and cross-layer propagation pattern; (5) intervention frequency ratios: freq(L1)/freq(L2)/freq(L3) tracked over time. Any multi-agent system that logs these five quantities can test TLG's predictions.
+
+### 15.9 Empirical Path
+
+Four empirical directions are immediately accessible: (1) controlled multi-agent simulation comparing type-based versus threshold-based escalation routing; (2) processing isolation experiment measuring classification diversity with and without lateral exchange; (3) MDS detection validation via controlled θd drift injection, measuring Cross-Scale Consistency Check detection latency; (4) perturbation testing protocol validation in production LLM systems to verify SSS and Silent Criticality discrimination.
+
+---
+
 ## Conclusion
 
 Governance in multi-agent systems is not about suppressing diversity. It is about **structuring instability**.
