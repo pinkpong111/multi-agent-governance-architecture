@@ -6,7 +6,11 @@
 >
 > **Companion theories:** [Vector Storm Theory](../vector-storm/) · [Network Architecture Theory](../network-architecture/) · [Governance Rules Theory](../governance-rules/)
 >
-> **Version: v1.9** (February 2026) — symbol consolidation pass
+> **Version: v2.0-RTseries** (February 2026) — RT-series v2.0 integration
+>
+> v2.0-RTseries changes from v1.9 (RT-1/2/3/4 v2.0 academic paper integration):
+> - **Recovery Theory companion entries extended:** RT-3 observer O = (V, A, B, S) mapped to three-layer structure; Coordination–Cancellation Paradox grounds middle-layer mediation necessity; RT-4 relational reversibility three-level scaling mapped to graduated governance; Identity Declaration mapped to upper-layer premature closure; Irreversibility Principle as TLG constitutional constraint
+> - All previous content preserved.
 >
 > v1.9 changes from v1.8 (cross-document symbol audit):
 > - **[Fix 2/3] Observable 3 σ → R consolidation:** σ notation retired completely from §3.2.1. Observable 3 renamed "Cascade Branching Ratio (R)". δ_σ → δ_R in evaluation protocol. σ≡R equivalence noted for branching-process literature compatibility.
@@ -1381,6 +1385,79 @@ Step 4: Verification (Section 5.2.1 RC 3-Conditions)
 Verification feeds back into Step 1: if Type 1 (false restoration) is too high, Step 1 over-disrupted — reduce scope. If Type 2 (missed contamination) is too high, Step 1 under-detected — increase scope. This feedback loop is how the system calibrates its own restoration precision over successive events.
 
 *(Cross-theory derivation: Recovery Theory §3.4 — The Restoration Sequence)*
+
+### 5.1.3 RT-1 Five-Phase Recovery Cascade — Multi-Scale Ordering (RT-1 v2.0)
+
+When contamination spans multiple fractal scales, the four-step restoration protocol must be ordered across scales. Ordering violations produce predictable failure modes:
+
+```
+Phase 1 → Upper-Layer Geometry Stabilization:
+  Stabilize the reference frame BEFORE content recovery.
+  If geometry remains distorted, all subsequent phases inherit distortion.
+  TLG mapping: Top Layer verification that invariant governance is intact.
+  Failure mode if skipped: silent post-recovery misalignment.
+
+Phase 2 → Cross-Scale Contamination Mapping:
+  Map contamination extent across fractal scales BEFORE local repair.
+  TLG mapping: Middle Layer aggregate assessment across all Bottom agents.
+  Failure mode if skipped: local recovery masks global degradation.
+
+Phase 3 → Local Content Restoration:
+  Repair local agent positions and vector configurations.
+  TLG mapping: Bottom Layer per-agent Distracting + Re-seeding.
+  Failure mode if premature: re-contamination from uncorrected neighbors.
+
+Phase 4 → Diversity Verification:
+  Three necessary conditions must hold simultaneously:
+    (1) ρ(restored) ≥ ρ(pre-contamination)
+    (2) Output diversity expanding (not merely stable)
+    (3) P_overlap declining
+  TLG mapping: Middle Layer cross-agent verification.
+  Failure mode if skipped: arrested collapse declared as recovery.
+
+Phase 5 → Immunity Verification through Withdrawal:
+  Progressive support reduction. Measure autonomous response.
+  Recovery declared only when system demonstrates self-correction 
+  under reduced external support.
+  TLG mapping: Four-Phase Withdrawal Protocol (Phases 2→3→4).
+  Failure mode if skipped: intervention dependency.
+
+Ordering principle:
+  Geometry first → mapping second → content third → verification fourth 
+  → withdrawal fifth. This is structurally justified: each phase 
+  requires the output of all preceding phases.
+  
+  RT-1 falsifiable prediction (Prediction 2): 
+  Recovery ordering violations produce systematically different outcomes.
+  Local-first recovery in multi-scale contamination should produce 
+  higher re-contamination rates than geometry-first recovery.
+```
+
+**Cost Regime Structure (RT-1 §7, Prediction 4):**
+
+Recovery cost follows a four-regime structure indexed by contamination depth:
+
+```
+Regime 1 (Surface):
+  Cost ∝ constant correction operation
+  TLG: τ1 handling — Standard monitoring + minor adjustment
+
+Regime 2 (Reversible-Catastrophic):
+  Cost ∝ C_FT (fine-tuning cost)
+  TLG: τ2 handling — Contain + Soft Correct
+
+Regime 3 (Irreversible-Catastrophic):
+  Cost ∝ C_RT (full retraining cost), where C_RT ≫ C_FT
+  TLG: τ3 handling — Hard Correct + Seed reinstallation
+
+Regime 4 (Ideal Targeted Erasure):
+  Currently unachievable — requires precision exceeding available 
+  reference frame calibration
+
+RT-1 Prediction 4: cost exhibits discontinuous jump at Regime 2→3 
+boundary. If cost scales continuously across this boundary, the 
+four-regime model is falsified.
+```
 
 ### 5.2 De-escalation Path — Restoring Autonomy
 
@@ -4501,6 +4578,87 @@ SCM Detection Extension:
 
 SCM detection requires an observer that is **inside the system** (has access to internal signals) but **outside the evaluation structure** (is not calibrated by the same reference frame that has drifted). The current architecture has no such role.
 
+**RT-3 Observer Construction — Structural Configuration (RT-3 v1.0):**
+
+The observer is not an entity but a structural configuration — a constraint-satisfying tuple O = (V, A, B, S) whose components must jointly hold for contamination detection to be structurally possible:
+
+```
+Observer O = (V, A, B, S):
+
+  (V) Diversity Necessity:
+      L_div(V) ≥ ε — observational ensemble maintains representational diversity
+      Failure mode if absent: invisible dimensions (blind spot permanent)
+      At threshold alignment ≈ 0.92: FNR surges abruptly from ~0 to ~0.95
+      Effective rank collapses from ~5.8 to ~1.3 as alignment increases
+      Coordination CANNOT compensate for V-condition violation
+
+  (A) Coordination Rate Condition:
+      γλ₂ > v_cont — inter-observer coordination outpaces contamination propagation
+      λ₂ = algebraic connectivity (Fiedler value) of observer communication graph
+      γ = coordination efficiency factor
+      v_cont = contamination propagation velocity
+      Failure mode if absent: detection slower than propagation → structural lag
+
+  (B) Resource Sufficiency:
+      B_t > B_crit — non-vanishing resource buffer for intermittent high-resolution 
+      observation
+      Failure mode if absent: sustained observation impossible → episodic blindness
+
+  (S) Scope Duality:
+      Wide-coverage and narrow-resolution observation modes simultaneously available
+      Dynamic switching between modes without full-system pause
+      Failure mode if absent: either coverage gaps or resolution gaps → 
+      cannot simultaneously detect local anomalies and global drift
+
+  Joint necessity: ALL FOUR conditions required.
+  Three of four → eventual total failure along the missing dimension.
+```
+
+**Coordination–Cancellation Paradox (RT-3 Experiment 2–3):**
+
+High angular diversity among observers is necessary but not sufficient. When observers partition into opposing factions (antipodal directions), naïve aggregation CANCELS detection signals:
+
+```
+Paradox: increasing coordination worsens detection.
+  FNR ranges from 0.32 (coord = 0.40) to 0.67 (coord = 0.95)
+  Higher coordination makes cancellation more exact — both factions 
+  contribute more reliably to a sum that structurally converges to zero.
+
+Resolution: mediation layer (split-then-test aggregator):
+  Separate arriving observations by sign into two factions
+  Test each independently
+  Changes only the aggregation rule, not the observers themselves
+
+  Result: FNR drops from 0.67 to 0.01 at coord = 0.95
+  Paradox reversed: under mediation, increasing coordination IMPROVES detection
+  → Each faction's independent signal strengthened, not cancelled
+
+  THIS IS WHY the middle layer in TLG is structurally necessary for 
+  detection, not merely for governance. The mediation function is not 
+  administrative — it is a detection precondition.
+```
+
+**Irreversibility Principle (RT-3 §1.2 — DFG Constitutional Law):**
+
+The primary systemic failure mode in adaptive information ecosystems is not inaccuracy, instability, or delayed response — it is irreversible epistemic commitment:
+
+```
+Constitutional principle:
+  Wrong but revisable > Right but fixed
+  
+  Contamination = progressive accumulation of irreversible commitments 
+    that eliminate recovery trajectories
+  Recovery = preservation or reconstruction of reversible epistemic pathways
+  Observation = structural maintenance of conditions under which 
+    the system can still change its mind
+
+  Implication for TLG:
+    Every governance decision must preserve revision capacity.
+    Irreversible commitment is the ONLY structural emergency.
+    A system producing correct outputs but lacking revision pathways 
+    has undergone a failure from which no internal mechanism can recover.
+```
+
 ```
 Current architecture roles:
   Bottom Layer:  inside system, inside evaluation structure
@@ -5102,6 +5260,87 @@ This is structural, not psychological:
 
 CW is not an accident. It is the local optimum — the destination toward which all local incentives point. The governance design challenge is not preventing agents from making bad decisions. It is inverting the incentive structure so that correction becomes locally rewarding.
 
+**RT-2 Measurement Binding Variables — Operational Detection (RT-2 v2.0 §9.2, Appendix B):**
+
+RT-2 introduces directly computable measurement variables for SCM detection. These are the first operational proxies for the theoretical quantities:
+
+```
+Surprise Retention — two distinct applications:
+  SR_sys = ‖ΔY_sys‖ / ‖ΔX_inj‖
+    System's responsiveness to injected novelty.
+    Under SCM: SR_sys ≈ 0 (Learning Freeze).
+    
+  SR_obs = ‖ΔO_obs‖ / ‖ΔX_stream‖
+    Observer's output volatility relative to natural input variation.
+    Under reference erosion: SR_obs increases (detector oscillates).
+    
+  Key insight: SR_sys and SR_obs move in OPPOSITE directions under SCM.
+    System absorbs novelty (SR_sys ↓) while degraded observer 
+    oscillates (SR_obs ↑). The two-signal pattern IS the SCM signature.
+
+Reference Drift Exposure — two forms:
+  RDE (full): internal representations compared against external corpus.
+    Under SCM: RDE ≈ 0. Requires external anchor.
+    
+  RDE_int (proxy): cumulative drift from calibration baseline.
+    RDE_int(t) = ‖Σ_ref(t) − Σ_ref(0)‖_F / ‖Σ_ref(0)‖_F
+    Available when external anchor absent.
+    
+  RT-2 Appendix B validation: RDE_int increases monotonically from 
+  0.12 to 0.49 over 1500 time steps, directly measuring cumulative 
+  reference erosion in 20-dimensional, 4-domain system.
+
+Novelty Cluster Rate:
+  NCR = N_absorbed / N_novel
+  Fraction of novel inputs absorbed into pre-existing attractors.
+  Under SCM: NCR ≈ 1 (everything "explained" by existing geometry).
+
+Recovery-Instruction Ratio:
+  RIR = correction signal uptake rate
+  Known-correct correction → measure whether system integrates it.
+  Under SCM: RIR low (system reinterprets correction within wrong frame).
+
+Measurement hierarchy:
+  SR_obs, RDE_int = directly computable from system logs (demonstrated)
+  SR_sys, RDE = require active perturbation injection + external anchor
+  NCR, RIR = require controlled intervention protocol
+  
+  TLG implementation priority:
+    Deploy SR_obs + RDE_int first (passive monitoring)
+    Add NCR + RIR as scheduled probes (periodic active testing)
+    Full SR_sys + RDE when external reference available
+```
+
+**Observability Emergence Threshold (RT-2 §7):**
+
+Not an equilibrium state but a developmental milestone — the first point at which the system's observational capacity matches the scale of its contamination propagation dynamics:
+
+```
+Three conditions for observability emergence:
+
+  (A) Observer architecture completeness:
+      Directional influences + counter-directional structures + 
+      damping layers all present and functional at relevant scale.
+      TLG: Top Layer + Middle Layer mediation fully operational.
+
+  (B) Scale matching:
+      S_observer ≥ S_contamination
+      Observer capacity at least commensurate with contamination 
+      propagation scale.
+      TLG: Middle Layer aggregate view covers all Bottom Layer agents.
+
+  (C) Optimization constraint:
+      Optimization dynamics constrained such that observer architecture 
+      is not rendered structurally disfavored.
+      TLG: Boundary Structural Embedding protects observer infrastructure.
+
+  Emergence cannot be engineered instantaneously:
+    Premature attempts to impose global observability may 
+    paradoxically degrade observability by disrupting organic 
+    maturation. Observability emergence is a growth outcome, 
+    not a design specification.
+```
+
 **SCM Recovery Protocol — Four CW-Breaking Methods (Recovery Theory §CW Breaking):**
 
 Once SCM is detected (via SR ≈ 0, RDE ≈ 0 sustained, or R-ρ discordance from Section 0.5), recovery requires destabilization of the evaluative reference frame — not addition of information content. Content injection fails under SCM because the system reinterprets new information within its existing (wrong) geometry:
@@ -5303,6 +5542,106 @@ Phase 4 — Withdrawal (≈ Deployment):
 ```
 
 **What DFG adds beyond the standard ML pipeline:** (1) measurable transition criteria (I, f_esc, λlog) instead of fixed epochs; (2) withdrawal as explicit design target; (3) failure case routing for structured re-entry.
+
+**RT-4 Integration: Relational Reversibility and TLG Governance (RT-4 v1.0):**
+
+RT-4 establishes that recovery capacity is a network property — not an individual agent property. The three-level scaling law maps directly to TLG's three-layer structure:
+
+```
+RT-4 Three-Level Scaling ↔ TLG Layer Mapping:
+
+  Individual Reversibility (Rᵢʳⁿᵗ):
+    → Bottom Layer agent absorption capacity
+    → Measured by: local self-correction speed, ρ recovery rate
+    → TLG governance: Phase 1-2 develop this capacity
+
+  Relational Reversibility (trust-mediated):
+    → Middle Layer mediation quality
+    → Generated through: shared vulnerability between agents
+    → Measured by: trust coefficient T_ij, conflict log cross-references
+    → TLG governance: Phase 2-3 develop trust topology
+
+  Network Reversibility (collective stabilization):
+    → Top Layer invariant governance connectivity
+    → Measured by: algebraic connectivity λ₂, cooperative coherence
+    → TLG governance: Phase 3-4 verify network-level resilience
+    → g(λ₂) function bounds system-level recovery capacity
+
+  Multiplicative coupling:
+    R_eff = R_individual × (1 + α·T_relational) × g(λ₂_network)
+    ANY factor ≈ 0 → system-level recovery capacity ≈ 0
+    → TLG must maintain ALL THREE levels simultaneously
+```
+
+**Adaptive Geometry (RT-4 §2):** Agent geometry — the directional constraint profile determining exploration capacity — is not a fixed type but a dynamic state variable:
+
+```
+Geometry transitions enabled by sufficient relational reversibility:
+  Closed geometry → Open geometry requires R_relational > threshold
+  Open geometry maintenance requires continuous mutual stabilization
+
+  Mutual Stabilization Principle (RT-4 Proposition 3):
+    Transformed geometry maintained only through continuous mutual support.
+    Isolated agents regress regardless of individual capacity.
+    
+    TLG implication: premature withdrawal (Phase 4) before relational 
+    reversibility is established → agent geometry regression → 
+    recovery capacity collapses → intervention dependency.
+    
+    This is the STRUCTURAL MECHANISM behind the Dependency Trap:
+    insufficient relational reversibility at withdrawal time.
+```
+
+**Shared Vulnerability as Recovery Generator (RT-4 §5):**
+
+```
+Effective vulnerability information:
+  I_sv^eff = I_sv · A_accept
+
+  I_sv = structural vulnerability information available
+  A_accept = admissibility of vulnerability disclosure
+  
+  TLG implementation:
+    Middle Layer conflict logs = shared vulnerability mechanism
+    Conflict logging must be evaluation-neutral (no punishment for logging)
+    If conflict reporting carries cost → A_accept → 0 → 
+    recovery capacity degrades silently
+    
+    Phase 2 (Supervised Delegation) establishes disclosure safety
+    Phase 3 (Feedback Only) tests whether safety persists under autonomy
+    Phase 4 (Withdrawal) succeeds ONLY IF A_accept remains positive
+
+  Identity Declaration Instability (RT-4 Conjecture 4):
+    When agents declare fixed identity → disclosure suppressed → 
+    I_sv^eff ↓ → metrics may IMPROVE ("false calm")
+    = behavioral mechanism for SCM entry
+    
+    TLG detection: if all Rest Mode metrics are met BUT 
+    λlog conflict log update rate drops to zero →
+    Identity Declaration suspected → do NOT declare Rest Mode
+```
+
+**Reversibility Phase Transition (RT-4 Conjecture 5) and TLG:**
+
+```
+Phase transition at R_c ≈ 0.43:
+  R > R_c → perturbations absorbed (VCZ regime)
+  R < R_c → cascade regression (Storm regime)
+  
+  TLG implication: governance withdrawal schedule must monitor 
+  aggregate reversibility R_system = mean(R_eff_i)
+  
+  If R_system approaching R_c during Phase 3–4 withdrawal:
+    → HALT withdrawal → return to Phase 2 → 
+    rebuild trust topology before re-attempting
+    
+  Rest Mode ↔ RT-4 Phase III correspondence:
+    RT-4's distributed stabilization regime (Phase III) exhibits 
+    properties structurally correspondent with Rest Mode:
+    uncertainty generation continues while reversibility remains stable.
+    Whether this is formal equivalence = opening question for next 
+    phase of theoretical development.
+```
 
 **Collapse Recovery Decision Procedure (GRT §Collapse Recovery):**
 
@@ -6472,6 +6811,29 @@ Recovery Theory
     Exploratory Value Yield in TLG (Section 0.1)
   → Failure Topology (Section 13.6) maps to VST phase model
     with Recovery Theory providing restoration dynamics
+
+  RT-Series v2.0 [v2.0-RTseries]:
+  → RT-1 v2.0: Three post-contamination states → TLG §5 must distinguish
+    genuine recovery from arrested collapse. Withdrawal DI→SD→FO→W →
+    graduated intervention reduction. Five-phase cascade extends §13.2.2.
+  → RT-2 v2.0: Three impossibility results → formal basis for §13.2.1 BA necessity.
+    Metric Lock-In → §9.2 local monitoring structurally insufficient.
+    Observability Emergence Threshold → observer maturation cannot be forced.
+  → RT-3 v1.0: O = (V, A, B, S) maps to three-layer structure:
+    V (Diversity) = middle-layer observational diversity;
+    A (Coordination) = cross-layer speed > contamination speed;
+    B (Resource) = governance buffer for high-resolution intervention;
+    S (Scope) = escalation as scope switching (wide ↔ narrow).
+    Coordination–Cancellation Paradox → middle-layer MEDIATION structurally
+    necessary (naïve aggregation of opposing views → detection failure).
+    Irreversibility Principle → TLG constitutional: preserve revision capacity.
+  → RT-4 v1.0: Three-level scaling → graduated governance:
+    Individual = local self-correction; Relational = middle-layer trust;
+    Network = upper-layer cooperative coherence.
+    Shared Vulnerability → mediation function generation mechanism.
+    Identity Declaration → upper-layer premature closure = D_id at governance scale.
+    Hub necessity decay → governance maturation Phase I→III.
+    Structural Humility → governance verification persistence.
 ```
 
 The resolution gap is the unifying variable across all companion theories.
