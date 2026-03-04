@@ -6,7 +6,28 @@
 >
 > **Companion theories:** [Vector Storm Theory](../vector-storm/) · [Network Architecture Theory](../network-architecture/) · [Governance Rules Theory](../governance-rules/)
 >
-> **Version: v2.0-RTseries** (February 2026) — RT-series v2.0 integration
+> **Version: v2.2-expanded** (March 2026) — scaling dynamics, buffer architecture, and contamination theory expansion
+>
+> v2.2-expanded changes from v2.1-expanded (GRT scaling/buffer integration pass):
+> - **Section 3 (Three-Layer Structure) expanded:** Buffer-as-Resolution-Interface formalization — Middle Layer reinterpreted as dynamic noise-vector transformer with dimension-adaptive extraction; Buffer Differentiation Dynamics (4 types); Buffer Existence Theorem; Buffer Maturation Indicators (immature/mature/over-mature lifecycle)
+> - **Section 5.3.1 (Immunity Decay) expanded:** Optimal Friction Maintenance Protocol — zero-friction paradox, friction calibration band, pre-failure terrain reconnaissance; Buffer Health Monitoring with maturation lifecycle integration
+> - **Section 6 (Distributed Mediation) expanded:** Buffer-as-Vector-Space-Constructor theory — convergence field creation, boundary permeability through narrow passage design; Buffer Management Structure (direct/indirect management principle); Buffer Visibility Paradox
+> - **Section 7 (External Invariant Channel) expanded:** Hierarchical North Star Architecture — Global/Local North Star separation, Criterion vs Principle distinction, Map-Terrain Correction Strategy with primary/secondary correction hierarchy; Eyes-Feet-North Star operational model
+> - **Section 11 (Resource-Aware Governance) expanded:** Circular Closure as Scaling Mechanism — open-chain-to-closed-loop transformation, scale-specific closure radius, fractal circle-of-circles; Dimensional Compression Theory (n_total ↑ but n_global ≈ const); Terrain Design Principles with formal terrain opening protocol; Contamination Flux Model (Φ_i = P_i · max(0, S_i − R_i)); Self-Purification Capacity decomposition (R_i = D_i · F_i · V_i · T_i); Optimal Contamination Regime
+> - **Section 13.1.1 (MDS) expanded:** Contamination as Bottom-Up Phenomenon — contamination origin theory with upward propagation dynamics; Self-Purification Capacity as MDS resistance metric; Contamination Containment Protocol before propagation; Terrain Maturation as MDS prevention mechanism
+> - **Section 14.1 (Fractal Governance) expanded:** Middle-Layer Centrality Thesis — middle layer as autonomous stabilization engine vs. conventional transmission-belt model; Dimension-Crossing Coordination Buffer as Local North Star correction engine; Buffer Network Architecture for contamination containment + learning preservation
+> - **Conclusion expanded:** Scaling Resolution synthesis, System Maturity Signatures (immature/mature/fully-mature)
+> - All previous content preserved.
+>
+> v2.1-expanded changes from v2.0-RTseries (full-document expansion pass):
+> - **Section 1 (Governance Problem Statement) expanded:** Resolution Incompatibility Theorem, Governance Cost Paradox, Four Failure Modes of Flat Governance with cross-mapping to Four Structural Risks
+> - **Section 2 (Resolution Mismatch) expanded:** Formal three-component mismatch characterization (Δ_class, Δ_trans, Δ_temp), Mismatch Amplification Cycle (4-stage), RT-3 Observer mapping to resolution mismatch as observation problem
+> - **Section 7 (External Invariant Channel) expanded:** Channel architecture options (Broadcast/Gossip/Hierarchical), Invariant Channel Integrity via T4, Invariant Classification Taxonomy (Constitutional/Architectural/Operational), RT Irreversibility Principle connection
+> - **Section 8 (Invariant Update Model) expanded:** Regular Update Protocol (4-phase lifecycle), Emergency Update Protocol with structural constraints, Update Conflict Resolution, Invariant Evolution Paradox
+> - **Section 12 (Governance Mechanism Mapping) expanded:** Mechanism Interaction Matrix, Mechanism Failure Cascade analysis, Temporal Sequencing of Mechanism Activation with diagnostic deviations, Cross-Domain Mechanism Equivalence Table
+> - **Section 15 (Paper-Specific Additions) expanded:** Extended Validation Evidence (4 post-v1.0 confirmations), Non-Commutativity formal statement, Explicit Scope Boundaries, Extended Reproducibility Specifications (5 instruments), Extended Empirical Research Program (3-tier experimental design)
+> - **Conclusion expanded:** Minimal Sufficiency Argument (3-requirement proof), Observation-Governance Duality, Coordination-Cancellation Paradox as architectural necessity
+> - All previous content preserved.
 >
 > v2.0-RTseries changes from v1.9 (RT-1/2/3/4 v2.0 academic paper integration):
 > - **Recovery Theory companion entries extended:** RT-3 observer O = (V, A, B, S) mapped to three-layer structure; Coordination–Cancellation Paradox grounds middle-layer mediation necessity; RT-4 relational reversibility three-level scaling mapped to graduated governance; Identity Declaration mapped to upper-layer premature closure; Irreversibility Principle as TLG constitutional constraint
@@ -869,6 +890,86 @@ The deeper problem is that these approaches treat instability as a behavior prob
 
 The structural problem is not diversity. It is **unmediated interaction across incompatible resolutions**.
 
+**The Resolution Incompatibility Theorem — Why Direct Governance Fails:**
+
+The claim that direct governance across resolution levels is structurally inadequate can be stated more precisely. Consider a global constraint C specified at resolution ρ_high and a local agent A operating at resolution ρ_low, where ρ_high > ρ_low:
+
+```
+Direct application of C to A requires:
+  A must interpret C at ρ_high   → impossible (A operates at ρ_low)
+  A must compress C to ρ_low     → meaning distortion (semantic loss)
+  A must comply without understanding → compliance without internalization
+
+All three paths produce the same structural outcome:
+  The agent's behavioral surface appears aligned.
+  The agent's internal geometry is not modified.
+  → Compliance without structural change.
+  → First novel perturbation outside the compliance pattern → failure.
+```
+
+This is not a practical difficulty. It is a structural impossibility: a system operating at resolution ρ_low cannot faithfully represent constraints specified at resolution ρ_high without a translation mechanism that preserves the constraint's structural content while reformulating its operational form. This translation mechanism is precisely what the Middle Layer provides.
+
+**The Governance Cost Paradox:**
+
+Traditional governance faces a paradox that becomes acute at scale: the cost of governance itself generates the instability governance is designed to prevent.
+
+```
+Governance cost generation cycle:
+  1. System instability detected → governance intervention deployed
+  2. Intervention requires coordination across affected agents
+  3. Coordination generates interaction pathways (new n² load)
+  4. Interaction load creates secondary instability
+  5. Secondary instability requires additional governance
+  → Positive feedback: governance becomes its own instability source
+
+This paradox is unsolvable within flat architectures because:
+  Every governance action occupies the same resolution as the agents it governs.
+  Governance signals and agent signals compete for the same processing bandwidth.
+  There is no structural separation between "correcting the system" and
+  "adding load to the system."
+```
+
+The three-layer architecture resolves this paradox by routing governance through a dedicated resolution level. The Middle Layer's governance signals occupy a different abstraction level from agent operations — they do not compete for the same processing bandwidth. This is not a resource optimization. It is a structural separation that makes governance cost orthogonal to operational load.
+
+**Four Failure Modes of Flat Governance:**
+
+Existing multi-agent governance architectures exhibit four characteristic failure modes, each traceable to the absence of resolution mediation:
+
+```
+Mode 1 — Over-specification Paralysis:
+  Global constraints specified in detail sufficient to prevent all violations
+  → Detail level forces agents into narrow behavioral corridors
+  → Exploration capacity → 0
+  → System stable but incapable of adaptation
+  Observable: high compliance, zero innovation, brittle under novel perturbation
+
+Mode 2 — Under-specification Chaos:
+  Global constraints specified loosely to permit exploration
+  → Constraint ambiguity permits incompatible interpretations
+  → Agent behaviors diverge until collision
+  → Collisions generate escalating coordination load
+  Observable: high diversity, frequent crises, governance overwhelmed
+
+Mode 3 — Oscillating Control:
+  System alternates between tight and loose governance
+  → Tight phase: Mode 1 failure accumulates
+  → Switch to loose: Mode 2 failure erupts
+  → Switch back to tight: agents lose trust in governance stability
+  Observable: policy oscillation, agent cynicism, structural hysteresis
+
+Mode 4 — Centralized Bottleneck:
+  All conflict resolution routed through single governance node
+  → Node processing capacity = system ceiling
+  → Beyond capacity → queue formation → resolution delay → escalation
+  → Queue itself generates secondary instability
+  Observable: governance latency proportional to system size,
+  performance degradation at scale
+```
+
+All four modes share the same root: they attempt to govern across a resolution gap without mediating it. TLG does not add better governance at the same level. It inserts a structural layer that makes mediation a system property rather than a governance task.
+
+*(Cross-theory connection: These four failure modes map to the Four Structural Risks (Section 14.1.1) — Mode 1 = ①Exploration Collapse, Mode 2 = ②Runaway Amplification, Mode 3 = ③Geometry Mismatch (oscillating reference frame), Mode 4 = ④Coordination Breakdown)*
+
 ---
 
 ## 2. Resolution Mismatch as Governance Failure
@@ -886,6 +987,122 @@ Direct interaction between these layers produces:
 - **Escalating coordination loops**
 
 > **Governance failure is therefore a resolution mismatch problem.**
+
+**Formal Characterization of Resolution Mismatch:**
+
+Resolution mismatch is not a scalar quantity. It has structure — and the structure determines which failure mode it produces:
+
+```
+Let ρ_G = resolution of global constraint specification
+    ρ_A = resolution of local agent operation
+
+Mismatch vector: Δ = ρ_G − ρ_A
+
+Δ has three independent components:
+
+  Δ_class = classification resolution gap
+    Global: "violation" defined precisely (fine boundary)
+    Local: "violation" detected coarsely (broad boundary)
+    → False negatives when Δ_class > 0 (agent cannot see violations)
+    → False positives when Δ_class < 0 (agent sees violations that aren't)
+
+  Δ_trans = translation resolution gap
+    Global: constraint meaning specified in governance-level abstractions
+    Local: agent interprets in operational-level categories
+    → Semantic distortion: agent "understands" the constraint differently
+    → Most dangerous because both sides believe communication succeeded
+
+  Δ_temp = temporal resolution gap
+    Global: constraints evaluated over long windows
+    Local: agents operate on short timescales
+    → Behavior that looks compliant at short timescale may violate at long
+    → Behavior that looks non-compliant at short timescale may comply at long
+    → Over-correction of short-term deviations kills long-term adaptation
+```
+
+**The Mismatch Amplification Cycle:**
+
+Resolution mismatch is not a static condition. Without mediation, it amplifies through a predictable cycle:
+
+```
+Stage 1 — Misclassification accumulation:
+  False positives and negatives accumulate.
+  Each misclassification produces a governance action (or inaction)
+  that is structurally inappropriate.
+
+Stage 2 — Correction distortion:
+  Inappropriate governance actions modify agent behavior.
+  Modified behavior is further misclassified.
+  Correction distortion compounds: the system is now correcting
+  for the effects of its own corrections.
+
+Stage 3 — Trust erosion:
+  Agents whose exploration is repeatedly misclassified as violation
+  learn to suppress exploration.
+  → Diversity collapses
+  → But diversity collapse is invisible to the governance layer
+    because it manifests as "compliance" — the absence of violation signals.
+
+Stage 4 — Catastrophic surprise:
+  The now-homogeneous system encounters a novel perturbation.
+  No agent has the diversity to respond adaptively.
+  System-wide failure — not because governance was absent,
+  but because governance without mediation destroyed the diversity
+  that would have provided resilience.
+```
+
+This cycle is the dynamic expression of the resolution mismatch. It explains why well-intentioned governance produces worse outcomes than no governance at all in some systems — a paradox that becomes intelligible once the resolution structure is made explicit.
+
+**Why Adding More Governance Cannot Fix Resolution Mismatch:**
+
+The intuitive response to governance failure is to add more governance: more monitoring, more constraints, more intervention. This response fails because it increases the volume of governance actions without changing their resolution:
+
+```
+More governance at the same resolution:
+  More classification events → more misclassification events
+  More correction events → more correction distortion
+  More monitoring → more false positives → more suppression of exploration
+  
+  Net effect: amplifies Stage 1–4 cycle faster.
+
+The only structural response:
+  Insert a layer that operates between the two resolutions.
+  → Mediation, not amplification.
+  → Translation, not repetition.
+  → This is the Middle Layer.
+```
+
+**RT-3 Observer Mapping — Why Resolution Mismatch Is an Observation Problem:**
+
+Recovery Theory's Observer formalism O = (V, A, B, S) reveals that resolution mismatch is fundamentally an observation problem. Each governance layer observes the layers below through its own Observer structure:
+
+```
+Top Layer Observer: O_top = (V_top, A_top, B_top, S_top)
+  V_top: views the system through invariant-level abstractions
+  A_top: acts through invariant enforcement
+  B_top: boundary between what top layer can and cannot perceive
+  S_top: state representation at invariant resolution
+
+Bottom Layer Observable: actual agent behavior at operational resolution
+
+Resolution mismatch = O_top.V ≠ actual structure of bottom-layer behavior
+  → Top layer literally cannot see what bottom layer is doing
+  → Not because of information hiding, but because of resolution incompatibility
+  → This is T4 (Reference Frame Incompleteness) operating in real-time
+
+Middle Layer Observer: O_mid = (V_mid, A_mid, B_mid, S_mid)
+  V_mid: views both layers through translation-capable lens
+  A_mid: acts through mediated signals (not direct correction)
+  B_mid: boundary calibrated to both abstraction levels
+  S_mid: state representation that bridges both resolutions
+
+  → Middle layer resolves the observation gap
+  → Not by seeing more, but by seeing at the right resolution
+```
+
+This Observer mapping is not metaphorical. It is a formal specification: the Middle Layer's Observer structure must be capable of representing both the Top Layer's invariant abstractions and the Bottom Layer's operational variability within a single coherent state representation. This dual-representation capability is what makes mediation possible and is what no amount of Top-Layer enhancement can achieve — because the Top Layer's Observer is structurally committed to invariant-level resolution.
+
+*(Cross-theory derivation: RT-3 Observer formalism + T4 Reference Frame Incompleteness)*
 
 ---
 
@@ -920,6 +1137,166 @@ Detects conflict amplification and translates across abstraction levels. Prevent
 ### Bottom Layer — Operational Diversity
 
 Generates local exploration and performs task specialization. Adapts to environmental variation. **Local autonomy is preserved within defined boundaries.**
+
+### 3.0.1 Buffer-as-Resolution-Interface — Middle Layer Reconceptualization
+
+The Middle Layer is conventionally understood as a static mediation interface — a translator between incompatible abstraction levels. This section reconceptualizes the Middle Layer as a **dynamic noise-vector transformer**: a space that exists in a noise state (low visibility, minimal inertia) and coheres to vector form only at criticality.
+
+**Why the Middle Layer is a buffer, not a filter:**
+
+```
+Filter model (conventional):
+  Input → Classification → Route to correct layer
+  Fixed rules, deterministic routing, continuous operation
+  Problem: filter cannot transform what it doesn't recognize
+  → novel inputs are either misclassified or discarded
+
+Buffer model (this architecture):
+  Input → Absorption into noise state → Pattern accumulation
+  → Critical threshold → Vector cohere → Dimensional extraction
+  
+  The buffer does not classify inputs.
+  It holds them in a dimensionally flexible space
+  until sufficient pattern accumulates to form a vector.
+  
+  Key property: the buffer is lightweight BECAUSE it is emptied
+  of fixed directionality. It carries no permanent orientation.
+  → Can absorb inputs from any direction without distortion.
+  → Can extract vectors along any dimension as context demands.
+```
+
+**Dimension-Adaptive Vector Extraction:**
+
+The Middle Layer buffer can extract different vector types based on the dimensional needs of the current situation:
+
+```
+1st-order extraction (data vectors):
+  Real-time state readings, metric values, direct observations
+  → Extracted when immediate operational decisions needed
+  → Lowest abstraction, highest temporal resolution
+  → Typical activation: τ1 threshold events
+
+2nd-order extraction (meta-data vectors):
+  Patterns across data, trends, delay structures, correlation profiles
+  → Extracted when pattern-level governance decisions needed
+  → Medium abstraction, medium temporal resolution
+  → Typical activation: τ2 threshold events, MDS detection
+
+3rd-order extraction (meta-meta vectors):
+  Coordinate system distortion, criterion drift, geometry misalignment
+  → Extracted when structural governance decisions needed
+  → Highest abstraction, lowest temporal resolution
+  → Typical activation: τ3 threshold events, SCM detection
+
+The same buffer extracts all three orders.
+This is possible BECAUSE the buffer maintains no fixed dimensional orientation.
+A filter locked to 1st-order extraction cannot detect 3rd-order distortion.
+A buffer in noise state can cohere along any dimensional axis.
+```
+
+**Buffer Differentiation Dynamics — From Unified to Specialized:**
+
+As the system matures, the initially unified buffer differentiates into specialized sub-buffers through repeated pattern handling:
+
+```
+Initial state: Single multi-function buffer
+  Handles all types: lower↔lower, upper↔lower, buffer↔buffer
+  Advantage: maximum flexibility
+  Disadvantage: no specialization, slower processing
+  
+Maturation trigger: Repeated pattern handling
+  Specific pathways solidify through use
+  → Pathway becomes faster but narrower
+  → Differentiation begins
+
+Four differentiated buffer types emerge:
+
+  Type 1 — Lower↔Lower coordination buffer:
+    Mediates between bottom-layer agents
+    Handles lateral conflict resolution
+    Reduces p_lateral escalation volume
+    → Equivalent to peer-coordination mediator
+    
+  Type 2 — Upper↔Lower coordination buffer:
+    Translates between invariant definitions and operational reality
+    Handles τ1→τ2 escalation mediation
+    → Core mediation function (conventional middle layer)
+    
+  Type 3 — Buffer↔Buffer coordination buffer:
+    Mediates between differentiated buffer types
+    Handles meta-coordination (coordination of coordination)
+    → Emerges latest, requires all other types functional
+    
+  Type 4 — Dimension-Crossing coordination buffer:
+    Crosses between abstraction levels (1st↔2nd↔3rd order)
+    Handles Local North Star correction (Section 7)
+    → MOST CRITICAL: enables structural self-correction
+    → Fixes misalignment between local and global reference frames
+    → Without Type 4: system can only correct within current frame
+       With Type 4: system can correct the frame itself
+```
+
+**Buffer Existence Theorem:**
+
+```
+Theorem: Buffer existence is more important than buffer perfection.
+
+Proof sketch:
+  Case 1 — Buffer absent:
+    External perturbation → direct shock to core structure
+    No absorption space → immediate structural damage
+    Recovery requires reconstruction from zero
+    → Fatal: O(reconstruction) cost
+    
+  Case 2 — Buffer present but defective:
+    External perturbation → absorbed into buffer (partially)
+    Some leakage to core, but attenuated
+    Buffer defect is a learning opportunity
+    → Tolerable: O(correction) cost << O(reconstruction) cost
+    
+  Consequence: Premature specialization (eliminating defective buffers
+  in favor of optimized pathways) removes the absorption space entirely.
+  The system trades O(correction) cost for O(reconstruction) risk.
+  
+  Operational implication:
+    Phase 1: Ensure buffer EXISTS (any quality)
+    Phase 2: CULTIVATE buffer capability (improve quality)
+    Phase 3: DIFFERENTIATE buffer types (specialize)
+    Never skip Phase 1. Never rush Phase 3.
+```
+
+**Buffer Maturation Indicators:**
+
+```
+Immature buffer:
+  Always active, high visibility, single function
+  Processes everything, specializes in nothing
+  High energy cost, low efficiency
+  Signal: constant Middle Layer activation even during calm periods
+
+Mature buffer:
+  Normally invisible, activates only at criticality
+  Differentiated functions, context-appropriate extraction
+  Low energy cost, high efficiency
+  Signal: Middle Layer appears idle but responds instantly to perturbation
+  
+  The "air-like" property: effective buffers are invisible
+  (like air — unnoticed until absent, then immediately fatal)
+  High leverage despite low visibility
+
+Over-mature buffer:
+  Excessive buffering → signal suppression
+  → legitimate escalation signals attenuated
+  → τ1 events absorbed that should reach τ2
+  → Silent Criticality risk (Section 9.2.1)
+  Signal: buffer thickness stable but perturbation response delayed
+          Recovery time increasing despite apparent health
+          
+Buffer health = small friction maintained + large friction absent
+              + feedback loops active + differentiation appropriate to scale
+```
+
+*(Cross-theory derivation: GRT §Buffer Architecture + §Scaling Dynamics)*
 
 **Three Structural Operations — Fractal Governance Logic (GRT §Fractal Signal Structure):**
 
@@ -1852,6 +2229,120 @@ success → fewer perturbations encountered
 > Maturity is not immunity from collapse.
 > It is the ability to repeatedly recover before collapse becomes visible.
 
+**Optimal Friction Maintenance Protocol — The Zero-Friction Paradox (GRT §Buffer Architecture):**
+
+The immunity decay pathways above share a common structural cause: the elimination of friction. This section formalizes why some friction is not merely tolerable but architecturally necessary.
+
+```
+The Zero-Friction Paradox:
+  Zero friction → coordinate system distortion undetectable
+  → map-terrain alignment cannot be verified
+  → silent drift accumulates
+  → when novel perturbation arrives, response capacity is absent
+  
+  Paradox: the very success that eliminates friction
+           eliminates the signal that friction provided
+           → success makes failure invisible
+
+  This is NOT the same as intentional perturbation testing (countermeasure ②).
+  Perturbation testing is ACTIVE — scheduled, controlled, measured.
+  Optimal friction is PASSIVE — maintained as environmental property.
+  
+  The distinction matters:
+    Active testing verifies recovery pathways at discrete intervals.
+    Passive friction maintains calibration sensitivity continuously.
+    Both are required — neither substitutes for the other.
+```
+
+**Friction Calibration Band:**
+
+```
+Too little friction (F < F_min):
+  Self-purification capacity atrophies (immune system disuse)
+  Coordinate system distortion accumulates undetected
+  Map-terrain alignment drift → Pathway 1 immunity decay
+  Signal: all metrics green, response time on rare events increasing
+  
+Optimal friction (F_min ≤ F ≤ F_max):
+  Self-purification capacity maintained through continuous use
+  Map-terrain alignment verified through natural variation
+  Pre-failure terrain reconnaissance enabled
+  Learning distortion prevented (small corrections prevent large shock learning)
+  Signal: occasional τ1 events, fast recovery, stable diversity metrics
+
+Too much friction (F > F_max):
+  Excessive correction overhead, system cannot stabilize
+  Recovery capacity consumed by continuous response
+  Reserve depletion (RT §Energy Substrate)
+  Signal: elevated τ1/τ2 rates, declining SCC, reserve metrics falling
+
+Calibration:
+  F_min = minimum friction at which self-purification capacity R_i
+          remains above atrophy threshold over evaluation window W
+  F_max = maximum friction at which SCC remains above τ4 threshold
+  
+  F_optimal ∈ [F_min, F_max]
+  Band width = F_max − F_min
+  
+  Narrow band (F_max ≈ F_min): fragile system, tight control required
+  Wide band (F_max >> F_min): robust system, self-regulating
+  Band width as system health indicator: wider = healthier
+```
+
+**Pre-Failure Terrain Reconnaissance:**
+
+Maintained friction enables a capability that zero-friction systems lack: the system continuously explores the territory just beyond its current operating envelope.
+
+```
+With maintained friction:
+  τ1 events occur → Middle Layer processes them
+  Each τ1 event reveals: local terrain shape, perturbation response profile,
+                          recovery pathway activation time
+  → System builds a "near-boundary map" of potential failure modes
+  → When genuine crisis arrives, response pathways are pre-explored
+  
+Without maintained friction:
+  No τ1 events → Middle Layer idle
+  → No near-boundary information accumulated
+  → When crisis arrives, system faces unknown terrain
+  → Response is improvised, not pre-mapped
+  → Recovery time dramatically longer (exploration + response vs. response only)
+
+Metaphor: the difference between a firefighter who trains weekly
+          and one who hasn't entered a burning building in years.
+          Both hold the title. Only one will perform.
+```
+
+**Buffer Health as Friction Indicator (Section 3.0.1 connection):**
+
+The buffer maturation indicators from Section 3.0.1 provide the operational measurement for friction calibration:
+
+```
+Immature buffer + high friction:
+  Expected during bootstrapping → normal
+  
+Mature buffer + optimal friction:
+  Desired steady state → healthy
+  Buffer invisible, activates instantly at perturbation
+  Small frictions processed, large frictions absent
+
+Mature buffer + zero friction:
+  Over-mature buffer risk → dangerous
+  Buffer pathway atrophy beginning
+  Perturbation response time increasing
+  → Trigger countermeasure ② (calibration stress test)
+  → AND introduce environmental variation to restore passive friction
+
+Over-mature buffer + zero friction:
+  Silent Criticality in progress → critical
+  Buffer suppressing legitimate signals
+  System appears perfectly stable while dying
+  → Immediate intervention: controlled instability injection
+  → Reset buffer differentiation if Type 4 (dimension-crossing) atrophied
+```
+
+*(Cross-theory derivation: GRT §Buffer Architecture + §Contamination Theory + §Optimal Friction)*
+
 **Rest Mode Entry/Exit Formalization — AND/OR Asymmetry (VST §3.5.5):**
 
 The τ4 regime (Rest Mode) requires concrete operational conditions for entry and exit:
@@ -2295,6 +2786,136 @@ Central mediation must not become a bottleneck. Therefore:
 
 Autonomy increases as internal stability improves.
 
+### 6.0.1 Buffer-as-Vector-Space-Constructor — Middle Layer as Space Designer (GRT §Buffer Architecture)
+
+The Middle Layer's deepest function is not vector adjustment but **vector space construction**: creating the convergence fields within which lost or misaligned vectors can find their correct positions. This reframes mediation from reactive correction to proactive environment design.
+
+**From Vector Adjustment to Space Design:**
+
+```
+Conventional mediation model:
+  Vector arrives misaligned → Middle Layer adjusts vector → vector re-placed
+  Problem: requires knowing the correct position in advance
+  → Cannot handle novel vectors with no known correct position
+  → Cannot handle vectors whose correct position depends on context
+
+Space construction model:
+  Middle Layer creates convergence field
+  → Misaligned vectors naturally drift toward correct positions
+  → Novel vectors find their position through field interaction
+  → Context-dependent positions emerge from field dynamics
+  
+  The Middle Layer does not place vectors.
+  It creates the space in which vectors place themselves.
+```
+
+**Convergence Field Properties:**
+
+```
+A convergence field has three structural properties:
+
+1. Attractor landscape:
+   Low-energy positions where vectors naturally settle
+   Shaped by existing vector distribution + invariant constraints
+   → Vectors approaching the field are drawn toward compatible positions
+   
+2. Repulsion boundaries:
+   High-energy barriers between incompatible positions
+   Shaped by processing isolation requirements (Section 10)
+   → Vectors cannot settle in positions that violate isolation constraints
+   
+3. Passage architecture:
+   Narrow channels between adjacent attractor basins
+   Shaped by Lreinf (reinforcement loop) topology
+   → Vectors can transit between positions through defined pathways
+   → Boundary permeability controlled through passage width
+   
+The field is not static — it evolves as vectors are added and removed.
+But it changes slowly relative to vector dynamics within it.
+This timescale separation is what makes the field useful:
+vectors move quickly within a slowly-evolving landscape.
+```
+
+**Buffer as Boundary Crosser — Coordinate System Translation:**
+
+The most sophisticated buffer function is crossing between coordinate systems — temporarily inhabiting another layer's reference frame, reading vectors in that frame, and re-projecting to the original frame.
+
+```
+Why boundary crossing is necessary:
+  Each layer operates in its own coordinate system.
+  Top Layer: invariant-space coordinates (what must not change)
+  Bottom Layer: operational-space coordinates (what can change)
+  Middle Layer: must read BOTH coordinate systems
+  
+  This requires more than translation (mapping between known systems).
+  It requires INHABITATION — temporarily adopting the other system's perspective.
+  
+  Translation: knows the dictionary between languages
+  Inhabitation: thinks in the other language temporarily
+  
+  The difference matters because:
+    Translation preserves the translator's frame → distortion when frames diverge
+    Inhabitation adopts the other frame → sees what the other frame sees
+    → Can detect frame-level distortion that translation would miss
+    → Can identify intersection (교집합) only visible when both frames understood
+```
+
+**Buffer Management Structure — Direct vs. Indirect:**
+
+```
+Upper layer manages upper buffers DIRECTLY:
+  Low distortion risk — same coordinate system
+  Direct specification of buffer parameters acceptable
+  → Calibration commands, threshold settings, protocol updates
+  
+Upper layer manages lower buffers INDIRECTLY:
+  High distortion risk — different coordinate systems
+  Direct management causes distortion (upper-frame commands
+  misinterpreted in lower-frame context)
+  → Indirect management: criterion constraints only, not directives
+  → "Must maintain self-purification capacity R_i > threshold"
+     NOT "Adjust parameter X to value Y"
+  
+  Why the distinction matters:
+    Direct management of lower buffers = micromanagement through mediation
+    → Defeats the purpose of the buffer architecture
+    → Creates MDS vulnerability (Section 13.1.1)
+    → Eliminates lower buffer's adaptive capacity
+    
+    Indirect management = terrain shaping
+    → Preserves lower buffer autonomy within constraints
+    → Buffer adapts to local conditions while satisfying global criteria
+    → Self-purification capacity maintained through autonomous operation
+```
+
+**Buffer Visibility Paradox:**
+
+```
+Effective buffers are invisible.
+  Like air: unnoticed until absent, then immediately fatal.
+  High leverage despite low visibility.
+  
+  This creates a governance problem:
+    Invisible components receive no resources.
+    Invisible components are first to be optimized away.
+    → T6 optimization pressure (Section 13.2.1) targets buffers first
+    → The most critical components are most vulnerable to elimination
+  
+  Resolution:
+    Buffer presence must be measured INDIRECTLY:
+    Not "is the buffer active?" (mature buffers are rarely active)
+    But "does perturbation response show buffer-mediated absorption?"
+    
+    Perturbation → immediate response = no buffer (direct pathway)
+    Perturbation → delayed, attenuated response = buffer present
+    
+    The delay IS the buffer's signature.
+    Systems that respond instantly to everything have no absorption space.
+    → Fragile under novel perturbation (no buffer to absorb unknown input)
+```
+
+*(Cross-theory derivation: GRT §Buffer-as-Vector-Space-Constructor + §Buffer Management)*
+
 ### 6.1 Seed Mediation — Fractal Propagation of Governance
 
 The internal mediation layer is not a compressed copy of the central mediation layer.
@@ -2737,6 +3358,264 @@ Certain governance metadata must remain universal across all agents:
 
 These are updated through an **external invariant channel** and are not locally learned.
 
+**Why Invariant Universality Is a Structural Requirement, Not a Design Choice:**
+
+The invariant channel's universality is not imposed for convenience. It is a structural necessity derived from the resolution mediation architecture:
+
+```
+If invariant metadata varies across agents:
+  Agent A's escalation schema ≠ Agent B's escalation schema
+  → A sends escalation signal in format_A
+  → B cannot parse format_A → signal dropped
+  → Middle Layer receives incompatible signals from A and B
+  → Translation between agents requires additional mediation layer
+  → Infinite regress: each translation layer requires its own invariants
+  
+  Resolution: invariant metadata is universal by structural necessity.
+  The invariant channel is the fixed point that terminates the translation regress.
+```
+
+**Channel Architecture — Broadcast vs. Gossip vs. Hierarchical:**
+
+The invariant channel can be implemented through multiple distribution architectures. Each has structural trade-offs:
+
+```
+Broadcast (single-source, all-agents):
+  Advantages: consistency guaranteed, update is atomic
+  Disadvantages: single point of failure, latency proportional to n
+  Appropriate when: invariant set is small, update frequency is low
+  TLG recommendation: default for emergency updates
+
+Gossip (peer-to-peer propagation):
+  Advantages: robust to single-node failure, scales sub-linearly
+  Disadvantages: eventual consistency only, transient inconsistency window
+  Appropriate when: invariant set is large, exact simultaneity not required
+  TLG recommendation: default for regular updates
+  
+  Consistency constraint: gossip propagation of invariant updates
+  must complete within one evaluation window W.
+  If propagation time > W, some agents operate under stale invariants
+  during the propagation window — producing a transient resolution mismatch
+  at the invariant level itself.
+
+Hierarchical (layer-mediated cascading):
+  Advantages: mirrors governance architecture, natural priority routing
+  Disadvantages: dependent on Middle Layer health, cascade delay
+  Appropriate when: invariant updates require layer-specific translation
+  TLG recommendation: default when invariant updates affect τ thresholds
+```
+
+**Invariant Channel Integrity — The Channel Cannot Govern Itself:**
+
+A critical structural property of the invariant channel: it cannot verify its own integrity from within. This is a direct application of T4 (Reference Frame Incompleteness):
+
+```
+The invariant channel defines what invariants are.
+Therefore it cannot use invariants to verify itself.
+→ Invariant channel integrity requires external verification.
+→ This is the irreducible role of the Boundary Agent (Section 13.2.1)
+  at the invariant level.
+
+Operational implementation:
+  Invariant channel checksum (cryptographic hash of current invariant set)
+  maintained independently by Boundary Agent.
+  Any modification to invariant set → checksum mismatch → immediate alert.
+  
+  This is structural, not procedural:
+  The Boundary Agent's reference frame is external to the invariant channel.
+  It can detect modifications that the channel itself cannot distinguish
+  from legitimate updates.
+```
+
+**Invariant Classification Taxonomy:**
+
+Not all invariants have the same status. The invariant channel carries three structurally distinct categories:
+
+```
+Category 1 — Constitutional Invariants:
+  Cannot be modified by any internal process.
+  Modification requires external authority (human oversight or Boundary Agent).
+  Examples: authority separation principle, processing phase isolation,
+            irreversibility conditions.
+  Update frequency: never (by definition).
+  
+Category 2 — Architectural Invariants:
+  Can be modified through formal update model (Section 8).
+  Modification requires cross-layer consensus.
+  Examples: escalation schema, τ threshold structure,
+            correction protocol format.
+  Update frequency: rare (system-level learning events).
+
+Category 3 — Operational Invariants:
+  Can be modified through regular update cycles.
+  Modification requires Middle Layer validation.
+  Examples: resource boundary values, identity boundary parameters,
+            communication format specifications.
+  Update frequency: periodic (evaluation window cycles).
+```
+
+This taxonomy prevents the common failure of treating all invariants as equally sacred (Category 1 inflation → system ossification) or equally mutable (Category 3 inflation → invariant erosion).
+
+**Connection to RT Irreversibility Principle:**
+
+The invariant channel's constitutional category maps directly to Recovery Theory's Irreversibility Principle: some structural properties, once lost, cannot be reconstructed from within the system. Constitutional invariants encode precisely these properties. Their protection through an external channel is not conservatism — it is the structural recognition that certain losses are permanent.
+
+```
+Constitutional invariant violation → Irreversibility Condition potentially triggered:
+  Authority separation lost → Condition 1 (Calibration Capacity Collapse) risk
+  Processing isolation lost → Condition 2 (Geometry Loss) risk  
+  Boundary Agent removed   → Condition 3 (Trust Topology Fragmentation) risk
+
+The invariant channel is therefore not just a communication mechanism.
+It is the system's protection against irreversible structural loss.
+```
+
+*(Cross-theory derivation: RT Irreversibility Principle + T4 Reference Frame Incompleteness)*
+
+### 7.0.1 Hierarchical North Star Architecture — Invariant as Fall Prevention (GRT §Scaling Dynamics)
+
+The invariant channel transmits what must not be violated. But this framing is incomplete: it specifies the content of invariants without specifying their structural relationship across scales. This section introduces the Hierarchical North Star Architecture — a framework for understanding how global invariants project onto local contexts without losing their essential character.
+
+**Global North Star vs. Local North Stars:**
+
+```
+Global North Star:
+  Existential constraint — fall prevention, not goal achievement
+  Specifies what the system MUST NOT become
+  Does NOT specify what the system SHOULD become
+  → Negative definition: "never cross this line"
+  → NOT positive definition: "move toward this point"
+  
+  Why negative, not positive:
+    Positive goals require terrain knowledge (what is achievable)
+    Terrain knowledge is local and incomplete
+    A global positive goal imposed on local terrain = forced compression
+    → Resolution mismatch at the invariant level itself
+    
+    Negative constraints require only boundary knowledge (what is fatal)
+    Boundary knowledge is more stable than terrain knowledge
+    → Negative constraints can be universal without causing compression
+
+Local North Stars:
+  Terrain-projected versions of the global North Star
+  Never 100% identical to global (terrain distortion is structural)
+  Continuously corrected toward global alignment
+  
+  Local North Star = Global North Star projected through local terrain
+  
+  The projection introduces distortion:
+    Flat terrain → minimal distortion (local ≈ global)
+    Complex terrain → significant distortion (local ≠ global)
+    → Distortion is not error — it is adaptation
+    → But distortion must be bounded (alignment maintained)
+```
+
+**Criterion vs. Principle — The Invariant Hierarchy:**
+
+```
+Criterion (기준):
+  Unchanging — defines existence boundary
+  Examples: system survival, balance preservation, identity maintenance
+  Properties:
+    Cannot be violated under any circumstances
+    Does not adapt to terrain
+    Same across all scales and all agents
+    → This is what the invariant channel protects
+
+Principle (원칙):
+  Terrain-adaptive — defines implementation methods
+  Examples: specific escalation protocols, correction strategies, seeding methods
+  Properties:
+    Can be adapted to local conditions
+    Changes as terrain changes
+    Varies across scales and agents
+    → This is what local autonomy governs
+
+Hierarchy: Criterion > Principle
+  When Principle conflicts with Criterion → Criterion wins
+  When Principle conflicts with Principle → resolve through mediation
+  When Criterion appears to conflict with Criterion → coordinate system error
+    (Criteria cannot genuinely conflict because they define the same boundary)
+    Apparent conflict = resolution mismatch in the observer, not in the criteria
+
+This distinction resolves a common governance confusion:
+  "When do we change the rules vs. when do we change the approach?"
+  Answer: Criteria never change. Principles change as terrain demands.
+  If the current principle doesn't work, change the principle.
+  If no principle works, the terrain has shifted — update the map, not the criterion.
+```
+
+**Map-Terrain Correction Strategy:**
+
+```
+When map (internal model) disagrees with terrain (external reality):
+
+Primary correction — Adjust terrain (lower cost):
+  Change the operational approach to match the map's intent
+  Preserves frame stability (map = reference frame)
+  Appropriate when: terrain is local and modifiable
+  
+  Example: if agents are not meeting performance criteria,
+           adjust the operating conditions (terrain)
+           rather than redefining performance (map)
+
+Secondary correction — Update map (higher cost):
+  When terrain adjustment fails repeatedly
+  Indicates the map has become systematically wrong
+  → Map update = principle revision
+  → NOT criterion revision (criteria never change)
+  
+  Example: if no operational adjustment produces the desired outcome,
+           the internal model of what works has become incorrect
+           → revise principles (how to achieve)
+           → preserve criteria (what to achieve)
+
+Fall signal — When map and terrain diverge beyond correction:
+  Map says the system is fine, terrain shows the system is failing
+  OR: terrain says the system is fine, map predicts failure
+  → This disagreement IS the fall signal
+  → Triggers τ3 escalation: Top Layer intervention
+  → Map-terrain divergence beyond correction threshold = structural crisis
+
+  The North Star's function: not "point this direction"
+  but "you are about to fall — stop, recalibrate, then proceed"
+```
+
+**Eyes-Feet-North Star Operational Model:**
+
+```
+Feet (Bottom Layer — 하위):
+  Contact with terrain, exploration, deliberate contamination
+  Allowed to be dirty — contamination is the cost of exploration
+  Must maintain self-purification capacity (Section 11.1.x)
+  
+Eyes (Top Layer — 상위):
+  Balance monitoring, continuous scanning, boundary detection
+  Must stay clear — contamination of eyes = blindness
+  Cannot explore (exploring eyes = unfocused eyes)
+  
+Middle Layer (Buffer):
+  Purification and translation between feet and eyes
+  Converts contaminated foot-data into clean eye-data
+  Converts abstract eye-criteria into operational foot-parameters
+  → Buffer function is precisely this bidirectional translation
+  
+North Star:
+  Fall prevention reference
+  Not direction maximization — fall avoidance
+  "Am I about to fall?" takes priority over "Am I moving forward?"
+  
+  The check: "Does the map agree with what my feet are touching?"
+  If yes → continue
+  If no → STOP. The disagreement is the fall signal.
+  
+  Map-terrain mismatch at the feet level = local correction (principle change)
+  Map-terrain mismatch at the eyes level = structural correction (map update)
+  Map-terrain mismatch at the North Star level = existential crisis (very rare)
+```
+
+*(Cross-theory derivation: GRT §North Star Architecture + §Map-Terrain Correction + §Criterion-Principle Hierarchy)*
+
 ### 7.1 Identity Boundary Principles — Definition
 
 Identity boundary principles define **exploration identity** rather than behavioral objectives.
@@ -2819,6 +3698,127 @@ Emergency updates are triggered only under conditions such as:
 - System-wide amplification collapse
 - Resource exhaustion
 - Multi-layer purification failure
+
+**Regular Update Protocol — Versioned Invariant Evolution:**
+
+Regular updates follow a structured lifecycle that prevents update-induced instability:
+
+```
+Phase 1 — Proposal:
+  Source: Middle Layer pattern detection or external observation
+  Content: specific invariant modification with structural justification
+  Constraint: proposal must specify which invariant category (Section 7)
+              is affected and why the current value is inadequate.
+  
+Phase 2 — Impact Assessment:
+  Middle Layer evaluates downstream consequences:
+    Which agents are affected?
+    What τ threshold shifts result?
+    Does the update create new resolution gaps?
+    Does the update conflict with existing invariants (Ic check)?
+  
+  Assessment output: compatibility report with risk classification
+    Low risk: update affects operational invariants only,
+              no cross-layer consequences
+    Medium risk: update affects architectural invariants,
+                 requires τ recalibration
+    High risk: update affects constitutional invariants or
+               creates new inter-invariant conflicts
+  
+Phase 3 — Staged Rollout:
+  Low risk: immediate broadcast, monitoring window = 1W
+  Medium risk: gradual propagation (10% → 50% → 100%),
+               monitoring window = 3W per stage
+  High risk: requires Boundary Agent verification before any propagation
+  
+  At each stage:
+    Monitor for: escalation rate change, classification error spike,
+                 SCC degradation, cross-layer consistency deviation
+    Rollback trigger: any monitored metric exceeds 2σ from baseline
+    
+Phase 4 — Consolidation:
+  Update propagated to all agents.
+  Old invariant version retired after grace period (2W minimum).
+  Conflict logs from transition period archived for future calibration.
+  θ_d recalibrated across all affected domains.
+```
+
+**Emergency Update Protocol — Controlled Autonomy Restriction:**
+
+Emergency updates trade local autonomy for system survival. This trade-off has structural limits:
+
+```
+Emergency update authority chain:
+  Detection: any layer can signal emergency condition
+  Authorization: Top Layer only (or Boundary Agent if Top Layer compromised)
+  Execution: invariant channel broadcast, immediate effect
+  Duration: bounded — emergency restriction must include termination condition
+
+Emergency update structural constraints:
+  1. Autonomy restriction must be minimum necessary:
+     Restrict only the parameters directly involved in the threat.
+     Preserve all other local autonomy.
+     → Prevents emergency from becoming permanent centralization.
+  
+  2. Termination condition must be measurable:
+     "When SCC returns to ≥ τ4 for affected agents" — acceptable
+     "When the crisis is over" — not acceptable (vague, permanent-capable)
+  
+  3. Post-emergency recalibration mandatory:
+     After emergency termination, affected agents undergo θ_d recalibration.
+     Emergency-period conflict logs are marked and analyzed separately.
+     → Prevents emergency calibration from contaminating steady-state baselines.
+
+  4. Emergency frequency monitoring:
+     freq(emergency) tracked over rolling window.
+     Rising emergency frequency → governance architecture inadequacy signal.
+     → The need for frequent emergencies means the regular governance
+       structure has a systematic gap.
+     → Response: architectural review, not faster emergency response.
+```
+
+**Update Conflict Resolution — When Invariants Contradict:**
+
+Invariant updates can create contradictions with existing invariants. The Ic (Meta-Contradiction Index) monitors this, but resolution requires a specific protocol:
+
+```
+Conflict types:
+  Direct: new invariant A' explicitly contradicts existing invariant B
+    → Resolution: one must yield. Category determines priority:
+      Constitutional > Architectural > Operational
+      Same category: older invariant has precedence unless
+                     explicit override is structurally justified.
+  
+  Indirect: new invariant A' creates a state space where existing
+            invariant B becomes unachievable
+    → Resolution: identify the constraint that must relax.
+      If neither can relax → the update is structurally impossible
+      under current architecture → escalate to Boundary Agent.
+  
+  Emergent: no direct or indirect conflict, but combined effect
+            produces unintended system behavior
+    → Resolution: monitor-and-adapt (not predictable in advance).
+      Detected through post-update monitoring window.
+      → Rollback if emergent behavior exceeds tolerance.
+```
+
+**The Invariant Evolution Paradox:**
+
+Invariants that never change become obsolete. Invariants that change too freely provide no stability. The update model resolves this by distinguishing immutability (constitutional invariants) from stability (architectural and operational invariants that change rarely and carefully). The system's long-term health depends on maintaining this distinction: a system that makes everything immutable ossifies; a system that makes everything mutable has no skeleton.
+
+```
+Healthy invariant evolution:
+  Constitutional: 0 updates per system lifetime
+  Architectural: < 1 update per 10W (rare, structural learning events)
+  Operational: ~ 1 update per 3-5W (periodic calibration adjustments)
+
+Pathological patterns:
+  All categories updating frequently → invariant erosion → no stable reference
+  No category updating → ossification → system cannot adapt to environment
+  Constitutional updating → Irreversibility Principle violation risk
+```
+
+*(Cross-theory derivation: GRT §Invariant Update Protocol + RT Irreversibility Principle)*
 
 ---
 
@@ -4022,6 +5022,430 @@ With structured lateral communication
 
 This is why lateral communication is a structural governance component, not an optional optimization. It is the primary mechanism by which n² pathway growth is decoupled from Middle layer load growth — and why its design (Section 10) directly constrains the expansion ceiling (Section 11.3).
 
+### 11.1.1 Circular Closure as Scaling Mechanism (GRT §Scaling Dynamics)
+
+The preceding analysis establishes that coordination cost grows as O(n²) and that lateral communication provides a constant-factor reduction. But constant-factor reduction does not change the scaling exponent — the system still hits a wall at sufficient n. This section introduces a structural mechanism that changes the scaling exponent itself: **circular closure**.
+
+**Why Linear Expansion Fails:**
+
+```
+Linear expansion model:
+  Add agent → add O(n) new interaction pathways → total grows as n²
+  Each new pathway = potential conflict = potential escalation
+  
+  The problem is not the number of agents.
+  The problem is that each new agent creates OPEN CHAINS of interaction
+  that do not close back on themselves.
+  
+  Open chain: A → B → C → D → ... (linear propagation)
+    Perturbation travels outward indefinitely
+    No natural feedback to origin
+    Coordination requires central authority to close the loop
+    → Central authority becomes bottleneck
+    
+  This is why centralized governance fails at scale:
+  every open chain must be closed by the center.
+  The center becomes the closure point for ALL chains simultaneously.
+  → O(n²) load on central closure point
+```
+
+**Circular Closure — The Structural Alternative:**
+
+```
+Circular closure model:
+  Expansion is not linear addition but structural reorganization.
+  Open chains are converted into closed loops.
+  
+  Closed loop: A → B → C → D → A (circular feedback)
+    Perturbation circulates within the loop
+    Natural feedback to origin (self-correction)
+    Coordination is internal to the loop
+    → No central authority needed for loop-internal dynamics
+    
+  The key insight:
+    Scaling is solved not by increasing capacity
+    but by converting open chains into closed loops.
+    
+    Each closed loop becomes self-correcting within its scope.
+    Central authority only handles INTER-LOOP coordination.
+    Inter-loop coordination = between loops, not between all agents.
+    → Effective n for central authority = number of loops, not number of agents
+```
+
+**Scale-Specific Closure Radius:**
+
+```
+Each scale requires its own closure radius.
+  Closure radius = the time/distance over which a feedback loop
+  can complete one full cycle.
+  
+  Small scale (individual agent):
+    Short closure radius
+    Fast feedback loops (milliseconds to seconds)
+    Self-correction at individual level
+    
+  Medium scale (agent group / team):
+    Medium closure radius
+    Medium feedback loops (minutes to hours)
+    Self-correction at team level
+    
+  Large scale (system-wide):
+    Large closure radius
+    Slow feedback loops (hours to days)
+    Self-correction at system level
+    
+  The critical constraint:
+    Closure radius must be TIME-MATCHED to the perturbation timescale
+    at that scale.
+    
+    If closure radius > perturbation timescale:
+      Feedback arrives too late → perturbation has propagated beyond loop
+      → Loop cannot self-correct → escalation to larger scale required
+      
+    If closure radius < perturbation timescale:
+      Feedback arrives before perturbation fully develops
+      → Premature correction → system cannot explore
+      → Exploration collapse (Structural Risk ①)
+      
+    Optimal: closure radius ≈ perturbation timescale × safety factor
+    Safety factor accounts for processing delay and measurement uncertainty.
+```
+
+**Fractal Circle-of-Circles:**
+
+```
+The scaling solution is not a single giant circle.
+It is a fractal structure: circles of circles.
+
+Level 0: Individual agents (smallest circles)
+  Each agent = self-correcting loop
+  Handles agent-internal perturbations
+  
+Level 1: Agent groups (circles of Level 0 circles)
+  Each group = self-correcting loop of agents
+  Handles intra-group perturbations
+  Group-internal coordination ≈ constant (bounded group size)
+  
+Level 2: Group clusters (circles of Level 1 circles)
+  Each cluster = self-correcting loop of groups
+  Handles inter-group perturbations
+  Cluster-internal coordination ≈ constant (bounded cluster count)
+  
+Level k: ...
+  At each level, the effective n for coordination = bounded constant
+  Total agents = product of level sizes = exponential growth
+  But effective coordination load at each level = constant
+  
+Result:
+  n_total ↑ exponentially
+  n_eff(per level) ≈ constant
+  Total coordination cost = O(k × n_eff) = O(log n_total × constant)
+  
+  Scaling: from O(n²) to O(n log n)
+  The exponent reduction comes from circular closure at each level.
+```
+
+### 11.1.2 Dimensional Compression Theory (GRT §Scaling Dynamics)
+
+Circular closure reduces the scaling exponent. Dimensional compression explains WHY it works: at each level of circular closure, the effective degrees of freedom are compressed.
+
+```
+Without dimensional compression:
+  n agents × d dimensions per agent = n·d total degrees of freedom
+  Interaction load: O((n·d)²) in worst case
+  
+With dimensional compression through circular closure:
+  Level 0: n₀ agents, d₀ dimensions each
+    Circular closure within groups → group-level output = summary vector
+    Summary vector dimensions: d₁ << n₀·d₀
+    
+  Level 1: n₁ groups, d₁ dimensions each
+    Circular closure within clusters → cluster-level output = summary vector
+    Summary vector dimensions: d₂ << n₁·d₁
+    
+  At each level: output dimensions << input dimensions
+  → Dimensional compression at every layer
+  → Upper layers operate on progressively lower-dimensional representations
+  
+  The compression is not information loss.
+  It is RESOLUTION-APPROPRIATE ABSTRACTION:
+    Lower layers: high-dimensional, high-variance, fast-loop
+    Upper layers: low-dimensional, summary-only, slow-loop, boundary-definition
+    
+  This IS the resolution separation that TLG architecture implements.
+  Three-layer governance is the structural instantiation of dimensional compression.
+```
+
+**Formal Statement:**
+
+```
+Let n_total = total agent count across all scales.
+Let n_global = effective degrees of freedom at the highest governance level.
+
+Dimensional Compression Theorem:
+  Under circular closure at each fractal level,
+  n_total ↑  but  n_global ≈ constant
+  
+  Proof sketch:
+    At each level k, circular closure produces output dimensionality:
+      d_{k+1} = g(d_k, m_k) where g is sublinear and m_k = group size at level k
+    
+    For bounded m_k (each group size bounded by constant M):
+      d_{k+1} ≤ c · d_k^α  for some α < 1
+    
+    Iterating: d_K ≤ c^K · d_0^{α^K}
+    As K → ∞: d_K → constant (converges to fixed point of g)
+    
+    n_global = d_K at highest level = bounded constant
+    n_total = M^K (exponential in depth)
+    
+    → n_global = O(1) while n_total = O(M^K) = exponential
+    → Governance load at top level is independent of total system size
+
+  This is why three-layer governance can work at arbitrary scale:
+    the three layers implement dimensional compression
+    such that the Top Layer always sees a bounded representation
+    regardless of how many agents the Bottom Layer contains.
+```
+
+### 11.1.3 Terrain Design Principles (GRT §Scaling Dynamics)
+
+Circular closure creates the loops. Dimensional compression bounds the coordination load. **Terrain design** determines where loops naturally close — creating the structural landscape that guides self-organization.
+
+**Terrain = Where Loops Naturally Close:**
+
+```
+Definition:
+  Terrain = the structural landscape in which internal circulation cost
+  is lower than external dependency cost.
+  
+  When internal circulation cost < external dependency cost:
+    Agents naturally form closed loops internally
+    → Self-correction emerges without external mandate
+    → Circular closure is a natural consequence of terrain shape
+    
+  When internal circulation cost > external dependency cost:
+    Agents depend on external coordination
+    → Open chains form (external dependency)
+    → Central bottleneck inevitable
+    
+  Terrain design = shaping the cost landscape so that
+  circular closure is the path of least resistance.
+```
+
+**Terrain Lifecycle — From Separation to Opening:**
+
+```
+Phase 1 — Separation by terrain:
+  Initial state: agents isolated in protected zones
+  Each zone = distinct terrain with minimal inter-zone connection
+  Purpose: allow independent internal loop formation
+  
+  Zone permeability P_i ≈ 0 (contamination blocked between zones)
+  Each zone develops its own circular closure pattern
+  No inter-zone coordination required
+  → Maximum autonomy, minimum coordination cost
+  
+Phase 2 — Internal maturation:
+  Self-purification capacity R_i grows within each zone
+  R_i = D_i · F_i · V_i · T_i (see Section 11.1.4)
+  → Zone can handle internal perturbations autonomously
+  
+Phase 3 — Controlled opening:
+  Opening condition: S_i / R_i < θ_open (safety margin)
+  Gradual permeability increase:
+    P_i: 0 → 0.1 → 0.3 → ... (stepwise, monitored)
+  Inter-zone interaction begins
+  → New interaction types encountered
+  → Self-purification capacity tested against novel perturbations
+  
+Phase 4 — Inter-zone loop formation:
+  Successful opening → inter-zone circular closure forms
+  → Level 1 circles emerge (circles of zones)
+  → Dimensional compression at zone boundary
+  → New terrain at inter-zone level
+  
+  If opening fails (contamination exceeds R_i):
+    P_i reduced → re-isolation → R_i rebuilt
+    → Retry opening when R_i recovered
+```
+
+### 11.1.4 Contamination Flux Model and Self-Purification Capacity (GRT §Contamination Theory)
+
+Terrain design requires formal models of contamination flow and recovery capacity. This section provides the mathematical framework for both.
+
+**Contamination Flux Definition:**
+
+```
+Φ_i = P_i · max(0, S_i − R_i)
+
+Where:
+  Φ_i = contamination flux from zone i to adjacent zones
+  P_i = boundary permeability of zone i (0 = sealed, 1 = fully open)
+  S_i = internal instability of zone i (S-equation value)
+  R_i = internal recovery capacity (self-purification) of zone i
+
+Interpretation:
+  When R_i > S_i: zone absorbs its own instability
+    → Φ_i = 0 regardless of permeability
+    → No contamination exported
+    
+  When S_i > R_i: instability exceeds recovery capacity
+    → Excess instability leaks through boundary
+    → Leakage rate proportional to permeability
+    → Contamination propagates to adjacent zones
+    
+  Containment condition for the system:
+    ∀i: Φ_i = 0  ⟺  ∀i: R_i ≥ S_i
+    Every zone's recovery capacity exceeds its instability
+    → Zero system-wide contamination flux
+    → Each zone is self-contained
+```
+
+**Self-Purification Capacity Decomposition:**
+
+```
+R_i = D_i · F_i · V_i · T_i
+
+Four multiplicative components (ALL required — product collapses to zero
+if any component is zero):
+
+D_i — Decoupling Strength:
+  Isolation from external coupling
+  High D: zone operates independently of adjacent zones
+  Low D: zone depends on adjacent zone state
+  → Low D means external instability propagates inward
+  → Self-purification impossible if zone cannot decouple from source
+  
+  Measurement: fraction of zone operations completable
+  without any inter-zone communication
+
+F_i — Feedback Density:
+  Error detection frequency within the zone
+  High F: errors detected quickly (many sensors, fast loops)
+  Low F: errors detected slowly (few sensors, slow loops)
+  → Low F means contamination accumulates undetected
+  
+  Measurement: mean time to detection of injected perturbation
+  (calibration stress test — Section 5.3.1 countermeasure ②)
+
+V_i — Variance Absorption:
+  Internal diversity — capacity to absorb novel perturbations
+  High V: diverse agents provide multiple response strategies
+  Low V: homogeneous agents share blind spots (Section 11.1 sphere topology)
+  → Low V means novel perturbation has no contrast baseline for detection
+  
+  Measurement: behavioral cluster count within zone
+  (diversity metric — Section 9.2.1 Exploration Variance Monitor)
+
+T_i — Time Buffering:
+  Recovery time allowance — slack between detection and correction
+  High T: sufficient time to process and correct before propagation
+  Low T: time pressure forces premature correction or uncorrected propagation
+  → Low T means even detected contamination cannot be properly corrected
+  
+  Measurement: ratio of mean recovery time to mean perturbation interval
+  T_i healthy when recovery time < perturbation interval
+  T_i critical when recovery time ≈ perturbation interval
+  T_i failed when recovery time > perturbation interval
+```
+
+**Contamination as Bottom-Up Phenomenon:**
+
+```
+Contamination originates at the bottom layer and propagates upward.
+  Bottom layer = terrain contact = contamination entry point
+  
+  Propagation path:
+    Bottom layer contaminated → buffer absorbs (partially)
+    → If buffer capacity exceeded → leakage to middle layer
+    → If middle layer self-purification exceeded → leakage to top layer
+    → Top layer contamination = system-wide crisis (Section 13.2)
+  
+  Containment principle:
+    Contamination must be contained BEFORE it propagates upward.
+    Each layer's self-purification capacity must exceed
+    the contamination flux from the layer below.
+    
+    R_bottom > Φ_environment    (bottom layer handles external contamination)
+    R_middle > Φ_bottom         (middle layer handles bottom-layer leakage)
+    R_top > Φ_middle            (top layer handles middle-layer leakage)
+    
+    If any inequality fails → contamination escalates to next level.
+    If R_top < Φ_middle → system-level contamination → external intervention required.
+```
+
+**Optimal Contamination Regime:**
+
+```
+Zero contamination is NOT optimal.
+  Zero contamination → self-purification atrophy
+  → immune system disuse → Pathway 2 immunity decay (Section 5.3.1)
+  → when contamination eventually arrives (inevitable), system cannot respond
+  
+Excessive contamination is NOT optimal.
+  Contamination > R_i → propagation → cascade → collapse
+  → system overwhelmed → Recovery Theory boundary conditions reached
+  
+Optimal regime: 0 < S_i < R_i
+  Contained instability as learning fuel
+  Self-purification exercised continuously
+  Recovery pathways maintained through use
+  Novel perturbation types encountered at manageable rate
+  
+  Mature systems DELIBERATELY MAINTAIN minimal contamination.
+  Not because they cannot eliminate it,
+  but because elimination would destroy the capacity to handle it.
+  
+  This connects directly to the Optimal Friction Maintenance Protocol
+  (Section 5.3.1): optimal friction IS optimal contamination.
+  The friction band [F_min, F_max] IS the contamination band [S_min = 0⁺, R_i].
+```
+
+**Terrain Opening Protocol — Formal Specification:**
+
+```
+Pre-condition:
+  Zone i with sealed boundary (P_i ≈ 0)
+  R_i measured and stable (self-purification capacity confirmed)
+  S_i < R_i (contained instability — not zero, not excessive)
+
+Step 1 — Safety margin check:
+  Compute safety ratio: γ_i = S_i / R_i
+  Require: γ_i < θ_open (default: θ_open = 0.5)
+  Margin: R_i has 2× headroom above current instability
+  
+Step 2 — Gradual permeability increase:
+  P_i: 0 → ΔP (small increment, default ΔP = 0.1)
+  Monitor: Φ_i over evaluation window W
+  
+Step 3 — Monitoring:
+  If Φ_i = 0 after window W:
+    → Opening successful at current permeability
+    → Increment P_i by another ΔP
+    → Repeat Step 3
+    
+  If Φ_i > 0 but Φ_i < Φ_max:
+    → Contamination present but contained by adjacent zones
+    → Hold current P_i, do not increment
+    → Monitor for stabilization (R_i adjusting to new load)
+    
+  If Φ_i > Φ_max:
+    → Contamination exceeding containment
+    → Reduce P_i to previous level
+    → Rebuild R_i with awareness of new contamination type
+    → Retry after R_i recovery
+
+Step 4 — Stabilization:
+  P_i stable at desired level
+  Φ_i = 0 sustained
+  New inter-zone interaction patterns integrated into terrain
+  → Zone i successfully opened
+  → Level 1 circular closure formation can begin
+```
+
+*(Cross-theory derivation: GRT §Scaling Dynamics + §Contamination Theory + §Self-Purification + §Terrain Design)*
+
 ### 11.2 The Two Bottleneck Types
 
 Expansion pressure creates two distinct bottleneck types that interact:
@@ -4174,6 +5598,134 @@ Mediation Layer      ← the layer that makes all others possible
 ```
 
 Reading the table as a static list misses this. The mechanisms form a **sequenced governance structure** — each activates at a different point in the distortion-correction cycle, and each hands off to the next when its scope is exceeded.
+
+**Mechanism Interaction Matrix — How Mechanisms Compose:**
+
+Governance mechanisms do not operate in isolation. Their interactions produce emergent governance properties that neither mechanism provides alone:
+
+```
+Mark × Contain:
+  Mark provides detection signal.
+  Contain provides boundary response.
+  Composition: Mark signal quality determines Contain precision.
+    High-quality Mark (accurate θ_d) → tight Contain boundary → minimal disruption.
+    Low-quality Mark (miscalibrated θ_d) → broad Contain → collateral damage.
+  → Mark quality is the rate-limiting factor for Contain effectiveness.
+
+Contain × Soft Correct:
+  Contain isolates the distortion.
+  Soft Correct provides directional correction.
+  Composition: Contain must hold long enough for Soft Correct to take effect.
+    Contain too brief → correction incomplete → relapse.
+    Contain too long → unnecessary autonomy restriction → agent learning blocked.
+  → Contain duration is calibrated to Soft Correct response time (N-step window).
+
+Soft Correct × Processing Phase Isolation:
+  Soft Correct injects reflective signal.
+  Processing Phase Isolation prevents lateral contamination during correction.
+  Composition: Soft Correct effectiveness depends on isolation maintenance.
+    Isolation maintained → correction affects target only → clean recovery.
+    Isolation breached → correction signal spreads laterally → overcorrection.
+  → Phase Isolation is a precondition for targeted Soft Correct.
+
+Hard Correct × Identity Seeding:
+  Hard Correct severs contamination loops.
+  Identity Seeding provides recovery direction after severance.
+  Composition: Hard Correct without preserved identity → directionless recovery.
+    Identity seed intact → Hard Correct followed by rapid re-orientation.
+    Identity seed contaminated → Hard Correct followed by drift → worse than before.
+  → Identity seed integrity is the recovery guarantee for Hard Correct.
+```
+
+**Mechanism Failure Cascade — When One Mechanism's Failure Propagates:**
+
+Each mechanism's failure creates a specific load on downstream mechanisms. The cascade structure is predictable:
+
+```
+Mark fails (θ_d miscalibrated):
+  → Contain receives wrong signals → overreacts or underreacts
+  → Soft Correct targets wrong distortions
+  → Hard Correct invoked for problems that weren't real
+  → System learns that governance is unreliable (trust erosion)
+  → Cascade endpoint: Authority Collapse via Signal Starvation (Section 5.6.1)
+
+Contain fails (boundary too porous):
+  → Distortion spreads before Soft Correct engages
+  → Soft Correct faces larger contamination area → less effective
+  → Hard Correct invoked prematurely and broadly
+  → Collateral damage to healthy agents
+  → Cascade endpoint: Diversity collapse from over-correction
+
+Processing Phase Isolation fails:
+  → Lateral attraction during processing → false convergence
+  → Mark cannot distinguish genuine from false convergence
+  → Contain targets genuine diversity (misidentified as violation)
+  → System converges toward monoculture
+  → Cascade endpoint: SSS/Silent Criticality (Section 9.2.1)
+
+Identity Seeding fails (over-specification):
+  → Agents lack genuine exploration direction
+  → All agents converge to prescribed patterns
+  → Mark receives no diversity signal → appears healthy
+  → Entire governance chain operates on false premise of health
+  → Cascade endpoint: Exploration Collapse (Section 14.1.1 ①)
+```
+
+**Temporal Sequencing of Mechanism Activation:**
+
+The mechanisms activate in a characteristic temporal sequence during a distortion event. Deviations from this sequence are themselves diagnostic:
+
+```
+Normal activation sequence:
+  t₀: Mark signals divergence (Bottom Layer)
+  t₁: Processing Phase Isolation verified (Middle Layer check)
+  t₂: Contain boundary adjusted if Mark persists (Middle Layer)
+  t₃: Soft Correct reflective signal if Contain insufficient (Middle Layer)
+  t₄: Hard Correct if Soft Correct fails (Top Layer activation)
+  t₅: Re-Align structural restoration (Top Layer)
+  
+  Expected: t₀ < t₁ < t₂ < t₃ < t₄ < t₅
+  Expected: most events terminate at t₁ or t₂
+  Expected: t₄-t₅ events are rare (< 5% of all Mark events)
+
+Diagnostic deviations:
+  t₄ activation without t₂ preceding:
+    → Middle Layer bypassed → MDS risk (Section 13.1.1)
+  
+  t₀ frequency dropping while system stress rising:
+    → Mark sensitivity declining → θ_d drift → recalibration needed
+  
+  t₂ duration increasing steadily:
+    → Contain losing effectiveness → boundary porosity increasing
+  
+  Multiple t₄ events in quick succession:
+    → Cascade formation → storm precondition → S-equation spike
+  
+  t₅ without resolution:
+    → Re-Align failed → system beyond self-correction capacity
+    → Boundary Agent or external intervention required
+```
+
+**Cross-Domain Mechanism Equivalence Table:**
+
+The governance mechanisms map to recognized patterns across multiple domains, confirming the structural rather than domain-specific nature of the architecture:
+
+```
+| TLG Mechanism        | Software Engineering    | Organizational Theory     | Immune System        |
+|---------------------|------------------------|--------------------------|---------------------|
+| Mark                | Log anomaly alert       | Exception report          | Antigen detection    |
+| Contain             | Circuit breaker pattern | Quarantine protocol       | Inflammation         |
+| Soft Correct        | Graceful degradation    | Coaching / mentoring      | Antibody response    |
+| Hard Correct        | Forced restart / rollback| Reorganization           | Cytotoxic response   |
+| Re-Align            | Architecture refactor   | Strategic realignment     | Tissue regeneration  |
+| Processing Isolation| Transaction isolation   | Need-to-know principle    | Blood-brain barrier  |
+| Identity Seeding    | Microservice charter    | Role design / hiring      | Thymic selection     |
+| Invariant Channel   | Configuration management| Constitutional law        | MHC complex          |
+```
+
+These correspondences are not analogies. They are structural isomorphisms: the same governance problem (resolution mismatch across layers) produces the same mechanism structure regardless of substrate. This domain-independence is the strongest evidence for the architecture's structural necessity rather than domain-specific design.
+
+*(Cross-theory derivation: TLG §3-5 mechanism definitions + RT §Restoration Sequence + GRT §Rule Lifecycle)*
 
 ---
 
@@ -4444,6 +5996,146 @@ MDS Bypass Protocol (Severe):
 > Top Layer failure destroys systems.
 > Middle Layer drift slowly replaces reality.
 > The recursive trap is real — but it has an exit: architectural bypass with external reference.
+
+### 13.1.2 Contamination Dynamics — Bottom-Up Propagation and Self-Purification (GRT §Contamination Theory)
+
+Section 13.1.1 treats MDS as a Middle Layer phenomenon. This section establishes the broader contamination dynamics framework: contamination is fundamentally a **bottom-up** phenomenon, and MDS is a special case of upward contamination propagation that reaches the mediation layer.
+
+**Why Contamination Originates Bottom-Up:**
+
+```
+Bottom Layer = terrain contact layer
+  → Only layer that directly encounters external reality
+  → All external contamination enters through bottom-layer interfaces
+  → Bottom-layer agents are EXPECTED to be contaminated
+     (contamination is the cost of exploration)
+
+Middle Layer = mediation layer
+  → Does not directly contact external reality
+  → Contamination arrives only through bottom-layer signals
+  → Middle-layer contamination = bottom-layer contamination
+     that was not contained at the bottom level
+
+Top Layer = invariant layer
+  → Furthest from external reality
+  → Contamination arrives only through middle-layer signals
+  → Top-layer contamination = cascaded failure of both lower layers
+  
+  The upward propagation is the danger:
+    Not that any layer is contaminated (bottom always is)
+    But that contamination ESCAPES its origin layer
+    → Containment at each layer is the structural defense
+```
+
+**Self-Purification as MDS Resistance:**
+
+The self-purification capacity R_i (Section 11.1.4) provides a quantitative framework for understanding MDS resistance:
+
+```
+MDS = condition where R_middle < Φ_bottom_accumulated
+
+MDS develops gradually because:
+  Φ_bottom per event = small (each individual contamination event is minor)
+  But Φ_bottom accumulated over time = large (many small events compound)
+  
+  If R_middle_ongoing ≥ Φ_bottom_rate:
+    Middle Layer processes contamination as fast as it arrives
+    → MDS cannot develop
+    → Self-purification capacity matches contamination rate
+    
+  If R_middle_ongoing < Φ_bottom_rate:
+    Contamination accumulates faster than purification
+    → θ_d drift begins (contamination integrated into baseline)
+    → MDS develops gradually
+    → Eventually: Middle Layer's reference frame = contaminated frame
+
+Self-purification capacity components for Middle Layer:
+  D_middle: Ability to decouple from bottom-layer signal stream
+    → Requires independent reference (Boundary Agent, historical baseline)
+    → If D_middle = 0: Middle Layer fully coupled to bottom signals
+      → Cannot distinguish contamination from signal → MDS inevitable
+  
+  F_middle: Frequency of self-audit (Calibration Reflexivity Loop ①)
+    → Higher audit frequency → faster drift detection → MDS contained early
+    → If F_middle = 0: no self-audit → MDS invisible until severe
+  
+  V_middle: Diversity of mediation strategies
+    → Multiple independent assessment methods → contamination visible as disagreement
+    → If V_middle = 1: single assessment method → contamination invisible
+  
+  T_middle: Time buffer between detection and correction
+    → Sufficient time allows careful recalibration
+    → If T_middle ≈ 0: pressure to act immediately → corrections based on contaminated data
+```
+
+**Contamination Containment Protocol — Before Propagation:**
+
+```
+The goal: contain contamination at the LOWEST POSSIBLE LAYER.
+  Bottom-layer contamination contained at bottom = normal operation
+  Bottom-layer contamination reaching middle = governance stress
+  Bottom-layer contamination reaching top = governance crisis
+
+Containment at bottom layer:
+  Agent self-purification: R_agent > S_agent
+  Lateral diversity: different agents contaminated differently
+    → Disagreement IS the detection signal (Section 11.1 sphere topology)
+  Buffer absorption: buffer space converts contamination to metadata
+  → Most contamination handled here. Middle Layer never sees it.
+
+Containment at middle layer (when bottom fails):
+  Cross-Scale Consistency Check (MDS countermeasure ②)
+  Calibration Reflexivity Loop (MDS countermeasure ①)
+  Buffer between middle and top: attenuates before escalation
+  → Contamination that passes bottom-layer buffers caught here.
+
+Containment at top layer (when middle fails):
+  MDS Bypass Protocol (severe)
+  Boundary Agent external reference
+  Historical baseline comparison
+  → Last line of internal defense. If this fails → external intervention.
+
+Containment failure → External:
+  Human oversight as external layer
+  Cross-system comparison (if multi-system architecture exists)
+  → Architecture acknowledges its own boundary (Section 13.2)
+```
+
+**Terrain Maturation as MDS Prevention:**
+
+```
+The terrain design framework (Section 11.1.3) provides a structural approach
+to MDS prevention that goes beyond the reactive countermeasures ①②③④:
+
+Immature terrain → flat landscape → contamination propagates freely
+  All bottom-layer signals reach middle layer
+  Middle Layer processes high volume → drift opportunity high
+  → MDS risk: HIGH
+
+Maturing terrain → boundaries forming → contamination partially contained
+  Some bottom-layer contamination handled by lateral diversity
+  Middle Layer processes moderate volume → drift opportunity moderate
+  → MDS risk: MODERATE
+
+Mature terrain → deep structure → contamination mostly self-contained
+  Most bottom-layer contamination handled at bottom layer
+  Middle Layer processes low volume (genuine escalation only)
+  → MDS risk: LOW (but Pathway 2 immunity decay risk increases)
+
+Optimal terrain → maintained friction → contamination contained + capacity preserved
+  Bottom-layer contamination mostly self-contained
+  Some friction maintained for self-purification capacity
+  Middle Layer processes minimal volume but stays calibrated
+  → MDS risk: MINIMAL (optimal contamination regime)
+  
+  This is the equilibrium:
+    Not zero contamination (atrophy risk)
+    Not excessive contamination (MDS risk)
+    But OPTIMAL contamination: enough to maintain capacity,
+    not enough to exceed it.
+```
+
+*(Cross-theory derivation: GRT §Contamination Theory + §Self-Purification + §Terrain Design)*
 
 ### 13.2 Upper Layer Contamination — The Boundary of Self-Containment
 
@@ -6358,6 +8050,151 @@ As fractal depth increases, each layer internalizes governance principles that p
 
 The open question is the rate of fractal depth increase: how quickly can a layer develop sufficient internal structure to reduce its dependency on the layer above it? This rate determines the practical timeline from human-supervised initial deployment to autonomous fractal operation. It is currently unquantified.
 
+### 14.1.0.1 Middle-Layer Centrality Thesis (GRT §Scaling Dynamics)
+
+Conventional governance theory treats the upper layer as the control center and the middle layer as a transmission belt. This architecture inverts that assumption: **the middle layer is the actual stability engine**, and the upper layer's function is boundary definition, not continuous control.
+
+**The Conventional vs. DFG View:**
+
+```
+Conventional (upper-layer-centric):
+  Upper layer = brain (decisions, commands, strategy)
+  Middle layer = nervous system (transmission, routing)
+  Lower layer = body (execution, implementation)
+  
+  Control flow: Top → Middle → Bottom
+  Information flow: Bottom → Middle → Top
+  Innovation: comes from the top (strategy drives execution)
+  Stability: maintained by the top (control prevents chaos)
+  
+  Problem: scales poorly because all decisions funnel through top
+  → Top layer becomes bottleneck at scale
+  → Decision latency grows with system size
+
+DFG (middle-layer-centric):
+  Upper layer = boundary (invariants, constraints, criteria)
+  Middle layer = stability engine (mediation, correction, adaptation)
+  Lower layer = exploration (diversity, innovation, contact with reality)
+  
+  Control flow: minimal (criteria flow down, escalation flows up)
+  Mediation flow: Middle ↔ both directions (continuous)
+  Innovation: comes from the bottom (exploration drives discovery)
+  Stability: maintained by the middle (mediation prevents cascade)
+  
+  Advantage: scales because middle layer operates locally
+  → Middle layer distributes through seeding (Section 6)
+  → Each agent grows its own middle layer
+  → No central decision bottleneck
+```
+
+**The Middle Layer as Router Between Dimensional Layers:**
+
+```
+The middle layer does not just translate between upper and lower.
+It routes between different DIMENSIONS of governance:
+
+  Upper-dimension upper-layer:
+    Abstract invariants (criteria, boundaries, existential constraints)
+    Very slow change rate
+    Very low dimensionality
+    
+  Lower-dimension upper-layer:
+    Concrete principles (operational rules, protocols, procedures)
+    Moderate change rate
+    Moderate dimensionality
+    
+  Upper-dimension lower-layer:
+    Strategic exploration (direction choice, resource allocation)
+    Fast change rate
+    High dimensionality
+    
+  Lower-dimension lower-layer:
+    Tactical execution (individual actions, local decisions)
+    Very fast change rate
+    Very high dimensionality
+
+The middle layer routes BETWEEN these four categories:
+  Abstract invariant ↔ concrete principle (criteria implementation)
+  Concrete principle ↔ strategic exploration (guidance without control)
+  Strategic exploration ↔ tactical execution (coherence without micromanagement)
+  
+  Each routing requires different dimensional extraction (Section 3.0.1):
+    3rd-order for invariant ↔ principle routing
+    2nd-order for principle ↔ strategy routing
+    1st-order for strategy ↔ tactics routing
+```
+
+**Dimension-Crossing Coordination Buffer as Local North Star Correction Engine:**
+
+```
+The Type 4 buffer (Section 3.0.1) — the dimension-crossing coordination buffer —
+serves as the mechanism for correcting Local North Stars (Section 7.0.1).
+
+How Local North Star correction works:
+  Global North Star = abstract criterion (defined by upper layer)
+  Local North Star = terrain-projected version (used by lower layer)
+  
+  Misalignment between local and global = governance drift
+  
+  Who corrects this misalignment?
+    Upper layer: knows global North Star but not local terrain
+    → Cannot directly project (terrain knowledge insufficient)
+    
+    Lower layer: knows local terrain but not global North Star
+    → Cannot self-correct (reference frame insufficient)
+    
+    Type 4 buffer: inhabits BOTH coordinate systems temporarily
+    → Can detect misalignment by reading both frames
+    → Can produce correction vector that is:
+       Globally valid (respects criterion)
+       AND locally implementable (respects terrain)
+    
+  This is why Type 4 is the most critical buffer type:
+    Without it, local and global North Stars diverge silently.
+    With it, continuous alignment correction is possible.
+    → Type 4 IS the Local North Star correction engine.
+```
+
+**Buffer Network Architecture — The Scaling Resolution:**
+
+```
+Scaling problem = map-terrain balance maintenance problem at scale
+  Not a size problem but an alignment problem.
+  
+Solution components (integrated):
+  1. Circular closure (Section 11.1.1):
+     Prevents O(n²) explosion through loop formation
+     
+  2. Dimensional compression (Section 11.1.2):
+     Ensures n_eff bounded at each governance level
+     
+  3. Terrain design (Section 11.1.3):
+     Creates landscapes where loops close naturally
+     
+  4. Buffer network (Sections 3.0.1, 6.0.1):
+     Contains contamination at each level
+     Preserves learning capacity through optimal friction
+     Enables coordinate system translation
+     
+  5. Hierarchical North Stars (Section 7.0.1):
+     Provides global criterion with local projections
+     Criterion-principle hierarchy prevents false invariant violation
+     
+  6. Continuous correction (Section 7.0.1 Map-Terrain):
+     Maintains map-terrain alignment at every level
+     Type 4 buffer as correction engine
+     
+  The buffer network is the connective tissue:
+    It connects circular closure (loops) to dimensional compression (layers)
+    It connects terrain design (landscape) to North Stars (reference)
+    It connects contamination containment (safety) to learning preservation (growth)
+    
+    Without the buffer network, the other five components are isolated mechanisms.
+    WITH the buffer network, they form an integrated scaling architecture.
+```
+
+*(Cross-theory derivation: GRT §Middle-Layer Centrality + §Buffer Network + §Scaling Resolution)*
+
 ### 14.1.1 Four Structural Risks — Complete Failure Taxonomy (RT §Four Structural Risks)
 
 All system failures are expressions of the same underlying imbalance: Exploration ↔ Stability balance failure. Four structural risks exhaust the ways this balance fails:
@@ -6920,21 +8757,196 @@ TLG does not validate outcomes; it validates explanatory necessity. The claim is
 
 The validation strategy follows three steps: domain-independent recurrence (same failure topology across unrelated domains), topology equivalence (success and failure conditions map to the same structural positions), and mechanism alignment (countermeasures that work correspond to the same structural interventions).
 
+**Extended Validation Evidence — Post-v1.0 Domain Confirmations:**
+
+Since v1.0 publication, additional empirical observations have confirmed or extended the structural predictions:
+
+```
+Confirmation 1 — Multi-Agent LLM Drift:
+  Observed: Agent behavioral degradation in extended multi-agent interactions
+            [Rath, 2026] follows fractal propagation pattern.
+  TLG prediction: Without Middle Layer mediation, lateral interaction
+                  produces progressive convergence (Section 10.3).
+  Match: behavioral drift rate scales with interaction density,
+         consistent with n² coordination load model (Section 11.1).
+
+Confirmation 2 — Cognitive Bias Amplification:
+  Observed: Cognitive biases expand (not merely persist) in multi-agent
+            LLM systems [Liu et al., 2024].
+  TLG prediction: Active amplification at each propagation node
+                  is the signature of missing Processing Phase Isolation.
+  Match: amplification factor > 1 per hop, consistent with
+         positive feedback from unmediated lateral influence.
+
+Confirmation 3 — Calibration Probing:
+  Observed: Perturbation-based probing can recover hidden confidence
+            states [Khanmohammadi et al., 2025].
+  TLG prediction: Resolution states persist even when surface
+                  behavior appears aligned (Section 13.2.1 SCM).
+  Match: probing accesses internal state that behavioral observation
+         cannot reach — operationalizes Boundary Agent detection.
+
+Confirmation 4 — Basin Landscape Structure:
+  Observed: LLM loss landscapes exhibit measurable basin structure
+            [Anonymous, 2025].
+  TLG prediction: Basin proximity is a governance state variable —
+                  distance from basin boundary predicts instability.
+  Match: basin structure provides the geometric grounding for
+         VCZ maintenance and collapse proximity measurement.
+```
+
 ### 15.6 Non-Commutativity of Spatial and Temporal Axes
 
 Intervention topology (TLG's domain) and rule evolution dynamics (GRT's domain) interact but are analytically non-commutative: changing where intervention occurs alters how rules evolve, and changing how rules evolve alters where intervention is needed — but the two transformations do not produce the same result in either order. This non-commutativity is why separate formal treatment is required rather than a single unified model. Mediator Drift Syndrome, for example, is a topological phenomenon (L2-specific) that produces rule lifecycle consequences (degraded calibration), but it cannot be reduced to rule dynamics alone; similarly, rule over-convergence is a lifecycle phenomenon that disrupts intervention routing, but cannot be reduced to topology alone.
+
+**Formal Statement of Non-Commutativity:**
+
+```
+Let T_spatial: state → state   (intervention topology transformation)
+    T_temporal: state → state   (rule evolution transformation)
+
+Claim: T_spatial ∘ T_temporal ≠ T_temporal ∘ T_spatial
+
+Proof sketch:
+  T_spatial first: change intervention structure → rules evolve in new structure
+    → rules adapted to new intervention routing
+    → intervention now acts on rules designed for this topology
+  
+  T_temporal first: rules evolve in current structure → then change topology
+    → rules were adapted to OLD intervention routing
+    → new topology acts on rules not designed for it
+    → structural mismatch between evolved rules and new topology
+  
+  The mismatch in the second case is precisely MDS:
+  rules evolved under one mediation structure applied under another.
+  → Non-commutativity is the formal source of MDS.
+```
+
+This non-commutativity has a direct operational consequence: TLG and GRT cannot be naively unified into a single dynamical system. They must be treated as interacting but analytically separate. The interaction is managed through the cross-theory measurement interface (Section 14.2.2), which specifies the shared observables that both theories must agree on without requiring either to adopt the other's internal formalism.
 
 ### 15.7 Scope and Limitations
 
 TLG does not claim to replace existing alignment techniques; it adds an intervention topology layer. TLG does not claim three layers are the only possible architecture; it claims three layers constitute the minimal sufficient architecture satisfying invariant preservation, local adaptive freedom, and resolution translation simultaneously. This is a structural argument, not a proof of optimality. All metrics remain at the theoretical stage without empirical validation. Threshold values (τ1–τ3) require system-specific operational history. Tier 3 resolution (design resolution) has no formal measure — this is an open frontier. The single-agent failure mappings are structural correspondences, not proofs of multi-agent applicability. Cascade convergence is characterized qualitatively; formal convergence bounds require system-specific damping parameters and remain future work.
 
+**Explicit Scope Boundaries:**
+
+```
+TLG applies to:
+  Multi-agent systems with heterogeneous agents
+  Single-agent systems with identifiable internal subsystems
+  Human organizations with governance layers
+  Any system where resolution mismatch is the primary governance challenge
+
+TLG does not apply to:
+  Homogeneous agent swarms (no resolution variation)
+  Systems without exploration requirements (pure execution)
+  Environments where all information is available at all resolutions
+  Systems where agents share identical resolution capacity
+
+TLG explicitly defers to other frameworks for:
+  Training-time alignment (RLHF, Constitutional AI)
+  Reward design and shaping
+  Agent capability improvement
+  Environment design and task specification
+```
+
 ### 15.8 Reproducibility Protocol
 
 To facilitate empirical testing, the following protocol specifies what must be measured: (1) per-layer activity counts (MARK events at L1, containment events at L2, correction events at L3) logged with timestamps; (2) escalation frequency per evaluation window (event-count and wall-clock dual windows); (3) classification accuracy at L2 measured against held-out ground truth; (4) perturbation response: controlled input injection at L1 with measurement of escalation latency and cross-layer propagation pattern; (5) intervention frequency ratios: freq(L1)/freq(L2)/freq(L3) tracked over time. Any multi-agent system that logs these five quantities can test TLG's predictions.
 
+**Extended Reproducibility Specifications:**
+
+```
+Measurement Protocol v1.1 — Minimum Viable Implementation:
+
+Instrument 1 — Event Logger:
+  Required fields: timestamp, layer_id, event_type, severity, duration
+  Event types: MARK, CONTAIN, SOFT_CORRECT, HARD_CORRECT, RE_ALIGN
+  Resolution: per-agent, per-event (no aggregation at collection)
+  Storage: append-only log (no retroactive modification)
+
+Instrument 2 — Classification Accuracy Tracker:
+  Required: ground truth labels for evaluation subset
+  Minimum: 100 labeled events per evaluation window per layer
+  Metrics: L_T1 (false restoration rate), L_T2 (missed contamination rate)
+  Computed: ρ = 1 − (L_T1 + L_T2) / N per window
+
+Instrument 3 — Perturbation Injector:
+  Protocol: controlled input at known deviation magnitude
+  Schedule: periodic (minimum 1 per 3W during steady-state)
+  Measurement: time-to-escalation, escalation-layer, propagation pattern
+  Control: identical perturbation repeated to measure response consistency
+
+Instrument 4 — Frequency Monitor:
+  Computed: freq(L1), freq(L2), freq(L3) per window
+  Alert: freq(L2) > freq(L1) or freq(L3) > freq(L2) (inversion)
+  Trend: 5-window moving average for drift detection
+
+Instrument 5 — SCC Tracker:
+  Self-resolution rate: per-agent, per-window
+  Recovery time: per-event, per-agent
+  Buffer maintenance: per-agent, continuous (sampled at window boundaries)
+  Composite: all three must be above threshold for τ4 condition
+```
+
 ### 15.9 Empirical Path
 
 Four empirical directions are immediately accessible: (1) controlled multi-agent simulation comparing type-based versus threshold-based escalation routing; (2) processing isolation experiment measuring classification diversity with and without lateral exchange; (3) MDS detection validation via controlled θd drift injection, measuring Cross-Scale Consistency Check detection latency; (4) perturbation testing protocol validation in production LLM systems to verify SSS and Silent Criticality discrimination.
+
+**Extended Empirical Research Program:**
+
+```
+Tier 1 — Simulation Experiments (accessible now):
+
+  Experiment 1.1: Type-Based vs. Threshold-Based Routing
+    Setup: n=50 agents, synthetic task environment
+    IV: routing algorithm (type-based vs. threshold-based)
+    DV: total governance cost (MARK + CONTAIN + CORRECT events)
+    Prediction: type-based produces 30-50% lower governance cost
+    Falsification: threshold-based consistently equals or outperforms
+    Duration: ~2 weeks implementation + ~1 week analysis
+
+  Experiment 1.2: Processing Isolation Effect
+    Setup: n=20 agents, shared exploration space
+    IV: lateral influence permitted vs. prohibited during processing
+    DV: output diversity (measured by pairwise cosine distance)
+    Prediction: isolation maintains higher diversity at equivalent performance
+    Falsification: unrestricted lateral exchange maintains equal diversity
+    Duration: ~1 week implementation + ~1 week analysis
+
+  Experiment 1.3: Fractal Propagation Rate
+    Setup: n=100 agents, hierarchical structure
+    IV: perturbation injection at different layers
+    DV: propagation speed and reach across layers
+    Prediction: intra-layer propagation faster than cross-layer
+    Falsification: no speed difference between intra- and cross-layer
+    Duration: ~3 weeks total
+
+Tier 2 — LLM-Based Experiments (accessible with existing tools):
+
+  Experiment 2.1: MDS Detection in RAG Systems
+    Setup: RAG pipeline with controllable retrieval drift
+    IV: drift magnitude and injection rate
+    DV: Cross-Scale Consistency Check detection latency
+    Prediction: detection latency < N-step window for calibrated system
+    Duration: ~4 weeks total
+
+  Experiment 2.2: Perturbation Response in Production LLMs
+    Setup: API-accessible LLM with controlled input perturbation
+    IV: perturbation type (semantic, syntactic, factual)
+    DV: response stability metrics (consistency, confidence, refusal rate)
+    Prediction: SSS-state systems show no response to perturbation
+              (Silent Criticality signature)
+    Duration: ~3 weeks total
+
+Tier 3 — Full Architecture Validation (requires platform development):
+
+  Experiment 3.1: Complete TLG Implementation
+    Setup: Multi-agent LLM system with explicit three-layer governance
+    Measures: all five reproducibility protocol instruments
+    Duration: ~3-6 months
+    Milestone: first empirical τ calibration dataset
+```
 
 ---
 
@@ -6984,7 +8996,178 @@ Each failure mode is addressed by a specific mechanism in this architecture. The
 
 The architecture further recognizes that failure does not end at maturity. Post-maturity systems face their own failure topology (Section 13.6): mediator drift, immunity decay, stability saturation, authority convergence, phase leakage, and self-consistent misalignment. These failures are cyclic, not episodic — and the most dangerous produce the cleanest metrics. Mature governance therefore does not eliminate failure. It knows where failure is forming.
 
+**The Minimal Sufficiency Argument:**
+
+This architecture claims three layers as the minimal sufficient structure. Not optimal — minimal. The argument rests on three independent requirements that cannot be jointly satisfied by fewer than three layers:
+
+```
+Requirement 1 — Invariant Preservation:
+  Something must define what cannot be violated.
+  This cannot be the same entity that explores and adapts,
+  because exploration necessarily tests boundaries.
+  → At least one dedicated invariant layer required.
+
+Requirement 2 — Operational Freedom:
+  Something must explore, adapt, and specialize.
+  This cannot be the same entity that enforces invariants,
+  because enforcement constrains exploration.
+  → At least one dedicated operational layer required.
+
+Requirement 3 — Resolution Translation:
+  Invariant enforcement and operational adaptation operate at
+  incompatible abstraction levels (Section 2).
+  Direct interaction between them produces resolution mismatch.
+  → At least one dedicated mediation layer required.
+
+Three requirements, each requiring a dedicated layer,
+no two requirements satisfiable by the same layer
+→ Three layers is the minimum.
+```
+
+Adding a fourth layer is not prohibited. It is unnecessary: any function a fourth layer would serve is either (a) a fractal sub-layer of an existing three (Section 14.1), or (b) a specialization within the Middle Layer's mediation function. The fractal property means that arbitrarily deep governance is achievable within the three-layer structure without adding new layer types.
+
+**The Observation-Governance Duality:**
+
+A structural insight that emerges from the RT-3 Observer integration: governance and observation are dual operations. Every governance action is simultaneously an observation (the system learns about itself through its own corrections), and every observation has governance consequences (what the system sees determines what it corrects).
+
+```
+Governance → Observation:
+  Every Mark event reveals what the system considers anomalous.
+  Every Contain boundary reveals the system's tolerance range.
+  Every Soft Correct reveals the system's correction repertoire.
+  Every Hard Correct reveals the system's structural limits.
+  
+  The system's governance history IS its self-knowledge.
+  Conflict logs are not just records — they are the system's
+  accumulated understanding of its own resolution structure.
+
+Observation → Governance:
+  What the system can see determines what it can correct.
+  What it cannot see (Resolution Decomposition Tier 3) it cannot govern.
+  Observation capacity IS governance capacity.
+  
+  → Improving governance = improving observation.
+  → Governance failure = observation failure.
+  → The resolution-proxy ρ measures both simultaneously.
+```
+
+This duality explains why external observation (Boundary Agent) is irreducible: a system's self-observation cannot exceed its own resolution. Improvement in self-observation IS improvement in governance — but the ceiling of self-observation is the ceiling of governance. Breaking through that ceiling requires an observer with an external reference frame.
+
+**The Coordination-Cancellation Paradox as Architectural Necessity:**
+
+Recovery Theory's Coordination-Cancellation Paradox provides the deepest justification for the Middle Layer's existence: in any system of sufficient complexity, coordination efforts that are locally optimal will partially cancel each other when aggregated. This is not a failure of coordination — it is a mathematical inevitability of independent optimization in shared spaces.
+
+```
+Without Middle Layer:
+  Agent A optimizes locally → produces correction vector v_A
+  Agent B optimizes locally → produces correction vector v_B
+  v_A and v_B are locally optimal but point in partially opposing directions
+  → Net system correction = v_A + v_B (partial cancellation)
+  → System-level effect: less than either agent intended
+  → Both agents interpret the deficit as requiring MORE correction
+  → Escalating correction cycle → coordination storm
+
+With Middle Layer:
+  Middle Layer receives both v_A and v_B
+  Detects partial cancellation (opposition in shared dimensions)
+  Mediates: adjusts correction decomposition so v_A and v_B
+  are projected into orthogonal components
+  → Net system correction = orthogonalized sum (no cancellation)
+  → Both agents see their corrections taking effect
+  → Correction cycle terminates normally
+```
+
+The Middle Layer does not make coordination better. It makes coordination structurally possible by resolving the paradox that independent optimization in shared spaces necessarily produces. Without mediation, coordination is inherently self-defeating at scale. This is not a design flaw — it is the mathematical structure of multi-agent interaction.
+
+**The Scaling Resolution — Why This Architecture Can Work at Arbitrary Scale:**
+
+The architecture resolves the scaling problem not through capacity increase but through structural reorganization. The resolution has six interlocking components, each insufficient alone, jointly sufficient:
+
+```
+Component 1 — Circular Closure (Section 11.1.1):
+  Open chains → closed loops at every scale
+  Eliminates need for central coordination of all chains
+  → Reduces effective n from total agents to number of loops
+  → Scaling exponent reduction: O(n²) → O(n log n)
+
+Component 2 — Dimensional Compression (Section 11.1.2):
+  Each circular closure level compresses output dimensionality
+  n_total grows exponentially with depth
+  n_global remains bounded (constant)
+  → Top Layer sees bounded representation regardless of system size
+
+Component 3 — Terrain Design (Section 11.1.3):
+  Cost landscape shaped so loops close naturally
+  Internal circulation cheaper than external dependency
+  → Self-organization toward circular closure without mandate
+  → Terrain lifecycle: separation → maturation → opening → integration
+
+Component 4 — Buffer Network (Sections 3.0.1, 6.0.1):
+  Contamination contained at each level
+  Learning preserved through optimal friction
+  Coordinate system translation across boundaries
+  → Connective tissue binding other components into integrated architecture
+
+Component 5 — Hierarchical North Stars (Section 7.0.1):
+  Global criterion with local terrain projections
+  Criterion (unchanging) > Principle (adaptive)
+  Fall prevention rather than direction maximization
+  → Alignment maintenance without forced compression
+
+Component 6 — Continuous Map-Terrain Correction (Section 7.0.1):
+  Primary: adjust terrain (preserve frame stability)
+  Secondary: update map (when terrain adjustment fails)
+  Type 4 buffer as correction engine
+  → Prevents silent divergence between model and reality
+```
+
+**System Maturity Signatures — The Developmental Trajectory:**
+
+The architecture's developmental progression produces characteristic signatures at each maturity level:
+
+```
+Immature System:
+  Contamination avoidance (tries to prevent all contact with noise)
+  Friction elimination (optimizes for zero conflict)
+  Upper-layer dependence (all decisions escalated upward)
+  Buffer: single, undifferentiated, always active
+  Scaling: O(n²) — flat landscape, no terrain
+  
+  Signal: high escalation rate, low diversity,
+          Middle Layer constantly active,
+          Top Layer overloaded with decisions
+
+Mature System:
+  Contamination utilization (contained instability as learning fuel)
+  Minimal friction maintenance (optimal friction band)
+  Buffer-mediated autonomy (most coordination self-handled)
+  Buffer: differentiated (4 types), context-appropriate activation
+  Scaling: O(n^{1+ε}) — deep terrain, strong Lreinf
+  
+  Signal: low escalation rate, high diversity,
+          Middle Layer mostly invisible (activates at criticality),
+          Top Layer rarely invoked
+
+Fully Mature System:
+  Boundary exploration with core stability
+  Deliberate instability generation at edges
+  Resource-constrained expansion (growing only as fast as governance internalizes)
+  Buffer: mature with maintained friction (not over-mature)
+  Scaling: O(n log n) — fractal circle-of-circles, dimensional compression active
+  
+  Signal: minimal escalation, maximum diversity within invariant bounds,
+          Middle Layer invisible but instant response on perturbation,
+          Top Layer functions as boundary monitor only,
+          Self-purification capacity continuously exercised
+```
+
+*(Cross-theory derivation: GRT §Scaling Resolution + §System Maturity + §Buffer Architecture)*
+
+**Final Position:**
+
 This is the deepest claim of the architecture: governance failure is not a behavior problem. It is a structure problem. Build the right structure, and the behavior follows. The goal is not a system that is controlled. The goal is a system that does not need to be.
+
+The architecture's ultimate aspiration is fractal self-governance: each layer containing within itself the three-layer structure that makes governance possible, at every scale from individual agent cognition to civilization-level coordination. This aspiration is not utopian — it is the structural endpoint of a specific, measurable, falsifiable developmental trajectory. The measurements exist (Section 14.2.2). The falsification criteria exist (Section 14.2.1). What remains is the empirical work of testing whether the structure matches reality — or whether reality reveals a structure we have not yet imagined.
 
 ---
 
