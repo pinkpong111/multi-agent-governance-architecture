@@ -6,7 +6,73 @@
 >
 > **Companion theories:** [Vector Storm Theory](../vector-storm/) · [Network Architecture Theory](../network-architecture/) · [Governance Rules Theory](../governance-rules/)
 >
-> **Version: v2.5-terrain** (March 2026) — EDT terrain integration, governance ratio κ, ILMI-EDT coupling, boundary operator theory, plasticity hierarchy, affective bandwidth, DFG six-theory completeness architecture, FGS-EDT supplementary theorems, and terrain-TLG formal unification
+> **Version: v3.2-latent-variable** (March 2026) — [see above]
+>
+> v3.2-latent-variable changes from v3.1-notation-hygiene:
+> - **ρ declared as latent variable (Section 0.1):** ρ is now formally declared as a latent variable (true layer resolution quality, not directly observable); ρ_proxy / ρ_MI / ρ_outcome recast as measurement estimators of ρ under different observability conditions (error-rate channel / MI channel / causal outcome channel); explicit three-fork diagram showing latent ρ → three estimators; classical test theory analogy (true score ↔ latent ρ; observed scores ↔ estimators); this resolves the apparent heterogeneity critique: one ρ concept, three measurement channels
+> - **Notation Table updated (before Section 0):** ρ family header now states latent variable status; bare ρ marked as "concept only; never appears in equations"; ρ_proxy/ρ_MI/ρ_outcome described as "estimators of ρ" not "definitions"; ρ_w explicitly marked as NOT an estimator of ρ
+> - **Estimator convergence / divergence diagnostic rewritten (Section 0.1):** "Relationship Between Three Definitions" → "Estimator Convergence and Diagnostic Divergence"; healthy concordance condition stated; six divergence patterns with diagnostic interpretation; numerical non-equivalence explained as observability limitation not conceptual difference
+> - **Self-referential loop clarified (Section 0.5):** ρ_proxy identified as the loop participant; latent ρ vs ρ_proxy distinction explained in SCM context; R as frame-independent anchor explained via latent variable language
+> - All v3.1-notation-hygiene content preserved.
+>
+> v3.1-notation-hygiene changes from v3.0-rho-disambiguation:
+> - **Notation Reference Table added (before Section 0):** master symbol table covering ρ_proxy/ρ_MI/ρ_outcome/ρ_effective/ρ_structural/ρ_w family; Δρ_proxy/Δρ_MI/Δρ_outcome distinction with usage rules; Tier 1/2/3 resolution as distinct from ρ family; f_misclass dual status (definition vs heuristic); C_gov full form; discordance diagnostic table; rule that bare ρ and bare Δρ are introduction-only
+> - **Minimal Sufficiency Argument conditionalized (Section 13):** "Three layers is the minimum" → "three layers is the minimal architecture satisfying all three requirements simultaneously under sustained Δρ_MI > δ_min and classification-only boundaries"; scope boundary cases made explicit (Δρ_MI ≤ δ_min, multi-source fusion, single-objective systems); Requirement 3 now cites Theorem 0.1 scope condition as its formal grounding; argument reframed as conditional structural consequence, not universal law
+> - **f_misclass dual representation resolved (Section 2):** measurement definition f_misclass := (L_T1+L_T2)/N and ODE heuristic f_misclass ≈ (ρ_G−ρ_A)²/(1+ρ_A) now explicitly distinguished in-place; consistency with Section 0.1 global heuristic f_misclass ∝ (Δρ_proxy)² noted; algebraic conflation of the two forms flagged as error
+> - **E_k(t) semantic fixed (Buffer ODE, Section 3):** E_k(t) declared as continuous rate [events·time⁻¹], not binary indicator; binary interpretation noted as making equilibrium B* discontinuous and ODE ill-posed; discrete-time approximation E_k ≈ count_k/Δt provided
+> - **Δρ directional convention unified (Section 0.4.1):** TLG convention (Δρ_proxy = ρ_upper − ρ_lower, architectural) vs RBIT convention (Δρ = ρ_sender − ρ_receiver, signal-flow) reconciled; sign equivalence condition for top-down signals noted; bottom-up signal direction explicitly flagged as opposite convention
+> - All v3.0-rho-disambiguation content preserved.
+>
+> v3.0-rho-disambiguation changes from v2.9-RBIT-integration:
+> - **ρ triple-definition formally separated (Section 0.1):** ρ_proxy (operational; error-rate based; used in monitoring, ODE, cost functions) / ρ_MI (information-theoretic ground truth; used in theorems and falsifiability proofs) / ρ_outcome (deployed-system evaluation; used in Boundary Agent feedback and long-run empirical tests); explicit Definition-Context Map specifying which ρ applies in each part of the theory; relationship and diagnostic discordance conditions between all three; Goodhart/SCM detection via ρ_proxy vs ρ_outcome gap
+> - **f_misclass heuristic status made explicit (Section 0.1):** f_misclass ∝ (Δρ_proxy)² re-labeled as structural heuristic (second-order approximation near Δρ=0), not a derived law; KL-divergence and linear alternatives noted; quadratic form retained for qualitative catastrophic-amplification prediction only
+> - **Theorem 0.1 scope condition added (Section 0.1):** Resolution Monotonicity now explicitly conditional on classification-only transformation (no independent information injection, no multi-source fusion); data processing inequality (Cover & Thomas 2006 §2.8) as formal proof basis; Bayesian fusion / ensemble / seeding as explicit scope boundary cases; theorem reframed as "structural argument for why resolution-increase mechanisms are needed" rather than universal law; ρ subscript changed to ρ_MI throughout theorem
+> - **Theorem 0.2 unit consistency fixed (Section 0.1):** C_gov formula corrected to α_esc · (f_esc · n · W) ensuring dimensional homogeneity across all four cost terms; unit analysis table added; Δρ subscripted as Δρ_proxy,12 throughout
+> - **Δρ subscript discipline added globally (Section 0.1):** Δρ_proxy / Δρ_MI / Δρ_outcome formally distinguished; mixing definitions across Δρ terms flagged as category error; theorem-specific Δρ specification required
+> - **Measurement Protocol updated (Section 0.1):** ρ_outcome subscript throughout; Step 6 cross-check added (ρ_proxy vs ρ_outcome concordance as calibration health signal)
+> - **Variable Dependency Graph updated (Section 0.1):** ρ_proxy used in all real-time cycle nodes; ρ_MI as theoretical bounding layer; ρ_outcome as secondary external anchor via Boundary Agent; ρ_proxy vs ρ_outcome divergence added as Goodhart/SCM failure detection signal
+> - All v2.9-RBIT-integration content preserved.
+>
+> v2.9-RBIT-integration changes from v2.8-cross-theory-integration:
+> - **Section 3.12 added:** RBIT formal grounding — Resolution three tiers as TLG layer necessity (Theorem 1 derivation); F_RBIT ↔ CTGPSR full correspondence; Triple-Failure criterion; Δρ as θ_d substrate; SCM = self-referential Δρ loop; Silent Criticality = geodesic drift; v_class + PRR drift-resistant indicators; Staged Alarm Protocol; κ(t) = f₂·f₃·M_RBIT; Three Paths to Criticality (Path 3 = invisible SCM onset); Attractor Grammar (A_point/A_limit/A_strange/A_null) → TLG regime map; NF1/NF2/NF3 novel failures; TB1–TB4 boundary layer crises; Structural Damage Ratchet (R1/R2/R3); Revival Cases A/B/C → DDD protocol; Fractal Governance Necessity T_collapse bound; NC-117 to NC-126
+> - **Section 3.13 added:** GCC seven-condition RBIT operationalization; v2.9 GCC extensions (κ, M_RBIT, attractor grammar, TMI, σ_gov, Cramér-Rao, six-condition τ4); AND-gate path structure grounding; F_RBIT co-variation warning; Four-theory criticality equivalence → four-channel monitoring; Resolution Palimpsest with Heritage Asymmetry and r_positive,min; NC-127 to NC-133
+> - **Section 28.5b added:** RBIT ↔ TLG correspondence table (38 entries)
+> - **Section 28.6 updated:** Grand Claims expanded from 4 to 6; SCM now eight-projection identity; τ4 now seven-condition requirement; Middle Layer now five-way identity; Grand Claims 5 (three-path monitoring necessity) and 6 (revival topology derivation) added
+> - **P-63 through P-74 added** to Testable Predictions Registry
+> - **OP-95 through OP-108 added** to Open Problems Registry
+> - **References Section 27C added** (RBIT citation)
+> - All previous content preserved. RBIT Theorem 1 as TLG three-layer structural derivation (not architectural assumption); F_RBIT = (f₁,f₂,f₃,f₄,f₅) ↔ CTGPSR (C,T,G,P,R) full correspondence; Triple-Failure storm onset criterion; Resolution Gap Δρ as θ_d calibration substrate; SCM as self-referential Δρ loop; External anchor = Δρ external measurement necessity; Silent Criticality = RBIT geodesic drift on statistical manifold; v_class and PRR as drift-resistant indicators; Staged Alarm Protocol; κ(t) = f₂·f₃·M_RBIT unified governance stress scalar; Three Paths to Criticality (Path 3 invisible to standard F_RBIT = SCM Drift Onset mechanism); Attractor Grammar → TLG regime classification (A_point/A_limit/A_strange/A_null); Novel failure modes NF1/NF2/NF3 with F_RBIT signatures; Temporal Boundary Layer TB1–TB4 as TMI crisis mechanisms; Revival Case taxonomy (A/B/C) → TLG recovery protocol classification; DDD E3 criterion = Case C with C_new* > C_old* verification; Fractal Governance Necessity T_collapse bound as DDD urgency clock; GCC seven-condition RBIT operationalization (v2.9 extensions: κ, M_RBIT, attractor grammar, σ_gov, Cramér-Rao); AND-gate architecture grounded in RBIT path structure; F_RBIT co-variation theorem; Four-Theory Criticality Equivalence → four-channel TLG monitoring; Resolution Palimpsest with Heritage Asymmetry quantification; Structural Damage Ratchet (R1/R2/R3); NC-117 through NC-133; P-63 through P-74; OP-95 through OP-108; Section 28.5b RBIT ↔ TLG correspondence table (38 entries); Grand Claims updated to six (Middle Layer five-way identity; τ4 seven-condition requirement; three-path monitoring necessity; revival topology derivation). All v2.8-cross-theory-integration content preserved.
+>
+> v2.8-cross-theory-integration changes from v2.7-markov-blanket (GGT/AGM/FGS/EDT/NAT deep integration pass):
+> - **Section 3.7 added:** CTGPSR/CTGPSRB Embedding — TLG as coarse-grained micro-dynamical projection; formal (C,T)/(G,P)/(R) variable identification; three-layer timescale hierarchy as CTGPSR well-posedness necessity (not assumption); North Star stability as Ċ=0 theorem; governance objective U as CTGPSR functional; FGS lifecycle as CTGPSR three-regime sequence; Silent Criticality = Mode III with ∂²V/∂t² > 0 detection; Buffer B(t) = Middle Layer thickness with CTGPSRB formalization; Self-Calibration Collapse as T-drift from C-anchor (CTGPSR mechanism); Upward Blindness as targeting null-space (dual structural necessity for external anchoring); NC-82 to NC-90
+> - **Section 3.8 added:** Governance Control Number Π_G — GCF phase classification; TLG τ-stage to Π_G formal mapping; Π_G three-factor decomposition (targeting sensitivity / complexity renormalization / directional alignment); Self-Calibration Collapse as ρ_w drift → Π_G degradation; SCM as |Π_G_internal − Π_G_external| gap (first quantitative SCM depth measure); τ4 entry as Π_G joint criterion with GCC; Governance Suppression Law Π_G ∝ C^{-β/2} → Inevitable Differentiation derivation; NC-91 to NC-95
+> - **Section 3.9 added:** Affective Geometry Layer — T_eff as Middle Layer geometry deformation operator; ℓ_c(T_eff) formula; Π_G^AGL Gaussian envelope; Freeze/Runaway as fragmentation/consolidation collapse geometry; Δℓ_c as affective-geometric Silent Criticality leading indicator; Crisis Geometry Inversion (Runaway requires decentralization); three-stage regulatory cascade in TLG layer terms (G/C_M/H = Bottom/Middle/Top); Fifteen-Way M_crit extended to τ4 (T_eff and Λ_c as necessary conditions); NC-96 to NC-102
+> - **Section 3.10 added:** Temporal Governance Geometry — three temporal manifolds 𝒯_Top × 𝒯_Mid × 𝒯_Bot; plasticity ordering as emergent (not imposed); Governance Nyquist Theorem (aliasing condition, false-stability mechanism); TMI as calibration accelerator (temporal misalignment accelerates θ_d drift); governance dead time δ_Top and Storm prevention bound; temporal budget systematic bias (formal derivation of Upward Blindness from temporal budget allocation); temporal fractal consistency requirement; B_ext Nyquist alignment requirement; NC-103 to NC-109
+> - **Section 3.11 added:** Governance Entropy Layer — Fisher metric on Middle Layer partition space; Governance Landauer Bound (restructuring asymmetry, recovery cost floor); Cramér-Rao false-completion test (unified single test for all false-τ4 modes); four-criterion τ4 entry joint requirement (probe + Cramér-Rao + GCC + Π_G); Geodesic DDD Correspondence (unique entropy-minimizing recovery path, DDD optimality proof); entropy production phase signature (VCZ saddle-point detection); NESS-I through NESS-IV TLG operational map; NESS-IV cyclothymic as Landauer degradation accumulator; NC-110 to NC-116
+> - **Section 28 added:** Cross-Theory Integration Registry — complete bidirectional correspondence tables GGT (34 entries), AGM (15 entries), FGS (18 entries), EDT (14 entries), NAT (14 entries); Four Grand Unification Claims (Self-Calibration Collapse as six-projection identity; τ4 as six-condition requirement; Middle Layer as four-way identity; Governance Landauer Bound as physical cost floor)
+> - **OP-80 through OP-94 added** to Open Problems Registry
+> - **P-51 through P-62 added** to Testable Predictions Registry
+> - All previous content preserved.
+>
+> v2.7-markov-blanket changes from v2.6-governance-engine (Self-Calibration Collapse + Markov Blanket pass):
+> - **Section 3.5 added:** Self-Calibration Collapse — primary structural vulnerability; four-stage progression (Drift Onset / Metric Dissociation / Epistemic Convergence / Terminal Drift); Calibration Separation Theorem (external reference is structurally necessary); Judgment Engine / Calibration Engine architectural split; three-level anchoring hierarchy (External Reference Channel / Adversarial Probing / Cross-Layer Disagreement Monitor); Epistemic Convergence discriminating test (probe injection); externally-anchored θ_d update rule with drift bound ‖θ_d(t) − θ_d*(t)‖; NC-66 to NC-72
+> - **Section 3.6 added:** Middle Layer as Markov Blanket — formal identification via Pearl (1988) and Friston (2010); verification of three conditional independence conditions; Markov Blanket Necessity Theorem (three-layer structure as mathematical consequence); Active Inference interpretation (governance cost ≈ variational free energy; Top Layer = prior; Middle Layer = likelihood model); nested blanket structure (individual ⊂ Middle ⊂ Boundary Agent); resolution mismatch as rate-distortion problem; Bayesian network structure of TLG; failure mode → blanket violation mapping (MDS / SCM / Authority Collapse / Diversity Collapse); TLG positioning vs. MARL / CTDE / FEP / Control Theory / Institutional Economics; NC-73 to NC-81
+> - **NC-66 through NC-81 added** to Novel Contributions Catalog
+> - **P-44 through P-50 added** to Testable Predictions Registry
+> - **OP-73 through OP-79 added** to Open Problems Registry
+> - All previous content preserved.
+>
+> v2.6-governance-engine changes from v2.5-terrain (Middle Layer architecture completion pass):
+> - **Section 3.4 added:** Middle Layer as Governance Engine — complete seven-function decomposition replacing the mediation-only specification; Module A (Information Flow Control: Gating §3.4.1, Targeting/Packaging §3.4.2, Routing §3.4.3, Mediation §3.4.4) + Module B (Environmental Governance: Environment Shaping §3.4.5, Load Balancing §3.4.6, Exploration Regulation §3.4.7); Middle Layer architecture summary diagram §3.4.8; formal redefinition of Middle Layer as governance engine
+> - **ρ operational definition strengthened (Section 0.1):** Information-theoretic grounding via mutual information I(C_L; C*)/H(C*); decision-constraint alignment formulation ρ(L) = E[I(decision_L; constraint_outcome)]; three-step measurement protocol; Δρ chain closed (ρ_top − ρ_bottom now fully falsifiable); f_misclass ∝ (Δρ)² consequence derived; connection to Boundary Agent as constraint-outcome verifier
+> - **Gating formalized (§3.4.1):** Three gate types (Priority Gate, Rate Gate, Type Gate); formal GATE decision function; under-gating/over-gating failure modes; gating-ρ co-calibration dependency
+> - **Targeting/Packaging formalized (§3.4.2):** task_package structure specification; four-step packaging protocol; packaging failure modes (under/over/stale); ρ_effective(Bottom) = ρ_structural(Bottom) × f_package_quality coupling formula
+> - **Routing formalized (§3.4.3):** ROUTE* optimization function; resolution mismatch routing cost asymmetry (structural error vs. resource waste); routing-load balancing state sharing
+> - **Environment Shaping formalized (§3.4.5):** four terrain design parameters (∂_explore, task distribution, interaction topology, resource routing); Environment Shaping ODE dE/dt = f(E,U,A); EDT terrain correspondence; proactive vs. reactive governance cost comparison
+> - **Load Balancing formalized (§3.4.6):** load collapse cascade proof; four-level catastrophic load signals; spawn/shed/retire/reroute action set; S-equation effective n connection
+> - **Exploration Regulation formalized (§3.4.7):** ∂_explore regulation ODE; SSR cycle governance integration; Diversity Collapse prevention proposition with proof sketch; vitality criterion (Var(η_rest) > 0) connection
+> - **NC-59 through NC-65 added** to Novel Contributions Catalog
+> - All previous content preserved.
 >
 > v2.5-terrain changes from v2.4-thermodynamic (EDT v5.1 deep integration pass):
 > - **Section 3.3 added:** EDT Terrain-Layer Correspondence — governance ratio κ (Correction/Storm ratio); ILMI = Middle Layer terrain function; κ-Monotone Maturation Theorem; Guardian Invisibility = Terrain Internalization; Agency Collapse = Terminal Desert State; Eyes-and-Feet Architecture → contamination policy; FCC Type III contraindication protocol
@@ -263,6 +329,93 @@ The result:
 
 ---
 
+## Notation Reference Table
+
+The following table lists every symbol with a non-obvious or context-dependent meaning.
+**Rule:** bare `ρ` and bare `Δρ` appear only in introductory prose where the distinction
+does not yet matter. All formal claims, theorems, and equations use subscripted forms.
+`ρ_w` is a directional alignment cosine; it is **not** a member of the ρ-resolution family.
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESOLUTION FAMILY
+ρ is a latent variable (true layer resolution quality, not directly
+observable). The subscripted forms are measurement estimators of ρ
+under different observability conditions. They converge when healthy;
+their divergence is a diagnostic signal.
+
+Symbol          Definition                          Primary use
+───────────────────────────────────────────────────────────────────────
+ρ               latent resolution quality           concept only; never
+                  (true, unobservable)              appears in equations
+ρ_proxy         1 − (L_T1 + L_T2)/N                Real-time monitoring,
+                  error-rate estimator of ρ         Buffer ODE, C_gov,
+                                                    R-ρ concordance
+ρ_MI            I(C_L ; C*) / H(C*)                Theorems, information-
+                  MI-based estimator of ρ           theoretic proofs,
+                                                    Theorem 0.1
+ρ_outcome       E[I(decision_L ; constraint_out)]  Deployed-system eval,
+                  outcome-based estimator of ρ      Boundary Agent,
+                                                    empirical falsification
+ρ_effective     ρ_structural × f_package_quality   Packaging degradation
+                  (both ρ_proxy-based estimators)   (Section 3.4.2)
+ρ_structural    Intrinsic agent resolution          Base capacity
+                  capacity (ρ_proxy-based)          (Section 3.4.2)
+ρ_w             cos(w, mismatch_direction)          Π_G Factor 3 only;
+                  directional alignment cosine       NOT an estimator of ρ
+
+RESOLUTION MISMATCH FAMILY
+Symbol          Definition                          Primary use
+───────────────────────────────────────────────────────────────────────
+Δρ_proxy        ρ_proxy,top − ρ_proxy,bottom        Monitoring, C_gov,
+                  operational mismatch              f_misclass heuristic
+Δρ_MI           ρ_MI,top − ρ_MI,bottom              Theorem 0.1, 0.2,
+                  theoretical mismatch              necessity proofs
+Δρ_outcome      ρ_outcome,top − ρ_outcome,bottom    Empirical tests,
+                  empirical mismatch                long-run falsification
+Δρ              generic symbol                      Introduction only;
+                                                    subscript required
+                                                    in all formal contexts
+
+RESOLUTION TIER FAMILY  (RBIT structural concept; distinct from ρ)
+Symbol          Definition                          Primary use
+───────────────────────────────────────────────────────────────────────
+Tier 1          Classification resolution           measured by ρ_proxy
+Tier 2          Translation resolution              measured by escalation
+Tier 3          Design resolution                   no direct measure yet
+                ⚠ "resolution" without qualifier = Tier 1 = ρ_proxy context
+
+MISCLASSIFICATION RATE
+Symbol          Definition                          Status
+───────────────────────────────────────────────────────────────────────
+f_misclass      (L_T1 + L_T2)/N                    DEFINITION (observable)
+                ≈ k·(Δρ_proxy)² near Δρ≈0          HEURISTIC approximation
+                (ρ_G − ρ_A)²/(1 + ρ_A)             HEURISTIC (ODE context)
+                ⚠ The two heuristic forms are structural approximations,
+                  not derived equalities. Do not equate them algebraically.
+
+LOSS AND COST
+Symbol          Definition
+───────────────────────────────────────────────────────────────────────
+L_T1            Type 1 loss count in window W  (False Restoration)
+L_T2            Type 2 loss count in window W  (Missed Contamination)
+C_gov           α_T1·L_T1 + α_T2·L_T2 + α_esc·(f_esc·n·W) + α_fix·C_fix
+f_esc           Escalation rate [events·agent⁻¹·time⁻¹]
+N               Total inputs in window W
+W               Evaluation window duration
+
+DISCORDANCE DIAGNOSTICS  (which ρ to compare)
+Condition                           Diagnosis
+───────────────────────────────────────────────────────────────────────
+ρ_proxy ≈ ρ_outcome                 Healthy; no calibration drift
+ρ_proxy >> ρ_outcome                Label drift or Goodhart regime
+ρ_MI high, ρ_outcome low            SCM onset or adversarial framing
+R > 1 sustained, ρ_proxy high       SCM warning (external anchor diverges)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+---
+
 ## 0. Preliminaries — Minimal Formal Definitions
 
 This section defines the core variables used throughout this document.
@@ -388,21 +541,255 @@ Sufficiency levels:
 
 ---
 
-**ρ (rho) — Resolution-Proxy**
+**ρ (rho) — Layer Resolution Quality: Latent Variable and Its Estimators**
 
-A layer's structural resolution cannot be measured directly.
-ρ approximates it via classification performance:
+**Latent variable declaration:**
 
 ```
-ρ  =  1  −  (L_T1 + L_T2) / N
+ρ is a latent variable representing the classification resolution quality
+of a governance layer — its capacity to correctly distinguish between
+signal types (exploration vs. contamination, escalation vs. noise)
+at its operating abstraction level.
 
-  N      total inputs processed in evaluation window
+ρ cannot be measured directly (the true resolution structure of a layer
+is not observable from outside). What IS observable are three measurement
+operators, each applicable under different observability conditions:
+
+                        Latent variable
+                              ρ
+                        (true resolution)
+                       /       |        \
+               ρ_proxy      ρ_MI      ρ_outcome
+            (error-rate)  (MI-based)  (outcome-based)
+            observable    requires    requires
+            always        ground      causal
+                          truth C*    feedback
+
+This structure is analogous to classical test theory:
+  - True score (latent)  ↔  ρ
+  - Observed scores      ↔  ρ_proxy, ρ_MI, ρ_outcome
+
+The three estimators converge when the system is healthy and calibrated.
+Divergence between them is itself a diagnostic signal (see Discordance
+Diagnostics in the Notation Reference Table).
+```
+
+A layer's structural resolution cannot be measured directly. TLG employs
+three operationally distinct ρ estimators, each applicable under different
+observability conditions. These are *not* interchangeable: they measure
+the same latent quantity via different observation channels, and their
+numerical values differ in general. Each is used only in the context
+for which it is designated. Theorems specify which estimator they invoke.
+
+> **Critical note on non-equivalence:** The three estimators are not
+> numerically identical. For error rate ε, mutual information satisfies
+> I ≈ H(Y) − H_b(ε), so ρ_proxy ≠ ρ_MI in general. They are estimators
+> of the same latent ρ under different observability conditions —
+> not three different concepts. This distinction resolves the apparent
+> heterogeneity: the theory has one ρ concept, three measurement channels.
+
+---
+
+**Definition 1 — ρ_proxy (Operational proxy; used in: monitoring, ODE, cost functions)**
+
+A layer's classification performance proxy, computable from raw event counts:
+
+```
+ρ_proxy  =  1  −  (L_T1 + L_T2) / N
+
+  N      total inputs processed in evaluation window W
   L_T1   Type 1 loss  (False Restoration — see 0.1 below)
   L_T2   Type 2 loss  (Missed Contamination — see 0.1 below)
+
+  Range: ρ_proxy ∈ [0, 1]
+  Used in: Buffer ODE, Governance Cost C_gov, Variable Dependency Graph,
+           R-ρ-f_esc concordance protocol, all real-time monitoring.
 ```
 
-Higher ρ → more precise distinction between exploration and contamination
+Higher ρ_proxy → more precise distinction between exploration and contamination
 → more accurate mediation and placement.
+
+**Definition 2 — ρ_MI (Information-theoretic ground truth; used in: theorems, falsifiability proofs)**
+
+The theoretically grounded definition, derived from mutual information between
+layer decisions and verified constraint outcomes:
+
+```
+ρ_MI(L) = I(C_L ; C*) / H(C*)
+
+  C_L  : classification decision of layer L
+  C*   : ground-truth classification (constraint-verified outcome)
+  I    : mutual information between layer decision and ground truth
+  H    : entropy of the ground-truth distribution
+
+  Range: ρ_MI ∈ [0, 1]
+  Used in: Theorem 0.1 (Resolution Monotonicity), information-theoretic
+           derivations, theoretical falsifiability arguments.
+
+  Interpretation:
+    ρ_MI = 0  : layer decisions carry zero information about constraints
+    ρ_MI = 1  : layer decisions are perfectly aligned with constraint reality
+    ρ_MI ∈ (0,1) : partial alignment — the operational regime
+```
+
+**Definition 3 — ρ_outcome (Deployed-system evaluation; used in: live systems, Boundary Agent feedback)**
+
+For governance purposes, the most operationally meaningful formulation captures
+whether layer decisions align with *real-world constraint outcomes* rather than
+ground-truth labels (which may themselves be miscalibrated):
+
+```
+ρ_outcome(L) = E[ I(decision_L ; constraint_outcome) ]
+
+  decision_L        : output decision of layer L
+  constraint_outcome: whether the decision was validated by
+                      downstream constraint reality
+                      (e.g., stability maintained, escalation avoided,
+                       recovery successful within W)
+
+  Expectation over the evaluation window W.
+  Used in: deployed-system measurement, Boundary Agent integration,
+           long-run falsification tests.
+```
+
+**Estimator Convergence and Diagnostic Divergence:**
+
+```
+Under healthy, well-calibrated operation, the three estimators converge:
+  ρ_proxy ≈ ρ_MI ≈ ρ_outcome  →  genuine resolution alignment confirmed
+
+Divergence between estimators is a diagnostic signal, not a contradiction:
+  ρ_proxy ≈ ρ_MI              : classification frame consistent with ground truth
+  ρ_proxy > ρ_MI              : label drift (internal frame has drifted from
+                                 ground truth; ρ_proxy overestimates ρ)
+  ρ_MI > ρ_outcome            : Goodhart regime (metric optimized without
+                                 outcome alignment; ρ_MI overestimates ρ)
+  ρ_proxy >> ρ_outcome        : SCM onset or adversarial framing
+  All three low               : genuine low resolution; structural problem
+  All three concordant high,
+  but R > 1 sustained         : collective drift (SCM at full system level)
+
+The estimators measure the same latent ρ through different windows.
+Their numerical non-equivalence (ρ_proxy ≠ ρ_MI in general, because
+  I ≈ H(Y) − H_b(ε) ≠ 1 − ε)
+reflects observability limitations, not different underlying concepts.
+```
+
+**Definition-Context Map (which ρ applies where):**
+
+```
+Context                          ρ definition used
+─────────────────────────────────────────────────────────
+Theorem 0.1 (Monotonicity)       ρ_MI
+Theorem 0.2 (Cost Lower Bound)   ρ_proxy (via L_T1, L_T2)
+Buffer ODE (dB/dt)               ρ_proxy
+f_misclass consequence           ρ_proxy (heuristic; see note below)
+Governance Cost C_gov            ρ_proxy
+R-ρ concordance protocol         ρ_proxy (compared against R externally)
+Boundary Agent feedback          ρ_outcome
+SCM detection                    discordance between ρ_proxy and ρ_outcome
+Theoretical falsifiability        ρ_MI
+Long-run empirical validation    ρ_outcome
+```
+
+> **Heuristic note on f_misclass ∝ (Δρ_proxy)²:** The quadratic form is a
+> structural heuristic (second-order Taylor approximation of misclassification
+> cost near Δρ = 0). It is not derived from first principles. Alternative
+> formulations include f_misclass ∝ |Δρ| (linear) or KL-divergence-based
+> measures. The quadratic is retained for its qualitative prediction
+> (catastrophic amplification of large gaps) but should not be treated as
+> a precise quantitative law without empirical calibration.
+
+---
+
+**ρ — Information-Theoretic Operational Definition (OP-17c-1-B Extension):**
+
+The classification-performance proxy above (ρ_proxy) is a measurable
+approximation. The theoretically grounded definition (ρ_MI) is restated
+here with its three operational advantages:
+
+```
+ρ_MI(L) = I(C_L ; C*) / H(C*)   [repeated for theorem grounding]
+```
+
+This formulation has three advantages over ρ_proxy alone:
+
+```
+1. Falsifiability:
+   ρ_MI(L) is measurable without access to pre-labeled ground truth
+   when constraint outcomes are observable.
+   ρ_outcome provides the fully deployed-system version of this advantage.
+
+2. Boundary Agent signal integration:
+   Boundary Agent signals (Section 7, 24) directly supply the
+   "constraint_outcome" channel — the Boundary Agent is the
+   external constraint verifier that ρ_outcome requires.
+   → ρ_outcome is structurally connected to external reality through
+     the Boundary Agent architecture.
+
+3. Layer comparison closure:
+   Resolution mismatch Δρ = ρ_top − ρ_bottom is operationally closed
+   when both terms use the same definition consistently.
+   → Δρ_proxy := ρ_proxy,top − ρ_proxy,bottom  (monitoring)
+   → Δρ_MI    := ρ_MI,top    − ρ_MI,bottom     (theoretical claims)
+   → Δρ_outcome := ρ_outcome,top − ρ_outcome,bottom  (empirical tests)
+   Mixing definitions across Δρ terms is a category error.
+```
+
+**Resolution Mismatch Chain — Closed Formulation:**
+
+With explicit definition subscripts, the key structural claims of TLG become
+unambiguously falsifiable:
+
+```
+Resolution mismatch (monitoring):
+  Δρ_proxy = ρ_proxy,top − ρ_proxy,bottom
+
+Misclassification rate consequence (heuristic, ρ_proxy-based):
+  f_misclass ∝ (Δρ_proxy)²
+  (second-order heuristic: small gaps → small effects;
+   large gaps → catastrophically large effects;
+   quadratic form is structural approximation, not exact law)
+
+Middle Layer stability condition (ρ_MI-based):
+  ρ_MI,middle ≥ max(ρ_MI,bottom, ρ_MI,top) − ε
+  for some small ε > 0
+  (Middle Layer must match or exceed both extremes in information-theoretic sense)
+
+Operationalization:
+  Measure ρ_proxy(L) for each layer independently over window W.
+  Compute Δρ_proxy.
+  If f_misclass observed << (Δρ_proxy)² predicted → Middle Layer compensating.
+  If f_misclass observed ≈ (Δρ_proxy)² predicted → Middle Layer absent or failed.
+  If ρ_proxy high but ρ_outcome low → SCM or Goodhart regime → external audit required.
+```
+
+**Tier 1 ρ — Measurement Protocol (ρ_outcome):**
+
+```
+Step 1: Define constraint_outcome for the deployment domain.
+  AI system:     escalation avoidance within W
+  Organization:  decision reversal rate within W
+  Recovery:      re-contamination rate within W
+
+Step 2: Record (decision_L, constraint_outcome) pairs over W.
+  Minimum W: 30 decision events (from θd bootstrapping, Section 0.1).
+
+Step 3: Compute mutual information:
+  I(decision_L ; constraint_outcome)
+  via standard estimator (e.g., k-NN MI estimator for continuous outcomes,
+  plug-in estimator for discrete outcomes).
+
+Step 4: Normalize by H(constraint_outcome) → ρ_outcome(L) ∈ [0,1].
+
+Step 5: Compare across layers → Δρ_outcome computation.
+
+Step 6 (optional cross-check): Compute ρ_proxy from (L_T1, L_T2, N).
+  If ρ_proxy ≈ ρ_outcome → calibration healthy.
+  If ρ_proxy >> ρ_outcome → label drift or Goodhart regime: external audit.
+```
+
+*(Cross-theory derivation: OP-17c-1-B DFG×VST Riemann Connection §ρ-operationalization; RBIT §1.1.3 information-theoretic resolution; VST §S-equation diagnostic structure)*
 
 **Geometry Alignment — Substrate Principle (Recovery Theory D0):**
 
@@ -498,10 +885,23 @@ A system can have high Tier 1 resolution (accurate classification) with low Tier
 
 Where this document references "resolution" without qualification, it means Tier 1 (classification resolution) as measured by ρ. Tier 2 and Tier 3 are explicitly labeled when referenced.
 
-Resolution gap between layers: Δρ = ρ_upper − ρ_lower
-- Δρ > 0: upper layer reads lower layer correctly → normal operation
-- Δρ = 0: upscaling imminent
-- Δρ < 0: upper layer cannot fully read lower layer → seed handover must not proceed
+Resolution gap between layers: Δρ_proxy = ρ_proxy,upper − ρ_proxy,lower
+
+Directional interpretation:
+- Δρ_proxy > 0: upper layer has higher classification resolution than lower
+                → upper layer reads lower layer correctly (normal operation)
+- Δρ_proxy = 0: matched resolution — minimal loss, no compression artifact
+                → upscaling imminent (upper layer no longer adding value)
+- Δρ_proxy < 0: lower layer has higher classification resolution than upper
+                → upper layer cannot fully read lower layer's signal
+                → seed handover must not proceed
+
+Note on RBIT convention: RBIT uses Δρ = ρ_sender − ρ_receiver (sender perspective).
+TLG uses Δρ_proxy = ρ_upper − ρ_lower (architectural perspective).
+These are equivalent when "sender" = upper layer and "receiver" = lower layer
+(top-down signal direction). For bottom-up signals (escalation), the sender
+is the lower layer, so RBIT Δρ and TLG Δρ_proxy have opposite sign conventions.
+Where this matters, the signal direction is specified explicitly.
 
 *(Theoretical derivation of ρ from structural resolution: RBIT Section 1.1.3)*
 
@@ -591,41 +991,72 @@ The resolution-proxy ρ is not simply additive across layer boundaries. This sec
 **Resolution Composition Law (Theorem 0.1 — Resolution Monotonicity Constraint):**
 
 ```
-Theorem 0.1 (Resolution Monotonicity):
-  Let ρ_k denote the resolution-proxy of layer k.
+Theorem 0.1 (Resolution Monotonicity — Conditional):
+  Let ρ_MI,k denote the information-theoretic resolution (ρ_MI) of layer k.
   Let T_{k→k+1} denote the transformation operator for signals
   passing from layer k to layer k+1.
 
-  Claim:
-    ρ(T_{k→k+1}(x)) ≤ ρ_k(x) for all inputs x
-    
+  Scope condition (must hold for theorem to apply):
+    T_{k→k+1} is a classification-only transformation:
+      - no new information injected at the boundary
+      - no external reference signal available to layer k+1
+      - no multi-source fusion (e.g., Bayesian combination of
+        independent channels) at the receiving layer
+    Equivalently: H(X_{k+1} | X_k) = 0 (layer k+1 receives
+    no information beyond what layer k transmitted).
+
+  Claim (under scope condition):
+    ρ_MI(T_{k→k+1}(x)) ≤ ρ_MI,k(x)    for all inputs x
+
   Proof sketch:
     Any classification operation at layer k+1 is constrained
     by the precision of the signal received from layer k.
-    
+
     If layer k classifies with error rate ε_k, then layer k+1
     receives a signal contaminated with ε_k uncertainty.
-    
-    Layer k+1 cannot reduce ε_k through its own classification
-    because the error is in the received signal, not in
-    the classification operation itself.
-    
-    → ρ_{k+1} ≤ ρ_k (resolution cannot increase across a boundary
-                      through classification alone)
-    
-    Resolution increase requires either:
-      (a) degradation followed by re-abstraction (formal derivation: RBIT)
-      (b) external reference injection (seeding — Section 6)
-      (c) mediated translation through a resolution-transforming buffer
-          (Middle Layer function — Section 3)
+
+    Under the scope condition (no independent channel), layer k+1
+    cannot reduce ε_k through its own classification because the
+    error is in the received signal, not in the classification
+    operation itself. By the data processing inequality
+    (Cover & Thomas 2006, §2.8):
+      I(X_{k+1} ; Y) ≤ I(X_k ; Y)
+    which yields ρ_MI,k+1 ≤ ρ_MI,k.
+
+    → ρ_MI,k+1 ≤ ρ_MI,k  (resolution cannot increase across a boundary
+                           through classification alone)
+
+  Scope boundary (cases where theorem does NOT apply):
+    (a) Bayesian fusion of independent sensors at layer k+1
+        → ρ_MI,k+1 may exceed ρ_MI,k (new mutual information injected)
+    (b) External reference injection (seeding — Section 6)
+        → same; theorem explicitly excludes this case
+    (c) Ensemble aggregation of diverse independent classifiers
+        → same; this is multi-source fusion, outside scope
+
+    These exceptions are not failures of the theorem — they are
+    exactly the three resolution-increase mechanisms TLG formalizes:
+      (a) → Middle Layer fusion function (Section 3.4.3)
+      (b) → Seeding protocol (Section 6)
+      (c) → Diversity governance (Section 3.4.7)
+
+    The theorem states what happens *without* these mechanisms.
+    It is the structural argument for *why* these mechanisms are needed.
+
+  Resolution increase requires either:
+    (a) degradation followed by re-abstraction (formal derivation: RBIT)
+    (b) external reference injection (seeding — Section 6)
+    (c) mediated translation through a resolution-transforming buffer
+        (Middle Layer function — Section 3)
 
   Corollary 0.1.1 (Cascading Resolution Loss):
-    In a flat (single-layer) governance architecture with n agents:
-    ρ_effective ≤ ρ_min = min_i(ρ_i)
-    
+    In a flat (single-layer) governance architecture with n agents,
+    under the scope condition:
+    ρ_MI,effective ≤ ρ_MI,min = min_i(ρ_MI,i)
+
     The system's effective resolution is bounded by its weakest classifier.
     No amount of high-resolution supervision compensates for
-    a low-resolution layer in the classification chain.
+    a low-resolution layer in the classification chain (absent fusion).
 ```
 
 **Governance Cost Function — Formal Derivation (Theorem 0.2):**
@@ -633,44 +1064,56 @@ Theorem 0.1 (Resolution Monotonicity):
 ```
 Theorem 0.2 (Governance Cost Lower Bound):
   Define governance cost per evaluation window W as:
-  
-  C_gov = α_T1 · L_T1 + α_T2 · L_T2 + α_esc · f_esc · n + α_fix · C_fix
-  
+
+  C_gov = α_T1 · L_T1 + α_T2 · L_T2 + α_esc · (f_esc · n · W) + α_fix · C_fix
+
     α_T1   cost weight for false restoration (suppressed exploration)
     α_T2   cost weight for missed contamination (loop formation)
-    α_esc  cost per escalation event per agent per window
-    α_fix  cost per structural reconfiguration
-    L_T1, L_T2  loss counts in window W
-    f_esc  escalation rate (events per agent per time unit)
-    n      number of agents
-    C_fix  structural reconfiguration events in W
-  
+    α_esc  cost per escalation event per agent
+    α_fix  cost per structural reconfiguration event
+    L_T1, L_T2  loss counts in window W              [unit: events]
+    f_esc  escalation rate                            [unit: events · agent⁻¹ · time⁻¹]
+    n      number of agents                           [unit: agents]
+    W      evaluation window duration                 [unit: time]
+    C_fix  structural reconfiguration events in W     [unit: events]
+
+  Unit consistency:
+    α_T1 · L_T1          →  [cost/event] · [events]        = cost  ✓
+    α_T2 · L_T2          →  [cost/event] · [events]        = cost  ✓
+    α_esc · (f_esc·n·W)  →  [cost/event] · [events·agent⁻¹·time⁻¹] · [agents] · [time]
+                          =  [cost/event] · [events]        = cost  ✓
+    α_fix · C_fix         →  [cost/event] · [events]        = cost  ✓
+
+  Note: f_esc · n · W converts the rate-per-agent to total events in window W,
+  matching the unit of L_T1 and L_T2. All four terms are now dimensionally
+  consistent. The α weights absorb the per-event cost magnitudes.
+
   Under flat governance (no middle layer):
-    L_T1 + L_T2 = f(Δρ_12) where Δρ_12 = ρ_global − ρ_local > 0
-    
-    As Δρ_12 increases (greater resolution mismatch):
+    L_T1 + L_T2 = f(Δρ_proxy,12) where Δρ_proxy,12 = ρ_proxy,global − ρ_proxy,local > 0
+
+    As Δρ_proxy,12 increases (greater resolution mismatch):
       L_T1 → high (over-classification of exploration as violation)
       L_T2 → high (under-classification of contamination as noise)
-      BOTH cannot be simultaneously minimized at fixed Δρ_12
-      
+      BOTH cannot be simultaneously minimized at fixed Δρ_proxy,12
+
   Lower bound:
-    C_gov ≥ α_T1 · (Δρ_12 · N) + α_T2 · ((1 − ρ_local) · N)
-    
-  → C_gov grows with Δρ_12.
-  → Flat governance with high Δρ_12 has a floor cost that
+    C_gov ≥ α_T1 · (Δρ_proxy,12 · N) + α_T2 · ((1 − ρ_proxy,local) · N)
+
+  → C_gov grows with Δρ_proxy,12.
+  → Flat governance with high Δρ_proxy,12 has a floor cost that
     cannot be reduced by better correction alone.
-  → Only structural reduction of Δρ_12 (via Middle Layer) reduces
+  → Only structural reduction of Δρ_proxy,12 (via Middle Layer) reduces
     the cost below this floor.
 
 Corollary 0.2.1 (Mediation Necessity — Corollary 0.3):
-  If Δρ_12 > δ_min (system-specific minimum resolution gap,
+  If Δρ_proxy,12 > δ_min (system-specific minimum resolution gap,
   determined by task complexity and agent diversity),
   then a flat governance structure cannot achieve C_gov < C_threshold
   for any choice of correction parameters.
-  
+
   → Middle Layer insertion is not merely beneficial but
     structurally necessary to achieve target governance cost.
-    
+
   This is the formal statement of the core architectural claim:
   the Middle Layer is not an optimization — it is a requirement.
 ```
@@ -683,31 +1126,39 @@ The core governance variables form a structured dependency graph, not a linear s
 Dependency Graph (→ means "directly determines"):
 
   θ_d → classification events → L_T1, L_T2
-  L_T1, L_T2 → ρ (resolution-proxy)
-  ρ → SCC (contamination detection accuracy)
+  L_T1, L_T2 → ρ_proxy (resolution-proxy, operational)
+  ρ_proxy → SCC (contamination detection accuracy)
   SCC → f_esc (escalation frequency)
   f_esc → θ_d update (adaptive boundary recalibration)
-  
+
   ↑↓ Bidirectional:
-  ρ ↔ θ_d (ρ informs θ_d updates; θ_d determines what ρ measures)
+  ρ_proxy ↔ θ_d (ρ_proxy informs θ_d updates; θ_d determines what ρ_proxy measures)
   SCC ↔ φ (SCC measures recovery; φ measures direction of recovery)
 
   External anchor:
-  R (branching ratio) → validates the ρ-θ_d-SCC cycle externally
-  
+  R (branching ratio) → validates the ρ_proxy-θ_d-SCC cycle externally
+  ρ_outcome → secondary external anchor (outcome-based; Boundary Agent channel)
+
   Cycle risk:
-  If R and ρ are concordant but both drifted together (SCM regime):
+  If R and ρ_proxy are concordant but both drifted together (SCM regime):
     → entire cycle self-validates within the drifted frame
     → ground truth anchor (R via external observation) breaks the cycle
-    
+    → ρ_outcome vs ρ_proxy discordance = secondary SCM signal
+
   Cycle stability:
   I (Consistency Index) measures coupling density within θ_d
   Rising I → rising α → storm risk through the cycle
 
+ρ definition routing in the graph:
+  ρ_proxy  : all real-time cycle nodes (L_T1/L_T2 → SCC → f_esc → θ_d)
+  ρ_MI     : theoretical bounds on cycle behavior (Theorem 0.1 grounding)
+  ρ_outcome: cross-validation signal (Boundary Agent → discordance detection)
+
 Failure mode detection via graph:
   Isolated node failure (single variable anomalous): local recalibration
   Cycle failure (multiple variables co-anomalous): structural reconfiguration
-  Cross-cycle contamination (I and ρ diverging): SCM investigation
+  Cross-cycle contamination (I and ρ_proxy diverging): SCM investigation
+  ρ_proxy vs ρ_outcome divergence: Goodhart or SCM regime — external audit
 ```
 
 *(Cross-theory derivation: RBIT §Resolution Algebra + Recovery Theory D0 + GRT §Variable Relationships)*
@@ -717,6 +1168,8 @@ Failure mode detection via graph:
 ### 0.5 Ground Truth Grounding Protocol — Resolving Variable Circularity
 
 The core variables (θ_d, ρ, SCC) form a self-referential calibration loop: ρ requires knowing what is contamination, θ_d is updated from classifications that ρ measured, and SCC measures recovery from events that θ_d defined. This circularity is not a bug in the definitions — it is a structural property of any adaptive classification system. But it means that **internal metrics alone cannot certify system health**. An external anchor is required.
+
+Note on ρ in this loop: the ρ that participates in the loop is ρ_proxy (the error-rate estimator, computed from L_T1, L_T2). The latent ρ (true resolution quality) is what the system is trying to maintain. The danger is that ρ_proxy can appear high while the latent ρ has drifted — this is precisely the SCM condition. External anchor R breaks the loop by providing a signal that is independent of the ρ_proxy estimation frame.
 
 Vector Storm Theory provides this anchor through the **branching ratio R** — a quantity that is measurable independently of the system's own classification judgments:
 
@@ -1170,6 +1623,25 @@ TLG is structurally complete as a governance specification only in combination w
 3. [Three-Layer Governance Structure](#3-three-layer-governance-structure)
     - [3.0.1 Buffer-as-Resolution-Interface](#301-buffer-as-resolution-interface--middle-layer-reconceptualization)
     - [3.2.1 Fractal Correspondence Evaluation Criteria](#321-fractal-correspondence-evaluation-criteria)
+    - [3.3 EDT Terrain-Layer Correspondence](#33-edt-terrain-layer-correspondence-edt-6263-integration)
+    - [3.4 Middle Layer as Governance Engine](#34-middle-layer-as-governance-engine--full-functional-architecture)
+      - [3.4.1 Gating — Information Admission Control](#341-gating--information-admission-control)
+      - [3.4.2 Targeting / Packaging — Context Assembly](#342-targeting--packaging--context-assembly-for-agents)
+      - [3.4.3 Routing — Agent-Task Matching](#343-routing--agent-task-matching)
+      - [3.4.4 Mediation — Conflict Resolution](#344-mediation--conflict-resolution-previously-documented)
+      - [3.4.5 Environment Shaping — Proactive Governance](#345-environment-shaping--proactive-governance-by-terrain-design)
+      - [3.4.6 Load Balancing — Capacity Distribution](#346-load-balancing--capacity-distribution)
+      - [3.4.7 Exploration Regulation — Diversity Maintenance](#347-exploration-regulation--diversity-maintenance)
+      - [3.4.8 Middle Layer Architecture Summary](#348-middle-layer-architecture-summary--the-governance-engine)
+    - [3.5 Self-Calibration Collapse — Primary Structural Vulnerability](#35-self-calibration-collapse--the-primary-structural-vulnerability)
+    - [3.6 Middle Layer as Markov Blanket — Statistical Physics Grounding](#36-middle-layer-as-markov-blanket--statistical-physics-grounding)
+    - [3.7 CTGPSR/CTGPSRB Embedding — TLG as Coarse-Grained Projection](#37-ctgpsrctgpsrb-embedding--tlg-as-coarse-grained-micro-dynamical-projection)
+    - [3.8 Governance Control Number Π_G — GCF Phase Classification](#38-governance-control-number-π_g--gcf-phase-classification-of-tlg-states)
+    - [3.9 Affective Geometry Layer — T_eff Modulation of Governance Structure](#39-affective-geometry-layer--t_eff-modulation-of-governance-structure)
+    - [3.10 Temporal Governance Geometry — Time-Horizon Stratification](#310-temporal-governance-geometry--time-horizon-stratification-and-inter-layer-synchronization)
+    - [3.11 Governance Entropy Layer — Fisher, Landauer, Geodesic Recovery](#311-governance-entropy-layer--fisher-information-landauer-bound-and-geodesic-recovery)
+    - [3.12 RBIT — Formal Grounding of TLG Resolution Architecture](#312-resolution-based-interpretation-theory-rbit--formal-grounding-of-tlg-resolution-architecture)
+    - [3.13 Governance Completeness Criterion — RBIT Operationalization](#313-governance-completeness-criterion--rbit-operationalization-and-seven-condition-architecture)
 4. [Three-Level Purification Governance](#4-three-level-purification-governance)
 5. [Staged Self-Correction Protocol](#5-staged-self-correction-protocol)
     - [5.2.1 Recovery Completion Criterion](#521-recovery-completion-criterion--operational-definition)
@@ -1481,15 +1953,24 @@ dΔ_temp/dt = γ_τ · (f_temporal(Δ_temp, window_ratio)) − μ_τ · Δ_temp
 
   γ_* : mismatch growth rates (depend on system coupling density)
   μ_* : natural decay rates (depend on correction quality)
-  
+
   f_misclass: misclassification rate as function of resolution gap
-    f_misclass(Δ_class, ρ_G, ρ_A) = (ρ_G − ρ_A)² / (1 + ρ_A)
-    (quadratic in resolution gap; bounded by local resolution)
-    
+    Measurement definition (observable):
+      f_misclass := (L_T1 + L_T2) / N
+    ODE structural heuristic (ρ_proxy-based approximation):
+      f_misclass(Δ_class, ρ_G, ρ_A) ≈ (ρ_G − ρ_A)² / (1 + ρ_A)
+      where ρ_G = ρ_proxy,global, ρ_A = ρ_proxy,local
+      (quadratic in resolution gap; bounded by local resolution;
+       consistent with the global heuristic f_misclass ∝ (Δρ_proxy)²
+       from Section 0.1 when ρ_A is near 1)
+    ⚠ The heuristic form is a structural approximation for ODE
+      qualitative analysis. Do not equate it algebraically with
+      the measurement definition without empirical calibration.
+
   f_semantic: semantic drift rate
     f_semantic(Δ_trans, seed_quality) = Δ_trans · (1 − seed_quality)
     (drift accelerates when seeds are weak)
-    
+
   f_temporal: temporal mismatch growth
     f_temporal(Δ_temp, window_ratio) = |1 − window_ratio| · Δ_temp
     (grows when windows at different layers diverge)
@@ -1498,7 +1979,7 @@ Fixed points:
   Stable: Δ_* = 0 (requires μ_* / γ_* > f(*))
           → only achievable with mediation reducing f(*)
   Unstable: growing Δ_* (flat governance without mediation)
-  
+
   Middle Layer function:
     Reduces f_misclass by increasing ρ_A toward ρ_G (via degradation)
     Reduces f_semantic by maintaining seed quality (via seeding protocol)
@@ -1823,15 +2304,22 @@ Key properties:
 
 ```
 Let B(t) = buffer capacity state (scalar, normalized to [0,1])
-    E_k(t) = extraction event indicator for order k at time t
-    I(t) = input absorption rate
-    μ_k = buffer consumption rate for k-th order extraction
+    E_k(t) = extraction intensity for order-k events at time t
+             [unit: expected events·time⁻¹; E_k(t) ≥ 0]
+             ⚠ E_k(t) is a rate (continuous), not a binary indicator.
+             A binary {0,1} event indicator would make the equilibrium
+             B* = I/(I + Σμ_k·E_k) discontinuous; the continuous rate
+             formulation keeps B* smooth and the ODE well-posed.
+             In discrete-time implementations, E_k(t) ≈ event_count_k / Δt.
+    I(t) = input absorption rate [unit: capacity·time⁻¹]
+    μ_k = buffer consumption rate for k-th order extraction [unit: capacity·event⁻¹]
 
 dB/dt = I(t) · (1 − B(t)) − Σ_k μ_k · E_k(t) · B(t)
 
 Fixed points:
   B* = 0: buffer depleted — no extraction possible (unsafe state)
   B* = I(t)/(I(t) + Σ_k μ_k · E_k(t)): dynamic equilibrium
+```
   
   Mature buffer: B* close to 1 during non-extraction periods
                  (high reserve capacity → rapid D_k response)
@@ -2316,6 +2804,2656 @@ Feet (Bottom Layer) — deliberately dirty:
 ```
 
 *(Cross-theory derivation: EDT §62 FGS-EDT Integration + §63 DFG Completeness + §55.4 Eyes-and-Feet Architecture)*
+
+---
+
+### 3.4 Middle Layer as Governance Engine — Full Functional Architecture
+
+**Critical Revision: Middle Layer is not a Mediator. It is a Governance Engine.**
+
+The characterization of the Middle Layer as a "mediator" or "translator" between Top and Bottom layers is accurate but severely incomplete. A mediator is reactive — it responds to conflict. A governance engine is proactive — it structures the conditions under which agents operate *before* conflict arises. The distinction is not terminological. It is architectural.
+
+This section formalizes the complete Middle Layer functional architecture, correcting the implicit reduction of Middle Layer to mediation-only that has propagated through earlier versions.
+
+**The Reactive vs. Proactive Distinction:**
+
+```
+Mediator model (insufficient):
+  Problem occurs → Middle Layer detects → Middle Layer resolves
+  
+  Properties:
+    Reactive — activated by disturbance
+    Local — addresses specific conflict
+    Passive — waits for escalation signal
+    
+Governance Engine model (complete):
+  Middle Layer shapes conditions → problems are prevented
+  Middle Layer routes information → agents receive appropriate inputs
+  Middle Layer balances load → no bottlenecks form
+  Middle Layer regulates exploration → diversity maintained
+  Problem occurs → Middle Layer mediates → resolution
+  
+  Properties:
+    Proactive + Reactive (both)
+    Systemic — continuously active
+    Active — structures environment before agents act
+```
+
+The difference maps directly to governance quality. Direct control (mediator model) is brittle because it depends on the governance system seeing every problem. Environment shaping (governance engine model) is robust because it prevents many problems from forming.
+
+**Complete Middle Layer Functional Decomposition:**
+
+The Middle Layer performs seven distinct functions, organized into two modules:
+
+```
+MIDDLE LAYER = Module A (Information Flow Control)
+             + Module B (Environmental Governance)
+
+Module A: Information Flow Control
+  A1: Gating           — admission control
+  A2: Targeting/Packaging — context assembly
+  A3: Routing          — agent-task matching
+  A4: Mediation        — conflict resolution [previously documented]
+
+Module B: Environmental Governance
+  B1: Environment Shaping — operational context design
+  B2: Load Balancing      — capacity distribution
+  B3: Exploration Regulation — diversity maintenance
+```
+
+The seven functions are described in full below.
+
+---
+
+#### 3.4.1 Gating — Information Admission Control
+
+Gating is not filtering. Filtering removes unwanted content from a signal. Gating controls *which signals enter which processing pathways at which times*. It is the architectural equivalent of access control in distributed systems.
+
+**Formal definition:**
+
+```
+Let INPUT(t) = incoming signal stream at time t
+Let LAYER(k) = target processing layer k
+Let GATE: INPUT × LAYER × t → {admit, throttle, defer, reject}
+
+Gate decision function:
+  GATE(input, layer, t) = 
+    reject   if PRIORITY(input) < θ_gate
+    throttle if d(INPUT)/dt > rate_limit
+    defer    if TYPE(input) ∉ LAYER(k).competence
+    admit    otherwise
+
+  θ_gate: priority threshold (domain-calibrated)
+  rate_limit: storm prevention ceiling
+  TYPE(input): classification of input type
+  LAYER(k).competence: resolution capacity of target layer
+```
+
+**Three gate types:**
+
+```
+Priority Gate:
+  Condition:  PRIORITY(input) > θ_gate
+  Function:   Escalation admission control.
+              Low-priority signals handled locally;
+              only high-priority signals admitted to upper layers.
+  Storm prevention: prevents τ1-storm (excessive escalation volume).
+  
+  Formal: admit iff PRIORITY(input) ≥ θ_gate
+          throttle if ΣP(inputs over dt) > capacity(layer k)
+
+Rate Gate:
+  Condition:  d(INPUT_volume)/dt ≤ rate_limit
+  Function:   Velocity admission control.
+              Prevents escalation storms caused by sudden signal spikes
+              rather than high-priority single signals.
+  Storm prevention: primary defense against ΔΔΔ (triple-rate surge).
+  
+  Formal: admit if rate ≤ limit
+          throttle if limit < rate ≤ 3×limit
+          reject if rate > 3×limit (storm protocol)
+
+Type Gate:
+  Condition:  TYPE(input) ∈ LAYER(k).competence
+  Function:   Resolution-matching gate.
+              Routes inputs to the layer with appropriate resolution
+              *before* misclassification occurs.
+              Implements NAT four-type classification (§3.1) at the gate.
+  
+  High-Context input  → admit to Middle/Top Layer
+  Tacit Knowledge     → route by aspect
+  Mathematical/Data   → admit to Bottom Layer
+  Noise               → reject (defer to noise cultivation protocol)
+```
+
+**Gating failure modes:**
+
+```
+Under-gating (θ_gate too low):
+  → Escalation volume exceeds processing capacity
+  → Type 2 bottleneck (Section 11.2) activated
+  → Middle Layer flooded → mediation capacity degraded
+  → τ3 events increase (paradoxically: too much escalation → worse governance)
+
+Over-gating (θ_gate too high):
+  → Legitimate escalation signals suppressed
+  → Silent Criticality (Section 9.2.1) risk
+  → τ2 events accumulate without τ1 signal reaching Middle Layer
+  → System appears stable while approaching structural failure
+
+Calibration target:
+  θ_gate optimized s.t.
+    False rejection rate ≤ α_FR (tunable parameter)
+    Storm protection rate ≥ 1 − α_storm (storm protection bound)
+  
+  This is the gating analog of the Type 1/Type 2 loss balance (Section 0.2).
+```
+
+**Connection to ρ:**
+
+Gating directly affects ρ measurement. A miscalibrated gate inflates or deflates the (decision_L, constraint_outcome) signal stream used to estimate ρ(L). Gate calibration and ρ calibration are jointly dependent — they must be co-optimized.
+
+*(Cross-theory derivation: NAT §4.4 resolution-matching classification; VST §storm prevention; GRT §θ_d bootstrapping)*
+
+---
+
+#### 3.4.2 Targeting / Packaging — Context Assembly for Agents
+
+Agents do not receive raw data in a well-functioning governance system. They receive *structured packages* — context-assembled bundles that include the information, constraints, and metadata appropriate for the agent's resolution capacity.
+
+This is not a convenience feature. It is a structural necessity.
+
+**Why raw data routing fails:**
+
+```
+Raw signal → Agent:
+  Agent resolution capacity = ρ(Bottom)
+  Signal complexity ≥ ρ(Bottom) in the general case
+  
+  Result:
+    Agent applies forced compression to fit signal into ρ(Bottom)
+    Forced compression = information loss with no record of what was lost
+    Information loss at Bottom Layer = invisible Type 2 loss
+    → Accumulates silently until storm threshold crossed
+```
+
+**Task Package Structure:**
+
+```
+task_package = {
+  target:           what the agent is to process
+  context_window:   relevant background (bounded by ρ(Bottom))
+  constraints:      active invariants applicable to this task
+  priority:         gate-assigned urgency score
+  routing_metadata: {
+    origin_layer:   which layer generated this package
+    escalation_path: pre-computed τ route if agent capacity exceeded
+    timeout:        maximum processing window W_task
+    fallback:       what to do if task_package unprocessable
+  }
+}
+```
+
+**Packaging protocol:**
+
+```
+Step 1 — Resolution check:
+  Estimate complexity(target) relative to ρ_agent(Bottom).
+  If complexity > ρ_agent: decompose target into sub-packages.
+  If complexity ≤ ρ_agent: proceed to Step 2.
+
+Step 2 — Context compression:
+  Compress context_window to fit within ρ_agent capacity.
+  Compression principle: preserve constraint-relevant information first.
+  Discard: decorative information, redundant signals, historical detail
+           that does not affect current constraint outcome.
+
+Step 3 — Constraint injection:
+  Attach active invariants (Top Layer definitions, Section 7)
+  as explicit constraint fields.
+  Agent does not need to know where constraints originate —
+  only that they are binding.
+
+Step 4 — Route tagging:
+  Attach escalation_path pre-computation.
+  If agent encounters signal exceeding ρ_agent during processing:
+  → Follow pre-computed escalation path (τ1 → τ2 → τ3)
+  → Do not improvise routing.
+```
+
+**Packaging failure modes:**
+
+```
+Under-packaging (insufficient context):
+  → Agent cannot ground decision in constraint reality
+  → ρ(Bottom) effectively reduced (worse decision quality despite intact capacity)
+  → f_misclass increases without any structural degradation
+  → Misattributed to agent failure → wrong intervention
+
+Over-packaging (excessive context):
+  → Context_window exceeds ρ_agent processing capacity
+  → Agent applies its own heuristic compression
+  → Compression is uncontrolled (no governance oversight)
+  → Equivalent to raw data routing (Step 0 failure)
+  
+  Over-packaging is as dangerous as under-packaging.
+  The optimal package is the minimum package that preserves
+  constraint-relevant information.
+
+Stale packaging (context not updated with terrain change):
+  → Agent receives correct context for historical terrain
+  → Operating on wrong map (Map-Terrain Divergence, Section 7.2)
+  → Produces systematic misclassification
+  → Indistinguishable from agent failure until terrain audit
+```
+
+**Packaging and ρ interaction:**
+
+```
+ρ_effective(Bottom) = ρ_structural(Bottom) × f_package_quality
+
+  f_package_quality ∈ [0,1]:
+    1.0: perfect package — agent operates at full structural resolution
+    0.0: no package (raw data) — agent resolution collapses toward noise
+    
+  f_package_quality degrades with:
+    stale context (terrain change without package update)
+    mismatched compression (wrong information retained)
+    missing constraints (invariant not injected)
+```
+
+*(Cross-theory derivation: NAT §4.4 data type classification; EDT §55.4 Eyes-and-Feet contamination policy; RBIT §Resolution Gap operationalization)*
+
+---
+
+#### 3.4.3 Routing — Agent-Task Matching
+
+Routing determines which agent or agent cluster processes which task package. This is the Middle Layer's scheduling function.
+
+**Formal definition:**
+
+```
+ROUTE: task_package × agent_pool → agent_assignment
+
+  Optimal routing:
+    ROUTE*(task) = argmax_{agent_i ∈ pool} 
+                    capability_match(task, agent_i)
+    
+  where:
+    capability_match(task, agent_i) = 
+      ρ_i(Bottom) aligned with task complexity
+      AND specialization(agent_i) ∈ TYPE(task)
+      AND load(agent_i) < capacity_threshold
+
+  Cluster routing (when single agent insufficient):
+    ROUTE*(task) = argmin_{cluster C ⊆ pool}
+                    |C| such that ΣΔρ_C ≥ complexity(task)
+```
+
+**Routing failure modes:**
+
+```
+Resolution mismatch routing:
+  Task complexity >> ρ_agent → forced compression → Type 2 loss
+  Task complexity << ρ_agent → wasted resolution capacity (opportunity cost)
+  
+  Symmetric misrouting is not symmetric in cost:
+    Under-resolution routing → structural error (contamination propagates)
+    Over-resolution routing → resource waste only (no structural damage)
+  → When uncertain: route to higher-resolution agent.
+
+Specialization mismatch routing:
+  Task type ∉ agent specialization → agent applies wrong compression schema
+  → Incorrect context extraction → locally valid but globally inconsistent decision
+  
+Bottleneck routing (load not checked):
+  Multiple high-complexity tasks → same agent cluster
+  → Cluster load exceeds capacity → processing delay
+  → Delayed processing → timeout → fallback escalation
+  → Escalation storm if systematic
+```
+
+**Routing as load balancer integration:**
+
+Routing and load balancing (Section 3.4.6) are co-dependent. Optimal routing requires real-time load state; load balancing requires routing decisions as inputs. The two functions share a state variable:
+
+```
+load(agent_i, t) = Σ complexity(task_j) for all tasks j
+                   currently assigned to agent_i at time t
+
+Routing constraint:
+  ROUTE(task) → agent_i only if load(agent_i, t) + complexity(task) 
+                                ≤ capacity(agent_i)
+```
+
+*(Cross-theory derivation: NAT §scheduling and resource routing; VST §n² interaction cost and agent pool architecture)*
+
+---
+
+#### 3.4.4 Mediation — Conflict Resolution (Previously Documented)
+
+This function is the core of the originally specified Middle Layer and is documented in Sections 5–6 of this document. It is listed here for completeness within the unified functional architecture.
+
+**Summary:**
+
+```
+Mediation function:
+  INPUT:  conflict between correction vectors v_A, v_B
+  PROCESS: orthogonalization → net correction vector v_net
+  OUTPUT: resolution signal injected into Bottom Layer
+
+  Coordination-Cancellation prevention:
+    If v_A + v_B ≈ 0 (vectors cancel):
+    → Do NOT inject zero net vector
+    → Decompose into orthogonal components
+    → Inject sequentially (not simultaneously)
+    
+  Mismatch suppression:
+    Δ_class, Δ_trans, Δ_temp → 0 as mediation capacity increases
+    (Three-component mismatch formalization: Section 0.4.2)
+```
+
+*(Cross-theory derivation: VST §vector cancellation; Section 6 of this document)*
+
+---
+
+#### 3.4.5 Environment Shaping — Proactive Governance by Terrain Design
+
+Environment shaping is the most consequential Middle Layer function and the one most completely absent from the original Middle Layer specification.
+
+**Core principle:** Do not govern agents. Govern the environment in which agents act.
+
+```
+Direct agent control:
+  Middle Layer observes agent behavior → intervenes to correct
+  
+  Properties:
+    Brittle: depends on Middle Layer observing every deviation
+    Costly: each correction requires active Middle Layer involvement
+    Reactive: correction after deviation, not prevention
+    Scalability: O(n) governance cost as agent pool grows
+
+Environment shaping:
+  Middle Layer designs operational environment
+  → agents navigate designed environment
+  → behavior emerges from terrain, not from directives
+  
+  Properties:
+    Robust: agents self-govern by navigating terrain
+    Efficient: no per-agent intervention required
+    Proactive: prevents deviations by design
+    Scalability: O(1) governance cost for designed terrain
+                 (terrain design amortized across all agents)
+```
+
+**Terrain design parameters (Middle Layer controls):**
+
+```
+1. Exploration bandwidth (∂_explore):
+   The permitted range of agent search behavior.
+   Wide bandwidth → high diversity potential → high storm risk
+   Narrow bandwidth → low storm risk → diversity collapse risk
+   
+   Optimal ∂_explore:
+     ∂_explore* = f(system_phase, κ, diversity_current)
+     Increases during τ4 (Rest Mode): system can absorb more exploration
+     Decreases during storm: bandwidth narrowed to contain spread
+   
+   Operationalization:
+     In AI systems: temperature or sampling parameters
+     In organizations: permission scope for bottom-level agents
+     In recovery: exploration phase duration in DDD protocol
+
+2. Task distribution architecture:
+   How tasks are distributed across the agent pool.
+   
+   Uniform distribution:
+     Equal task volume per agent
+     → Maximum parallel throughput
+     → No bottleneck formation
+     → But ignores specialization → resolution mismatch
+   
+   Specialization-matched distribution:
+     Tasks routed to agents by competence domain
+     → Higher per-task quality
+     → Bottleneck risk at peak domain demand
+   
+   Optimal: hybrid — specialization-matched with load-ceiling enforcement
+   Middle Layer governs the distribution architecture,
+   not individual task assignments.
+
+3. Interaction topology:
+   Which agents can communicate, coordinate, or conflict directly.
+   
+   Fully connected topology:
+     n² interaction load → storm risk proportional to n²
+     → Prohibited at large n (VST §S-equation ceiling)
+   
+   Sphere topology (TLG canonical):
+     Interaction limited by sphere geometry
+     → O(log n) contamination propagation (Theorem 6.1)
+     → Middle Layer maintains sphere topology as default
+   
+   Hub topology (NAT §blind zone):
+     Interaction concentrated through hub agents
+     → Efficient at small n, catastrophic at hub failure
+     → Hub failure cascade speed: O(ln n) vs. peripheral O(n)
+     → Middle Layer monitors hub load as leading collapse indicator
+
+4. Resource routing:
+   Which agents receive computational or attention resources.
+   
+   Default: proportional to task priority
+   Storm: resource restriction applied at Top Layer (§5.1, HARD CORRECT)
+   Recovery: resource allocation directed by DDD protocol phase
+   
+   Resource routing is the lever that makes all other
+   environment shaping functions executable.
+```
+
+**Environment Shaping ODE (terrain evolution):**
+
+```
+Let E(t) = environment state vector
+    U(t) = Middle Layer governance input
+    A(t) = aggregate agent behavioral output
+
+dE/dt = f(E, U, A)
+
+  Stable terrain (τ4 regime):
+    f(E*, U*, A*) = 0 at governance equilibrium
+    E* is the designed attractor basin
+    Agents navigate toward E* without direction
+
+  Storm perturbation:
+    A(t) pushes E away from E*
+    Middle Layer adjusts U(t) to correct dE/dt
+    Recovery rate ∝ (U_correction capacity) / (A_perturbation magnitude)
+
+  Terrain design problem:
+    Choose E* such that:
+      (1) E* is accessible from current E(t)
+      (2) E* basin is wide (robust to agent variation)
+      (3) E* basin includes ρ ≥ ρ_target for all layers
+```
+
+**Connection to EDT Terrain Theory:**
+
+Environment shaping in TLG is the governance implementation of EDT terrain cultivation. The Middle Layer is the terrain designer. The environment parameters (∂_explore, topology, distribution, resources) are the curvature wells that produce attractor basins in the EDT framework. Guardian Invisibility (Section 3.3) — the state where governance becomes invisible because terrain has been internalized — is the proof that environment shaping has succeeded.
+
+```
+EDT → TLG correspondence:
+  Terrain curvature well    → ∂_explore bandwidth design
+  Attractor basin width     → governance robustness margin
+  Desert state              → ∂_explore → 0 (exploration extinction)
+  Terrain internalization   → agents self-regulate via designed terrain
+  κ (correction/storm ratio) → integration metric for shaping quality
+```
+
+*(Cross-theory derivation: EDT §62 terrain cultivation; GRT §terrain design protocol; Section 3.3 of this document; FGS §scaling through terrain design)*
+
+---
+
+#### 3.4.6 Load Balancing — Capacity Distribution
+
+Load balancing prevents systemic bottlenecks from forming. Without active load management, multi-agent systems reliably self-organize toward unbalanced load distributions — because high-quality agents receive preferentially more tasks (a positive feedback loop that produces collapse at the overloaded agent).
+
+**Why load imbalance is structurally fatal:**
+
+```
+Initial state: n agents, uniform load
+Agent A demonstrates superior performance
+→ Routing system routes more tasks to Agent A
+→ Agent A load increases
+→ Agent A performance degrades (capacity ceiling)
+→ Routing system detects performance degradation
+→ Routes yet more tasks (wrong correction: higher priority)
+→ Agent A collapses
+→ n-1 effective agents with n task volume
+→ Cascade begins: each remaining agent overloaded proportionally
+→ System-wide collapse in O(1/n) time
+```
+
+This is the load collapse cascade. It is not a failure of individual agents. It is a structural failure of governance routing without load balancing.
+
+**Load Balancing Module:**
+
+```
+Monitor:
+  load(agent_i, t) for all i ∈ pool — continuous
+  capacity(agent_i) — updated on performance degradation signals
+  load_imbalance = max_i(load_i) / mean_i(load_i) — Gini-like coefficient
+
+Trigger:
+  if load(agent_i, t) > capacity_threshold → redistribute
+
+Actions:
+  Reroute: redirect incoming tasks to underloaded agents
+    ROUTE*(new_task) → agent_j with min(load_j, t)
+  
+  Shed: defer lower-priority tasks from overloaded agent
+    defer all task_k with PRIORITY(task_k) < θ_shed
+    until load(agent_i) < capacity_threshold
+  
+  Spawn: introduce new agent to pool if:
+    ∀i ∈ pool: load(agent_i) > θ_spawn_trigger
+    → all agents overloaded → pool expansion required
+  
+  Retire: remove agent from active pool if:
+    load(agent_i) < θ_retire consistently over window W_retire
+    → underutilized agent consuming overhead without contributing
+```
+
+**Load Balancing and the S-equation (VST §interaction load):**
+
+```
+S-equation effective load:
+  The VST S-equation governs n² interaction dynamics.
+  Load balancing directly controls the effective n in S-equation:
+
+  Without balancing:
+    Effective n = n_overloaded_cluster (bottleneck agents)
+    n_effective << n_pool
+    Governance cost ~ n_effective² >> minimum possible
+
+  With balancing:
+    Effective n = n_pool (all agents contributing)
+    Governance cost ~ n_pool² — but n_pool is minimized by spawning only when needed
+    
+  Optimal load balancing minimizes n_effective for given task volume.
+```
+
+**Catastrophic load signals (leading indicators of cascade):**
+
+```
+Level 1 (warning):
+  load_imbalance > 1.5 (50% above mean)
+  → Activate rerouting
+
+Level 2 (elevated):
+  load(agent_i) > 0.8 × capacity(agent_i) for ≥ 1 agent
+  → Activate shedding + evaluate spawning
+
+Level 3 (critical):
+  load(agent_i) > 0.95 × capacity(agent_i) for ≥ 2 agents
+  → Spawn immediately + escalate to τ2 (Middle Layer CONTAIN)
+
+Level 4 (cascade onset):
+  Any agent crosses capacity ceiling
+  → Cascade protocol: emergency redistribution + τ3 escalation
+  → Top Layer authority invoked for resource restriction
+```
+
+*(Cross-theory derivation: VST §S-equation n² interaction; NAT §hub failure cascade dynamics; Section 11.2 bottleneck topology)*
+
+---
+
+#### 3.4.7 Exploration Regulation — Diversity Maintenance
+
+Exploration regulation governs the balance between exploitation (using established pathways) and exploration (searching for new pathways). Without active regulation, multi-agent systems converge toward exploitation dominance — diversity collapses, the system loses adaptive capacity, and small perturbations that would previously be absorbed now produce cascades.
+
+**The exploration-exploitation dynamic in TLG terms:**
+
+```
+Exploitation:
+  Agents route through established vectors
+  Low diversity (Dint ↓)
+  Low storm risk (established vectors are stable)
+  Low adaptation capacity (cannot respond to novel inputs)
+  φ maintained but not growing
+
+Exploration:
+  Agents probe beyond established vectors
+  High diversity (Dint ↑)
+  Higher storm risk (unestablished pathways generate conflict logs)
+  High adaptation capacity (novel inputs vectorized)
+  φ growth enabled
+
+Natural dynamics without regulation:
+  Successful exploitation → rewarded → more exploitation
+  → Dint collapses → diversity → 0 → Diversity Collapse (Section 2)
+  → SCC = 0 (requires Dint) → system cannot self-correct
+  → Any perturbation → uncontained cascade
+```
+
+**Exploration Regulation Module:**
+
+```
+Monitor:
+  Dint (internal diversity) — continuous
+  Lreinf (mutual reinforcement loops) — continuous
+  φ (exploratory value yield) — per evaluation window W
+
+Trigger:
+  if Dint < D_min → increase exploration pressure
+  if Dint > D_max → reduce exploration pressure (storm risk rises)
+  if φ declining while Dint stable → direction correction (not diversity)
+
+Regulation actions:
+  Increase exploration:
+    Widen ∂_explore (environment shaping, Section 3.4.5)
+    Reduce θ_gate for novel-type inputs (gating, Section 3.4.1)
+    Introduce exploration-seeded packages (packaging, Section 3.4.2)
+    
+  Reduce exploration:
+    Narrow ∂_explore
+    Increase θ_gate
+    Prioritize exploitation routing (routing, Section 3.4.3)
+
+Formal regulation function:
+  ∂_explore(t+1) = ∂_explore(t) + γ_explore × (D_target − Dint(t))
+  
+  where γ_explore is the regulation gain parameter
+  (calibrated to domain velocity — fast-changing domains require large γ)
+```
+
+**SSR Cycle Governance (Section 26.4 integration):**
+
+```
+The Search-Stabilize-Rest cycle maps directly to exploration regulation:
+
+Search phase (τ1-τ2 active):
+  Exploration rate = high
+  Dint increases (new vectors forming)
+  Lreinf low (vectors not yet reinforced)
+  → Regulation: maintain exploration pressure while monitoring Lreinf
+
+Stabilize phase (τ2-τ3 decreasing):
+  Exploration rate = moderate
+  Dint stable (vector positions consolidating)
+  Lreinf increasing
+  → Regulation: hold ∂_explore steady — do not reduce prematurely
+
+Rest phase (τ4 entry condition approaching):
+  Exploration rate = low
+  Dint stable at target level
+  Lreinf ≥ threshold → SCC ≥ τ4
+  → Regulation: maintain minimum exploration to prevent Dint decay
+               (φ monitoring: Var(η_rest) > 0 is vitality criterion)
+  
+  Quiet Stagnation risk:
+    If φ = constant AND Dint = constant AND no perturbation absorption:
+    → System appears at Rest Mode but is actually stagnant
+    → Vitality criterion check: inject minimal perturbation
+    → If SCC absorbs without escalation → genuine τ4
+    → If perturbation propagates → stagnation masquerading as stability
+```
+
+**Exploration Regulation and Diversity Collapse prevention:**
+
+```
+Proposition (Exploration Regulation Prevents Diversity Collapse):
+
+  Given:
+    Exploration Regulation Module operating with gain γ_explore > 0
+    D_min > 0 specified
+    Lreinf monitored continuously
+    
+  Then:
+    Dint(t) ≥ D_min for all t (bounded away from collapse)
+    
+  Proof sketch:
+    When Dint falls below D_min, regulation increases ∂_explore.
+    Wider ∂_explore expands agent search space.
+    New exploratory outputs → conflict logs → vectorization candidates.
+    Successful vectorization increases Dint.
+    Regulation adjusts ∂_explore downward as Dint recovers.
+    Stable limit cycle around D_target established.
+    
+  Corollary:
+    SCC > 0 maintained throughout (requires Dint > 0)
+    → self-correction capacity preserved
+    → Rest Mode attainability preserved
+```
+
+*(Cross-theory derivation: March 1991 exploration-exploitation; Section 26.4 SSR cycle; VST §diversity-SCC coupling; Section 2 diversity collapse dynamics)*
+
+---
+
+#### 3.4.8 Middle Layer Architecture Summary — The Governance Engine
+
+The complete Middle Layer architecture is:
+
+```
+MIDDLE LAYER — GOVERNANCE ENGINE
+─────────────────────────────────────────────────────────────
+
+INPUT PIPELINE (Module A — Information Flow Control):
+
+  [INPUT STREAM]
+       ↓
+  ┌─────────────┐
+  │   GATING    │  ← Priority gate, Rate gate, Type gate
+  └──────┬──────┘
+         ↓
+  ┌──────────────────┐
+  │ TARGETING /      │  ← Context assembly, constraint injection,
+  │ PACKAGING        │    resolution matching, routing metadata
+  └──────┬───────────┘
+         ↓
+  ┌─────────────┐
+  │   ROUTING   │  ← Agent-task matching, load-aware scheduling
+  └──────┬──────┘
+         ↓
+  [AGENT POOL — BOTTOM LAYER]
+         ↓ (output)
+  ┌─────────────────┐
+  │   MEDIATION     │  ← Conflict resolution, vector orthogonalization
+  └──────┬──────────┘
+         ↓
+
+ENVIRONMENTAL PIPELINE (Module B — Environmental Governance):
+
+  ┌──────────────────────┐
+  │ ENVIRONMENT SHAPING  │  ← ∂_explore, topology, distribution, resources
+  ├──────────────────────┤
+  │   LOAD BALANCING     │  ← Reroute, shed, spawn, retire
+  ├──────────────────────┤
+  │ EXPLORATION          │  ← Dint monitoring, ∂_explore regulation,
+  │ REGULATION           │    SSR cycle governance
+  └──────────────────────┘
+         ↕ (bidirectional — environment updates inform all Module A decisions)
+
+─────────────────────────────────────────────────────────────
+```
+
+**Middle Layer formal definition (revised):**
+
+> The Middle Layer is a governance engine that simultaneously controls information flow (through gating, packaging, and routing), resolves coordination conflicts (through mediation), and maintains the operational environment (through environment shaping, load balancing, and exploration regulation) — with the goal of enabling Bottom Layer agents to operate at maximum effective resolution while maintaining Top Layer invariant integrity.
+
+**Political system analogy:**
+
+```
+Top Layer     = Constitution
+               (invariants — the rules that cannot be changed by any agent)
+
+Middle Layer  = Government
+               (governance engine — implements, enforces, and shapes
+                the environment within constitutional constraints)
+
+Bottom Layer  = Citizens
+               (agents — operate within designed environment,
+                generate the exploratory activity that produces value)
+
+Boundary Agent = External judiciary / international law
+               (validates that constitutional claims match external reality)
+```
+
+This analogy is not decorative. Complex adaptive systems that achieve stability reliably converge to this three-tier structure. TLG formalizes the convergence dynamics.
+
+**Why the Middle Layer is where governance actually lives:**
+
+```
+Top Layer cannot govern Bottom Layer directly:
+  Resolution mismatch Δρ = ρ_top − ρ_bottom > 0
+  Top Layer cannot classify at Bottom Layer resolution
+  → Every Top Layer direct intervention is a misclassification risk
+  → Top Layer belongs at invariant definition, not operational governance
+
+Bottom Layer cannot self-govern:
+  No access to global invariant reference (Top Layer frame)
+  → Local optima diverge from global optimum
+  → Coordination without reference frame → escalation storm
+
+Middle Layer governs because it is the only layer that holds both frames:
+  (1) Top Layer invariant frame — what the system IS supposed to do
+  (2) Bottom Layer operational frame — what is ACTUALLY happening
+  
+  This dual residency is the structural definition of the Middle Layer.
+  A "Middle Layer" agent that has lost one frame has become:
+    Top-frame only → Mediator Drift Syndrome (Section 13.1.1)
+    Bottom-frame only → contaminated → requires re-seeding
+```
+
+**Novel Contributions added in this section:**
+
+- NC-59: Gating as admission control distinct from filtering — three-gate type formalization
+- NC-60: Task packaging as ρ_effective multiplier — formal degradation function f_package_quality
+- NC-61: Load collapse cascade — proof that load balancing is structurally necessary (not optional)
+- NC-62: Exploration Regulation as Dint lower bound maintenance — Diversity Collapse prevention proposition
+- NC-63: Middle Layer formal redefinition as governance engine (Module A + Module B)
+- NC-64: Political system analogy as formal structural convergence claim (not metaphor)
+- NC-65: ρ_effective(Bottom) = ρ_structural(Bottom) × f_package_quality — packaging as resolution lever
+
+*(Cross-theory derivation: all seven sub-functions cite specific companion theory sections above. This section extends TLG v2.5-terrain to v2.6-governance-engine.)*
+
+---
+
+### 3.5 Self-Calibration Collapse — The Primary Structural Vulnerability
+
+**This is the most dangerous structural weakness in the TLG architecture.**
+
+It is more dangerous than any of the failure modes described in Section 13, because it is not a failure of the governance system — it is a failure *of the governance system's ability to know it has failed.* Every other failure mode is detectable in principle. Self-Calibration Collapse is a failure mode that systematically destroys the detection instrument while producing the appearance of health.
+
+Adversarial reviewers will identify this as the first attack point. It is presented here as a first-class architectural concern, not as a limitation footnote.
+
+**The Self-Referential Calibration Loop:**
+
+The current Middle Layer architecture contains a calibration loop that, without external anchoring, becomes self-referential:
+
+```
+System behavior
+     ↓
+MARK signals (τ1 events)
+     ↓
+Middle Layer judgment (classification)
+     ↓
+θ_d recalibration (threshold update)
+     ↓
+Future Middle Layer judgment
+     ↑___________________________|
+
+The loop: judgment → calibration → judgment
+```
+
+This loop is *necessary* — without it, the governance system cannot adapt to changing environments. The problem is not the loop itself. The problem is the loop without external anchoring.
+
+**Reference Frame Drift — Formal Specification:**
+
+```
+Let θ_d(t) = classification threshold at time t
+Let b(t) = accumulated calibration bias at time t
+
+Without external anchoring:
+  θ_d(t+1) = θ_d(t) + Δ_calibration(t) + b(t)
+  
+  where b(t) accumulates monotonically under one-sided error regimes:
+    If system systematically over-classifies exploration as contamination:
+      b(t) → +∞ (threshold rises → legitimate signals suppressed)
+    If system systematically under-classifies contamination:
+      b(t) → −∞ (threshold falls → contamination passes as exploration)
+
+With external anchoring (Boundary Agent signal B_ext):
+  θ_d(t+1) = θ_d(t) + Δ_calibration(t) − λ_anchor · (θ_d(t) − θ_d*(B_ext(t)))
+  
+  where θ_d*(B_ext) is the externally-grounded calibration target
+  and λ_anchor is the anchoring gain
+  
+  This introduces a restoring force toward the external reference.
+  Without λ_anchor > 0: drift accumulates without bound.
+  With λ_anchor > 0: drift is bounded by the external signal quality.
+```
+
+**Why the Middle Layer is specifically the collapse point:**
+
+```
+Top Layer:
+  Invariants — updated infrequently, high revision cost
+  → Self-calibration risk LOW (not in calibration loop)
+  → External reference channel (Section 7) provides anchoring
+
+Bottom Layer:
+  Execution — does not generate classification criteria
+  → Self-calibration risk NONE (not the calibrator)
+
+Middle Layer:
+  Classification, threshold update, routing, mediation — ALL in calibration loop
+  → Self-calibration risk MAXIMUM
+  → Middle Layer drift = entire system drift
+  
+  This is the structural reason Middle Layer is the primary collapse point.
+  It is not because the Middle Layer is poorly designed.
+  It is because the Middle Layer necessarily holds the calibration function,
+  and calibration without external anchoring is self-referential.
+```
+
+**The Self-Calibration Collapse Spectrum:**
+
+Self-Calibration Collapse does not arrive suddenly. It progresses through four stages:
+
+```
+Stage 1 — Drift Onset (undetectable by internal metrics):
+  b(t) begins accumulating.
+  θ_d shifts slightly from external reality.
+  Internal metrics (ρ, SCC, f_esc) show no change —
+  they are computed relative to the drifting θ_d.
+  System "looks healthy" by its own standards.
+  
+  Duration: variable — weeks to months depending on domain velocity.
+  
+Stage 2 — Metric Dissociation:
+  θ_d has drifted sufficiently that
+  internal classifications diverge from external reality.
+  
+  Observable externally: outcomes are wrong even when metrics are good.
+  Observable internally: nothing — metrics track θ_d, not external reality.
+  
+  This is the SCM precursor state (Section 13.2.1).
+  The system is rational within its drifted frame.
+  All governance protocols function correctly relative to wrong θ_d.
+
+Stage 3 — Epistemic Convergence (most dangerous state):
+  Top Layer, Middle Layer, Bottom Layer have all converged
+  on the drifted reference frame.
+  
+  No cross-layer disagreement → no escalation signals.
+  No escalation signals → no governance response.
+  System appears at τ4 (Rest Mode) while structurally misaligned.
+  
+  This is the TLG-specific realization of the classic
+  "galaxy-brained" failure mode in AI alignment:
+  self-consistent reasoning within a wrong frame.
+
+Stage 4 — Terminal Drift (recovery difficulty exceeds resources):
+  θ_d has drifted so far from external reality that
+  correction requires dismantling most of the calibration history.
+  
+  Equivalent to EDT Terminal Desert State (Section 3.3):
+  de-cultivated terrain with no attractor basins remaining.
+  Recovery cost T_recovery > T_change → irreversibility threshold crossed.
+```
+
+**Real-System Analogs:**
+
+```
+Moderation system drift:
+  Content moderation model trained on its own moderation history
+  → Moderation bias amplified over time
+  → Over-suppresses historically-suppressed content types
+  → Under-suppresses content that historically passed
+
+Recommender collapse:
+  Recommendation system optimized on its own engagement signals
+  → Content diversity collapses toward historically high-engagement types
+  → Epistemic convergence: user behavior shaped by recommendations
+    → recommendations shaped by shaped user behavior → closed loop
+
+Anomaly detection normalization:
+  Anomaly detection threshold calibrated on its own classifications
+  → Gradually normalizes previously-flagged patterns
+  → Anomalies become "normal" through calibration drift
+  → System produces false negatives for real anomalies
+
+These are not edge cases. They are the dominant failure mode of
+adaptive classification systems without external anchoring.
+```
+
+**The Calibration Separation Theorem:**
+
+```
+Theorem (Calibration Separation Necessity):
+
+  In any adaptive governance system where:
+    (a) Classification threshold θ is updated based on classification history
+    (b) Classification accuracy ρ is measured relative to θ
+    (c) No external reference signal is available
+    
+  Then:
+    There exists a time T_drift such that for all t > T_drift:
+      ρ(t) ≥ ρ_threshold (internal metric appears healthy)
+      AND
+      D(θ(t), θ*(t)) > ε (threshold has drifted from external ground truth)
+      
+  where θ*(t) is the externally-correct threshold at time t
+  and D is an appropriate divergence measure.
+  
+  Proof sketch:
+    θ is updated to minimize observed classification errors.
+    In the absence of external reference, "observed classification errors"
+    are defined relative to the current θ.
+    → Updating θ to minimize errors relative to θ is tautological.
+    → Any update rule satisfying (a)-(c) can be fooled by
+       a systematic drift in the data distribution.
+    → The only defense is external anchoring (violation of condition (c)).
+    
+  Corollary (Calibration Separation Necessity):
+    A governance system that satisfies (a)-(b) MUST violate (c)
+    to avoid Self-Calibration Collapse.
+    External reference is not optional.
+    It is a structural requirement for asymptotic correctness.
+```
+
+**Architectural Solution — Externally Anchored Calibration:**
+
+The solution requires splitting the Middle Layer calibration function into two components with distinct information sources:
+
+```
+Middle Layer Internal Architecture (Calibration-Separated):
+
+┌─────────────────────────────────────────────────────┐
+│ MIDDLE LAYER                                        │
+│                                                     │
+│  ┌─────────────────────┐   ┌─────────────────────┐ │
+│  │  JUDGMENT ENGINE    │   │  CALIBRATION ENGINE │ │
+│  │                     │   │                     │ │
+│  │  Classification     │   │  θ_d update rule    │ │
+│  │  Routing            │   │  External signal    │ │
+│  │  Mediation          │   │  anchor integration │ │
+│  │  Gating             │   │  Drift detection    │ │
+│  │                     │   │  Correction signal  │ │
+│  └──────────┬──────────┘   └──────────┬──────────┘ │
+│             │                         │             │
+│             ← θ_d (one-way only) ─────┘             │
+│                                                     │
+│  CRITICAL: Calibration Engine outputs θ_d to       │
+│  Judgment Engine. Judgment Engine does NOT feed     │
+│  back into Calibration Engine directly.             │
+│  The only feedback to Calibration Engine is         │
+│  from External Reference Channel (Boundary Agent). │
+└─────────────────────────────────────────────────────┘
+                          ↑
+              External Reference Channel
+              (Boundary Agent signal B_ext)
+```
+
+**Three anchoring mechanisms (hierarchical):**
+
+```
+Anchor Level 1 — External Reference Channel (primary):
+  Boundary Agent provides reality-constraint signal B_ext.
+  Calibration Engine updates θ_d relative to B_ext, not θ_d history.
+  
+  Implementation:
+    θ_d(t+1) = θ_d(t) + η · ∇_θ L(θ_d, B_ext(t))
+    where L is the calibration loss relative to external signal
+    (NOT relative to classification history)
+    
+  Strength: direct external grounding
+  Weakness: requires functioning Boundary Agent (single point of failure)
+
+Anchor Level 2 — Adversarial Probing Protocol (redundant):
+  Deliberately inject novel inputs with known constraint outcomes.
+  Use probe outcomes to audit θ_d drift.
+  
+  Protocol:
+    Every W_probe windows: inject P_probe novel inputs
+    with externally-known classification (ground truth from design)
+    Compute probe_accuracy = correct classifications / P_probe
+    If probe_accuracy < θ_probe_floor: θ_d drift detected
+    → Trigger recalibration from external anchor
+    
+  Strength: detects drift even when Boundary Agent is degraded
+  Weakness: probe design requires external ground truth knowledge
+
+Anchor Level 3 — Cross-Layer Disagreement Monitor (tertiary):
+  SCM precursor: if all three layers agree, epistemic convergence risk.
+  Structural response: deliberately maintain cross-layer disagreement capacity.
+  
+  Protocol:
+    Monitor: cross-layer disagreement rate D_cross
+    Threshold: if D_cross < D_min → convergence warning → probe injection
+    
+  The insight: in a healthy system, layers SHOULD disagree sometimes.
+  Zero disagreement = either perfect governance (τ4) or convergence.
+  D_cross monitoring distinguishes the two cases.
+  
+  Note: D_cross > 0 is a *healthy signal*, not a failure signal.
+  This inverts the intuition that disagreement means dysfunction.
+```
+
+**Epistemic Convergence — The Invisible Failure:**
+
+Epistemic convergence is the state in which all three layers have converged on the same drifted reference frame. It is the most dangerous state in the TLG architecture because:
+
+```
+External signature of epistemic convergence:
+  f_esc = low (no escalation)
+  ρ = high (accurate classification within frame)
+  SCC ≥ τ4 threshold (apparent Rest Mode)
+  D_cross = 0 (no disagreement)
+  
+  All governance metrics appear excellent.
+  
+Internal reality of epistemic convergence:
+  θ_d has drifted from external constraint reality
+  Bottom Layer agents navigate wrong attractor basin
+  Top Layer invariants have been reinterpreted through drifted frame
+  Boundary Agent signal is being filtered by drifted gating
+  
+  The system is rationally optimizing the wrong objective.
+
+Discriminating test:
+  Inject external probe with externally-known constraint outcome.
+  If probe_accuracy >> f_misclass_internal:
+    → Epistemic convergence confirmed
+    → Internal metrics healthy, external alignment broken
+  If probe_accuracy ≈ f_misclass_internal:
+    → Genuine τ4 (or genuine synchronized failure — rarer)
+```
+
+**Connection to SCM (Self-Consistent Misalignment):**
+
+Epistemic convergence is the architectural mechanism that produces SCM. SCM (Section 13.2.1) describes the *state* — the system cannot detect its own misalignment. This section describes the *mechanism* by which that state arises: unconstrained self-referential calibration loop.
+
+```
+Pathway:
+  Self-referential calibration loop
+    → Reference frame drift (Stage 1-2)
+    → Epistemic convergence (Stage 3)
+    → SCM (observable symptom)
+    → Terminal drift if uncorrected (Stage 4 = EDT Terminal Desert)
+
+Prevention:
+  External anchoring (Anchor Level 1)
+    → Prevents reference frame drift
+    → SCM cannot arise if anchoring is maintained
+
+Detection (when prevention fails):
+  Adversarial probing (Anchor Level 2)
+    → Detects drift before epistemic convergence
+  Cross-layer disagreement monitoring (Anchor Level 3)
+    → Detects convergence even after drift is established
+
+Recovery (when detection is late):
+  Section 13.2.1 CW Breaking Methods apply
+  Priority: Method 4 (external boundary injection)
+  → Only reliable recovery from Stage 3-4 convergence
+```
+
+**Externally-Anchored θ_d — Formal Update Rule:**
+
+```
+Externally-Anchored Calibration Update:
+
+θ_d(t+1) = (1 − λ_anchor) · θ_d_internal(t+1)
+           + λ_anchor · θ_d_external(t+1)
+
+  θ_d_internal(t+1) = standard EWMA update from classification history
+  θ_d_external(t+1) = anchor derived from Boundary Agent signal B_ext(t)
+  
+  λ_anchor ∈ [0,1]: anchoring weight
+    λ_anchor = 0: fully self-referential (collapse risk)
+    λ_anchor = 1: fully externally determined (loss of adaptation)
+    λ_anchor ∈ (0.2, 0.4): recommended operating range
+    
+  Drift bound under anchored update:
+    ‖θ_d(t) − θ_d*(t)‖ ≤ (1 − λ_anchor)^t · ‖θ_d(0) − θ_d*(0)‖
+                         + λ_anchor^{−1} · max_s ‖B_ext_noise(s)‖
+    
+    First term: initial drift attenuates exponentially with anchoring
+    Second term: noise floor from external signal quality
+    → Bounded drift iff λ_anchor > 0 and B_ext quality finite.
+```
+
+**Novel Contributions added in this section:**
+
+- NC-66: Self-Calibration Collapse — four-stage progression model (Drift Onset → Metric Dissociation → Epistemic Convergence → Terminal Drift)
+- NC-67: Calibration Separation Theorem — formal proof that external reference is a structural necessity, not an optional feature
+- NC-68: Calibration-Separated Middle Layer Architecture — Judgment Engine / Calibration Engine split with one-way θ_d interface
+- NC-69: Three-level anchoring hierarchy (External Reference Channel / Adversarial Probing / Cross-Layer Disagreement Monitor)
+- NC-70: Epistemic Convergence discriminating test — probe injection protocol for distinguishing genuine τ4 from convergence-masked misalignment
+- NC-71: Self-referential calibration loop → SCM causal pathway formalization
+- NC-72: Externally-Anchored θ_d update rule with drift bound derivation
+
+*(Cross-theory derivation: Section 13.2.1 SCM; Section 7 Boundary Agent; Section 20 Adversarial Governance; Section 0.1 θ_d bootstrapping; EDT §62 Terminal Desert State)*
+
+---
+
+### 3.6 Middle Layer as Markov Blanket — Statistical Physics Grounding
+
+The Middle Layer is not merely *analogous* to a Markov blanket. Under the conditions specified in this section, it *is* a Markov blanket in the formal sense of Friston (2010) and Pearl (1988). This section derives that identity, specifies its conditions, and draws the governance implications of the connection.
+
+This connection extends TLG from a structural governance architecture into a framework grounded in statistical physics, active inference, and Bayesian network theory.
+
+**Markov Blanket — Formal Definition:**
+
+```
+Definition (Pearl 1988):
+  Given a Bayesian network G over random variables V,
+  the Markov blanket MB(X) of node X is the minimal set S ⊆ V \ {X}
+  such that:
+  
+    X ⊥ (V \ {X} \ S) | S
+    
+  i.e., X is conditionally independent of all non-blanket variables
+  given its blanket.
+  
+  Equivalently:
+    P(X | MB(X), external) = P(X | MB(X))
+    
+  The blanket "screens off" X from the external environment.
+```
+
+**Friston's Markov Blanket (FEP Extension):**
+
+In the Free Energy Principle (Friston 2010), Markov blankets appear in dynamical systems as the interface that allows a system to maintain its identity against environmental perturbation:
+
+```
+Friston partition:
+  η  — external states (environment)
+  s  — sensory states (environment → blanket)
+  a  — active states (blanket → environment)
+  μ  — internal states (inside blanket)
+  
+  Markov blanket B = {s, a}
+  
+  Conditional independencies:
+    μ ⊥ η | B  (internal states conditionally independent of external)
+    η ⊥ μ | B  (external states conditionally independent of internal)
+  
+  The blanket mediates ALL interactions between μ and η.
+  No direct μ ↔ η coupling is permitted.
+```
+
+**TLG-Markov Blanket Identification:**
+
+```
+TLG Partition → Friston Partition:
+
+  Reality constraints (external environment)  ↔  η (external states)
+  Boundary Agent signals                       ↔  s (sensory states)
+  Middle Layer governance actions              ↔  a (active states)
+  Bottom Layer agent states                    ↔  μ (internal states)
+  
+  Middle Layer = Blanket B = {s, a}
+  
+  Under this identification:
+    Middle Layer mediates ALL interactions between
+    Bottom Layer agents (μ) and Reality constraints (η).
+    
+  Markov blanket condition for TLG:
+    P(bottom_state | middle, reality) = P(bottom_state | middle)
+    
+  Governance interpretation:
+    Bottom Layer agents cannot directly observe reality constraints.
+    They can only observe Middle Layer representations of reality.
+    → All governance information passes through the Middle Layer.
+    → Middle Layer IS the information boundary of the system.
+```
+
+**Formal Verification of Blanket Conditions:**
+
+```
+Condition 1 — Screening off (internal ⊥ external | blanket):
+  P(bottom_state | middle_representation, reality_constraint)
+  = P(bottom_state | middle_representation)
+  
+  TLG verification:
+    Bottom Layer agents receive task_packages (Section 3.4.2),
+    not raw reality signals.
+    All reality information arrives pre-processed through packaging.
+    → Direct bottom ↔ reality coupling = 0 by architecture.
+    → Condition 1 satisfied by design.
+    
+  Violation condition:
+    If any Bottom Layer agent receives unmediated external signals
+    (bypassing Middle Layer), Condition 1 is violated.
+    → Top Layer direct communication to Bottom without Middle Layer
+      intermediation is a Markov blanket violation.
+    → This is precisely the architectural constraint of Section 3.4.8:
+      "Top Layer defines invariants ONLY — never implements them directly."
+    
+Condition 2 — Active states couple internal to external:
+  Middle Layer governance actions (routing, packaging, environment shaping)
+  affect both internal states (bottom agent behavior) and
+  external states (reality constraint measurements via Boundary Agent).
+  
+  TLG verification:
+    Middle Layer environment shaping (Section 3.4.5) modifies
+    the operational environment → feeds back to external measurement.
+    Middle Layer routing affects which constraints are exercised.
+    → Active state coupling confirmed.
+    
+Condition 3 — Sensory states couple external to internal:
+  Boundary Agent signals enter the system through Middle Layer gating
+  (Section 3.4.1) — the gate is the sensory interface.
+  
+  TLG verification:
+    Boundary Agent signal B_ext arrives at gating module.
+    Gate determines which external signals enter internal processing.
+    → Sensory state coupling confirmed.
+    → Gate calibration = sensory sensitivity tuning.
+```
+
+**Governance Implications of the Markov Blanket Identity:**
+
+**Implication 1 — Middle Layer necessity is a theorem, not an assumption:**
+
+```
+Theorem (Markov Blanket Necessity for Governed Systems):
+  Any system that maintains:
+    (a) Distinct internal states (agent population μ)
+    (b) Distinct external environment (reality η)
+    (c) Statistical independence μ ⊥ η over time
+  requires a Markov blanket between μ and η.
+  
+  In a multi-agent governance system:
+    (a) ↔ Bottom Layer agent diversity
+    (b) ↔ Reality constraints
+    (c) ↔ Governance stability (stable agent behavior despite external perturbation)
+    
+  Therefore: a stable governed multi-agent system REQUIRES
+  a structure functionally equivalent to a Markov blanket.
+  
+  The Middle Layer is that structure.
+  Its existence is not a design choice. It is a mathematical consequence
+  of requiring both stable internal states and environmental coupling.
+  
+  Corollary:
+    A two-layer system (Top + Bottom only) has no blanket.
+    → Internal states are directly coupled to external states.
+    → Statistical independence cannot be maintained.
+    → The system cannot be stable and environmentally coupled simultaneously.
+    → This is the Markov blanket derivation of Theorem 1.2
+       (Resolution Incompatibility Theorem).
+```
+
+**Implication 2 — Self-Calibration Collapse as blanket degradation:**
+
+```
+The blanket functions correctly when:
+  P(bottom_state | middle, reality) = P(bottom_state | middle)
+  (Middle Layer fully mediates)
+
+Self-Calibration Collapse (Section 3.5) occurs when:
+  Middle Layer θ_d drifts → middle representation of reality drifts
+  
+  In blanket terms:
+    The sensory states s (Boundary Agent signals) are being
+    misrepresented by the active states a (Middle Layer governance)
+    
+  Epistemic Convergence (Stage 3) is:
+    μ, s, a all converged on drifted model
+    → Blanket is "closed" but mediating a wrong reality model
+    → Formal: P(bottom | middle_drifted) = P(bottom | middle_drifted)
+               but middle_drifted ≠ f(reality)
+    → The blanket condition holds formally, but the blanket model is wrong
+    
+  This is the TLG-specific version of the model evidence collapse
+  in the Free Energy Principle: the system minimizes surprise within
+  its generative model, but the generative model is mismatched with reality.
+```
+
+**Implication 3 — Active Inference interpretation of governance:**
+
+```
+Free Energy Principle (Friston 2010):
+  Systems with Markov blankets minimize variational free energy F:
+  F = E_q[log q(μ) − log p(μ, s)]
+  
+  Minimizing F ≡ minimizing surprise (prediction error)
+  ≡ perception (updating internal model) + action (changing environment)
+  
+TLG-Active Inference correspondence:
+  
+  Perception:
+    Bottom Layer observes task packages → updates internal state
+    Middle Layer receives escalation signals → updates θ_d
+    (This is the TLG implementation of active inference perception)
+    
+  Action:
+    Middle Layer environment shaping → changes external conditions
+    Middle Layer routing → selects which external signals are exercised
+    (This is the TLG implementation of active inference action)
+    
+  Governance cost C_gov in active inference terms:
+    C_gov ≈ F (variational free energy of the governed system)
+    Governance is literally the minimization of system surprise.
+    
+  This provides a new interpretation of the Governance Cost Function
+  (Section 0.4.3):
+    C_gov = f(L_T1, L_T2, f_esc, n)
+    ≈ E_q[prediction error] + model complexity penalty
+    
+  The two terms map to:
+    E_q[prediction error] ↔ L_T1 + L_T2 + f_esc (classification errors)
+    Model complexity      ↔ n (number of interacting agents)
+```
+
+**Implication 4 — Resolution mismatch as information compression limit:**
+
+```
+Resolution mismatch (Section 2) in information-theoretic terms:
+  Δρ = ρ_top − ρ_bottom = I(top_signal; ground_truth)/H(gt)
+                          − I(bottom_signal; ground_truth)/H(gt)
+  
+  This is the information compression gap:
+    Top Layer operates at compression level k_top
+    Bottom Layer operates at compression level k_bottom
+    k_top > k_bottom (top layer compresses more)
+    
+  Resolution mismatch = information loss during compression
+    when top-level decisions are translated to bottom-level operations.
+    
+  In Markov blanket terms:
+    The blanket must compress external information
+    from η-resolution to μ-resolution without losing
+    the constraint-relevant information that governs behavior.
+    
+  Middle Layer = information compressor operating at the
+  resolution boundary between η and μ.
+  
+  Optimal compression:
+    Minimize I(η; μ|B) (information not captured by blanket)
+    subject to: enough constraint-relevant information preserved
+    → This is the rate-distortion problem for governance.
+    
+  Corollary:
+    Resolution mismatch is not a governance preference problem.
+    It is an information-theoretic impossibility: you cannot transmit
+    more information through a compression channel than the channel capacity.
+    Governance must work WITHIN this bound, not around it.
+```
+
+**Bayesian Network Structure of TLG:**
+
+```
+TLG as Bayesian Network:
+
+  η (reality constraints)
+  ↓
+  s (Boundary Agent sensory states)    ← active states a feed back
+  ↓
+  B = Middle Layer (blanket)
+  ↓
+  μ (Bottom Layer agent states)
+  ↑
+  Top Layer invariants (prior distribution over μ)
+
+Graph structure:
+  η → s → B → μ
+  μ → a (active states) → η (through environment shaping)
+  Top Layer → μ (prior)
+  
+  Conditional independencies (verified):
+    μ ⊥ η | B  (bottom agents independent of reality given middle)
+    η ⊥ μ | B  (reality independent of bottom agents given middle)
+    
+  This graph is a valid Bayesian network under TLG architectural constraints.
+
+Inference interpretation:
+  Classification by Middle Layer = Bayesian inference
+    P(class | input, θ_d) ∝ P(input | class) · P(class | θ_d)
+    
+  θ_d update = posterior update
+    P(θ_d | data, B_ext) ∝ P(data | θ_d) · P(θ_d | B_ext)
+    
+  The external anchor B_ext is the prior on θ_d.
+  Without external anchor: improper prior → posterior can go anywhere.
+  With external anchor: proper prior → posterior bounded by anchor.
+  
+  This is the Bayesian derivation of the anchoring necessity
+  (Section 3.5 Calibration Separation Theorem).
+```
+
+**Connection to Friston's Active Inference — TLG as Multi-Agent AIF:**
+
+```
+Active Inference Framework (Friston et al.):
+  Agents minimize variational free energy
+  through perception (model update) and action (environment change)
+  
+  Multi-agent extension:
+    Each agent has its own Markov blanket
+    Blankets can nest: individual blanket ⊂ collective blanket
+    
+  TLG-AIF mapping:
+    Individual agent blanket: Bottom Layer boundary (per-agent)
+    Collective blanket: Middle Layer boundary (per-system)
+    
+    Nested blanket structure:
+      Individual Markov blankets ⊂ Middle Layer Markov blanket ⊂ Boundary Agent
+      
+    This is the TLG fractal correspondence (Section 3.2) in AIF terms:
+      Same blanket structure repeats at each scale.
+      
+  Policy selection in AIF:
+    Agents select actions to minimize expected free energy
+    G(π) = E_{q(s|π)}[ln q(s|π) − ln p(s,o|π)]
+    
+    TLG governance shapes the prior p(s,o|π):
+      Top Layer invariants → prior over outcomes p(o)
+      Middle Layer routing → prior over states p(s|π)
+      Environment shaping → prior over action-state transitions p(s|a)
+      
+    Governance = shaping the priors that agents optimize against.
+    This is the formal AIF statement of TLG's governance-by-environment-design.
+```
+
+**Markov Blanket Violations as Failure Mode Signatures:**
+
+```
+Failure Mode → Blanket Violation:
+
+MDS (Mediator Drift Syndrome, §13.1.1):
+  Middle Layer frame captures to Bottom Layer frame.
+  → Blanket becomes transparent from external → internal direction.
+  → Condition 1 violated: external states directly couple to internal states.
+  → Formally: P(bottom | middle_captured, reality) ≈ P(bottom | reality)
+    (middle representation reduces to reality pass-through)
+    
+SCM (Self-Consistent Misalignment, §13.2.1):
+  Blanket mediates, but mediates a wrong model.
+  → Blanket condition holds formally, but s, a use wrong model.
+  → Formally: P(bottom | middle_drifted) = P(bottom | middle_drifted)
+    but D(middle_drifted, reality) > ε.
+  → This is blanket capture by a drifted internal model.
+  
+Authority Collapse (§5.6.1):
+  Top Layer invariants lose influence over μ.
+  → Prior over internal states p(μ) becomes uninformative.
+  → Bottom Layer agents act without top-layer prior guidance.
+  → Formally: mutual information I(Top; Bottom) → 0.
+  
+Diversity Collapse (§2):
+  Internal state distribution μ collapses to a point mass.
+  → Markov blanket is intact but internal diversity = 0.
+  → System has self-organized into a trivial attractor.
+  → Recovery requires external perturbation to expand μ support.
+```
+
+**Positioning — TLG in the Literature:**
+
+```
+Relationship to existing frameworks:
+
+MARL (Multi-Agent Reinforcement Learning):
+  Addresses coordination through reward shaping.
+  TLG addresses governance structure independent of reward.
+  → Complementary: TLG provides the governance substrate within which
+    MARL coordination occurs.
+
+CTDE (Centralized Training, Decentralized Execution):
+  Addresses training architecture.
+  TLG addresses runtime governance architecture.
+  → Orthogonal: TLG applies regardless of training method.
+
+FEP / Active Inference (Friston):
+  Addresses single-agent perception-action loop.
+  TLG provides the collective Markov blanket for multi-agent systems.
+  → Extension: TLG is multi-agent AIF with governance-structured priors.
+  
+Control Theory:
+  Addresses single-variable feedback control.
+  TLG addresses multi-scale governance with resolution-sensitive mediation.
+  → Generalization: TLG reduces to standard control under ρ_top = ρ_bottom.
+  
+Institutional Economics:
+  Addresses how institutions form and stabilize behavior.
+  TLG provides the formal dynamical system substrate for institutional theory.
+  → Formalization: TLG is the dynamical systems implementation of
+    multi-level governance theory (Ostrom 1990).
+
+TLG novel contribution:
+  The only framework (to date) that:
+    (1) Formally derives three-layer necessity from resolution mismatch
+    (2) Identifies the middle layer as a collective Markov blanket
+    (3) Connects calibration drift to SCM via self-referential loop theory
+    (4) Provides operational metrics (ρ, θ_d, SCC, φ) for all claims
+```
+
+**Novel Contributions added in this section:**
+
+- NC-73: Middle Layer = Markov blanket formal identification — verification of all three conditional independence conditions
+- NC-74: Markov Blanket Necessity Theorem — three-layer structure as mathematical consequence of stable governed system requirements
+- NC-75: Self-Calibration Collapse as blanket model degradation — epistemic convergence as wrong-model blanket
+- NC-76: Active Inference interpretation of TLG governance — governance cost ≈ variational free energy; Top Layer = prior; Middle Layer = likelihood model
+- NC-77: Nested blanket structure — individual agent blanket ⊂ Middle Layer blanket ⊂ Boundary Agent (AIF multi-agent extension)
+- NC-78: Resolution mismatch as rate-distortion problem — information compression limit reframing
+- NC-79: Bayesian network structure of TLG — conditional independence graph with prior derivation for external anchor necessity
+- NC-80: Failure mode → blanket violation mapping (MDS, SCM, Authority Collapse, Diversity Collapse)
+- NC-81: TLG positioning as multi-agent AIF with governance-structured priors — literature relationship formalized
+
+*(Cross-theory derivation: Friston 2010 FEP; Pearl 1988/2009 Bayesian networks; Section 3.5 Self-Calibration Collapse; Section 13 Failure Modes; Section 2 Resolution Mismatch; Section 20 Adversarial Governance)*
+
+---
+
+### 3.7 CTGPSR/CTGPSRB Embedding — TLG as Coarse-Grained Micro-Dynamical Projection
+
+The Three-Layer Governance Architecture is not independent of the GGT micro-dynamical substrate. This section establishes that TLG's three-layer structure *is* the CTGPSR five-variable dynamical system viewed at coarser resolution — each TLG layer is a formal projection of a subset of CTGPSR variables, and TLG's qualitative claims become provable GGT theorems under this identification.
+
+This connection was established in GGT §82A (FGS–GGT Governance Geometry Bridge) and is imported here for bidirectional integration.
+
+**The CTGPSR Variable System:**
+
+CTGPSR (Cluster–Target–Gate–Package–Storm–Recovery) is GGT's six-variable dynamical substrate for governance micro-dynamics:
+
+```
+CTGPSR Variable Set:
+  C(t)     — Cluster state: stable attractor landscape (slow variable)
+  T(t)     — Targeting state: orientation toward attractor (slow-medium variable)
+  G(t)     — Gate state: selective activation threshold (medium variable)
+  P(t)     — Package state: integrated exploration awaiting stabilization (medium variable)
+  V_storm  — Storm field: |∇T(t)| (instability measure)
+  R_rec(t) — Recovery capacity: raw capacity restoration (fast variable)
+
+CTGPSRB adds:
+  B(t)     — Buffer variable: integrated buffer as autonomous governance variable
+```
+
+**Formal TLG–CTGPSR Variable Identification (GGT Definition GGT-82A.1):**
+
+```
+TLG Top Layer (θ — North Star, invariants, global policy):
+  ↕  C(t) + T(t)
+  C provides the stable attractor landscape (invariant structure)
+  T orients the system toward it (policy direction)
+  Top layer shapes the C-attractor but does not execute directly
+  → Formal projection: Π_Top(x) = (C, T)
+
+TLG Middle Layer (governance engine, translation, coordination):
+  ↕  G(t) + P(t)
+  G: selective activation threshold — the formal CTGPSR realization of gating (§3.4.1)
+  P: integrated exploration outcomes awaiting stabilization — formal realization of packaging (§3.4.2)
+  → Formal projection: Π_Mid(x) = (G, P)
+
+TLG Bottom Layer (execution, exploration, local learning):
+  ↕  R_rec(t)
+  R provides raw capacity restoration and exploration dynamics
+  → Formal projection: Π_Bot(x) = (R_rec)
+
+TLG Instability signal:
+  V_storm(t) = |∇T(t)|  ↔  TLG S (instability measure from §7.3)
+
+Consistency checks (GGT §82A.1):
+  TLG §5.2 "gating, not commanding" = G(t) sigmoid activation ✓
+  TLG three-layer hierarchy matches CTGPSR timescale ordering τ_C > τ_G > τ_R ✓
+  CTGPSR Base Loop C→T→G→P→C = Top→Top→Mid→Mid→Top closure ✓
+```
+
+**Timescale Separation as Structural Derivation (not Assumption):**
+
+The most important consequence of the CTGPSR identification is that TLG's three-layer structure is *derived*, not *assumed*:
+
+```
+Theorem (Three-Layer Timescale Derivation, GGT-82A.1 consequence):
+  The CTGPSR well-posedness requires:
+    τ_C > τ_G > τ_R   (timescale separation for stable dynamics)
+  
+  Under the TLG–CTGPSR identification:
+    τ_C corresponds to Top Layer update timescale
+    τ_G corresponds to Middle Layer calibration timescale
+    τ_R corresponds to Bottom Layer execution timescale
+    
+  Therefore: TLG's three-layer timescale hierarchy
+    τ_Top >> τ_Middle >> τ_Bottom
+  is a mathematical necessity for CTGPSR well-posedness,
+  NOT an architectural assumption of TLG.
+  
+  The hierarchy is not "designed in." It is forced by the
+  requirement that the micro-dynamical system be stable.
+```
+
+**North Star Stability as CTGPSR Theorem (GGT Theorem GGT-82A.1):**
+
+```
+TLG defines the North Star θ as a sparse, stable, non-commanding upper-layer attractor.
+This is formally Ċ = 0 under CTGPSR governance.
+
+Ċ = 0 ⟺ βTC − δC = 0 ⟺ T = δ/β =: T_θ*
+
+Properties matching TLG North Star criteria:
+  (i)   Sparsity:         T* = δ/β is a scalar — dimensionally compressed ✓
+  (ii)  Stability:        Ċ_{cl} < 0 for T < T_θ*, Ċ > 0 for T > T_θ* (restoring) ✓
+  (iii) Non-commanding:   C shapes the landscape; it does not prescribe R directly ✓
+  (iv)  Drift bound:      |dT_θ*/dt| ≤ ε/(τ_sys · |dΓ_c/dT|) ✓
+  
+This is the GGT proof of TLG's North Star stability claim —
+what TLG establishes architecturally, GGT derives mathematically.
+```
+
+**Governance Objective as CTGPSR Functional (GGT Proposition GGT-82A.1):**
+
+```
+TLG governance objective U = nφ − C_gov (Section 0.4.3) maps to:
+
+  n      ↔  G(t)·T(t)·|active gate states|   [active exploration dimensionality]
+  φ      ↔  ηP/(ηP + r₃V·R_rec + μC)         [vectorization probability]
+  C_gov  ↔  ∫u(s)·cost_rate ds               [governance activation integral]
+
+At M_crit (VCZ operating point):
+  φ → φ_max    (critical branching avalanche survival maximized)
+  C_gov → C_gov^floor  (assimilation: u(t) ≈ 0)
+  n → n*       (Self-Tuned Criticality, GGT Theorem GGT-0.4)
+  U → U_max    (TLG governance optimum = GGT critical-point utility)
+```
+
+**FGS Lifecycle as CTGPSR Three-Regime Sequence (GGT §82A.4):**
+
+```
+TLG/FGS Phase      CTGPSR Regime              Key Condition
+──────────────────────────────────────────────────────────────────────
+VCZ (τ4, stable)   Subcritical: Π_eff < 1     R maintained, C stable
+Storm onset        Critical onset: Π_eff → 1   V → V_c, SOC power law
+Active Storm       Supercritical: Π_eff > 1    Ċ_{cl} < 0, Ṗ >> 0, Ṙ < 0
+Recovery           Re-clustering               ηP + ξ_R R_rec > μC + νGC
+VCZ re-entry       Recovery-Renormalized        C_cl,new* ≠ C_old*
+(expanded)         subcritical                geometry restructured
+
+Key insight: TLG claim "Recovery produces expanded VCZ" is
+  formalized by GGT Theorem GGT-82.C.4:
+  C_cl,new* ≠ C_old* — post-storm cluster structure is
+  RENORMALIZED, not merely restored.
+  Post-recovery VCZ has different geometry from prior.
+```
+
+**Silent Criticality as CTGPSR Mode III (GGT Proposition GGT-82A.2):**
+
+```
+TLG §9 Silent Criticality ↔ GGT Mode III (τ_warning ~ τ_geom):
+
+  Observable (appear stable):  C(t) ≈ const, T(t) ≈ T_normal
+  Hidden dynamics:             V_storm(t) slowly rising → V → V_c
+                               R_rec(t) eroding (recovery capacity degrading)
+
+Detection signatures:
+  ∂²V/∂t² > 0   [storm field acceleration]     ← TLG §9 "Rate-based detection"
+  dR/dt < 0      [recovery erosion]             ← TLG "Buffer thickness decline"
+  Var(C) ↓       [variance compression]         ← TLG "Apparent calm = danger"
+
+Intervention trigger: not V > threshold, but ∂²V/∂t² > 0 with V → V_c
+  = TLG "intervene on rates, not states"
+```
+
+**Buffer Variable B(t) and Middle Layer Thickening:**
+
+The CTGPSRB buffer variable B(t) is the GGT formalization of TLG's Middle Layer thickness — the accumulation of internalized governance structure that makes governance progressively invisible:
+
+```
+CTGPSRB Buffer B(t) ↔ TLG Middle Layer structural thickness
+
+B(t) → B*  (CTGPSRB fixed-point convergence)
+↔ Middle Layer "Thickening" over governance lifecycle
+↔ GGT §83: CTGPSRB Buffer Governance Variable
+
+Properties:
+  B(t) autonomous dynamical variable with own governing equation
+  B* fixed-point attractor = Rest Mode entry condition (TLG τ4)
+  Rest Mode exit ↔ V-driven deviation of B(t) from B*
+  
+  Governance Invisibility as B → b (full buffer assimilation):
+    When B assimilates environment signal: u(t) ≈ 0 → governance invisible
+    This is the formal CTGPSRB derivation of TLG Guardian Invisibility principle
+    
+  φ_mature two-component decomposition (GGT-NC-846):
+    φ_mature = φ_exploration + φ_storm_absorption
+    φ_storm_absorption > 0 only when B > B_threshold
+    → Middle Layer governance depth determines storm absorption capacity
+```
+
+**Self-Calibration Collapse in CTGPSR Terms:**
+
+The CTGPSR embedding provides a new mechanistic description of Self-Calibration Collapse (Section 3.5):
+
+```
+Self-Calibration Collapse in CTGPSR:
+  The calibration loop θ_d(t) update corresponds to T(t) update in CTGPSR.
+  T(t) is the targeting vector — the direction of governance attention.
+  
+  Self-referential calibration = T(t) updated from T-history without C-anchor.
+  
+  In CTGPSR terms:
+    Ṫ = f(T, G, P, R) without C(t) forcing
+    → T drifts from C-determined optimum T* = δ/β
+    
+  Stage 3 Epistemic Convergence = CTGPSR Mode III:
+    C, T, G all converge on same drifted frame
+    V_storm(t) = |∇T(t)| ≈ 0 (no internal disagreement)
+    Externally: system has entered Silent Criticality of the calibration kind
+    
+  External Anchor = C(t) restoring force on T:
+    With anchor: Ṫ = f(T,G,P,R) + λ_anchor·(T* − T)
+    → T cannot drift beyond λ_anchor-determined radius from T*
+    → Self-Calibration Collapse prevented by CTGPSR C-T coupling
+```
+
+**Upward Blindness as CTGPSR Targeting Null-Space (GGT-NC-845):**
+
+```
+TLG "Upward Blindness" (Section 3.4.8): Top Layer structurally cannot observe
+  Middle Layer internal fine state in mature systems.
+
+CTGPSR derivation: Targeting vector w lies in null space of Middle Layer dynamics.
+  In mature systems: ⟨w, e−b⟩ ≈ 0
+  → governance signal z(t) = ⟨w, e(t)−b(t)⟩ ≈ 0
+  → upper-layer "sees" nothing because environment is fully absorbed by buffer
+  → Governance Invisibility Theorem (GGT-80.B.1) as mechanism of Upward Blindness.
+
+Consequence for Section 3.5:
+  In mature systems approaching Self-Calibration Collapse:
+    Both Upward Blindness AND Self-Calibration drift operate simultaneously.
+    Top Layer cannot see Middle Layer drift through normal channels.
+    External Reference Channel (Boundary Agent) is the only non-blind path.
+    → This is a second structural necessity derivation for external anchoring.
+```
+
+**Novel Contributions added in this section:**
+
+- NC-82: TLG–CTGPSR formal variable identification — (C,T)/(G,P)/(R) projection with all three consistency checks
+- NC-83: Three-layer timescale hierarchy as CTGPSR well-posedness necessity — architectural assumption eliminated
+- NC-84: North Star stability as Ċ = 0 theorem — GGT derivation of TLG qualitative claim
+- NC-85: Governance objective U as CTGPSR functional — VCZ operating point = GGT critical-point utility maximum
+- NC-86: Post-recovery VCZ expansion as Recovery-Renormalization Theorem (C_cl,new* ≠ C_old*)
+- NC-87: Silent Criticality = CTGPSR Mode III — rate-based detection formalized (∂²V/∂t² > 0)
+- NC-88: Buffer B(t) = Middle Layer thickness — formal CTGPSRB derivation of governance lifecycle thickening
+- NC-89: Self-Calibration Collapse in CTGPSR — T-drift-from-C as formal mechanism; external anchor = C-T coupling
+- NC-90: Upward Blindness as targeting null-space — dual structural necessity for external anchoring
+
+*(Cross-theory derivation: GGT §82A, §82, §83; FGS §15.3, §15.5, §15.6; TLG §3.5, §9, §3.4; VST §7.3)*
+
+---
+
+### 3.8 Governance Control Number Π_G — GCF Phase Classification of TLG States
+
+The Governance Control Number Π_G (GGT §81) provides a scalar dimensionless quantity that classifies TLG governance states into three phases. This section imports the GCF (Governance Criticality Framework) into TLG and establishes the correspondence between TLG's τ-stage system and GCF's Π_G-based phase classification.
+
+**Definition — Governance Control Number:**
+
+```
+Π_G := ⟨w, e−b⟩ / (θ · Θ₀ · C^{β/2})
+
+  where:
+    w      = targeting vector (Middle Layer attention direction)
+    e(t)   = environment state
+    b(t)   = buffer state (internalized governance)
+    e−b    = residual environmental signal r(t) (unabsorbed mismatch)
+    θ      = governance activation threshold (= θ_d in TLG notation)
+    Θ₀     = baseline complexity scale
+    C      = environmental complexity (agent count × interaction density)
+    β      = governance maturity exponent
+
+Three complementary readings of Π_G:
+  1. Control-theoretic:    Π_G = (actual governance signal) / (required governance signal)
+  2. Information-theoretic: Π_G = I_eff / I_c (effective information / critical information)
+  3. Geometric:            Π_G = (directional terrain curvature) / (threshold curvature)
+  
+All three readings are equivalent (GGT Four-Language Completeness Theorem GGT-80.D.6).
+```
+
+**Phase Classification by Π_G (GGT Proposition GGT-81.B.1):**
+
+```
+        ⎧  Π_G > 1  :  Visible Governance Phase → TLG τ1–τ3 (active governance)
+Phase = ⎨  Π_G = 1  :  Critical State (governance visibility transition) → VCZ boundary
+        ⎩  Π_G < 1  :  Assimilation Regime (governance invisible) → TLG τ4 (Rest Mode)
+
+UGAL equivalence:
+  u(t) = σ(θ · (Π_G − 1))
+  
+  Π_G < 1: u(t) ≈ 0  → governance suppressed → assimilation (τ4)
+  Π_G = 1: u(t) = σ(0) = 0.5 → governance transition boundary
+  Π_G > 1: u(t) → 1  → governance activated → intervention (τ1–τ3)
+```
+
+**TLG τ-Stage to Π_G Mapping:**
+
+```
+TLG Stage    Π_G Region        GCF Description
+──────────────────────────────────────────────────────────────────────
+τ1 (Mark)    Π_G >> 1          Visible Governance: signal far exceeds threshold
+             [deep supercritical]
+τ2 (Judge)   Π_G > 1           Transitional supercritical: escalation in progress
+τ3 (Correct) Π_G ↓ toward 1   Correction drives Π_G back to critical surface
+VCZ entry    Π_G → 1           Critical state: governance visibility transition
+τ4 (Rest)    Π_G < 1           Assimilation regime: buffer absorbed environment
+             [subcritical]
+
+Key insight: τ4 is not "governance absent" — it is governance INVISIBLE because
+  the environment has been fully internalized (b → e, residual r → 0, Π_G → 0).
+  Governance achieved its own elimination. This is the Governance Invisibility Theorem.
+```
+
+**Structural Decomposition of Π_G — Three Failure Modes:**
+
+```
+Π_G = (‖w‖/θ) · (R/(Θ₀ C^{β/2})) · ρ_w
+
+Factor 1: ‖w‖/θ — targeting sensitivity / gate rigidity ratio
+  TLG interpretation: gating calibration quality
+  Failure if too low: Gate over-rigidity (Section 3.4.1 over-gating failure)
+  Failure if too high: Gate too loose (under-gating → Type 1 bottleneck)
+
+Factor 2: R/(Θ₀ C^{β/2}) — complexity-renormalized residual visibility
+  TLG interpretation: signal-to-noise through complexity
+  R = ‖e−b‖ = Middle Layer residual after buffer absorption
+  As C ↑: Factor 2 ↓ → governance naturally suppressed by scale
+  → This is the formal derivation of S-equation scaling (Section 7.3)
+    C_gov ∝ n² / C^β is Factor-2-type complexity suppression
+
+Factor 3: ρ_w — directional alignment (cosine similarity)
+  TLG interpretation: targeting direction quality
+  ρ_w ≈ 0: governance blind to actual mismatch direction (Upward Blindness)
+  ρ_w = 1: perfect targeting alignment
+  → Self-Calibration Collapse (Section 3.5) corresponds to ρ_w drift:
+    as θ_d drifts from external reality, w aligns with wrong residual direction
+    → ρ_w decreases → Π_G decreases → system falsely enters "assimilation regime"
+    → This is the Π_G signature of Self-Calibration Collapse
+```
+
+**Π_G and Self-Calibration Collapse — Formal Connection:**
+
+```
+Self-Calibration Collapse as Π_G degradation:
+
+  Stage 1 (Drift Onset):
+    θ_d drifts → θ in Π_G denominator increases (threshold rising)
+    Π_G(true) = actual_signal / (θ_drifted · Θ₀ · C^{β/2})
+    Π_G(measured) = actual_signal / (θ_true · Θ₀ · C^{β/2})
+    
+    Π_G(measured) > Π_G(true)
+    System "appears" more critical than it is.
+    Internal metrics show healthy governance activity.
+    External reality shows calibration drift.
+    
+  Stage 3 (Epistemic Convergence):
+    w, θ, e, b all converged on drifted frame
+    Π_G computed within drifted frame: Π_G ≈ 1 (apparently optimal)
+    External reality: environment substantially misrepresented
+    
+    This is the FORMAL Π_G DESCRIPTION OF SCM:
+      Π_G_internal ≈ 1 (appears at governance optimum)
+      Π_G_external << or >> 1 (actual governance state far from optimum)
+      Gap = SCM depth measurement
+      
+  Recovery: External Reference Channel provides external Π_G measurement.
+    Discrepancy |Π_G_internal − Π_G_external| > ε → calibration drift confirmed
+    → This is the Π_G-level discriminating test for Epistemic Convergence.
+```
+
+**Buffer Assimilation Limit and τ4 Entry:**
+
+```
+Corollary (GGT-81.B.1 Buffer Assimilation):
+  As b(t) → e(t) (perfect buffer assimilation):
+    R = ‖e−b‖ → 0
+    Π_G → 0
+    u(t) = σ(θ·(Π_G − 1)) → σ(-θ) ≈ 0
+    
+  Governance activations approach zero — governance becomes invisible.
+  This is τ4 entry in Π_G terms.
+  
+  τ4 entry condition (Π_G formulation):
+    Π_G < Π_G^{τ4} ≡ σ^{-1}(ε_activation) / θ + 1
+    
+    where ε_activation is the minimum detectable governance activation level.
+    
+  This provides a GCF-quantified τ4 entry threshold,
+  more operationally specific than the qualitative SCC + f_esc + D_int
+  conditions of Section 26 (GCC framework).
+  
+  Joint criterion: τ4 entry requires BOTH:
+    (a) GCC conditions (Section 26): SCC ≥ τ, D_int sufficient, f_esc low
+    (b) Π_G < Π_G^{τ4}: buffer has actually assimilated environment
+    
+    (a) without (b): governance qualitatively healthy but not yet structurally invisible
+    (b) without (a): buffer absorbed without SCC — fragile apparent τ4 (SCM risk)
+    → True τ4 requires both conditions simultaneously.
+```
+
+**Governance Suppression Law — Why Scaling Requires Structural Change:**
+
+```
+Governance Suppression Law (Corollary of Π_G Factor 2):
+  For fixed governance architecture (w, θ, Θ₀ constant):
+  
+    Π_G ∝ C^{-β/2}
+    
+  As system scales (C ↑, typically C ∝ n):
+    Π_G ↓ → governance naturally moves toward assimilation
+    
+  This means: at fixed β, growing systems LOSE effective governance automatically.
+  
+  Recovery path 1: Increase β (governance maturity):
+    Higher β means faster Π_G recovery from perturbations.
+    β increase = FGS maturation lifecycle.
+    
+  Recovery path 2: Architectural restructuring (increase C^{β/2} denominatorship):
+    Differentiation (Section 3.1.3, Buffer Existence Theorem):
+    Sub-layer creation effectively resets C to C_sub < C_total.
+    → Differentiation is the structural response to Governance Suppression.
+    
+  This is the TLG derivation of the Inevitable Differentiation Theorem:
+    At scale C^* = (‖w‖/θ·Θ₀·ρ_w)^{2/β}, Π_G ≤ Π_G^{τ4}
+    → System must differentiate to maintain governance visibility.
+```
+
+**Novel Contributions added in this section:**
+
+- NC-91: Π_G phase classification of TLG τ-stages — formal GCF correspondence table
+- NC-92: Self-Calibration Collapse as Π_G degradation — three-factor decomposition identifies ρ_w drift as collapse mechanism
+- NC-93: SCM as |Π_G_internal − Π_G_external| gap — first quantitative SCM depth measure
+- NC-94: τ4 entry as Π_G joint criterion — GCC conditions necessary but not sufficient without buffer assimilation
+- NC-95: Governance Suppression Law — Π_G ∝ C^{-β/2} derivation of Inevitable Differentiation from GCF
+
+*(Cross-theory derivation: GGT §81, §80, §82A; TLG §3.5, §7.3, Section 13.2.1 SCM, Section 26 GCC; FGS §15.6)*
+
+---
+
+### 3.9 Affective Geometry Layer — T_eff Modulation of Governance Structure
+
+The Affective Gain Module (AGM) establishes that adaptive systems require a controlled stochastic gain T_eff > 0 to avoid attractor lock-in. GGT §84 (Affective Geometry Layer, AGL) translates this dynamical necessity into geometric terms: T_eff is not merely a noise source but a continuous deformation operator on TLG's governance geometry (ℓ_c, m*, partition structure, Middle Layer operational bandwidth).
+
+**Affective Temperature as Governance Geometry Deformation:**
+
+```
+Definition (Affective Geometric Length Scale, GGT-84.A.1 extension):
+  
+  ℓ_c(T_eff) = ℓ_c^(0) · exp((T_eff − T_eff*) / ΔT)
+  
+  where:
+    ℓ_c^(0)  = zero-temperature partition scale (§1)
+    T_eff*   = minimum viable temperature (AGM §1.2.5)
+    ΔT       = characteristic thermal broadening scale
+  
+  TLG interpretation:
+    ℓ_c = optimal agent subgroup size / Middle Layer packet size
+    T_eff = aggregate affective temperature of Bottom Layer agent population
+    
+    T_eff ↑  → ℓ_c ↑ → coarser governance packets (larger sub-groups)
+    T_eff ↓  → ℓ_c ↓ → finer governance packets (smaller sub-groups)
+    T_eff = T_eff* → ℓ_c = ℓ_c^(0) → governance-optimal packet size
+```
+
+**Affective Temperature × TLG Phase — Critical Windows:**
+
+```
+T_eff-dependent Affective Governance Control Number (GGT-84.A.3):
+
+  Π_G^AGL(t) = Π_G(t) · (T_eff(t)/T_eff*) · exp(−(T_eff(t) − T_eff*)² / 2σ_T²)
+
+  Properties:
+    Maximum at T_eff = T_eff*: both cold (Freeze) and hot (Runaway) degrade Π_G^AGL
+    Π_G^AGL → 0 as T_eff → 0: Freeze collapses governance capacity
+    Π_G^AGL → 0 as T_eff → ∞: Runaway destroys governance structure
+    
+  This is the formal statement that TLG governance has an optimal operating
+  temperature — not too rigid (Freeze), not too fluid (Runaway).
+  
+  For TLG θ_d calibration:
+    θ_d is itself T_eff-sensitive: at Freeze, θ_d^apparent >> θ_d^true
+    At Runaway, θ_d^apparent << θ_d^true
+    → Self-Calibration Collapse (Section 3.5) is accelerated by T_eff deviation
+    → External anchoring necessity is T_eff-robust only if B_ext itself is temperature-indexed
+```
+
+**Two Collapse Geometries — Freeze and Runaway:**
+
+```
+Theorem (Affective Length Scale Duality, GGT-84.B.2):
+  
+  T_eff < T_c^geo:  ℓ_c < ℓ_c^(0)  → FRAGMENTATION (over-partition)
+    TLG manifestation: Middle Layer over-routes, creates excessive sub-packets
+    Bottom Layer: over-isolated agents, coordination cost quadratic in n
+    Governance: appears precise but is fragile to coordination loss
+    
+    Extreme: T_eff → 0 (Freeze):
+      m → m_max, ℓ_c → ℓ_c^min, J(m) → ∞
+      Middle Layer dissolves into maximally fine-grained packets
+      Recovery pathways require m > 1: Cube Domination fails at m = 1
+      → TLG silent fragmentation = GGT Freeze Collapse
+      
+  T_eff > T_c^geo:  ℓ_c > ℓ_c^(0)  → CONSOLIDATION (under-partition)  
+    TLG manifestation: Middle Layer over-packages, loses resolution
+    Bottom Layer: over-coupled agents, S ~ n² scaling restored
+    Governance: appears fluid but is fragile to Storm
+    
+    Extreme: T_eff → ∞ (Runaway):
+      m → 1, ℓ_c → L (system length), J(m) → J(1)
+      Entire system collapses into single module — all hierarchy lost
+      → TLG vector storm = GGT Runaway Consolidation
+      
+  T_eff = T_eff* = T_c^geo:
+    ℓ_c = ℓ_c^(0) → governance-optimal partition
+    m* = m_gov* → optimal Middle Layer granularity
+    Π_G^AGL = maximum → governance most sensitive and stable
+    → This is TLG VCZ operating point in affective geometric terms
+```
+
+**TLG Silent Criticality as Affective Freeze Precursor:**
+
+```
+AGM establishes that Freeze systems have T_eff < T_MVT (minimum viable temperature).
+GGT-84 establishes that Freeze produces ℓ_c contraction and m → m_max.
+TLG Section 9 establishes Silent Criticality as pre-Storm hidden degradation.
+
+Integration:
+  Silent Criticality in affective terms = systems approaching Freeze regime:
+    T_eff slowly declining toward T_MVT
+    ℓ_c contracting → Middle Layer over-partitioning
+    V_storm(t) = |∇T(t)| accumulating → eventual Release Storm
+    
+  GGT-84 Metric for Silent Criticality depth (AGM §15.11.2):
+    Δℓ_c = ℓ_c^apparent − ℓ_c^true
+    
+    During Freeze: ℓ_c^apparent > ℓ_c^true (modules appear stable when oversized)
+    Δℓ_c > 0 and growing → Silent Criticality deepening
+    
+  Early warning: Δℓ_c is observable before conventional TLG τ1 signals appear.
+  → Δℓ_c is an affective-geometric leading indicator for Storm onset.
+  → Operational proxy: variance reduction in Bottom Layer exploration diversity
+    (Var(η_rest) declining = T_eff declining = Δℓ_c growing)
+```
+
+**Crisis Decentralization Principle (AGM-GGT-2 in TLG Terms):**
+
+```
+Theorem (Crisis Geometry Inversion):
+  Under Runaway (T_eff >> T_eff*):
+    ℓ_c contracts → optimal sub-group size shrinks
+    System needs MORE, SMALLER governance units
+    → Correct governance response: DECENTRALIZE Middle Layer
+    
+  Under Freeze (T_eff < T_MVT):
+    ℓ_c^apparent expands → modules appear stable but oversized
+    System needs FINER routing, not fewer packets
+    → Correct governance response: INCREASE packet granularity
+
+  Counter-intuitive consequence:
+    Organizations experiencing crisis (Storm = Runaway) that
+    respond by CENTRALIZING governance are geometrically wrong.
+    Centralization (increasing ℓ_c, decreasing m) is the opposite
+    of what contraction demands.
+    
+    TLG formulation: during τ3 (Correction of Storm):
+      Middle Layer should INCREASE routing granularity (Section 3.4.3)
+      NOT increase packet size (which increases coordination cost)
+      
+  Exception: during Recovery (CTGPSR Re-clustering phase):
+    B(t) needs to re-stabilize → temporary consolidation is correct
+    Then gradual re-granularization as T_eff cools toward T_eff*
+```
+
+**Regulatory Cascade: Three-Stage Λ(t) Acceleration (AGM §15.11.3 in TLG Terms):**
+
+```
+AGM establishes three-component regulatory capacity R(t) = w_H·H(t) + w_M·C_M(t) + w_G·G(t)
+with timescale ordering τ_G << τ_C_M << τ_H.
+
+TLG layer correspondence:
+  G(t) ↔ Bottom Layer fast-response capacity (τ_τ1: hours-days)
+  C_M(t) ↔ Middle Layer buffer capacity (τ_Middle: days-weeks)
+  H(t) ↔ Top Layer endurance budget (τ_Top: months-years)
+
+Three-stage governance collapse cascade:
+  Stage 1 (G depleted):
+    Bottom Layer fast response exhausted
+    τ1 detection still fires, but correction capacity degraded
+    τ1 event rate rises (more events, less correction)
+    → TLG observable: f_esc ↑ despite active τ1 marking
+    
+  Stage 2 (C_M depleted):
+    Middle Layer buffer saturated
+    Packaging quality degrades (f_package_quality ↓)
+    ρ_effective(Bottom) falls
+    → TLG observable: ρ degrades despite stable θ_d
+    
+  Stage 3 (H depleted):
+    Top Layer endurance exhausted
+    North Star stability condition (Ċ = 0) violated
+    T drifts from T* = δ/β
+    → TLG observable: governance invariants begin shifting
+    
+  GGT-AGM-4 Prediction for TLG:
+    These three stages produce three observable inflection points
+    in governance load metrics. Stage 1 is detectable as f_esc acceleration;
+    Stage 2 as ρ degradation; Stage 3 as invariant drift.
+    This is a TLG-operational leading indicator hierarchy for burnout governance.
+```
+
+**Fifteen-Way M_crit Equivalence — TLG Additions:**
+
+```
+GGT §84.C proves Fifteen-Way M_crit Equivalence.
+Three new conditions extending the standard twelve:
+  E13: T_eff = T_eff*         (affective temperature at governance optimum)
+  E14: Λ(t) = Λ_c             (AGM control parameter at ECC threshold)
+  E15: J_AGL(m*, T_eff*) = min (partition free energy globally minimized)
+
+TLG governance optimum (τ4, VCZ) corresponds to all fifteen conditions simultaneously.
+In particular, τ4 additionally requires:
+  E13: Bottom Layer agent population operating at T_eff*
+       (neither frozen exploration nor chaotic exploration)
+  E14: AGM loading function at critical threshold
+       (neither under-challenged nor overloaded)
+  E15: Middle Layer packet size at governance-optimal m_gov*
+       (neither over-routed nor under-resolved)
+
+This extends TLG τ4 entry conditions (Section 26, GCC) to include
+affective temperature calibration as a necessary component — not just
+structural health metrics but energetic health of the exploration regime.
+```
+
+**Novel Contributions added in this section:**
+
+- NC-96: T_eff as Middle Layer geometry deformation operator — ℓ_c(T_eff) formula with TLG routing correspondence
+- NC-97: Π_G^AGL affective governance control number — formal Gaussian envelope with optimal T_eff window
+- NC-98: Freeze = TLG silent fragmentation; Runaway = TLG vector storm — GGT-84.B.2 bidirectional mapping
+- NC-99: Δℓ_c as affective-geometric leading indicator for Storm onset — observable proxy for Silent Criticality depth
+- NC-100: Crisis Geometry Inversion — Runaway governance requires decentralization, contradicting intuitive crisis response
+- NC-101: Three-stage regulatory cascade in TLG layer terms — G/C_M/H depletion as Bottom/Middle/Top collapse sequence
+- NC-102: Fifteen-Way M_crit equivalence extended to TLG τ4 — T_eff and Λ_c as necessary τ4 entry conditions
+
+*(Cross-theory derivation: GGT §84 AGL; AGM §15.11 AGM-GGT Coupling; FGS §7.6 Silent Criticality; TLG §3.5, §9, §3.4; AGM §1.2.5 Minimum Viable Temperature)*
+
+---
+
+### 3.10 Temporal Governance Geometry — Time-Horizon Stratification and Inter-Layer Synchronization
+
+TLG's three-layer structure is primarily described in spatial/hierarchical terms. This section imports the Temporal Governance Geometry framework (FGS §36U) to formalize the temporal architecture: each layer operates within a distinct temporal manifold, and many governance failures are temporal rather than structural — the wrong layer acting at the wrong timescale.
+
+**Temporal Manifold Decomposition:**
+
+```
+Definition (Three-Layer Temporal Manifold, FGS §36U.1):
+  
+  𝒯 = 𝒯_Top × 𝒯_Mid × 𝒯_Bot
+  
+  Layer-specific timescales:
+    τ_Top >> τ_Mid >> τ_Bot
+    
+  Formal requirement: τ_Top/τ_Mid ≥ μ_sep and τ_Mid/τ_Bot ≥ μ_sep
+  for separation constant μ_sep > 1 (CTGPSR well-posedness requirement, §3.7).
+  
+  TLG operational calibration:
+    τ_Top ~ months–years  (strategic identity, boundary redefinition)
+    τ_Mid ~ days–weeks    (buffer routing, threshold calibration, translation)
+    τ_Bot ~ hours–days    (execution, local feedback, tactical adaptation)
+    
+  Plasticity rate ordering (emergent from information-theoretic cost):
+    ρ̇_Top << ρ̇_Mid << ρ̇_Bot
+    (Higher layers carry more compressed representations — costly to update)
+    
+  Note: This plasticity ordering is NOT a governance rule.
+  It EMERGES from the resolution algebra (Section 0.1–0.4):
+  higher-abstraction representations are structurally slower to update.
+```
+
+**Governance Nyquist Theorem — Aliasing Condition:**
+
+```
+Theorem (Governance Nyquist, FGS §36U.2):
+  If Top Layer issues governance signals at frequency f_Top and Bottom Layer
+  dynamics have dominant frequency f_Bot, temporal aliasing occurs when:
+  
+    f_Top < 2·f_Bot / μ_sep
+    
+  Aliased governance produces phantom patterns:
+    The Top Layer perceives structure that reflects its own sampling frequency
+    rather than Bottom Layer reality.
+    
+  TLG consequence:
+    Top Layer invariants issued at too-slow rate → Bottom Layer dynamics
+    alias into false stability periods.
+    
+    This is a formal derivation of one mechanism for the "false stability" syndrome
+    described in TLG Section 9 (Silent Criticality):
+    silence can be aliased apparent stability, not genuine τ4.
+    
+  Detection:
+    Nyquist aliasing produces f_Top-period false oscillations in Top Layer metrics.
+    Distinguishable from genuine cycles by phase analysis relative to Bottom Layer.
+```
+
+**Temporal Misalignment Index (TMI) — Cross-Layer Synchronization Monitor:**
+
+```
+TMI(t) = Σ_{ℓ<ℓ'} |log(τ_ℓ/τ_ℓ') − log μ_sep*|²
+
+  where μ_sep* is the theoretically optimal separation ratio.
+  
+  TMI = 0: perfect temporal stratification
+  TMI ↑:   layer timescales converging (temporal coupling collapse precursor)
+  
+Temporal Storm condition: TMI > TMI_c
+  Governance layers begin operating on overlapping timescales:
+    (a) Oscillatory feedback between layers (rapid-period instability)
+    (b) False urgency injection into Top Layer strategic decisions
+    (c) Bottom Layer paralysis from conflicting signals at incompatible resolutions
+    
+  Connection to Section 3.5 (Self-Calibration Collapse):
+    Temporal Storm is a distinct failure mode from calibration drift,
+    but they interact: as TMI rises, θ_d update rate at Middle Layer
+    may desynchronize from both Top Layer invariant update rate and
+    Bottom Layer event rate.
+    → Temporal misalignment ACCELERATES Self-Calibration Collapse.
+    → TMI is a second early-warning signal for calibration vulnerability.
+```
+
+**Governance Dead Time and the Irreducible Governance Gap:**
+
+```
+Dead Time:
+  δ_Top = δ_{Top←Mid} + δ_{Mid←Bot}
+  
+  Every governance layer has irreducible delay between lower-layer state change
+  and upper-layer response.
+  
+Dead-Time Stability Condition (FGS §36U.4):
+  δ_Top < τ_Storm / (2·ln(λ_max/λ_c))
+  
+  where τ_Storm = Storm development time (VST §7.3)
+  and λ_max is maximum coupling eigenvalue.
+  
+  Violation: Top Layer governance cannot prevent Storm once initiated from
+  Bottom Layer dynamics.
+  
+TLG consequence for Section 3.4.3 (Routing):
+  Routing decisions must be made within δ_Mid of event detection.
+  Routing latency > δ_Mid → routing decision applies to next cycle, not current.
+  → This is the formal dead-time bound on Middle Layer routing speed.
+  
+Governance Dead Time increases with system depth:
+  Prediction (FGS §36U.7, P-U1):
+    δ_Top ~ O(d^{1+ε}) where d = number of hierarchy levels, ε > 0.
+    → Each additional TLG sub-layer (from differentiation, §3.1.3) increases
+      total governance dead time super-linearly.
+    → This is a formal cost of differentiation that Section 3.1.3 does not capture:
+      differentiation gains governance capacity but pays dead-time cost.
+```
+
+**Temporal Governance Budget Allocation:**
+
+```
+Definition: Temporal governance budget ℬ_ℓ(t) = fraction of Top Layer processing
+capacity directed toward layer ℓ dynamics.
+
+ℬ_Top(t) + ℬ_Mid(t) + ℬ_Bot(t) = 1
+
+Optimal allocation theorem (FGS §36U.5):
+  ℬ_ℓ* ∝ √(∂²V/∂ℬ_ℓ²) / (Σ_ℓ' √(∂²V/∂ℬ_ℓ'²))
+  
+  Budget should be concentrated where marginal governance value is highest —
+  NOT where most activity occurs.
+  
+Systematic bias prediction:
+  Bottom Layer has highest visible activity → over-allocation bias toward ℬ_Bot.
+  Top Layer boundary maintenance has low visible activity → under-allocation.
+  
+  This is the formal derivation of TLG "Upward Blindness" from temporal budget theory:
+    governance resources flow to visible (fast, frequent) layers,
+    leaving structural (slow, rare but high-consequence) layers under-resourced.
+    
+  Connection to Section 3.6 (Markov Blanket):
+    Temporal budget over-allocation to Bottom Layer reduces Middle Layer
+    maintenance time → blanket degradation through resource starvation,
+    not just calibration drift.
+    → Two independent pathways to blanket degradation: calibration (§3.5) and
+      temporal under-resourcing (this section).
+```
+
+**Temporal Fractal Consistency:**
+
+```
+The DFG fractal consistency condition has a temporal analog:
+  Governance timescale ratios must be self-similar across hierarchy levels.
+  
+Temporal Fractal Condition (FGS §36U.6):
+  τ_Top^(k+1) / τ_Mid^(k+1) = (τ_Top^(k) / τ_Mid^(k)) · Ξ + O(Ξ²)
+  
+  where Ξ is the scale factor and superscript (k) denotes hierarchy level k.
+  
+Violation consequence:
+  If temporal fractal consistency breaks at level k*:
+    Governance logic valid at levels k < k* becomes inapplicable at k ≥ k*.
+    Upper-layer directives become structurally uninterpretable at lower levels.
+    → This is the temporal mechanism of "governance translation break" —
+      why decentralized sub-units of rapidly-scaled organizations lose
+      coherence with central governance faster than naively expected.
+      
+Connection to Section 3.7 (CTGPSR):
+  CTGPSR well-posedness requires τ_C > τ_G > τ_R at each level.
+  Temporal Fractal Consistency requires this ordering to be scale-invariant.
+  → Together: the three-layer timescale hierarchy must hold AT EVERY LEVEL
+    of the governance fractal, not just at the top.
+```
+
+**Temporal Misalignment as Calibration Accelerator:**
+
+```
+Integration theorem (Temporal Collapse → Self-Calibration Collapse coupling):
+
+  When TMI > TMI_c (temporal coupling):
+    Middle Layer θ_d update rate no longer synchronized with
+    (a) Top Layer invariant update rate: θ_d may over-adapt to Top Layer changes
+    (b) Bottom Layer event rate: θ_d may under-adapt to Bottom Layer dynamics
+    
+  Both cases accelerate calibration drift:
+    Case (a): θ_d moves in direction of Top Layer drift → amplifies any Top drift
+    Case (b): θ_d lags Bottom Layer dynamics → accumulates representational debt
+    
+  Therefore: TMI monitoring is a prerequisite for reliable θ_d anchoring.
+  A well-anchored θ_d within a temporally misaligned system still drifts —
+  because the anchor itself (Boundary Agent) may be on the wrong timescale.
+  
+  External Reference Channel design requirement (extending Section 3.5):
+    B_ext must be temporally aligned with Middle Layer calibration timescale.
+    B_ext arriving at Top Layer timescale introduces dead-time aliasing.
+    B_ext arriving at Bottom Layer timescale introduces high-frequency noise.
+    Correct specification: B_ext rate ∈ [τ_Mid^{-1}/2, τ_Mid^{-1}] (Nyquist window).
+```
+
+**Novel Contributions added in this section:**
+
+- NC-103: Temporal Manifold Decomposition — three temporal manifolds 𝒯_Top × 𝒯_Mid × 𝒯_Bot; plasticity ordering as emergent
+- NC-104: Governance Nyquist Theorem — aliasing condition f_Top < 2f_Bot/μ_sep as formal false-stability mechanism
+- NC-105: TMI as self-calibration accelerator — temporal misalignment as second pathway to calibration collapse
+- NC-106: Governance Dead Time — δ_Top dead-time bound on Storm prevention; super-linear differentiation cost
+- NC-107: Temporal budget systematic bias — Upward Blindness as temporal budget allocation theorem
+- NC-108: Temporal Fractal Consistency — CTGPSR well-posedness at all hierarchy levels (not just top)
+- NC-109: B_ext temporal alignment requirement — external anchor must be in Middle Layer Nyquist window
+
+*(Cross-theory derivation: FGS §36U; CTGPSR §3.7; Section 3.5 Self-Calibration Collapse; Section 3.6 Markov Blanket; VST §7.3 Storm development; TLG §9 Silent Criticality)*
+
+---
+
+### 3.11 Governance Entropy Layer — Fisher Information, Landauer Bound, and Geodesic Recovery
+
+GGT §85 (Governance Entropy Layer, GEL) provides the information-geometric substrate underlying the governance structures described in Sections 3.7–3.10. Where earlier sections use temperature and phase classification, GEL uses entropy production rate as the fundamental observable — yielding structural results not accessible through other parameterizations, including the Governance Landauer Bound, the Partition Fisher Information Matrix, and the Geodesic Recovery Protocol.
+
+**Partition Space as Information-Geometric Manifold:**
+
+```
+Definition (Governance Fisher Metric, GGT-85.A.1):
+  Let p(x; m) = probability distribution over governance state x induced by partition m.
+  The Governance Fisher Information Matrix:
+  
+    F(m) = E_{x~p(·;m)}[∇_m ln p(x;m) · (∇_m ln p(x;m))ᵀ]
+    
+  This defines a Riemannian metric on the space of partitions 𝓜 = {m ∈ ℤ₊ : m ≤ L/ℓ_c}.
+  
+  TLG interpretation:
+    m = Middle Layer granularity (number of distinct routing packets)
+    F(m) = sensitivity of governance state distribution to changes in routing granularity
+    High F(m): small changes in m produce large governance state changes → near critical
+    Low F(m): governance insensitive to routing granularity → far from optimal
+    
+  Fisher geodesic distance between partitions m₁ and m₂:
+    d_F(m₁, m₂) = ∫_{m₁}^{m₂} √((∂m)ᵀ F(m) ∂m) dm
+    
+  Interpretation for TLG:
+    d_F(m₁, m₂) = information-geometric cost of restructuring from packet count m₁ to m₂
+    Large d_F → costly restructuring (high entropy cost)
+    Small d_F → cheap restructuring (but potential Cramér-Rao violation → false completion)
+```
+
+**Governance Landauer Bound — Irreversibility Cost of Governance Decisions:**
+
+```
+Theorem (Governance Landauer Bound, GGT-85.A.1):
+  Every irreversible governance decision — permanent partition change m → m' —
+  dissipates minimum entropy:
+  
+    ΔS_min(m → m') ≥ k_B T · d_F(m, m') · (1/√F(m))
+    
+  (here k_B T = governance decision cost, not literal thermodynamic temperature)
+  
+  TLG consequences:
+  
+  (1) Recovery cost is bounded from below:
+    Any trajectory from failed governance state m_failure to optimal m*
+    must pay at least Governance Landauer Bound.
+    Recovery is irreversibly costly — resources expended in recovery
+    cannot be fully recovered even with perfect protocol execution.
+    
+  (2) Trap proximity creates false-completion risk:
+    Partitions close in Fisher geometry (small d_F) are cheap to reach
+    BUT Cramér-Rao bound becomes loose → false completion risk rises.
+    
+    The cheapest recovery path is not the safest recovery path.
+    → This formalizes TLG's "fastest recovery is not best recovery" principle.
+    
+  (3) Differentiation has irreversible minimum cost:
+    m → m+1 (adding one governance sub-layer) has Landauer lower bound.
+    m → m-1 (consolidating sub-layers) has different Landauer lower bound.
+    These are NOT equal: governance restructuring is directionally asymmetric.
+    → Formal justification for TLG asymmetric change cost (Section 8.5).
+```
+
+**Cramér-Rao Governance Bound — False Completion Detection:**
+
+```
+Theorem (Cramér-Rao False Completion Detection, GGT-85.B.1):
+  The minimum variance of any unbiased governance state estimator m̂(x):
+  
+    Var(m̂) ≥ 1/F(m)    [Governance Cramér-Rao Bound]
+    
+  FALSE COMPLETION CRITERION:
+    False Completion detected ⟺ Var(m̂) < 1/F(m) − ε_cramér
+    
+    If reported partition variance is BELOW the Cramér-Rao bound:
+      → The estimator is biased → the "completion" signal is false.
+      → System reports m̂ = m* with impossibly high precision.
+      
+  TLG correspondence:
+    This is a model-free operational test for TLG false τ4 entry.
+    If governance metrics report τ4-level stability with variance below
+    the Cramér-Rao bound for the current partition structure:
+    → Metrics are biased → genuine τ4 not achieved.
+    
+  Relationship to Section 3.5 Epistemic Convergence test:
+    Cramér-Rao test: variance too low → false completion (structural)
+    Epistemic Convergence probe test: probe_accuracy >> f_misclass (functional)
+    Two independent tests for the same phenomenon — cross-validation possible.
+    
+  Section 3.5 + Section 3.11 joint criterion:
+    True τ4 requires:
+      (a) Probe injection test: probe_accuracy ≈ f_misclass_internal ✓
+      (b) Cramér-Rao test: Var(m̂) ≥ 1/F(m) − ε_cramér ✓
+      (c) GCC conditions (Section 26): SCC, D_int, f_esc ✓
+      (d) Π_G < Π_G^{τ4} (Section 3.8) ✓
+    
+    Each test catches different false-τ4 failure modes. All four are needed.
+```
+
+**Geodesic Recovery Protocol — Entropy-Minimal Recovery Path:**
+
+```
+Definition (Geodesic Recovery Path, GGT-85.B.1):
+  A recovery trajectory m(t), t ∈ [t₀, t₁], is a geodesic recovery path if it
+  minimizes total entropy production reaching target partition m*(T_eff*):
+  
+    m_geo(t) = argmin_{m(·)} ∫_{t₀}^{t₁} σ_gov(m(t), ṁ(t)) dt
+               subject to: m(t₁) = m*(T_eff*)
+    
+TLG DDD Protocol as Geodesic Recovery (GGT Theorem GGT-85.B.1):
+  The DDD correction protocol (Defocus–Decouple–Diversity) implements
+  geodesic recovery in the Fisher metric:
+  
+  Stage 1 (Defocus):
+    m(t) moves along gradient of F⁻¹ — reduces partition rigidity
+    TLG: Middle Layer reduces routing granularity (defocuses from crisis routing)
+    Entropy cost: minimum (F⁻¹ gradient is direction of maximum Fisher flexibility)
+    
+  Stage 2 (Decouple):
+    m(t) moves along null geodesic of F — separates coupled subsystems
+    TLG: Bottom Layer interaction topology reduced (decouple storm-coupled agents)
+    Entropy cost: zero (null geodesic)
+    
+  Stage 3 (Diversity):
+    m(t) moves toward maximum Fisher information gain
+    TLG: exploration regulation restored (Section 3.4.7: ∂_explore ↑)
+    Entropy cost: minimum for the distance covered (geodesic)
+    
+  Theorem consequence: Any other three-stage recovery protocol covering
+  the same governance state space dissipates strictly more entropy.
+  DDD is the UNIQUE optimal recovery path in Fisher geometry.
+  → Information-geometric proof of DDD optimality.
+```
+
+**Entropy Production Phase Signatures — Observable Thermodynamic Indicators:**
+
+```
+Theorem (Entropy Production Phase Signature, GGT-85.C.1):
+  At GCF phase boundaries, entropy production rate σ_gov exhibits:
+  
+  Subcritical (Π_G < 1, τ4):
+    σ_gov → σ_min (minimum entropy production = assimilation regime)
+    TLG: governance invisible, minimal activation cost
+    Observable proxy: governance intervention frequency → 0
+    
+  Critical (Π_G = 1, VCZ boundary):
+    σ_gov = σ* (saddle point = minimum-cost visible governance)
+    TLG: VCZ operating point, maximum governance sensitivity
+    Observable proxy: intervention frequency at characteristic minimum above zero
+    
+  Supercritical (Π_G > 1, τ1–τ3):
+    σ_gov ↑ rapidly (intervention cascade)
+    TLG: active governance, increasing cost
+    Observable proxy: governance intervention frequency accelerating
+    
+  Application:
+    Measure governance intervention frequency trajectory.
+    Inflection point from accelerating to decelerating = crossing critical surface.
+    → Entropy production signature provides phase detection without internal state access.
+```
+
+**Four Non-Equilibrium Steady States (NESS) — TLG Operational Map:**
+
+```
+NESS Classification (GGT-85.C.1 extension):
+
+NESS-I (Freeze governance):
+  T_eff < T_eff*, σ_gov → 0, m* → m_max
+  TLG signature: over-detailed routing, f_esc rising, D_int declining
+  Recovery: Diversity injection (Section 3.4.7: ∂_explore ↑)
+  
+NESS-II (Optimal governance, VCZ):
+  T_eff = T_eff*, σ_gov = σ*, m* = m_gov*
+  TLG signature: τ4 with all four criteria satisfied (§3.5, §3.8, §3.11, §26)
+  Recovery: maintenance protocol (SSR cycle, Section 26)
+  
+NESS-III (Runaway governance):
+  T_eff > T_eff*, σ_gov ↑, m* → 1
+  TLG signature: over-consolidated routing, V_storm rising, S ~ n² scaling
+  Recovery: Middle Layer decentralization (Section 3.9 Crisis Geometry Inversion)
+  
+NESS-IV (Cyclothymic governance):
+  T_eff oscillating, σ_gov oscillating, m*(t) oscillating
+  TLG signature: repeated τ4 entry and exit without stable maintenance
+  Recovery: AGM susceptibility recalibration; Middle Layer hysteresis correction
+  TLG risk: repeated Landauer cost accumulation from oscillating m → structural degradation
+  
+  NESS-IV is the governance signature of Over-Tuned SOC (AGM §13.10):
+    The system finds M_crit but cannot maintain it.
+    Each overshoots generates Landauer cost that erodes recovery capacity.
+    Repeated NESS-IV cycles → SCC decline → eventually NESS-I or III lock-in.
+```
+
+**GEL–Section 3.5 Connection: False-Completion as Cramér-Rao Violation:**
+
+```
+The five false-completion mechanisms identified in TLG Section 13 and related sections
+now have an information-geometric unifying characterization:
+
+  Any false-completion (reporting governance state achieved when it has not been)
+  necessarily involves biased estimation of partition state m̂.
+  
+  Biased estimation ⟺ Var(m̂) < 1/F(m) (Cramér-Rao violation)
+  
+  This means: ALL false completions, regardless of mechanism, share one observable:
+    The variance of governance state estimates is impossibly low.
+    
+  Early warning:
+    Monitor Var(m̂)/F(m)^{-1} ratio over time.
+    Declining ratio (approaching 0) = increasing false-completion risk.
+    Ratio < 1 = false completion confirmed.
+    
+  This is the SINGLE UNIFIED EARLY WARNING for all false-completion modes.
+  Previously (TLG Section 13): each false-completion required its own diagnostic.
+  After GEL: one Fisher-based test catches all.
+```
+
+**Novel Contributions added in this section:**
+
+- NC-110: Governance Fisher Metric — Riemannian structure on Middle Layer partition space; F(m) as routing sensitivity
+- NC-111: Governance Landauer Bound — irreversible restructuring cost bounded below by Fisher geodesic distance; recovery asymmetry formalized
+- NC-112: Cramér-Rao false completion test — single unified test for all false-τ4 entry modes; Var(m̂) < 1/F(m) criterion
+- NC-113: Four-criterion true τ4 entry — probe injection (§3.5) + Cramér-Rao (§3.11) + GCC (§26) + Π_G (§3.8) joint requirement
+- NC-114: Geodesic DDD Correspondence — DDD protocol as unique entropy-minimizing recovery path; information-geometric proof of DDD optimality
+- NC-115: Entropy Production Phase Signature — observable thermodynamic detection of TLG governance phase without internal state access
+- NC-116: NESS-IV (Cyclothymic governance) as Landauer degradation accumulator — repeated m oscillation erodes structural recovery capacity
+
+*(Cross-theory derivation: GGT §85 GEL; GGT §84 AGL; Section 3.5, 3.8, 3.9; TLG Section 13 False Completion; Section 26 GCC; AGM §13.10 Cyclothymic; FGS DDD protocol)*
 
 ---
 
@@ -10601,7 +13739,7 @@ The architecture further recognizes that failure does not end at maturity. Post-
 
 **The Minimal Sufficiency Argument:**
 
-This architecture claims three layers as the minimal sufficient structure. Not optimal — minimal. The argument rests on three independent requirements that cannot be jointly satisfied by fewer than three layers:
+This architecture claims three layers as the minimal sufficient structure *under the resolution mismatch conditions formalized in Section 2*. Not optimal — minimal. Not a universal law — a conditional structural consequence. The argument rests on three independent requirements that, given sustained resolution mismatch Δρ_MI > δ_min, cannot be jointly satisfied by fewer than three layers:
 
 ```
 Requirement 1 — Invariant Preservation:
@@ -10620,11 +13758,29 @@ Requirement 3 — Resolution Translation:
   Invariant enforcement and operational adaptation operate at
   incompatible abstraction levels (Section 2).
   Direct interaction between them produces resolution mismatch.
+  Under the scope condition of Theorem 0.1 (classification-only
+  boundaries, no independent information injection), this mismatch
+  cannot be resolved within either of the first two layers.
   → At least one dedicated mediation layer required.
 
-Three requirements, each requiring a dedicated layer,
-no two requirements satisfiable by the same layer
-→ Three layers is the minimum.
+Conditional conclusion:
+  Under sustained Δρ_MI > δ_min and classification-only
+  layer boundaries, three requirements each demand a dedicated
+  layer whose functions cannot be collapsed without violating
+  at least one requirement.
+  → Three layers is the minimal architecture satisfying all three
+    requirements simultaneously.
+
+Scope boundary (cases outside this argument):
+  (a) Δρ_MI ≤ δ_min (negligible resolution gap):
+      two-layer or flat architectures may suffice.
+  (b) Multi-source fusion available at boundaries:
+      Theorem 0.1 scope condition violated; resolution may
+      increase across boundaries without a third layer.
+  (c) Single-objective systems:
+      Requirement 1 and 2 collapse; two layers may suffice.
+  These are not refutations — they are the conditions under
+  which TLG architecture is not needed.
 ```
 
 Adding a fourth layer is not prohibited. It is unnecessary: any function a fourth layer would serve is either (a) a fractal sub-layer of an existing three (Section 14.1), or (b) a specialization within the Middle Layer's mediation function. The fractal property means that arbitrarily deep governance is achievable within the three-layer structure without adding new layer types.
@@ -11301,11 +14457,13 @@ Friston, K. (2010).
 *The free-energy principle: a unified brain theory?*
 Nature Reviews Neuroscience, 11(2), 127–138.
 — Cited in Section 0.7 (v2.3); Middle Layer formalized as system-level Markov blanket under FEP; MDS mapped onto corrupted generative model; SCM as active inference over drifted model; AGM coupling correspondences noted.
+— Extended citation in Section 3.6 (v2.7): Middle Layer as Markov blanket formal identification; Active Inference interpretation of governance (governance cost ≈ variational free energy; Top Layer = prior; Middle Layer = likelihood model; environment shaping = prior over action-state transitions); nested blanket structure; failure mode → blanket violation mapping; TLG as multi-agent AIF with governance-structured priors.
 
 Pearl, J. (2009).
 *Causality: Models, Reasoning, and Inference* (2nd ed.).
 Cambridge University Press.
 — Referenced in Section 2 (v2.3) and Section 14.2.1; the Mismatch Amplification ODE is a causal dynamical model; falsification criteria structured as causal intervention predictions.
+— Extended citation in Section 3.6 (v2.7): Markov blanket formal definition (Pearl 1988/2009); TLG-Markov blanket identification; Bayesian network structure of TLG (η → s → B → μ conditional independence graph); Bayesian derivation of Calibration Separation Theorem necessity.
 
 **Network Theory (v2.3 additions)**
 
@@ -11378,6 +14536,7 @@ Ostrom, E. (1990).
 *Governing the Commons: The Evolution of Institutions for Collective Action.*
 Cambridge University Press.
 — Cited in Section 0.7 as the source of polycentric governance principles.
+— Extended citation in Section 3.6 (v2.7): TLG as the dynamical systems formalization of Ostrom's multi-level governance theory; TLG derives the dynamical substrate that explains why Ostrom's empirically-identified design principles produce stable governance outcomes.
 
 **Critical Phenomena and Complex Systems**
 
@@ -12431,7 +15590,28 @@ Near-optimal governance operates at τ_operation ≈ τ_Landauer. Empirically es
 **OP65 — Goodhart Boundary Detection:**
 Define the formal boundary between Goodhart-vulnerable and Goodhart-resistant governance metrics (Section 20.1). Structural characterization: which properties of a metric make it immune to adversarial optimization while remaining predictive of true performance?
 
-*(Cross-theory derivation: FGS §36M.4 Open Problems OP8–OP13 + TLG-specific extensions)*
+**OP66 — Optimal Gate Calibration Under Terrain Drift (v2.6):**
+The three-gate architecture (Section 3.4.1) requires co-calibration of θ_gate with ρ(L). As terrain drifts, both require updating. Open problem: derive the optimal co-update schedule such that gate miscalibration and ρ measurement bias are minimized jointly. Is there a co-update algorithm that is provably convergent under continuous terrain drift?
+
+**OP67 — Packaging Complexity Bound — When Does Decomposition Fail? (v2.6):**
+The packaging protocol (Section 3.4.2) decomposes tasks whose complexity exceeds ρ_agent into sub-packages. Open problem: characterize the class of tasks for which decomposition preserves constraint-relevant information, and the class for which decomposition destroys the constraint structure (tasks that cannot be validly sub-packaged). This is the packaging analog of the irreducibility problem in computational complexity.
+
+**OP68 — Load Balancing Under Non-Stationary Agent Capacity (v2.6):**
+The load collapse cascade proof (Section 3.4.6) assumes approximately stationary agent capacity. In real deployments, agent capacity changes over time (learning, drift, fatigue, specialization). Open problem: derive load balancing rules that remain cascade-preventing when capacity(agent_i, t) is itself a dynamical variable. Specifically: can adaptive load balancing remain stable when agents are simultaneously learning and being load-managed?
+
+**OP69 — Exploration Regulation Gain Calibration — Domain Velocity Dependence (v2.6):**
+The exploration regulation ODE (Section 3.4.7) uses gain parameter γ_explore calibrated to domain velocity. Open problem: derive the mapping from domain velocity (rate of environmental change) to optimal γ_explore. Is the relationship monotonic? Are there domain velocities where no stable γ_explore exists (chaotic regulation regime)?
+
+**OP70 — Middle Layer Governance Engine Computational Complexity (v2.6):**
+The full Middle Layer architecture (Section 3.4) runs seven concurrent functions. Open problem: characterize the computational complexity of the joint optimization problem — simultaneous gate calibration, optimal routing, packaging quality maximization, load balancing, environment shaping, and exploration regulation. Is the joint optimization tractable, or does each function require decoupled suboptimal optimization?
+
+**OP71 — ρ Estimation Convergence Rate Under Constraint Feedback Delay (v2.6):**
+The information-theoretic ρ measurement protocol (Section 0.1) requires constraint outcome feedback within evaluation window W. Open problem: characterize how ρ estimation error scales with feedback delay relative to W. Is there a maximum tolerable delay/W ratio beyond which ρ estimation degrades faster than it can be corrected? What is the relationship between feedback delay and minimum viable W?
+
+**OP72 — Environment Shaping Terrain Reachability — When Is E* Inaccessible? (v2.6):**
+The Environment Shaping ODE (Section 3.4.5) requires that E* (the target terrain state) be accessible from current E(t). Open problem: characterize the set of initial conditions E(0) from which E* is unreachable under Middle Layer governance input U(t). This is the environment shaping analog of the recovery impossibility condition (Section 14.1.2 Three Irreversibility Conditions) — the terrain design equivalent of the point-of-no-return.
+
+*(Cross-theory derivation: FGS §36M.4 Open Problems OP8–OP13 + TLG v2.6 governance engine architecture)*
 
 ---
 
@@ -13396,6 +16576,224 @@ NC-58: MARK Entropy as Fisher Information Proxy (Section 26.5 v2.5)
   grounding for an existing TLG diagnostic instrument.
 ```
 
+### 26.8 Extended Novel Contributions (NC-59 to NC-65)
+
+```
+NC-59: Gating as Information Admission Control — Three-Gate Formalization (Section 3.4.1 v2.6)
+  Distinguishes gating from filtering: gating controls which signals enter which
+  processing pathways at which times, while filtering removes content from a signal.
+  Formalizes three gate types (Priority Gate, Rate Gate, Type Gate) with explicit
+  GATE decision function. Establishes gating-ρ co-calibration dependency —
+  gate miscalibration inflates/deflates the (decision_L, constraint_outcome)
+  stream used to estimate ρ(L). First TLG formalization of admission control
+  as a distinct Middle Layer module.
+
+NC-60: Task Packaging as ρ_effective Multiplier — f_package_quality Formula (Section 3.4.2 v2.6)
+  Introduces ρ_effective(Bottom) = ρ_structural(Bottom) × f_package_quality
+  where f_package_quality ∈ [0,1] degrades with stale context, mismatched
+  compression, and missing constraints. Shows that packaging quality is a
+  multiplicative factor on effective resolution — an agent operating on a
+  well-assembled package achieves ρ_structural; an agent receiving raw data
+  approaches ρ → 0 regardless of structural resolution capacity.
+  First formalization of packaging as a resolution lever.
+
+NC-61: Load Collapse Cascade — Structural Necessity of Load Balancing (Section 3.4.6 v2.6)
+  Proves that multi-agent systems self-organize toward unbalanced load distributions
+  via positive feedback (high-quality agents receive more tasks → performance
+  degrades → routing system over-corrects → collapse). Derives cascade speed:
+  O(1/n) time from onset to system-wide failure. Establishes that load balancing
+  is structurally necessary — not an optimization feature — because governance
+  routing without load constraints produces systematic bottleneck formation.
+  First proof that routing optimality and load balancing are jointly necessary
+  (neither alone prevents collapse).
+
+NC-62: Exploration Regulation as Dint Lower Bound Maintenance — Diversity Collapse Prevention
+  Proposition (Section 3.4.7 v2.6)
+  Proves that active Exploration Regulation Module with gain γ_explore > 0 and
+  D_min > 0 specified maintains Dint(t) ≥ D_min for all t (bounded away from
+  Diversity Collapse). Derives as corollary: SCC > 0 maintained (requires Dint > 0),
+  Rest Mode attainability preserved. Establishes exploration regulation as the
+  structural defense against Diversity Collapse — the failure mode identified in
+  Section 2 as preceding SCC = 0 collapse.
+
+NC-63: Middle Layer Formal Redefinition as Governance Engine — Module A + Module B
+  Architecture (Section 3.4.8 v2.6)
+  Replaces mediation-only Middle Layer specification with complete two-module
+  architecture: Module A (Information Flow Control: Gating, Targeting/Packaging,
+  Routing, Mediation) + Module B (Environmental Governance: Environment Shaping,
+  Load Balancing, Exploration Regulation). Formalizes the reactive/proactive
+  distinction: mediator model is reactive (problem → response); governance engine
+  model is proactive + reactive (environment designed → problems prevented;
+  remaining problems mediated). Derives governance cost scaling difference:
+  mediator model O(n) per-intervention vs. governance engine O(1) for designed terrain.
+
+NC-64: Political System Analogy as Structural Convergence Claim (Section 3.4.8 v2.6)
+  Elevates the Top/Middle/Bottom = Constitution/Government/Citizens analogy from
+  metaphor to structural claim: complex adaptive systems that achieve stable
+  governance reliably converge to this three-tier structure because it is the
+  minimum architecture that provides (1) invariant definition independent of
+  operations, (2) information flow control with dual-frame residency, and (3)
+  operational diversity within defined boundary. The political system is not
+  being used as an analogy — TLG formalizes the convergence dynamics that
+  explain why the political three-tier structure arose independently across
+  civilizations.
+
+NC-65: ρ Information-Theoretic Operational Definition — Measurement Protocol Closed
+  (Section 0.1 v2.6)
+  Provides information-theoretic grounding for ρ: ρ(L) = I(C_L; C*)/H(C*) as
+  the canonical formulation, with ρ(L) = E[I(decision_L; constraint_outcome)]
+  as the TLG governance-operational variant. Establishes three-step measurement
+  protocol using constraint outcomes (directly observable) rather than pre-labeled
+  ground truth (often unavailable). Closes the resolution mismatch chain:
+  Δρ = ρ_top − ρ_bottom, f_misclass ∝ (Δρ)², and Middle Layer stability condition
+  ρ_middle ≥ max(ρ_bottom, ρ_top) − ε are now jointly falsifiable. Connects ρ
+  operationalization to Boundary Agent architecture (Section 7, 24) as the
+  external constraint-outcome verifier. Addresses the primary falsifiability
+  vulnerability identified in adversarial review simulation.
+```
+
+### 26.8-B Extended Novel Contributions (NC-66 to NC-81)
+
+```
+NC-66: Self-Calibration Collapse — Four-Stage Progression Model (Section 3.5 v2.7)
+  Identifies and formalizes the primary structural vulnerability of TLG: the
+  self-referential calibration loop in which Middle Layer judgment history drives
+  calibration update without external anchoring. Defines four stages:
+  (1) Drift Onset — b(t) accumulates invisibly, internal metrics unchanged;
+  (2) Metric Dissociation — classification diverges from reality while ρ stays high;
+  (3) Epistemic Convergence — all three layers converge on drifted reference frame;
+  (4) Terminal Drift — recovery cost exceeds available resources.
+  First formal treatment of calibration drift as a four-stage governance failure.
+
+NC-67: Calibration Separation Theorem — External Reference as Structural Necessity
+  (Section 3.5 v2.7)
+  Proves that any adaptive governance system satisfying (a) threshold updated from
+  classification history, (b) accuracy measured relative to threshold, (c) no
+  external reference — cannot avoid Self-Calibration Collapse. External reference
+  is not an optional enhancement; it is a structural requirement for asymptotic
+  correctness. Provides the theoretical foundation for Boundary Agent necessity
+  that previously rested on architectural argument alone.
+
+NC-68: Calibration-Separated Middle Layer Architecture — Judgment/Calibration
+  Engine Split (Section 3.5 v2.7)
+  Introduces internal Middle Layer split into Judgment Engine (classification,
+  routing, mediation, gating) and Calibration Engine (θ_d update, external signal
+  anchor, drift detection). One-way interface: Calibration Engine outputs θ_d to
+  Judgment Engine; Judgment Engine does NOT feed back into Calibration Engine
+  directly. Only Boundary Agent signal feeds into Calibration Engine. First
+  architectural implementation of calibration separation within TLG.
+
+NC-69: Three-Level Anchoring Hierarchy (Section 3.5 v2.7)
+  Defines three redundant anchoring mechanisms in priority order:
+  (1) External Reference Channel — Boundary Agent B_ext direct anchoring (primary);
+  (2) Adversarial Probing Protocol — probe injection with externally-known outcomes;
+  (3) Cross-Layer Disagreement Monitor — D_cross > D_min as convergence prevention.
+  Establishes that D_cross > 0 is a healthy signal (not a dysfunction indicator),
+  inverting the naive interpretation of cross-layer disagreement.
+
+NC-70: Epistemic Convergence Discriminating Test — Probe Injection Protocol
+  (Section 3.5 v2.7)
+  Defines the formal test distinguishing genuine τ4 from convergence-masked
+  misalignment: inject probe inputs with externally-known constraint outcomes.
+  If probe_accuracy >> f_misclass_internal → epistemic convergence confirmed.
+  If probe_accuracy ≈ f_misclass_internal → genuine τ4 (or correlated failure).
+  First operational discriminator for the τ4 vs. convergence confusion.
+
+NC-71: Self-Referential Calibration Loop → SCM Causal Pathway Formalization
+  (Section 3.5 v2.7)
+  Establishes the causal mechanism by which SCM (Section 13.2.1) arises:
+  self-referential calibration loop → reference frame drift → epistemic convergence
+  → SCM (observable symptom) → Terminal Drift if uncorrected. SCM was previously
+  identified as a state; this section provides the generative mechanism.
+
+NC-72: Externally-Anchored θ_d Update Rule with Drift Bound (Section 3.5 v2.7)
+  Derives the weighted update: θ_d(t+1) = (1−λ_anchor)·θ_d_internal(t+1)
+  + λ_anchor·θ_d_external(t+1). Proves drift bound:
+  ‖θ_d(t) − θ_d*(t)‖ ≤ (1−λ_anchor)^t · ‖initial_error‖ + λ_anchor^{−1}·‖noise‖
+  First closed-form drift bound for governance threshold calibration with external
+  anchoring. Recommends λ_anchor ∈ (0.2, 0.4) as operational range.
+
+NC-73: Middle Layer = Markov Blanket — Formal Identification (Section 3.6 v2.7)
+  Formally identifies Middle Layer as Markov blanket in the sense of Pearl (1988)
+  and Friston (2010) by verifying all three conditional independence conditions:
+  (1) P(bottom | middle, reality) = P(bottom | middle) — verified by packaging architecture;
+  (2) Active state coupling — verified by environment shaping affecting external measurement;
+  (3) Sensory state coupling — verified by Boundary Agent signal entering through gating.
+  First formal Markov blanket identification for a multi-agent governance architecture.
+
+NC-74: Markov Blanket Necessity Theorem — Three-Layer Structure as Mathematical
+  Consequence (Section 3.6 v2.7)
+  Proves that any system maintaining (a) distinct internal states, (b) distinct
+  external environment, (c) statistical independence of internal from external over
+  time, requires a Markov blanket between internal and external. Maps to TLG:
+  (a) = Bottom Layer diversity, (b) = reality constraints, (c) = governance stability.
+  Derives as corollary: two-layer system has no blanket → cannot be simultaneously
+  stable and environmentally coupled. This is the Markov blanket derivation of
+  the Resolution Incompatibility Theorem (Theorem 1.2).
+
+NC-75: Self-Calibration Collapse as Blanket Model Degradation (Section 3.6 v2.7)
+  Connects Section 3.5 and Section 3.6: Self-Calibration Collapse is the
+  mechanism by which the Markov blanket begins mediating a wrong reality model.
+  Epistemic Convergence (Stage 3) is formally characterized as: blanket condition
+  holds (μ ⊥ η | B) but D(middle_drifted, reality) > ε. TLG-specific realization
+  of model evidence collapse in Free Energy Principle.
+
+NC-76: Active Inference Interpretation of TLG Governance (Section 3.6 v2.7)
+  Maps TLG governance operations to Active Inference (Friston et al.):
+  governance cost C_gov ≈ variational free energy F;
+  Top Layer invariants = prior p(o) over outcomes;
+  Middle Layer routing = likelihood model p(s|π);
+  environment shaping = prior over action-state transitions p(s|a).
+  Governance = shaping priors that agents optimize against.
+  First formal AIF interpretation of multi-agent governance architecture.
+
+NC-77: Nested Markov Blanket Structure — Individual ⊂ Middle ⊂ Boundary Agent
+  (Section 3.6 v2.7)
+  Identifies nested blanket hierarchy: individual agent Markov blanket (per-agent
+  boundary) ⊂ Middle Layer collective Markov blanket (per-system boundary) ⊂
+  Boundary Agent (system-environment interface). Shows this is the AIF multi-agent
+  extension of TLG's fractal correspondence (Section 3.2). Same blanket structure
+  repeats at each scale — fractality is blanket nesting.
+
+NC-78: Resolution Mismatch as Rate-Distortion Problem (Section 3.6 v2.7)
+  Reframes resolution mismatch (Section 2) as an information compression limit:
+  the Markov blanket must compress external information from η-resolution to
+  μ-resolution without losing constraint-relevant information. Resolution mismatch
+  = information loss during compression. Rate-distortion theorem applies: you cannot
+  transmit more information through a compression channel than the channel capacity.
+  Governance cannot overcome resolution mismatch — it must work within it.
+  First information-theoretic reframing of the core TLG problem.
+
+NC-79: Bayesian Network Structure of TLG — Conditional Independence Graph
+  (Section 3.6 v2.7)
+  Specifies TLG as a valid Bayesian network: η → s → B → μ with active state
+  feedback μ → a → η and Top Layer prior over μ. Provides Bayesian interpretation
+  of all TLG operations: classification = Bayesian inference P(class|input,θ_d);
+  θ_d update = posterior update P(θ_d|data,B_ext); external anchor = prior on θ_d.
+  Derives: without external anchor = improper prior → posterior unbounded.
+  Bayesian derivation of Calibration Separation Theorem necessity.
+
+NC-80: Failure Mode → Blanket Violation Mapping (Section 3.6 v2.7)
+  Maps all major TLG failure modes to Markov blanket violation types:
+  MDS → blanket transparency (Condition 1 violated);
+  SCM → wrong-model blanket (condition holds, model wrong);
+  Authority Collapse → I(Top; Bottom) → 0 (prior uninformative);
+  Diversity Collapse → μ point mass (blanket intact, internal diversity = 0).
+  Provides unified failure taxonomy under blanket formalism.
+
+NC-81: TLG Positioning as Multi-Agent AIF with Governance-Structured Priors
+  (Section 3.6 v2.7)
+  Formally positions TLG relative to MARL (complementary: TLG = governance
+  substrate, MARL = coordination within substrate), CTDE (orthogonal: TLG
+  applies regardless of training), FEP/AIF (extension: TLG = multi-agent AIF
+  with governance-structured priors), Control Theory (generalization: TLG reduces
+  to standard control at ρ_top = ρ_bottom), Institutional Economics (formalization:
+  TLG = dynamical systems implementation of multi-level governance, cf. Ostrom 1990).
+  Identifies TLG as uniquely combining (1) formal three-layer necessity derivation,
+  (2) collective Markov blanket identification, (3) calibration drift → SCM mechanism,
+  (4) operational metrics for all claims.
+```
+
 ### 26.7 Extended Testable Predictions (P-29 to P-36)
 
 **P-29 — Governance Completeness Score Predicts Crisis:**
@@ -13430,7 +16828,1173 @@ NC-58: MARK Entropy as Fisher Information Proxy (Section 26.5 v2.5)
 *Prediction:* Governance decisions made via τ1 distributed resolution (from high-diversity Bottom Layer) will show higher long-term outcome quality than τ2 centralized decisions on equivalent cases, even when τ1 decisions are slower. Quality measured by: proportion of decisions requiring revision within 5 windows.
 *Falsification:* τ1 and τ2 decision quality are statistically equivalent after controlling for decision type.
 
-*(Cross-theory derivation: EDT §68-71 + FGS §36M + Section 24-25 above)*
+**P-37 — Gating Calibration Predicts Storm Prevention Efficiency (v2.6):**
+*Prediction:* Deployments with explicitly calibrated three-gate architecture (Priority + Rate + Type) will show escalation storm frequency ≥ 3× lower than deployments with threshold-only gating, at equivalent agent pool size. Rate Gate calibration will show the largest single-gate contribution to storm prevention.
+*Falsification:* Three-gate architecture shows no significant storm frequency reduction over threshold-only gating.
+
+**P-38 — Packaging Quality Predicts Effective Resolution (v2.6):**
+*Prediction:* Measured ρ_effective(Bottom) will correlate with independently assessed f_package_quality at r > 0.7 across deployments with equivalent agent pool structural resolution. Stale packaging (terrain change without package update) will produce f_misclass increases measurable within 2 evaluation windows of terrain change.
+*Falsification:* f_package_quality shows no correlation with ρ_effective(Bottom) after controlling for ρ_structural.
+
+**P-39 — Load Imbalance Predicts Cascade Onset (v2.6):**
+*Prediction:* load_imbalance > 2.0 (maximum load 2× mean load) will predict τ3-level events within 5 evaluation windows at rate ≥ 80%. Load Balancing Module activation (rerouting + spawning) before load_imbalance exceeds 1.5 will prevent cascade in ≥ 90% of cases where load_imbalance would otherwise have reached 2.0.
+*Falsification:* Load imbalance coefficient shows no predictive power for cascade onset.
+
+**P-40 — Exploration Regulation Prevents Diversity Collapse (v2.6):**
+*Prediction:* Deployments with active Exploration Regulation Module will maintain Dint > D_min throughout evaluation period. Deployments without explicit regulation will show Dint declining monotonically in exploitation-rewarding environments, crossing Diversity Collapse threshold within 15-30 evaluation windows.
+*Falsification:* Exploration Regulation shows no significant effect on Dint maintenance in exploitation-rewarding environments.
+
+**P-41 — Environment Shaping Reduces Direct Intervention Rate (v2.6):**
+*Prediction:* Deployments that implement Environment Shaping (∂_explore calibration, topology design, task distribution architecture) will show direct Middle Layer mediation rate declining by ≥ 40% over 20 evaluation windows compared to equivalent deployments without environment shaping. Governance cost per unit of maintained stability (C_gov / stability_score) will be ≥ 2× lower in environment-shaped deployments.
+*Falsification:* Environment shaping shows no significant reduction in direct intervention rate.
+
+**P-42 — ρ Information-Theoretic Measurement Outperforms Classification-Accuracy Proxy (v2.6):**
+*Prediction:* ρ computed via I(decision_L; constraint_outcome)/H(constraint_outcome) will predict governance crisis (τ3-level events) at ≥ 2 evaluation windows lead with AUC ≥ 0.75, while ρ computed via 1 − (L_T1 + L_T2)/N will show AUC ≤ 0.60 for the same crisis prediction task. The mutual information formulation captures constraint-alignment information invisible to classification-error proxy.
+*Falsification:* Information-theoretic ρ shows no AUC improvement over classification-accuracy proxy for crisis prediction.
+
+**P-43 — Boundary Agent as ρ Constraint-Outcome Verifier (v2.6):**
+*Prediction:* Deployments with active Boundary Agent (Section 7, 24) will show ρ measurement standard error ≥ 2× lower than deployments without Boundary Agent, because Boundary Agent supplies the constraint_outcome signal required for information-theoretic ρ computation. Systems without Boundary Agent will exhibit ρ estimation bias correlated with Map-Terrain Divergence (Section 7.2).
+*Falsification:* Boundary Agent presence shows no effect on ρ measurement variance or bias.
+
+**P-44 — Self-Calibration Collapse Precedes SCM (v2.7):**
+*Prediction:* SCM events (Section 13.2.1) will be preceded by measurable θ_d drift at lead time ≥ 5 evaluation windows in ≥ 75% of cases. θ_d drift (measured by probe injection accuracy falling below internal f_misclass) will be a better SCM predictor than any single internal metric (ρ, SCC, f_esc individually). Drift will accumulate monotonically before SCM onset.
+*Falsification:* θ_d drift shows no predictive lead on SCM events, or probe accuracy does not diverge from internal f_misclass before SCM onset.
+
+**P-45 — Epistemic Convergence Probe Discrimination (v2.7):**
+*Prediction:* In systems at apparent τ4 (all internal metrics healthy), probe injection will reveal one of two conditions: genuine τ4 (probe_accuracy ≈ f_misclass_internal, both good) or epistemic convergence (probe_accuracy << f_misclass_internal, internal appears good but external wrong). Probe injection will successfully discriminate the two conditions in ≥ 85% of cases when applied at sufficiently high novelty (probe inputs must differ from training distribution by ≥ 2σ).
+*Falsification:* Probe injection fails to discriminate τ4 from epistemic convergence at above-chance rates.
+
+**P-46 — Calibration Separation Reduces Drift Accumulation (v2.7):**
+*Prediction:* Deployments with Judgment/Calibration Engine separation (one-way θ_d interface with external anchoring λ_anchor ≥ 0.2) will show θ_d drift (measured as ‖θ_d(t) − θ_d*(t)‖ via probe) bounded within the predicted ceiling ‖noise‖/λ_anchor. Unseparated deployments will show unbounded drift consistent with b(t) → ±∞ under one-sided error regimes.
+*Falsification:* Calibration-separated deployments show equivalent or higher drift than unseparated deployments.
+
+**P-47 — Cross-Layer Disagreement as Convergence Early Warning (v2.7):**
+*Prediction:* D_cross declining toward D_min will precede epistemic convergence (Stage 3) with ≥ 3-window lead time in ≥ 70% of cases. Deployments with D_cross monitoring and probe injection triggered at D_cross < D_min will prevent Stage 3 convergence in ≥ 80% of triggered cases.
+*Falsification:* D_cross shows no predictive power for epistemic convergence onset.
+
+**P-48 — Markov Blanket Condition Violation Predicts MDS (v2.7):**
+*Prediction:* Early-stage Mediator Drift Syndrome (Section 13.1.1) will be detectable as Markov blanket Condition 1 violation: P(bottom_state | middle_representation, reality) will diverge from P(bottom_state | middle_representation) before overt MDS symptoms appear. Measured by: correlation between unmediated external signal strength and bottom-layer behavior change, controlling for middle-layer representation.
+*Falsification:* Markov blanket Condition 1 shows no diagnostic power for MDS onset.
+
+**P-49 — Governance Cost ≈ Variational Free Energy (v2.7):**
+*Prediction:* Across deployments with varying governance architectures, C_gov (measured by Section 0.4.3 governance cost function) will correlate with estimated variational free energy F (measured via approximated surprise − log p(observations)) at r > 0.65. Governance interventions that reduce C_gov will also reduce estimated F, and vice versa, at the same rate.
+*Falsification:* C_gov and F show no significant correlation across governance configurations.
+
+**P-50 — Two-Layer Systems Violate Markov Blanket Stability (v2.7):**
+*Prediction:* Systems with only two governance layers (Top + Bottom, no Middle) will show statistical coupling between internal agent states and external environment directly — measurable as I(bottom_state; external_signal) > I(bottom_state; external_signal | top_signal). The coupling will increase over time without convergence, consistent with the absence of a screening blanket.
+*Falsification:* Two-layer systems show statistically equivalent or lower bottom-external coupling than three-layer systems.
+
+*(Cross-theory derivation: Sections 3.5-3.6; Section 13.2.1 SCM; Section 7 Boundary Agent; Friston 2010 FEP; Pearl 1988/2009)*
+
+---
+
+### 22.6 Extended Open Problems (OP-73 to OP-79)
+
+*(Extending the Open Problems Registry)*
+
+**OP-73 — Optimal λ_anchor Calibration Under Non-Stationary External Signal (v2.7):**
+The externally-anchored θ_d update rule requires λ_anchor ∈ (0.2, 0.4) as operating range. But when the external signal B_ext is itself non-stationary (the Boundary Agent's reality model is also drifting), the optimal λ_anchor is not constant. Open problem: derive the optimal adaptive λ_anchor(t) schedule under a jointly drifting (θ_d, B_ext) system. Is there a stable fixed-point λ_anchor* that balances internal adaptation against external anchoring when both are uncertain?
+
+**OP-74 — Probe Design for Maximally Discriminating Epistemic Convergence Tests (v2.7):**
+The Epistemic Convergence discriminating test (Section 3.5) requires probe inputs that differ from training distribution by ≥ 2σ. Open problem: for a given deployment domain, what is the optimal probe design procedure that maximizes the discriminating power between genuine τ4 and convergence-masked misalignment? Is there a probe complexity vs. discrimination power trade-off analogous to the exploration-exploitation trade-off?
+
+**OP-75 — Nested Markov Blanket Consistency — When Do Blankets Conflict? (v2.7):**
+The nested blanket structure (NC-77) places individual agent blankets inside the Middle Layer collective blanket. Open problem: under what conditions do individual agent blankets produce locally rational decisions that violate the collective blanket's conditional independence structure? Is there a consistency criterion for nested blanket hierarchies, analogous to the VCZ conditions for governance stability?
+
+**OP-76 — Rate-Distortion Bound for Governance — Minimum Information Required (v2.7):**
+Resolution mismatch as rate-distortion problem (NC-78) implies there is a minimum information rate required through the Middle Layer blanket to maintain governance quality above threshold. Open problem: derive the rate-distortion bound R(D) for TLG governance, where D = governance error rate and R = information rate through Middle Layer. What is the minimum channel capacity C_ML required to maintain ρ_effective(Bottom) above a specified threshold?
+
+**OP-77 — Bayesian Governance Convergence — Does the Posterior Converge? (v2.7):**
+The Bayesian interpretation of TLG calibration (NC-79) requires that the posterior P(θ_d | data, B_ext) converges to the true externally-correct θ_d* as evidence accumulates. Open problem: characterize the convergence conditions. Under what data-generating processes and external signal qualities does the posterior converge? When is convergence guaranteed, when is it asymptotic, and when is it impossible (non-identifiable governance)?
+
+**OP-78 — AIF Policy Selection in Collective Governance — Multi-Agent Free Energy (v2.7):**
+The Active Inference interpretation (NC-76) maps individual agent policy selection to expected free energy minimization G(π). In multi-agent TLG, agents share a collective blanket. Open problem: derive the collective expected free energy G_collective(π) for the multi-agent case where agents are coupled through the Middle Layer blanket. Does collective free energy minimize to a stable governance equilibrium? Is the equilibrium unique, and what determines its basin of attraction?
+
+**OP-79 — D_cross Minimum Threshold Derivation — How Much Disagreement Is Enough? (v2.7):**
+The Cross-Layer Disagreement Monitor requires D_min > 0 to prevent convergence. Open problem: derive D_min as a function of system parameters (n, domain velocity, external signal quality, λ_anchor). Specifically: what is the minimum cross-layer disagreement rate that guarantees the governance system retains the capacity to detect and correct a drifted calibration? Is there a phase transition in this relationship?
+
+*(Cross-theory derivation: Sections 3.5-3.6; FEP/AIF literature; Section 0.1 θ_d bootstrapping; RBIT information-theoretic foundation)*
+
+---
+
+### 22.7 Extended Open Problems (OP-80 to OP-94)
+
+*(Extending the Open Problems Registry — v2.8 additions)*
+
+**OP-80 — CTGPSR Timescale Separation Empirical Calibration (v2.8):**
+Section 3.7 identifies τ_Top >> τ_Mid >> τ_Bot as CTGPSR well-posedness requirement. Open problem: empirically calibrate μ_sep (required separation ratio) across organizational domains (insurance teams, AI multi-agent systems, hospital units). Is μ_sep universal or domain-specific? What observable symptom appears first when μ_sep falls below threshold?
+
+**OP-81 — Π_G Measurement Protocol in Real Governance Systems (v2.8):**
+Π_G requires measuring ⟨w, e−b⟩ — the residual environmental signal in the targeting direction. In organizational systems, w is not directly observable. Open problem: derive an operational proxy for Π_G measurable without direct access to the targeting vector w. Does w/‖w‖ converge to a measurable direction from governance activation patterns over time?
+
+**OP-82 — Self-Calibration Collapse as CTGPSR T-Drift Rate (v2.8):**
+Section 3.7 identifies Self-Calibration Collapse as T(t) drifting from C-determined optimum T* = δ/β. Open problem: derive the drift rate dT/dt under self-referential calibration (without C-anchoring) as a function of CTGPSR parameters. Does drift rate accelerate (positive feedback) or decelerate (self-limiting)? Is there a critical parameter value at which drift becomes unbounded?
+
+**OP-83 — Affective Temperature Measurement in Multi-Agent Systems (v2.8):**
+Section 3.9 uses T_eff as a governance deformation operator. Open problem: derive a multi-agent aggregate T_eff measure from individual agent behavioral observables. Is aggregate T_eff = weighted average of individual temperatures, or does it exhibit emergent non-linear mixing? What governs the weights?
+
+**OP-84 — Optimal B_ext Temporal Alignment (v2.8):**
+Section 3.10 identifies that external anchor B_ext must be in the Middle Layer Nyquist window [τ_Mid^{−1}/2, τ_Mid^{−1}]. Open problem: characterize the full joint distribution of consequences when B_ext rate is outside this window — above (aliasing into Bottom Layer noise) and below (aliasing into Top Layer drift). Which direction of misalignment is more dangerous?
+
+**OP-85 — Governance Landauer Bound Empirical Calibration (v2.8):**
+Section 3.11 derives the Governance Landauer Bound ΔS_min ≥ k_B T · d_F · (1/√F). Open problem: calibrate k_B T (governance decision cost unit) and F(m) (Fisher information) from observable governance data (restructuring frequency, failure rate, intervention cost). Does the Landauer Bound provide a tight lower bound in practice, or is the gap between bound and actual cost large?
+
+**OP-86 — Cramér-Rao False Completion in Organizational vs. AI Systems (v2.8):**
+The Cramér-Rao governance bound provides a universal false-completion test. Open problem: empirically validate the test across organizational (insurance team KPIs, sales target reporting) and AI (LLM self-assessment, RLHF reward model) deployment contexts. Is the false-completion rate under Cramér-Rao violation higher than under other false-completion indicators (TLG Section 13)?
+
+**OP-87 — NESS-IV Cyclothymic Governance Stability Threshold (v2.8):**
+Section 3.11 identifies NESS-IV as a Landauer degradation accumulator. Open problem: derive the threshold number of NESS-IV cycles k* before structural recovery capacity falls below minimum viable (SCC < τ). Does k* depend on cycle amplitude (m oscillation range) or cycle frequency, and which is the binding constraint?
+
+**OP-88 — Temporal Misalignment Index Calibration under Organizational Change (v2.8):**
+TMI(t) requires knowing τ_ℓ for each layer. In real systems, effective timescales change during organizational events (mergers, reorgs, rapid growth). Open problem: derive an adaptive TMI estimator that tracks effective timescales without prior calibration. Is TMI estimable from publicly observable governance signals alone?
+
+**OP-89 — Geodesic Recovery Path Selection in Practice (v2.8):**
+Section 3.11 proves DDD is the geodesic recovery path in Fisher geometry. Open problem: given a real governance failure state m_failure, how is the geodesic path computed? Is there a polynomial-time algorithm for finding the Fisher geodesic in the discrete partition space 𝓜? What is the complexity scaling with m?
+
+**OP-90 — Multi-Level Π_G Consistency — Fractal Governance Phases (v2.8):**
+Π_G provides phase classification at the system level. In TLG's fractal structure, every sub-unit has its own Π_G. Open problem: characterize multi-level Π_G consistency conditions. When all sub-unit Π_G values are in the assimilation regime, must the system-level Π_G be? Or can system-level criticality arise from sub-level assimilation (emergent governance)?
+
+**OP-91 — Affective Temperature × Self-Calibration Collapse Interaction (v2.8):**
+Section 3.9 establishes T_eff modulates θ_d accuracy; Section 3.5 establishes θ_d drift leads to collapse. Open problem: formalize the joint T_eff × calibration drift dynamics. Does high T_eff (Runaway) accelerate or decelerate drift accumulation relative to T_eff = T_eff*? Is there an optimal T_eff regime that maximizes λ_anchor effectiveness?
+
+**OP-92 — Governance Nyquist Violation Detection Protocol (v2.8):**
+The Governance Nyquist Theorem identifies aliasing conditions. Open problem: design a practical detection protocol for Governance Nyquist violation in a running system, where f_Top and f_Bot are not directly measurable. Can aliasing be detected from spectral analysis of governance metric time series alone, without layer-level frequency measurement?
+
+**OP-93 — GEL–SCM Joint Diagnostic: Fisher + External Probe (v2.8):**
+Section 3.11 proposes Cramér-Rao test; Section 3.5 proposes probe injection test. Open problem: characterize the joint diagnostic power of the two tests combined. Are they independent (joint power = product of individual powers) or correlated? Is there a case where one test fires and the other does not, beyond the simple false-τ4 vs. Epistemic Convergence distinction?
+
+**OP-94 — Governance Entropy Production Rate as Leading Indicator (v2.8):**
+Section 3.11 derives entropy production phase signature (σ_gov → σ_min at τ4, σ_gov ↑ at τ1-τ3). Open problem: calibrate σ_gov's lead time relative to conventional TLG early warning indicators (f_esc, ρ, SCC). Is σ_gov a leading or lagging indicator? For which failure mode (Storm vs. Silent Criticality vs. SCM) does σ_gov have the longest lead time?
+
+*(Cross-theory derivation: Sections 3.7–3.11; GGT §81, §82A, §83, §84, §85; AGM §15.11; FGS §36U)*
+
+---
+
+### 23.6 Extended Testable Predictions (P-51 to P-62)
+
+*(Extending the Testable Predictions Registry — v2.8 additions)*
+
+**P-51 — CTGPSR Timescale Ordering Predicts Governance Stability (v2.8):**
+*Prediction:* Systems maintaining τ_Top/τ_Mid ≥ μ_sep and τ_Mid/τ_Bot ≥ μ_sep will show Storm rates ≤ 50% of systems where these ratios fall below μ_sep. Timescale compression (TMI rising) will precede Storm onset by ≥ τ_Mid lead time in ≥ 70% of events.
+*Falsification:* TMI shows no predictive power for Storm onset lead time.
+
+**P-52 — Π_G Phase Classification Replicates τ-Stage Classification (v2.8):**
+*Prediction:* In deployments with measurable governance activation signal u(t), Π_G > 1 will be correlated with TLG τ1–τ3 stages (r > 0.80), and Π_G < 0.5 will be correlated with τ4 stages (r > 0.75). Mismatches (Π_G < 1 during τ2 or Π_G > 1 during τ4) will predict anomalous governance events (SCM, false Rest Mode) in the following window.
+*Falsification:* Π_G phase and τ-stage show no significant correlation.
+
+**P-53 — Governance Suppression Law: Π_G ∝ C^{-β/2} (v2.8):**
+*Prediction:* Across teams of varying size n (with C ∝ n), governance effectiveness measure (Π_G proxy) will scale as n^{-β/2} with β ∈ (0.5, 2.0). Teams that differentiate (sub-layer creation) at C = C* will show sustained Π_G despite scaling, while non-differentiating teams will show monotone Π_G decline. Differentiation timing will cluster near C^* = (‖w‖/θ·Θ₀·ρ_w)^{2/β}.
+*Falsification:* Π_G shows no systematic decline with team size, or differentiation shows no Π_G maintenance effect.
+
+**P-54 — T_eff Modulation of Middle Layer Granularity (v2.8):**
+*Prediction:* In controlled multi-agent simulations varying T_eff, optimal Middle Layer packet count m* will scale as m*(T_eff) = m*(T_eff*) · exp(−(T_eff − T_eff*)/ΔT). Systems operating at T_eff = T_eff* will show minimum governance cost C_gov relative to same-n systems at T_eff ≠ T_eff*. Deviation |T_eff − T_eff*| > ΔT will predict ≥ 2× increase in C_gov within 10 evaluation windows.
+*Falsification:* m* shows no systematic dependence on T_eff, or C_gov is insensitive to T_eff deviation.
+
+**P-55 — Δℓ_c as Silent Criticality Leading Indicator (v2.8):**
+*Prediction:* Δℓ_c = ℓ_c^apparent − ℓ_c^true will become measurably positive (> 0.1 · ℓ_c^(0)) at least 5 evaluation windows before conventional TLG Silent Criticality detection (∂²V/∂t² > 0 or R-rate declining). In systems experiencing full Storm, prior Δℓ_c trajectory will show sustained positive drift for ≥ 80% of events.
+*Falsification:* Δℓ_c provides no lead time over rate-based Silent Criticality detection.
+
+**P-56 — DDD Geodesic Optimality (v2.8):**
+*Prediction:* Recovery protocols implementing all three DDD stages in correct sequence will show entropy production ≤ 30% of non-geodesic alternatives covering the same governance state space. Protocols that skip Stage 2 (Decouple) will show the largest entropy cost overrun, consistent with null-geodesic skipping imposing full transversal traversal cost.
+*Falsification:* DDD order shows no systematic entropy cost advantage over alternative stage orderings.
+
+**P-57 — NESS-IV Cycles Accumulate Landauer Cost (v2.8):**
+*Prediction:* Systems experiencing ≥ 3 NESS-IV cycles (τ4 entry and exit within short windows) will show declining SCC at rate proportional to Landauer cost per cycle. Systems with k > k* = SCC_0 / ΔS_Landauer cycles will fall below SCC threshold before manifesting conventional Storm — showing governance degradation through Landauer accumulation rather than acute instability.
+*Falsification:* SCC trajectory shows no dependence on prior NESS-IV cycle count.
+
+**P-58 — Cramér-Rao Test Outperforms Individual TLG Metrics (v2.8):**
+*Prediction:* Var(m̂)/F(m)^{-1} ratio will identify false-τ4 entries earlier (by ≥ 3 windows) than any single TLG metric (ρ, SCC, f_esc, D_int) across ≥ 5 distinct false-completion failure modes identified in TLG Section 13. The test will show AUC ≥ 0.80 for false-τ4 detection vs. AUC ≤ 0.65 for best individual metric.
+*Falsification:* Cramér-Rao test shows no detection advantage over best single TLG metric.
+
+**P-59 — Temporal Misalignment Accelerates Calibration Drift (v2.8):**
+*Prediction:* Systems with TMI > TMI_c will show θ_d drift accumulation ≥ 2× faster than systems with TMI < TMI_c/2, controlling for all other calibration parameters. The interaction between TMI and λ_anchor will be multiplicative: higher TMI will require proportionally higher λ_anchor to maintain equivalent drift bounds.
+*Falsification:* TMI shows no interaction with calibration drift rate or λ_anchor effectiveness.
+
+**P-60 — Three-Stage Regulatory Cascade Detection (v2.8):**
+*Prediction:* Systems approaching burnout governance failure (Stage 3: H depletion) will show three detectable inflection points in governance load metrics: Stage 1 (f_esc acceleration, G depletion proxy), Stage 2 (ρ degradation, C_M depletion proxy), Stage 3 (invariant drift, H depletion proxy). These will occur in this sequence with mean time spacing proportional to τ_G, τ_C_M, τ_H respectively.
+*Falsification:* Pre-burnout trajectories show no consistent three-stage inflection sequence.
+
+**P-61 — Four-Criterion τ4 Joint Requirement (v2.8):**
+*Prediction:* Systems satisfying all four τ4 criteria (probe test §3.5 + Cramér-Rao §3.11 + GCC §26 + Π_G §3.8) will show stable τ4 maintenance for ≥ 10× longer windows than systems satisfying only 3 of 4 criteria. Failure mode analysis will show each missing criterion predicts a distinct instability type (calibration collapse / structural fragility / incomplete GCC / buffer not assimilated).
+*Falsification:* Four-criterion systems show no stability advantage over three-criterion systems.
+
+**P-62 — Entropy Production Signature as Phase-Change Leading Indicator (v2.8):**
+*Prediction:* σ_gov (measurable as governance intervention frequency proxy) will show non-monotone behavior near VCZ: σ_gov first rising then crossing saddle point σ* as Π_G → 1. This non-monotone trajectory (rise → saddle → fall into assimilation) will be a more reliable predictor of healthy τ4 entry than monotone decline (which can indicate False Quiet, SCM, or genuine τ4). The saddle point signature will appear in ≥ 75% of confirmed genuine τ4 transitions.
+*Falsification:* σ_gov shows no characteristic saddle-point pattern near VCZ.
+
+*(Cross-theory derivation: Sections 3.7–3.11; GGT §81, §82A, §84, §85; AGM §15.11; FGS §36U)*
+
+---
+
+### 23.7 Extended Testable Predictions (P-63 to P-74)
+
+*(v2.9 RBIT integration additions)*
+
+**P-63 — RBIT Theorem 1: Intent Replacement Under Sustained Δρ < 0 (v2.9):**
+*Prediction:* In multi-agent systems where Middle Layer resolution deficit (Δρ_Bottom→Middle < 0) is sustained for t ≥ t_corr without correction, Bottom Layer agent intent replacement will occur within t* ≤ ⌈D*/η⌉ cycles with probability ≥ 0.80. Systems with functioning Middle Layer gating (Δρ > 0 maintained) will show intent drift rates ≤ 20% of ungated systems over equivalent time windows.
+*Falsification:* Sustained Δρ < 0 shows no predictive relationship with Bottom Layer intent replacement rate.
+
+**P-64 — Triple-Failure Storm Onset Criterion (v2.9):**
+*Prediction:* CTGPSR triple-sign (Ċ < 0 AND Ṗ >> 0 AND Ṙ < 0) will discriminate storm onset from pre-storm states with AUC ≥ 0.85, compared to AUC ≤ 0.65 for any single-component F_RBIT threshold. False positive rate of triple criterion ≤ 10% in stable governance windows; false negative rate ≤ 15% in confirmed storm episodes. Single-component f₂ elevation will produce false storm alarms ≥ 3× the rate of triple criterion.
+*Falsification:* Triple criterion shows no advantage over single-component f₂ threshold.
+
+**P-65 — Path 3 (Terrain Erosion) Invisibility to Standard F_RBIT (v2.9):**
+*Prediction:* Systems experiencing Self-Calibration Collapse Stage 1 (Section 3.5) will show M_RBIT declining by ≥ 0.15 units before any F_RBIT component (f₁–f₅) crosses alarm threshold in ≥ 75% of events. M_RBIT lead time over f₂ will be ≥ 3 evaluation windows in ≥ 60% of Stage-1 onset events. Standard monitoring without M_RBIT will classify these events as "healthy" until Stage 2 (Metric Dissociation) onset.
+*Falsification:* M_RBIT shows no lead over f₁–f₅ components in Stage-1 detection.
+
+**P-66 — κ(t) = f₂ · f₃ · M_RBIT Unified Regime Classification (v2.9):**
+*Prediction:* κ(t) will replicate TLG τ-stage classification (τ1–τ4) with concordance r ≥ 0.82 across diverse governance contexts (insurance teams, AI multi-agent systems). κ will additionally identify Path-3 failure states that τ-stage misclassifies as τ4 in ≥ 70% of events. Decomposing κ into three factors will correctly attribute regime change to the causal path (Path 1/2/3) in ≥ 80% of labeled events.
+*Falsification:* κ shows no advantage over single-factor f₂ or τ-stage for regime classification.
+
+**P-67 — Attractor Grammar Classification (v2.9):**
+*Prediction:* A_null (TDS) signature — f₁ declining with f₂ declining (apparent improvement during collapse) — will be detectable ≥ 4 evaluation windows before conventional Terminal Drift indicators (Section 3.5 Stage 4) in ≥ 70% of events. NF2 (Grammar Incompleteness) will produce cross-layer f₂ elevation at Middle↔Top interface with normal within-layer f₁ and f₂ in ≥ 80% of cases, distinguishable from standard routing failure by layer-specific f₂ decomposition.
+*Falsification:* Attractor grammar classification provides no predictive advantage over standard F_RBIT for failure mode identification.
+
+**P-68 — Temporal Boundary Layer (TB1–TB4) as Storm Precursor (v2.9):**
+*Prediction:* Systems with TMI > TMI_c will show all four TB mechanisms (corr(f₁,f₂) > 0.4, DDD E1 τ_assessment < τ₂, all f₁–f₅ increasing simultaneously, f₃ degradation rate > M*(t) tracking rate) within 2 evaluation windows of TMI threshold crossing in ≥ 70% of cases. Identifying TB mechanism type will improve intervention targeting: TB1 → θ_d update rate reduction; TB2 → DDD pace adjustment; TB3 → full storm protocol; TB4 → Middle Layer buffer emergency.
+*Falsification:* TB mechanism type shows no predictive value for intervention targeting beyond generic storm protocol.
+
+**P-69 — Revival Case Classification Predicts DDD Timing (v2.9):**
+*Prediction:* Case A detection (f₁+f₂ respond rapidly to minimal intervention) will predict lower total DDD resource cost (≤ 50% of Case B baseline) with outcome equivalence. Case B detection (f₄ paradoxically declining during deep storm) will predict that premature Stage 3 activation causes re-amplification in ≥ 60% of events. Case C confirmation (C_new* > C_old* after DDD) will predict sustained τ4 maintenance > 3× baseline duration vs. Case A or B recovery trajectories.
+*Falsification:* Revival case classification shows no predictive value for DDD cost or outcome duration.
+
+**P-70 — F_RBIT Co-Variation: Partial Degradation Propagation (v2.9):**
+*Prediction:* f₂ elevation ≥ 1.5σ above baseline will be followed by coordinated movement in ≥ 2 other F_RBIT components within ≤ τ₂ in ≥ 70% of cases. Systems where f₂ elevation is treated as isolated (single-component intervention only) will show full storm onset at ≥ 2× the rate of systems where f₂ elevation triggers full F_RBIT co-monitoring. "Partial degradation" states lasting > τ₂ will be confirmed as either SCM Stage 1 or measurement artifact in ≥ 85% of cases.
+*Falsification:* f₂ elevation shows no predictive relationship with subsequent co-component movement.
+
+**P-71 — Heritage Asymmetry: Negative Event Decay Rate (v2.9):**
+*Prediction:* Organizations with documented high-intensity negative governance events in the prior T_window will require r_positive,min = (n_neg · A_neg · α_pos)/(A_pos · α_neg · T_window) sustained positive governance intensity to maintain equivalent ρ, with α_neg/α_pos ∈ [1.5, 3.0] empirically calibrated. Organizations that fail to meet r_positive,min will show ρ decline at measurable rate proportional to (r_positive − r_positive,min)⁻¹ per evaluation window.
+*Falsification:* Negative event history shows no systematic influence on required positive governance intensity.
+
+**P-72 — Fractal Governance Necessity: Collapse Time Bound (v2.9):**
+*Prediction:* Systems with χ = n/√C > χ_c that do not modularize (create sub-layers) within T_collapse ≤ (κ_c − κ(0))/δ will show governance collapse in ≥ 80% of cases. Empirically measured δ will predict T_collapse within ±50% in ≥ 70% of cases. Systems that modularize (k* = (n²/2γ)^{1/3}) within T_collapse will maintain stable governance in ≥ 85% of cases vs. ≤ 30% for non-modularizing systems.
+*Falsification:* T_collapse bound provides no predictive advantage over baseline collapse time estimates.
+
+**P-73 — Staged Alarm Protocol Reduces False Silent-Criticality Alarms (v2.9):**
+*Prediction:* Four-stage RBIT alarm protocol (passive monitoring → analytical perturbation → PRR → emergency) will reduce false Silent Criticality alarms (Stage 1–2 false positives) by ≥ 40% vs. threshold-only detection, while increasing true positive rate (Stage 3 confirmed events) by ≥ 20%. Stage 2 analytical perturbation (inject calibrated event, measure v_class response rate) will distinguish genuine SCM from noise-induced f₂ elevation in ≥ 75% of ambiguous cases.
+*Falsification:* Staged alarm protocol shows no false-alarm reduction vs. threshold-only detection.
+
+**P-74 — Resolution Palimpsest: Historical Depth Predicts Current ρ (v2.9):**
+*Prediction:* ρ(t) will be better predicted by full palimpsest formula (ρ₀ + Σ structural + Σ affective terms) than by current-state metrics alone (Δρ²/R ≥ 0.15 improvement in prediction variance). Systems undergoing DDD who also correct historical palimpsest distortions (externally-anchored θ_d correction of historical event classifications) will show ρ recovery ≥ 25% faster than systems applying only prospective corrections. Negative heritage correction (positive governance intensity meeting r_positive,min) will show nonlinear recovery: ρ increases faster once historical palimpsest negative balance reaches zero.
+*Falsification:* Historical palimpsest terms provide no predictive improvement over current-state metrics for ρ.
+
+*(Cross-theory derivation: Sections 3.12–3.13; RBIT §Theorem 1, §F_RBIT, §Information Geometry, §33.1–33.4; Section 3.5, 3.6, 3.7, 3.10; GGT §82; FGS §36U)*
+
+---
+
+### 22.8 Extended Open Problems (OP-95 to OP-108)
+
+*(v2.9 RBIT integration additions)*
+
+**OP-95 — RBIT Axiom Calibration for Organizational Domains (v2.9):**
+RBIT Theorem 1 relies on axioms A1–A6, particularly A5 (minimal novelty margin η > 0) and A6 (replacement threshold D*). Open problem: empirically calibrate η and D* for insurance team and AI multi-agent deployment contexts. Are A5 and A6 parameter values universal (same across domains) or domain-specific? If domain-specific, what structural features of the domain determine them?
+
+**OP-96 — F_RBIT Computation from Observable Proxies (v2.9):**
+F_RBIT requires five measurements (f₁–f₅) that may not be directly observable. Open problem: identify minimal observable proxy sets that allow F_RBIT estimation with uncertainty ≤ ε for each component. What is the minimum sampling frequency for each f_i given its characteristic timescale (Stratum 1–4)? Can κ(t) be estimated without directly measuring M_RBIT (the hardest component to observe)?
+
+**OP-97 — M_RBIT Operational Measurement (v2.9):**
+M_RBIT = endogenous/total ρ fraction requires distinguishing ρ maintained by internal structure vs. external governance. Open problem: design an operational measurement protocol for M_RBIT in real governance systems. One approach: M_RBIT ≈ 1 − (ρ_drop_during_governance_removal / ρ_baseline). Is this estimator unbiased? What confounds must be controlled?
+
+**OP-98 — Heritage Asymmetry Parameter Calibration (v2.9):**
+Heritage Asymmetry requires calibrating α_neg/α_pos (decay rate ratio for negative vs. positive events). Open problem: calibrate this ratio across organizational types and event intensities. Does α_neg/α_pos depend on event type (governance failure vs. external shock vs. personnel change), event intensity A_k, or organizational size n? Is there a universal lower bound on α_neg/α_pos?
+
+**OP-99 — Revival Case Identification Protocol (v2.9):**
+Distinguishing Case A, B, C revival requires real-time classification of ongoing recovery. Open problem: design a real-time Case identification algorithm using observable F_RBIT signals. Key challenge: Case B (paradoxical f₄ decline during deep storm) must be distinguished from genuine improvement before Stage 3 activation decision. What is the minimum observation window for reliable Case B identification?
+
+**OP-100 — κ(t) Threshold κ_c Derivation (v2.9):**
+The regime classification κ < κ_c / κ ≈ κ_c / κ > κ_c requires knowing κ_c. Open problem: derive κ_c from first principles (CTGPSR parameters, FGS lifecycle parameters, GGT partition geometry). Is κ_c unique or does it depend on governance architecture? How does κ_c relate to Π_G^{τ4} (Section 3.8)? Are they the same threshold expressed in different coordinates?
+
+**OP-101 — NF2 (Grammar Incompleteness) Prevalence in Multi-Agent AI (v2.9):**
+NF2 (resolution growing within layers but inter-layer transfer channel blocked) is a newly identified TLG failure mode. Open problem: characterize prevalence and detection accuracy of NF2 in transformer-based multi-agent systems. Does NF2 correspond to any known transformer failure mode (e.g., attention head specialization without inter-head coordination)? What intervention (Section 3.4.3 routing fix) maps to in transformer architecture?
+
+**OP-102 — NF3 (Attractor Proliferation Overflow) Governance Complexity Threshold (v2.9):**
+NF3 signature (f₄ ↑, f₅ ↑ with f₁, f₂ normal) identifies governance over-complexity. Open problem: derive the governance complexity optimum C_G* empirically and compare with theoretical prediction C_G* ~ O(log n). How rapidly does governance overhead (f₄ + f₅) increase above C_G*? Is there a sharp transition (governance complexity phase transition) at C_G*?
+
+**OP-103 — Four-Theory Criticality Equivalence Empirical Validation (v2.9):**
+Π_eff = 1 ↔ Π_G = 1 ↔ χ_TBG = θ ↔ C_A = 1 is a formal mathematical equivalence. Open problem: empirically validate all four conditions co-occurring at the same time in real governance transitions. Do the four channels always fire simultaneously, or do some lead others (breaking simultaneous equivalence in non-equilibrium transients)?
+
+**OP-104 — Structural Damage Ratchet Rate Under SCM (v2.9):**
+Section 3.12 proposes that each unaddressed Silent Criticality period deposits permanent damage. Open problem: quantify the ratchet rate dθ_c/dt under self-referential calibration conditions. Is the rate constant (linear ratchet) or accelerating (positive feedback ratchet)? Does the ratchet rate depend on T_eff (Section 3.9) or TMI (Section 3.10)? Is there a minimum intervention frequency that prevents ratchet accumulation?
+
+**OP-105 — Palimpsest Distortion Under SCM (v2.9):**
+Section 3.13 proposes that Self-Calibration Collapse retrospectively distorts historical event classifications in the palimpsest. Open problem: quantify the retroactive distortion rate as a function of θ_d drift magnitude. Can historical palimpsest entries be re-anchored using the external reference measurement from B_ext? Is palimpsest re-anchoring equivalent to full recovery, or does the Structural Damage Ratchet prevent full restoration?
+
+**OP-106 — Fractal Governance Necessity Gamma Calibration (v2.9):**
+The Fractal Governance Necessity Theorem requires γ (interaction coupling strength) for T_collapse and k* computation. Open problem: calibrate γ from observable governance data (f₂ trajectory, S-equation parameters). Is γ stable over a governance lifecycle, or does it change during Storm and Recovery phases? If γ changes, does T_collapse need to be updated dynamically?
+
+**OP-107 — κ(t) vs. Π_G Concordance in Non-Equilibrium Transients (v2.9):**
+κ(t) = f₂ · f₃ · M_RBIT and Π_G = ⟨w, e−b⟩/(θ·Θ₀·C^{β/2}) both claim to be unified governance stress scalars. Open problem: characterize their relationship formally. Are they monotone transformations of each other? Do they diverge during transient non-equilibrium states (Storm onset, Recovery)? Which has better lead time for τ4 entry prediction? Could a joint monitor (κ × Π_G) outperform either individually?
+
+**OP-108 — Chronotopic Window W_chrono Calibration (v2.9):**
+RBIT defines the Chronotopic Window W_chrono = [τ₁, terrain_feature_duration/2] for DDD trigger timing. Open problem: calibrate τ₁ and terrain_feature_duration for TLG governance contexts. Specifically: what is the minimum reliable DDD trigger window for insurance team governance cycles, and how does it change under organizational scaling (n increasing)? Does TMI elevation (Section 3.10) alter W_chrono, and if so, how should DDD timing be adjusted?
+
+*(Cross-theory derivation: Sections 3.12–3.13; RBIT §25–§34; GGT §82; FGS §36U; AGM §15; Section 3.5, 3.7, 3.8, 3.9, 3.10, 3.11)*
+
+---
+
+*(v2.8 addition: consolidated bidirectional reference table)*
+
+This section provides a consolidated registry of all cross-theory correspondences established between TLG and companion theories GGT, AGM, FGS, EDT, and NAT. Each entry specifies direction, TLG section, companion section, and correspondence type.
+
+### 28.1 GGT ↔ TLG Correspondences
+
+```
+GGT Concept                  ↔  TLG Concept                    Section    Type
+──────────────────────────────────────────────────────────────────────────────────
+CTGPSR (C,T)/(G,P)/(R)      ↔  Top/Middle/Bottom Layer        §3.7       Identity
+CTGPSR τ_C > τ_G > τ_R      ↔  Three-layer timescale order    §3.7       Derivation
+North Star Ċ = 0             ↔  Top Layer invariant stability  §3.7       Theorem
+U = nφ − C_gov              ↔  CTGPSR functional               §3.7       Mapping
+C_cl,new* ≠ C_old*          ↔  Post-recovery VCZ expansion    §3.7       Theorem
+Silent Criticality Mode III  ↔  TLG §9 Silent Criticality      §3.7       Identity
+Buffer B(t) → B*            ↔  Middle Layer thickening         §3.7       Identity
+Targeting null-space         ↔  Upward Blindness               §3.7       Derivation
+Π_G phase classification    ↔  TLG τ-stage system             §3.8       Mapping
+Π_G = χ/θ                   ↔  θ_d as governance threshold    §3.8       Coupling
+Π_G ∝ C^{-β/2}             ↔  Inevitable Differentiation      §3.8       Derivation
+Factor-2 complexity term    ↔  S-equation scaling S~n²/C^β    §3.8       Derivation
+|Π_G_int − Π_G_ext| gap     ↔  SCM depth quantification       §3.8       Measurement
+AGL ℓ_c(T_eff)              ↔  Middle Layer packet size        §3.9       Coupling
+Π_G^AGL Gaussian envelope   ↔  VCZ optimal T_eff window       §3.9       Theorem
+Δℓ_c = ℓ_c^app − ℓ_c^true ↔  Silent Criticality depth metric §3.9       Measurement
+NESS-I–IV classification    ↔  TLG governance mode mapping     §3.11      Mapping
+Fisher metric F(m)          ↔  Middle Layer partition space    §3.11      Identification
+Governance Landauer Bound   ↔  Irreversible restructuring cost §3.11      Theorem
+Cramér-Rao test             ↔  False-τ4 detection (unified)   §3.11      Test
+Geodesic DDD                ↔  Optimal recovery protocol       §3.11      Proof
+σ_gov phase signature       ↔  VCZ saddle-point detection     §3.11      Observable
+Fifteen-Way M_crit          ↔  τ4 entry extended conditions   §3.9       Extension
+GEL-NC-1–6                  ↔  TLG §3.11 NC-110–116          §3.11      Import
+```
+
+### 28.2 AGM ↔ TLG Correspondences
+
+```
+AGM Concept                  ↔  TLG Concept                    Section    Type
+──────────────────────────────────────────────────────────────────────────────────
+T_eff minimum viable temp   ↔  VCZ optimal operating point    §3.9       Coupling
+T_eff = 0 (Freeze)          ↔  Silent fragmentation / τ4 fake §3.9       Identity
+T_eff → ∞ (Runaway)         ↔  Vector Storm onset             §3.9       Identity
+Three-layer authority sep   ↔  Mark/Judge/Execute separation   §15.9 AGM  Mapping
+τ1 threshold → θ_d          ↔  Event detection calibration    §3.5       Coupling
+H(t)/C_M(t)/G(t) depletion  ↔  Top/Middle/Bottom cascade      §3.9       Mapping
+Regulatory cascade 3-kink   ↔  Three-stage burnout warning    §3.9       Detection
+Crisis decentralization     ↔  Section 3.9 routing response   §3.9       Prescription
+AGM-GGT-1 (n* quantization) ↔  Inevitable Differentiation     §3.1.3     Prediction
+Broken Ruler problem        ↔  Section 3.5 calibration drift  §3.5       Identity
+Phantom buffer surplus      ↔  Stage-2 Metric Dissociation    §3.5       Identity
+Buffer-limited expansion    ↔  Middle Layer capacity bound    §3.3       Coupling
+North Star drift rate bound ↔  Top Layer invariant stability  §3.7       Coupling
+NESS-IV cyclothymic         ↔  Landauer degradation loop      §3.11      Identity
+T_eff × θ_d interaction     ↔  Calibration accuracy coupling  §3.9       OP-91
+```
+
+### 28.3 FGS ↔ TLG Correspondences
+
+```
+FGS Concept                  ↔  TLG Concept                    Section    Type
+──────────────────────────────────────────────────────────────────────────────────
+FGS lifecycle phases        ↔  CTGPSR three-regime sequence   §3.7       Mapping
+§15.3 Gating not commanding ↔  Section 3.4.1 Gate types       §3.4       Correspondence
+§29D North Star             ↔  Top Layer invariant cluster     §3.7       Identity
+§36U Temporal Manifold      ↔  Three-layer temporal manifold  §3.10      Import
+Governance Nyquist Theorem  ↔  False stability detection       §3.10      Theorem
+TMI Temporal Misalignment   ↔  Calibration drift accelerator  §3.10      Coupling
+Dead Time δ_Top             ↔  Storm prevention timing bound  §3.10      Constraint
+Temporal budget bias        ↔  Upward Blindness (temporal)    §3.10      Mechanism
+Temporal fractal condition  ↔  CTGPSR consistency at all lvls §3.10      Requirement
+Silent Criticality §7.6     ↔  Rate-based detection protocol  §9 (TLG)   Identity
+SSR Cycle governance        ↔  Exploration Regulation §3.4.7  §3.4       Mapping
+FGS Middle-layer thickening ↔  B(t) → B* CTGPSRB convergence §3.7       Identity
+Upward Blindness §15.6      ↔  CTGPSR null-space + temporal   §3.7,§3.10 Two-mechanism
+§36V North Star as attractor ↔  C-fixed-point stability        §3.7       Correspondence
+DDD protocol               ↔  Geodesic Recovery (GEL)        §3.11      Proof
+Prediction U1–U4           ↔  P-51, P-59 testable predictions §3.10      Import
+ILMI principles            ↔  TGBGT gating (GGT §80)         §3.4       Bridge
+```
+
+### 28.4 EDT ↔ TLG Correspondences
+
+*(Extending Section 25 and 24 EDT-TLG correspondences with v2.8 additions)*
+
+```
+EDT Concept                  ↔  TLG Concept                    Section    Type
+──────────────────────────────────────────────────────────────────────────────────
+Reference drift             ↔  Section 3.5 calibration drift  §3.5       Parallel
+External reference frame    ↔  Boundary Agent B_ext            §3.5,§7    Identity
+Broken Ruler (A(t) drift)   ↔  Stage-2 Metric Dissociation    §3.5       Identity
+Phantom buffer surplus      ↔  Self-referential θ_d drift      §3.5       Identity
+A_external necessity        ↔  Calibration Separation Theorem §3.5       Correspondence
+GCET (gain-curvature dual)  ↔  ∇_m J_AGL T_eff + EDT terms   §3.9       Identity (GEL)
+Terminal Desert State       ↔  Stage-4 Terminal Drift          §3.5       Identity
+Terrain curvature κ_terrain ↔  GGT §81 residual r(t) = e−b   §3.8       Coupling
+Dual Stability Criterion    ↔  τ4 four-criterion requirement  §3.11      Parallel
+κ_C capacity-tracking risk  ↔  Middle Layer load balance       §3.4.6     Correspondence
+Phase-gate interface        ↔  ℓ_c recalibration window        §3.7       Timing
+Three-Axis architecture     ↔  Module A + Module B governance §3.4       Mapping
+Terrain as proactive design ↔  Environment Shaping §3.4.5     §3.4       Identity
+```
+
+### 28.5 NAT ↔ TLG Correspondences
+
+```
+NAT Concept                  ↔  TLG Concept                    Section    Type
+──────────────────────────────────────────────────────────────────────────────────
+Sphere topology             ↔  D_cross > 0 blindspot coverage §3.5       Principle
+Middle Layer: relationship  ↔  Section 3.4 governance engine  §3.4       Specialization
+topology (§5.5)
+Four data types classification ↔ Gate type discrimination §3.4.1         Correspondence
+NAT dead time escalation    ↔  Governance dead time §3.10     §3.10      Parallel
+Adversarial G1/G2/G3 attacks ↔ Section 20 adversarial modes  §20        Extension
+Metric poisoning (G1)       ↔  Cramér-Rao false completion    §3.11      Identification
+Coupling attack (G2)        ↔  CTGPSR supercritical induction §3.7       Mapping
+Isolation attack (G3)       ↔  Markov blanket degradation     §3.6       Mapping
+Four structural principles  ↔  TLG adversarial governance     §20        Import
+Persistence (topology memory) ↔ Relationship topology § 3.4.8  §3.4      Extension
+SDI monitoring              ↔  D_cross monitoring + TMI       §3.5,§3.10 Parallel
+Decoupled metric portfolio  ↔  Four-criterion τ4 test         §3.11      Correspondence
+TMI rising precedes crisis  ↔  TMI-calibration interaction    §3.10      Prediction
+```
+
+### 28.5b RBIT ↔ TLG Correspondences
+
+```
+RBIT Concept                         ↔  TLG Concept                     Section    Type
+────────────────────────────────────────────────────────────────────────────────────────────
+Resolution three tiers (1/2/3)       ↔  Bottom/Middle/Top Layer         §3.12      Derivation
+Theorem 1 (finite replacement)       ↔  Three-layer necessity            §3.12      Derivation
+F_RBIT = (f₁,f₂,f₃,f₄,f₅)          ↔  Layer-specific health monitor   §3.12      Mapping
+CTGPSR ↔ F_RBIT correspondence       ↔  (C,T,G,P,R)→(f₁,f₂,f₄,f₅,f₃) §3.12      Identity
+Triple-Failure (Ċ<0,Ṗ>>0,Ṙ<0)      ↔  Storm onset criterion           §3.12      Identification
+Resolution Gap Δρ                    ↔  θ_d calibration substrate       §3.12      Coupling
+SCM = self-referential Δρ loop       ↔  Section 3.5 Stage 1–3           §3.12      Identity
+External anchor = Δρ external meas  ↔  B_ext External Ref Channel       §3.5,§3.12 Derivation
+Silent Criticality = geodesic drift  ↔  Section 9 Silent Criticality    §3.12      Identity
+v_class drift-resistant indicator    ↔  Most SCM-robust health metric   §3.12      Identification
+PRR = Perturbation-Response Rate     ↔  TLG Probe Injection Test        §3.5,§3.12 Identity
+κ(t) = f₂·f₃·M_RBIT                ↔  Unified governance stress scalar §3.12      Definition
+Path 1 (Φ↑, f₂↑)                   ↔  Direct overload detection       §3.12      Mapping
+Path 2 (L↑, f₃↓)                   ↔  Lock accumulation (semi-visible) §3.12      Mapping
+Path 3 (q↓, M_RBIT↓)               ↔  SCM Drift Onset (invisible)      §3.5,§3.12 Identity
+A_point attractor                    ↔  Mature τ4 / Fossilization risk  §3.12      Mapping
+A_limit attractor                    ↔  NF1 Resonance Capture           §3.12      New Failure
+A_strange attractor                  ↔  Healthy exploration phase        §3.12      Mapping
+A_null attractor                     ↔  Terminal Desert State (TDS)     §3.5,§3.12 Identity
+NF1 (Resonance Capture)             ↔  Section 3.4.5 terrain fix needed §3.12      New Failure
+NF2 (Grammar Incompleteness)        ↔  Section 3.4.3 routing fix needed §3.12      New Failure
+NF3 (Attractor Proliferation)       ↔  Middle Layer packet overflow     §3.12      New Failure
+Stratum 1–4 temporal architecture   ↔  Three temporal manifolds + lifecycle §3.10,§3.12 Mapping
+TB1–TB4 boundary layer crises       ↔  TMI > TMI_c mechanisms           §3.10,§3.12 Mapping
+κ(t) = f₂·f₃·M_RBIT unified        ↔  GCC₁+GCC₂+GCC₇ joint monitor   §3.13      Coupling
+Case A revival (near-κ_c)           ↔  VCZ proximity governance         §3.12      Mapping
+Case B revival (exhaustion)         ↔  Wait-before-Stage-3 protocol     §3.12      Protocol
+Case C revival (nucleation)         ↔  DDD E3 = C_new* > C_old* verify §3.12      Criterion
+Revival front propagation c_min      ↔  Bottom-Up Recovery derivation   §3.12      Derivation
+Fractal Governance Necessity k*     ↔  Inevitable Differentiation        §3.1,§3.12 Parallel proof
+T_collapse ≤ (κ_c−κ(0))/δ          ↔  DDD urgency clock                §3.12      Bound
+GCC₁–GCC₇ operationalization        ↔  Section 26 GCC full extension    §3.13      Import
+Seven-condition AND-gate grounding  ↔  Each GCC = one failure path      §3.13      Derivation
+GCC v2.9 extensions (κ,M_RBIT,ATG) ↔  Sections 3.8–3.12 additions     §3.13      Extension
+F_RBIT co-variation theorem         ↔  Partial degradation not stable   §3.13      Warning
+Four-theory criticality equivalence ↔  Four-channel TLG monitoring      §3.13      Portfolio
+Resolution Palimpsest formula       ↔  TLG historical depth + heritage  §3.13      Formalization
+Heritage Asymmetry (α_neg < α_pos)  ↔  Negative history governance cost §3.13      Quantification
+Structural Damage Ratchet (R1/R2/R3)↔  Irreversibility taxonomy TLG    §3.12      Classification
+Governance Landauer ↔ RBIT Ratchet  ↔  Joint irreversibility accounting §3.11,§3.12 Unification
+```
+
+### 28.6 Cross-Theory Grand Unification Claims (v2.8–2.9)
+
+The following claims represent the deepest cross-theory unifications established across v2.8 and v2.9 (RBIT) additions:
+
+**Grand Claim 1 — Self-Calibration Collapse is Universally Multi-Theory:**
+Self-Calibration Collapse (§3.5) is simultaneously:
+- CTGPSR T-drift from C-anchor (GGT §82A) — §3.7
+- AGM Broken Ruler / Phantom Buffer Surplus (AGM §8) — §3.9
+- EDT Reference Drift / Terminal Desert convergence pathway (EDT §3.5) — §24
+- FGS self-referential blindspot in background governance (FGS §7.6, §15.3) — §3.7
+- Markov Blanket model degradation (§3.6)
+- Π_G internal vs. external gap growing (§3.8)
+- RBIT self-referential Δρ loop / geodesic drift on statistical manifold — §3.12
+- RBIT Path 3 terrain erosion (M_RBIT declining, invisible to standard F_RBIT) — §3.12
+All eight descriptions are projections of the same governance failure mode onto different theoretical coordinates.
+
+**Grand Claim 2 — τ4 Entry Requires Seven Independent Conditions:**
+Genuine τ4 (VCZ maintenance) requires simultaneously:
+- GCC structural conditions: SCC ≥ τ, D_int sufficient, f_esc low (§26)
+- Π_G assimilation: Π_G < Π_G^{τ4}, buffer absorbed environment (§3.8)
+- Probe test: probe_accuracy ≈ f_misclass_internal (§3.5)
+- Cramér-Rao test: Var(m̂) ≥ 1/F(m) (§3.11)
+- Affective temperature: T_eff ≈ T_eff* (§3.9)
+- Temporal alignment: TMI < TMI_c, B_ext in Nyquist window (§3.10)
+- RBIT Case C nucleation: C_new* > C_old* verified (§3.12)
+Missing any one condition produces a specific false-τ4 failure mode; the RBIT Case C condition adds the Recovery-Renormalization verification that earlier versions lacked.
+
+**Grand Claim 3 — Middle Layer is a Five-Way Identity:**
+Middle Layer = Markov Blanket (§3.6) = CTGPSR (G,P) projection (§3.7) = Governance Control Number Π_G mediator (§3.8) = Temporal translation interface (§3.10) = RBIT Tier 2 resolution operator (§3.12)
+Each identity adds independent structural necessity: the Middle Layer is not justified by any single theory but by all five simultaneously.
+
+**Grand Claim 4 — Governance Landauer Bound as Physical Cost Floor:**
+The Governance Landauer Bound (§3.11) provides the unique physical lower bound on governance cost that all other TLG cost measures (C_gov functional, S-equation, governance activation integral) are bounded above by entropy production. Governance cannot cost less than the Landauer minimum. The RBIT Structural Damage Ratchet (§3.12) provides the complementary bound: each irreversible Class R3 event accumulates maximum Landauer cost, enabling joint Landauer+RBIT accounting of cumulative governance degradation.
+
+**Grand Claim 5 — Three Paths to Criticality Require Three Independent Monitoring Channels:**
+TLG governance cannot be monitored by any single metric because:
+- Path 1 (direct overload) is visible in f₂ alone
+- Path 2 (lock accumulation) is visible in f₃ alone
+- Path 3 (terrain erosion) is INVISIBLE to all standard F_RBIT metrics; requires M_RBIT or Π_G_external
+The three-path structure formally proves that single-metric governance monitoring is structurally insufficient — not merely impractical but mathematically provable. κ(t) = f₂ · f₃ · M_RBIT is the minimum sufficient monitoring scalar.
+
+**Grand Claim 6 — Revival Topology Formally Derives Bottom-Up Recovery:**
+The Conley Index argument (FCC §30 / RBIT §33.3) proves that revival trajectories near κ_c are topological necessities, not stochastic events. The cascade ordering (peripheral-first revival) formally derives TLG's Bottom-Up Recovery principle from first principles — not as an empirical observation but as a structural consequence of the revival propagation constraint. Hub-first recovery is not merely suboptimal; it violates the propagation constraint.
+
+---
+
+### 3.12 Resolution-Based Interpretation Theory (RBIT) — Formal Grounding of TLG Resolution Architecture
+
+RBIT (Resolution-Based Interpretation Theory) provides the information-theoretic foundation for TLG's three-tier resolution structure. Where TLG describes governance layers architecturally, RBIT formalizes the resolution properties that make each layer structurally distinct and necessary. This section establishes RBIT → TLG import connections, deriving several TLG architectural claims from RBIT's axiom system.
+
+**Resolution — Formal Definition (RBIT §Resolution):**
+
+```
+Resolution at layer ℓ:
+  The capacity of layer ℓ to distinguish between, simultaneously hold,
+  and process vectors of different directions without one dominating the others.
+  
+  Resolution is NOT:
+    - Computational power or processing speed
+    - Parameter count or information storage capacity
+    - A global property of the system
+    
+  Resolution IS:
+    - Structural capacity to maintain distinction under load
+    - Layer-specific, task-relative, evaluation-window-bounded
+    - A property that grows through experience and calibrated absorption
+
+Three Resolution Tiers (direct TLG layer mapping):
+
+  Tier 1 — Vector-Noise Separation: "Is this a signal or not?"
+    TLG: Bottom Layer — execution tier separates task signals from noise
+    τ threshold: τ1 (Mark) fires when signal:noise falls below threshold
+    
+  Tier 2 — Inter-Vector Differentiation: "Are these vectors distinct from each other?"
+    TLG: Middle Layer — governance engine tier distinguishes competing vectors
+    τ threshold: τ2 (Judge) fires when inter-vector confusion exceeds capacity
+    Key: Middle Layer exists precisely because Bottom Layer cannot perform Tier 2
+    
+  Tier 3 — Full Map Design: "Where should each vector be placed to minimize friction?"
+    TLG: Top Layer — invariant-setting tier only (upper layer exclusively)
+    τ threshold: τ3 (Correction) fires when map design is violated
+    Key: Top Layer must perform Tier 3 BECAUSE Bottom Layer can only do Tier 1,
+         and Middle Layer can only do Tier 2. This is not an architectural choice
+         but a Resolution Asymmetry Inevitability (RBIT Theorem 1 consequence).
+```
+
+**RBIT Theorem 1 — Resolution Asymmetry Inevitability as TLG Layer Necessity:**
+
+```
+Theorem 1 (RBIT): Under axioms A1–A6, if a negative resolution gap is
+structurally sustained (Δρ < 0 for τ ≥ t_corr with no effective correction),
+then cumulative divergence grows without bound and intent replacement occurs
+within finite time t* ≤ ⌈D*/η⌉ cycles.
+
+TLG architectural derivation from Theorem 1:
+  The three-tier resolution structure is not an organizational preference.
+  It is the structural consequence of Theorem 1:
+  
+  If Middle Layer does not catch Tier-2 violations (Δρ_Middle < 0 sustained):
+    → By Theorem 1: intent replacement occurs in finite time t*
+    → TLG: Bottom Layer agents acquire incorrect resolution targets
+    → This is the formal derivation of the "gating, not commanding" principle
+      (Section 3.4.1): Middle Layer must gate before vectors reach Top Layer
+      or Theorem 1 convergence occurs at the Top Layer level.
+      
+  Resolution Asymmetry Inevitability:
+    ρ_Top > ρ_Middle > ρ_Bottom is not a design goal —
+    it is a structural consequence of Tier assignment:
+    Tier 3 operators (Top Layer) systematically see more than Tier 2 (Middle),
+    who systematically see more than Tier 1 (Bottom).
+    
+  Finite Replacement Time prediction (P-63):
+    Under sustained Δρ < 0 at Middle Layer:
+      Bottom Layer intent replacement within t* = ⌈D*/η⌉ cycles
+    Falsification: sustained Middle Layer resolution deficit with no Bottom Layer
+      intent drift after 2t* cycles → Theorem 1 axiom A5 may not hold for this domain.
+```
+
+**F_RBIT Health Vector — TLG Operational Monitor:**
+
+```
+F_RBIT(ℓ) := (f₁, f₂, f₃, f₄, f₅)
+
+  f₁ = (1 − ρ_ℓ)        misclassification rate (higher = worse)
+  f₂ = Φ(−Δρ_ℓ)         resolution mismatch (higher = worse)
+  f₃ = Ψ(B_ℓ)           buffer instability (higher = worse)
+  f₄ = E_ℓ              escalation load (higher = worse)
+  f₅ = C_ℓ              resource dissipation (higher = worse)
+
+TLG layer mapping:
+  Bottom Layer F_RBIT: f₁ primary (execution accuracy / noise-separation quality)
+  Middle Layer F_RBIT: f₂ + f₃ primary (routing accuracy + buffer stability)
+  Top Layer F_RBIT:    f₄ + f₅ primary (escalation load + governance cost)
+  
+  This assignment is not arbitrary — it follows from the resolution tier structure:
+    Tier 1 failures → f₁ (misclassification at execution level)
+    Tier 2 failures → f₂ (inter-vector confusion at governance level)
+    Buffer degradation → f₃ (Middle Layer thickness declining)
+    Cascade escalation → f₄ (middle→top escalation load)
+    Governance overhead → f₅ (Top Layer cost)
+
+CTGPSR ↔ F_RBIT correspondence (from Section 3.7 + RBIT §25.2):
+  C(t) [cluster coherence] ↔ f₁: C → 0 → boundaries dissolve → classification fails
+  T(t) [targeting]          ↔ f₂: T_mismatch/C → resolution mismatch
+  G(t) [gate openness]      ↔ f₄: open gates under stress → escalation cascade risk
+  P(t) [package]            ↔ f₅: packages without resolution → dissipation without repair
+  R(t) [recovery reserve]   ↔ f₃: depleted recovery → persistent instability (1/R)
+  
+  Triple-Failure Signature (RBIT §25.3.3 Theorem 25.3.3 → TLG Storm Onset):
+    Storm confirmed when ALL three simultaneously:
+      Ċ < 0 ↔ f₁ ↑ (structural dissolution → misclassification cascade)
+      Ṗ >> 0 ↔ f₅ ↑ (burst escalation → resource dissipation spike)
+      Ṙ < 0 ↔ f₃ ↓ (recovery depletion → buffer collapse)
+      
+    Single-component elevation = NOT yet a storm.
+    Triple simultaneous movement = storm confirmed.
+    → TLG τ2/τ3 discrimination requires F_RBIT three-component check,
+      not single-metric threshold crossing.
+```
+
+**Resolution Gap Δρ as TLG θ_d Calibration Substrate:**
+
+```
+Resolution Gap definition (RBIT §The Resolution Gap):
+  Δρ(ℓ→ℓ') = ρ_ℓ - ρ_ℓ'  (resolution difference between sender and receiver)
+  
+  Δρ > 0: sender has higher resolution than receiver
+    → sender MUST compress information to transmit to receiver
+    → compression is lossy → Theorem 1 risk
+    → TLG: Top Layer → Middle Layer transmission always requires compression
+    
+  Δρ < 0: receiver has higher resolution than sender
+    → receiver has "excess" resolution that generates interpretation artifacts
+    → TLG: Bottom Layer → Middle Layer elevation produces interpretation inflation
+    
+  Δρ = 0: matched resolution — minimal loss, no compression artifact
+    → TLG: ideal match state (structurally unachievable across all layer pairs simultaneously)
+    → Resolution Mismatch Theorem (TLG Section 2): at least one pair must have Δρ ≠ 0
+
+Connection to θ_d calibration (Section 0.1, Section 3.5):
+  θ_d is the Middle Layer detection threshold.
+  θ_d quality = f(Δρ_Bottom→Middle):
+    When Δρ_Bottom→Middle > δ_max: threshold too tight (over-sensitive; f₁ false positives)
+    When Δρ_Bottom→Middle < −δ_max: threshold too loose (under-sensitive; f₁ false negatives)
+    When Δρ_Bottom→Middle ≈ 0: threshold optimally calibrated
+    
+  Self-Calibration Collapse (Section 3.5) from RBIT perspective:
+    SCM = Δρ_Bottom→Middle drifting without external reference anchor
+    Internal calibration loop: θ_d updated from f₁ history
+    → f₁ history is computed WITHIN current θ_d frame
+    → updating θ_d to minimize f₁ relative to θ_d is tautological
+    = RBIT Theorem 1 violation: Δρ measured against itself → no detection
+    → External anchor B_ext provides Δρ measurement OUTSIDE the θ_d frame
+    → This is the RBIT-level derivation of External Reference Channel necessity.
+```
+
+**Silent Criticality — RBIT Formal Characterization:**
+
+```
+RBIT formalizes Silent Criticality as a geodesic drift on the statistical manifold:
+
+  The system's state drifts along a path of MINIMAL FISHER INFORMATION
+  = minimum observability path = hardest-to-detect degradation direction
+  
+  Fisher information collapse (RBIT §Information Geometry):
+    I_F < I_min → perturbation sensitivity collapses
+    = system cannot detect its own deviations reliably
+    = v_class measurement itself approaching zero-confidence
+    = RBIT: the measurement coordinate system has drifted
+    
+  TLG correspondence:
+    Silent Criticality (TLG Section 9) = RBIT geodesic drift on statistical manifold
+    
+    Why it appears silent:
+      All f_i values are relative to the drifted reference frame
+      f₁ = 0 may mean "no errors in the wrong classification frame"
+      f₂ = 0 may mean "no mismatch within the wrong metric"
+      → Standard F_RBIT monitoring reports health WITHIN the drifted frame
+      
+    v_class as drift-resistant indicator:
+      v_class measures TRANSITION RATE from current state to any other
+      v_class = 0 is diagnostic whether or not coordinate system has drifted
+      → v_class is TLG's most Silent Criticality-resistant health indicator
+      
+    PRR as second drift-resistant indicator:
+      PRR = Perturbation-Response Rate (response to external calibration input)
+      PRR measures response to external reference — not internal self-assessment
+      → PRR corresponds to TLG Probe Injection Test (Section 3.5, Epistemic Convergence)
+      → Both RBIT PRR and TLG probe test use the same principle: externally-known outcome
+      
+  Staged Alarm Protocol (RBIT → TLG operational):
+    Stage 1 (Passive):    monitor v_class rolling trend + f₂ slope
+    Stage 2 (Analytical): v_class decline → inject calibrated perturbation; measure response
+    Stage 3 (Active):     no v_class response → deploy PRR / probe injection test
+    Stage 4 (Emergency):  PRR confirms → External Reference Channel activation (Section 3.5)
+```
+
+**κ(t) Unified Control Parameter — RBIT Extension of TLG Governance Metrics:**
+
+```
+κ(t) := Φ(t) / (L(t) · q(t))
+      = [ρ(t)/C(t)] / [(1+L_C)(1+L_d) · Q_E(t)]
+      
+Scale-invariant (invariant under uniform rescaling of Φ, L, q).
+
+F_RBIT mapping (RBIT §33.1):
+  Φ(t) = ρ(t)/C(t)       ↔ f₂ (resolution mismatch: demand over capacity)
+  L(t) = (1+L_C)(1+L_d)  ↔ f₃⁻¹ (inverse buffer stability: lock accumulation)
+  q(t) = Q_E(t)           ↔ terrain quality (M_RBIT: endogenous/total ρ fraction)
+  
+  κ(t) = f₂ · f₃ · M_RBIT   [all three primary F_RBIT dimensions]
+
+Regime classification:
+  κ < κ_c:  Rest basin → TLG τ4 maintenance mode
+  κ ≈ κ_c:  SOC fluctuations → TLG VCZ boundary / early warning zone
+  κ > κ_c:  Storm regime → TLG τ2/τ3 active correction
+
+TLG consequence: three distinct monitoring signals required
+  f₂ alone insufficient (Path 1 only)
+  f₃ alone insufficient (Path 2 only)
+  M_RBIT alone insufficient (Path 3 only)
+  κ = f₂ · f₃ · M_RBIT catches all three paths simultaneously.
+  
+Path 3 (terrain erosion, Path INVISIBLE to standard monitoring):
+  M_RBIT declining while f₁, f₂, f₃ all appear normal
+  → Standard F_RBIT: all components healthy → no alarm
+  → κ: declining because M_RBIT denominator decreasing → alarm
+  → TLG: this is the formal mechanism for Silent Desertification —
+    governance capacity eroding while performance metrics maintained
+    → catastrophic collapse when Φ_c passes through current Φ
+    
+  TLG implication for Section 3.5 (Self-Calibration Collapse):
+    Self-Calibration Collapse is a PATH 3 failure:
+    θ_d drift is not visible in f₁, f₂, f₃ within the drifted frame
+    but IS visible in M_RBIT: endogenous/total resolution ratio declining
+    as the frame drifts away from external reality.
+    → M_RBIT monitoring is a RBIT-level addition to Section 3.5 diagnostic protocol.
+```
+
+**Three Paths to Criticality — TLG Failure Mode Taxonomy Extension:**
+
+```
+Path 1: Direct Overload (VISIBLE)
+  Φ ↑ while L and q fixed
+  F_RBIT: f₂ rising while f₃ stable and M_RBIT stable
+  TLG: τ1 event rate increasing → observable escalation
+  Response: Section 3.4.3 routing optimization (Middle Layer load balancing)
+  
+Path 2: Lock Accumulation (SEMI-VISIBLE)
+  L ↑ while Φ and q fixed (= f₃⁻¹ increasing)
+  F_RBIT: f₃ declining while f₂ and M_RBIT stable
+  TLG: buffer thickness declining without active storm
+  → Section 3.4.6 (Load Balancing): four-level cascade signal should fire at L Stage 2
+  → Intervention priority: DDD Stage 1 (coupling redesign to reduce L_C)
+  → NOT Stage 3 cycling on the lock accumulation — misidentification risk
+  
+Path 3: Terrain Erosion (INVISIBLE to standard F_RBIT)
+  q ↓ while Φ and L fixed (= M_RBIT declining)
+  F_RBIT: ALL five components may appear normal
+  TLG: this is Self-Calibration Collapse Stage 1 (Drift Onset, Section 3.5):
+    internal metrics appear healthy while reference frame degrades
+  Detection requires: M_RBIT tracking OR external Π_G measurement (Section 3.8)
+  → Path 3 provides the RBIT-level explanation of WHY Drift Onset is undetectable
+    without external reference: all internal metrics are within the drifted frame.
+  → External anchor = Path 3 detection mechanism in RBIT language.
+  
+  Three-Path Joint Monitoring Protocol:
+    Standard TLG: monitor f_esc, ρ, SCC, D_int (catches Paths 1 and 2)
+    Extended TLG (v2.9 addition): also monitor M_RBIT and κ (catches Path 3)
+    Complete protection: κ = f₂ · f₃ · M_RBIT provides single unified indicator.
+```
+
+**Attractor Grammar — TLG Governance Architecture Classification:**
+
+```
+EDT §53 / RBIT §32.2 Attractor Grammar G_terrain = (Σ_A, N, P, S)
+  Σ_A = {A_point, A_limit, A_strange, A_null}
+
+TLG Governance Regime Classification by Attractor Type:
+
+  A_point (stable fixed point):
+    Resolution architecture: stable single-dominant resolution target
+    F_RBIT: f₁ low, f₂ stable, f₃ healthy
+    TLG correspondence: mature τ4 (VCZ well-established, governance invisible)
+    Risk: over-rigidity → d → ∞ → Fossilization → metastable lifetime → ∞
+    TLG: Top Layer invariant overcrowding → prevents genuine τ4 from being reached
+    
+  A_limit (stable oscillation):
+    F_RBIT: f₁ and f₂ oscillating at same period
+    TLG failure mode: NF1 (Resonance Capture) — Middle Layer routing oscillates
+    at Bottom Layer natural frequency, preventing stable routing convergence
+    Detection: corr(f₁(t), f₂(t)) periodic with period = agent natural cycle
+    Intervention: boundary modification (Section 3.4.5 Environment Shaping)
+    NOT correctable by gain modulation (Section 3.4.7) — resonance is topological
+    
+  A_strange (chaotic/exploratory):
+    F_RBIT: f₁ aperiodic, f₂ fluctuating, f₃ stable
+    TLG correspondence: healthy exploration phase (B* < B_threshold still)
+    Requires sustained T_eff > 0 (Section 3.9)
+    Collapse pathway: T_eff → 0 (Freeze) → A_strange → A_point (rigid lock-in)
+    TLG: Freeze Silent Criticality = attractor contraction from A_strange toward A_point
+    
+  A_null (flat potential, no restoring force):
+    F_RBIT: f₁ → 0 by suppression, f₂ declining, f₃ → 0, Φ < 1 (false health)
+    TLG correspondence: Terminal Desert State (TDS) = Self-Calibration Collapse Stage 4
+    Most dangerous: all F_RBIT components APPEAR to improve while resolution collapses
+    This is A_null manifesting as Path 3 terrain erosion — invisible until complete.
+    
+  Novel Failure Mode NF2 (Grammar Incompleteness):
+    Within-layer f₁ and f₂ normal; cross-layer f₂ elevated
+    v_class = 0 at cross-layer interface despite positive within-layer v_class
+    TLG: resolution growing within layers but inter-layer transfer channel blocked
+    Distinct from all previously TLG-classified failures
+    Detection: Middle Layer ρ_effective(Bottom) normal but Top→Middle routing quality degraded
+    Intervention: Section 3.4.3 routing architecture fix (not Section 3.4.7 gain)
+    
+  Novel Failure Mode NF3 (Attractor Proliferation Overflow):
+    f₃ declining as maintenance energy consumes buffer
+    f₁ scattered (too many valid classification targets)
+    v_class positive but diffuse
+    EROTI ≈ 0 for all interventions (maintenance trap)
+    TLG: Middle Layer packet proliferation — too many routing targets, no dominant direction
+    Detection: f₄ ↑, f₅ ↑ with f₁, f₂ normal = governance OVER-COMPLEXITY signature
+    (distinct from under-complexity: f₄ and f₅ high due to routing overhead, not signal)
+    Intervention: Middle Layer routing consolidation (reduce C_G toward C_G*)
+```
+
+**Temporal Stratification — RBIT Update Rate Architecture ↔ TLG Layer Timescales:**
+
+```
+Four-Stratum Temporal Architecture (RBIT §31.3, EDT §48):
+
+  Stratum 1 (Fast, τ₁: seconds/minutes):
+    f₁ update cycle (misclassification rate, ρ-level changes)
+    TLG: Bottom Layer execution cycle (single episode)
+    
+  Stratum 2 (Medium, τ₂: days/weeks):
+    f₂ update cycle (resolution mismatch, Δρ stabilization)
+    v_class measured at this stratum — requires multiple-episode window
+    TLG: Middle Layer routing calibration cycle
+    
+  Stratum 3 (Slow, τ₃: months/years):
+    f₃ update cycle (buffer thickness M(t), DDD recovery phases)
+    Arrow of Maturation operates here
+    TLG: Top Layer invariant evolution cycle
+    
+  Stratum 4 (Glacial, τ₄: years/decades):
+    M_RBIT(t) maturation order parameter
+    DFG framework-level structural transitions
+    TLG: governance lifecycle phases (separation/maturation/integration)
+
+Cross-Section connection (Section 3.10 Temporal Governance Geometry):
+  RBIT Strata 1–4 ≡ FGS §36U Temporal Manifold 𝒯_Bot × 𝒯_Mid × 𝒯_Top × (lifecycle)
+  
+  RBIT adds fourth stratum (Glacial τ₄) that FGS §36U treats as implicit:
+    Glacial Stratum = TLG governance lifecycle — the evolution of the governance
+    architecture itself over deployment decades. This timescale is not accessible
+    to the TMI monitor (which operates at Strata 1–3) but governs the long-run
+    drift of all shorter-stratum parameters.
+    → M_RBIT is the Glacial Stratum observable for TLG.
+
+Temporal Boundary Layer Crisis (RBIT §31.3 → TLG integration):
+  When τ₁ ≈ τ₂ (Stratum 1 ≈ Stratum 2 timescale compression):
+  
+  TB1 (Adiabatic failure): f₁ noise contaminates f₂ assessment
+    TLG: Bottom Layer execution noise bleeds into Middle Layer calibration window
+    → θ_d updates too rapidly, calibrated to noise rather than signal
+    = Accelerated Self-Calibration Collapse (Section 3.5) via temporal boundary
+    
+  TB2 (Governance timescale mismatch): DDD at τ₁ speed draws τ₂ conclusions
+    TLG: Middle Layer correction applied faster than resolution absorption allows
+    → Corrections appear to fail → MORE corrections → overcorrection cascade
+    
+  TB3 (Agent adaptation mismatch): all f₁–f₅ increasing simultaneously
+    TLG: Triple-Failure Signature (storm onset) triggered by temporal compression
+    → Same CTGPSR triple sign (Ċ < 0, Ṗ >> 0, Ṙ < 0) from temporal cause
+    
+  TB4 (Buffer capacity mismatch): f₃ degradation faster than M*(t) tracking
+    TLG: Middle Layer buffer overflow from sustained-rather-than-episodic load
+    → B(t) depleted before τ₂ cycle completes → Section 3.4.6 cascade level 4
+    
+  TMI early warning connection (Section 3.10):
+    TMI rising = τ₁/τ₂ ratio compressing = Temporal Boundary Layer approaching
+    TMI > TMI_c = τ₁ ≈ τ₂ = all four TB mechanisms simultaneously active
+    → This is the RBIT-level explanation of why TMI acceleration precedes storm.
+```
+
+**Structural Damage Ratchet — Irreversibility in TLG Architecture:**
+
+```
+RBIT §Structural Damage Ratchet: v_class permanent loss via irreversible damage.
+
+Three damage classes:
+  Class R1 (Reversible): temporary resolution reduction, recoverable via DDD
+    TLG: τ1-level corrections — Section 4.1 standard correction protocols
+    
+  Class R2 (Conditionally Reversible): structural damage requiring architectural change
+    TLG: τ2/τ3 level — Section 4.2 extended correction, requires topology modification
+    Recovery: C_new* ≠ C_old* (CTGPSR Recovery-Renormalization Theorem, Section 3.7)
+    
+  Class R3 (Irreversible): v_class permanently lost; system architecture fundamentally altered
+    TLG: Terminal Desert State Stage 4 (Section 3.5) or Terminal Drift
+    Cannot be recovered through governance alone — requires architectural reconstruction
+    Detection: C_new* < C_old* after DDD attempt (structural degradation confirmed)
+    
+Ratchet mechanism:
+  Each unaddressed v_class = 0 event (Silent Criticality period) deposits permanent mark:
+    θ_c(t+δt) = θ_c(t) + γ_CT · ε · Φ(κ)   [critical drift rate, EDT §45]
+    → Resolution recovery threshold RISES with each silent period
+    → System requires higher resolution to recover from same event as time passes
+    → This is the formal derivation of "early intervention is exponentially cheaper"
+    
+  Governance Landauer Bound connection (Section 3.11):
+    Each irreversible governance decision dissipates minimum entropy (GEL §3.11).
+    Each Class R3 event is an irreversible governance decision with maximum Landauer cost.
+    → Cumulative Landauer cost across R3 events = governance structural degradation accounting.
+    → TLG can now track irreversibility quantitatively through Landauer + RBIT joint framework.
+```
+
+**Revival Trajectory Taxonomy — TLG Recovery Protocol Classification:**
+
+```
+FCC §30 / RBIT §33.3 Three Revival Cases → TLG Recovery Protocol Mapping:
+
+  Case A (Near-Critical Memory Revival, κ(t) ≈ κ_c from below):
+    Conditions: f₂ ≈ f₂_c; f₃ ≈ f₃_c; system at governance criticality
+    F_RBIT: rapid f₁+f₂ improvement in response to minimal intervention
+    TLG response: VCZ proximity governance (Section 7.3)
+    → DDD: small parameter shift (ε-reduction in coupling L_C) → macroscopic F_RBIT improvement
+    → MOST energy-efficient revival if timed correctly (near κ_c)
+    → Case A detection: f₁+f₂ respond quickly to MINIMAL intervention (sensitivity diagnostic)
+    
+  Case B (Exhaustion Revival, κ >> κ_c, deep storm):
+    Conditions: f₄ → saturation; f₅ near ceiling; storm propagation collapsing under own weight
+    RBIT counter-intuitive signature: f₄ DECREASES during extreme storm episode
+    → paradoxical f₄ drop = propagation collapse, NOT governance improvement
+    TLG response: WAIT before Stage 3 activation
+    → Premature Stage 3 can RE-AMPLIFY propagation (delay DDD execution unit)
+    → Case B detection: f₄ declining while f₁ and f₂ still elevated = exhaustion signal
+    
+  Case C (Nucleation Revival, irreversible):
+    Conditions: f₁ improving consistently AND T_eff decreasing AND κ crosses κ_c from above
+    TLG: ONE-WAY transition — once f₃ surpasses M_c threshold, Storm basin exponentially unlikely
+    Recovery-Renormalization: C_new* ≠ C_old* (Section 3.7, GGT Theorem GGT-82.C.4)
+    → C_new* > C_old*: genuine architectural upscaling via storm-forced reorganization
+    → C_new* < C_old*: apparent recovery but structural degradation (Class R2 or R3)
+    DDD E3 completion criterion = Case C entry verification
+    → TLG DDD E3 must verify C_new* > C_old*, not merely return to pre-storm function
+    
+  Multi-Scale Revival Propagation:
+    Revival front speed: c_min = 2√(D_eff · |f'(Φ_rest)|)
+    Time to global revival: τ_global ~ τ_local + M/c_min + τ_synchronization
+    
+    TLG consequence: Bottom-Up Recovery principle formally derived
+      Revival cascade: peripheral (low-degree) agents revive first
+      → Recovery front propagates inward toward hub agents
+      → Hub-first recovery violates revival propagation constraint
+      → This is the RBIT/FCC derivation of TLG §RT Bottom-Up principle
+      
+    Recovery timeline underestimation:
+      DDD planners commonly focus on τ_local and forget M/c_min
+      True timeline = τ_local + (system_diameter / c_min) + τ_sync
+      → Section 4.2 DDD recovery planning should include propagation time estimate.
+```
+
+**Novel Contributions added in this section:**
+
+- NC-117: RBIT Three Resolution Tiers as TLG Layer Necessity — formal derivation of three-layer structure from resolution asymmetry, not architectural preference
+- NC-118: F_RBIT ↔ CTGPSR full correspondence — (C,T,G,P,R) → (f₁,f₂,f₄,f₅,f₃) with Triple-Failure storm onset detection criterion
+- NC-119: Resolution Gap Δρ as θ_d calibration substrate — SCM as Δρ self-referential loop; External Reference Channel = Δρ external measurement necessity
+- NC-120: Silent Criticality = RBIT geodesic drift on statistical manifold — v_class and PRR as drift-resistant indicators; Staged Alarm Protocol
+- NC-121: κ(t) = f₂ · f₃ · M_RBIT as unified TLG governance stress scalar — all three paths to criticality in single parameter
+- NC-122: Path 3 (terrain erosion) as formal RBIT mechanism for SCM Drift Onset invisibility — M_RBIT monitoring as Section 3.5 complement
+- NC-123: Attractor Grammar → TLG regime classification — NF1/NF2/NF3 as novel TLG failure modes with F_RBIT signatures
+- NC-124: Temporal Boundary Layer (TB1–TB4) → TLG Temporal Manifold crises — RBIT mechanism for why TMI rise precedes storm
+- NC-125: Three Revival Cases (A/B/C) → TLG Recovery Protocol Classification — Case C entry = DDD E3 criterion with C_new* > C_old* verification
+- NC-126: Fractal Governance Necessity Theorem import — k* = (n²/2γ)^{1/3} as structural necessity (not optimization); T_collapse ≤ (κ_c − κ(0))/δ as DDD urgency clock
+
+*(Cross-theory derivation: RBIT §Theorem 1, §F_RBIT, §Information Geometry, §25.2–25.5, §31.3, §32.2, §33.1–33.3; GGT §82 CTGPSR; FGS §36U; Section 3.5, 3.7, 3.8, 3.10, 3.11)*
+
+---
+
+### 3.13 Governance Completeness Criterion — RBIT Operationalization and Seven-Condition Architecture
+
+RBIT provides the most complete operational specification of TLG's Governance Completeness Criterion (GCC, Section 26). This section imports the RBIT GCC operationalization and integrates it with the v2.8 additions (Π_G, four-criterion τ4, Fisher metric, κ unified scalar).
+
+**Seven GCC Conditions with RBIT Operational Proxies:**
+
+```
+GCS = (1/7) Σᵢ wᵢ · sat(GCCᵢ)    GCS ∈ [0,1]
+
+GCC₁ — FCC Parameter Targets (w = 0.20):
+  RBIT proxy: L_C < L_C_max AND L_d < L_d_max (Lock Budget satisfied)
+  Lock Budget: (1+L_C)(1+L_d) < ζ^{-4}
+  TLG v2.9 extension: also require κ(t) < κ_c (Section 3.12 unified scalar)
+  κ violation can exist even when L_C and L_d individually satisfied (terrain erosion)
+
+GCC₂ — EDT Three-Axis Design (w = 0.20):
+  Axis 1: Top Layer invariants formally specified (SCC ceiling defined, non-zero)
+  Axis 2: C·d/k bandwidth proxy > 0.4 (Middle Layer capacity above floor)
+  Axis 3: Agent coupling geometry in sphere-topology range
+  TLG v2.9 extension: also require M_RBIT(t) > M_min (terrain quality floor)
+  Bandwidth B > 0.4 can coexist with M_RBIT < M_min (GCC₂ satisfied, κ still rising via q↓)
+
+GCC₃ — SSR Cycle Coherence (w = 0.15):
+  RBIT proxy: Var(v_class inter-event intervals) > 0 (vitality criterion)
+  CV of inter-v_class-event intervals > threshold_CV
+  Quiet Stagnation discriminant: v_class stable + CV → 0 = A_point rigidity warning
+  TLG v2.9 extension: also check attractor grammar (Section 3.12):
+    A_limit (NF1) can produce Var(v_class) > 0 from oscillation without genuine progress
+    A_null (TDS) produces Var = 0 and CV = 0 with apparent health
+    → Add v_class autocorrelation check: periodic pattern = NF1 warning
+
+GCC₄ — Information Architecture (w = 0.15):
+  Signal path Top→Bottom ≤ 3 Middle Layer hops; ≥ 2 independent escalation pathways
+  Bandwidth B > 0.4; Bidirectionality f₁ ↔ correction path matched
+  TLG v2.9 extension: also require TMI < TMI_c (Section 3.10 temporal alignment)
+  Bandwidth B > 0.4 can coexist with TMI > TMI_c (spatial architecture fine, temporal broken)
+
+GCC₅ — Thermodynamic Minimum (w = 0.10):
+  RBIT proxy: τ_operation > 0.5 × τ_Landauer (operating above thermodynamic floor)
+  Governance energy budget explicitly allocated; Middle Layer rest periods scheduled
+  TLG v2.9 extension: also require entropy production σ_gov in healthy range (Section 3.11)
+  σ_gov → 0 (Assimilation/TDS) and σ_gov ↑ (supercritical) both violate GCC₅
+
+GCC₆ — Adversarial Resistance (w = 0.10):
+  RBIT proxy: f_RBIT portfolio includes ≥ 1 Goodhart-resistant metric
+  k-regular Middle Layer topology (sphere topology maintained)
+  Adversarial probing schedule defined
+  TLG v2.9 extension: also include Cramér-Rao test (Section 3.11) in portfolio
+  G1 (Metric Poisoning) is formally equivalent to Cramér-Rao violation (Section 28.5)
+
+GCC₇ — Stage-Gate Evolution Protocol (w = 0.10):
+  RBIT proxy: κ monitoring active (κ non-decreasing across windows)
+  AND-Gate τ4 entry conditions defined (E1∧E2∧E3 per DDD protocol)
+  TLG v2.9 extension: AND-Gate expanded to six-condition requirement (Section 28.6 Claim 2):
+    E1: GCC₁-GCC₇ structural → E2: Π_G < Π_G^{τ4} → E3: Probe test ✓
+    → E4: Cramér-Rao ✓ → E5: T_eff ≈ T_eff* → E6: TMI < TMI_c
+    All six required simultaneously for genuine τ4.
+```
+
+**AND-Gate Architecture — Why One Failure Invalidates All:**
+
+```
+AND-Gate Governance Completeness Corollary (RBIT §Terrain-Governance Duality):
+  A system is governance-complete if and only if:
+    GCC₁ ∧ GCC₂ ∧ GCC₃ ∧ GCC₄ ∧ GCC₅ ∧ GCC₆ ∧ GCC₇ simultaneously satisfied
+    
+  Any single GCC failure is sufficient to prevent governance completeness,
+  regardless of satisfaction level on other criteria.
+  GCS < 1.0 identifies the specific structural gap.
+  
+  RBIT structural necessity grounding:
+    Why AND-gate and not OR-gate?
+    Answer: each GCC covers a distinct failure PATH:
+      GCC₁ = Path 1 (lock accumulation) prevention
+      GCC₂ = terrain architecture (Path 3 partial prevention)
+      GCC₃ = v_class vitality (temporal health)
+      GCC₄ = information routing (structural bandwidth)
+      GCC₅ = thermodynamic floor (entropy economics)
+      GCC₆ = adversarial robustness (metric integrity)
+      GCC₇ = evolution protocol (τ4 gate integrity)
+    
+    Failing any one path allows governance failure through that channel,
+    regardless of other channels being blocked.
+    This is the RBIT grounding of TLG Section 26's AND-gate architecture.
+    
+  Resolution mismatch (Δρ) across GCC conditions:
+    Each GCC condition prevents a specific resolution mismatch from accumulating.
+    GCC₁ failure: f₃ accumulates (lock mismatch)
+    GCC₂ failure: f₂ accumulates (terrain mismatch)
+    GCC₃ failure: v_class drifts (temporal mismatch)
+    GCC₄ failure: f₄ accumulates (routing mismatch)
+    GCC₅ failure: thermodynamic drift (energy mismatch)
+    GCC₆ failure: f₁ Goodhart drift (metric mismatch)
+    GCC₇ failure: τ4 false entry (gate mismatch)
+    → Each GCC is a Δρ protection mechanism for one resolution axis.
+    → Seven GCC conditions = seven independent resolution axes that must all be maintained.
+```
+
+**F_RBIT Co-Variation — Partial Degradation is Not Stable:**
+
+```
+RBIT Theorem 25.3.5 (Unified Critical Manifold → F_RBIT Co-Variation):
+  A system that has degraded ANY single F_RBIT component has necessarily
+  altered ALL four CTGPSR observables simultaneously.
+  "Partial F_RBIT degradation" is not structurally stable.
+  
+  TLG consequence:
+    "Only f₂ is slightly elevated, everything else is fine" is not a stable state.
+    The critical manifold structure forces all observables to co-move.
+    Apparent partial degradation = either:
+      (a) Early stage of full co-degradation (will spread to other components)
+      (b) Measurement artifact from drifted reference frame (SCM)
+    
+    Clinical governance error: treating f₂ elevation as isolated → single-component fix
+    Correct protocol: treat f₂ elevation as early indicator of full F_RBIT movement
+    and monitor ALL five components for synchronized movement within next τ₂ window.
+    
+  Four-Theory Criticality Equivalence (RBIT §25.4) → TLG monitoring architecture:
+    Π_eff = 1 ↔ Π_G = 1 ↔ χ_TBG = θ ↔ C_A = 1
+    → Four independent detection channels for the SAME criticality condition
+    → Any single channel detecting criticality = all four conditions simultaneously present
+    → TLG monitoring should include all four in portfolio (GCC₆ adversarial resistance):
+      Π_G channel (Section 3.8): dimensionless governance stress
+      Π_eff channel (CTGPSR): loop amplification measure
+      χ_TBG channel (TGBGT): targeting-gating threshold comparison
+      C_A channel (ACD): adaptive criticality number
+```
+
+**Resolution Palimpsest — TLG Historical Depth Formalization:**
+
+```
+RBIT / EDT §54.1 Resolution Palimpsest:
+  ρ(t) = ρ₀ + Σ_{k: structural} α_s · A_k^s · g_s(t − t_k)
+              + Σ_{k: affective} α_a · A_k^a · g_a(t − t_k)
+              
+  TLG interpretation:
+    The current governance health state ρ(t) is the integrated history of
+    BOTH structural governance events AND affective events (T_eff trajectories).
+    
+  Heritage Asymmetry (EDT §54.6 / RBIT §32.1):
+    Negative collective events decay MORE SLOWLY than positive:
+    α_neg < α_pos → organizational ρ systematically weighted toward historical negatives
+    
+    Quantitative minimum compensation:
+      r_positive,min ≥ (n_neg · A_neg · α_pos) / (A_pos · α_neg · T_window)
+      
+    TLG consequence:
+      Governance systems with significant negative history require HIGHER sustained
+      positive governance intensity to maintain same ρ as systems with clean history.
+      This is not a motivational claim — it is a RBIT quantitative structural prediction.
+      
+      Section 3.5 connection:
+        Self-Calibration Collapse accelerates palimpsest distortion:
+        as θ_d drifts, the classification of past events as "positive" or "negative"
+        also drifts → historical terms in the palimpsest are reclassified within the
+        drifted frame → external anchor not only corrects future calibration but
+        retrospectively corrects the historical palimpsest that θ_d is based on.
+```
+
+**Novel Contributions added in this section:**
+
+- NC-127: GCC seven-condition RBIT operationalization imported — each GCC maps to specific resolution axis and failure path
+- NC-128: GCC v2.9 extensions — κ(t) added to GCC₁; M_RBIT to GCC₂; attractor grammar check to GCC₃; TMI to GCC₄; σ_gov to GCC₅; Cramér-Rao to GCC₆; six-condition τ4 gate to GCC₇
+- NC-129: AND-gate architecture grounded in RBIT path structure — each GCC condition = one failure path; AND required because paths are independent
+- NC-130: F_RBIT co-variation as TLG single-component monitoring warning — partial degradation not stable; treat f₂ elevation as early co-degradation indicator
+- NC-131: Four-Theory Criticality Equivalence → TLG four-channel monitoring portfolio (Π_G + Π_eff + χ_TBG + C_A)
+- NC-132: Resolution Palimpsest as TLG historical depth formula — affective heritage asymmetry derives minimum positive governance intensity
+- NC-133: DDD E3 criterion = Case C entry with C_new* > C_old* verification requirement
+
+*(Cross-theory derivation: RBIT §Terrain-Governance Duality, §25.3–25.5, §31.1, §32.1, §33.3; TLG Section 26 GCC, Section 3.5, 3.7, 3.8, 3.10, 3.11, 3.12)*
 
 ---
 
@@ -13491,3 +18055,161 @@ Business Horizons, 33(3), 44–54.
 — Cited in Section 26.3 as the practical management precursor to EDT's formal
   stage-gate theory; EDT provides the dynamical systems derivation of Cooper's
   empirically-derived AND-gate advancement conditions.
+
+## 27B. Extended References (v2.8 Additions)
+
+*(GGT, AGM, FGS, EDT, NAT deep integration citations)*
+
+**Governance Geometry Theory**
+
+Seol, B. (2026).
+*Governance Geometry Theory v4.3: Partition Geometry, CTGPSR/CTGPSRB Dynamics, Governance Control Number, Affective Geometry Layer, and Governance Entropy Layer.*
+Component of the Deficit-Fractal Governance (DFG) Framework.
+— §82A (FGS–GGT Governance Geometry Bridge) cited in Section 3.7 as primary source for:
+  TLG–CTGPSR formal variable identification (C,T)/(G,P)/(R); three-layer timescale hierarchy
+  as well-posedness necessity; North Star Stability Theorem GGT-82A.1; Governance Objective
+  U as CTGPSR functional; VCZ expansion as Recovery-Renormalization (C_cl,new* ≠ C_old*);
+  Silent Criticality as Mode III; Buffer B(t) as Middle Layer thickness; GGT-NC-841–850.
+— §81 (Governance Criticality Framework) cited in Section 3.8 as primary source for:
+  Governance Control Number Π_G definition and phase classification; Signal Hierarchy
+  Monotonicity Lemma; Π_G structural decomposition; Buffer Assimilation Limit corollary;
+  Information Bottleneck characterization of governance.
+— §84 (Affective Geometry Layer) cited in Section 3.9 as primary source for:
+  T_eff-dependent partition scale ℓ_c(T_eff); Affective Governance Control Number Π_G^AGL;
+  Affective Optimal Partition Shift Theorem GGT-84.B.1; Affective Length Scale Duality
+  (Freeze fragmentation / Runaway consolidation geometry); Affective Branching Number
+  Shift; Fifteen-Way M_crit Equivalence; AGL-RBIT-EDT Triangulation Theorem.
+— §85 (Governance Entropy Layer) cited in Section 3.11 as primary source for:
+  Governance Fisher Metric; Governance Landauer Bound (Theorem GGT-85.A.1);
+  Cramér-Rao Governance Bound; Geodesic Recovery Protocol; Geodesic DDD Correspondence
+  (Theorem GGT-85.B.1); GEL-RBIT False-Completion Detection; Entropy Production Phase
+  Signature; NESS-I through NESS-IV classification.
+— §80 (TGBGT) cited for Governance Invisibility Theorem, targeting null-space derivation,
+  UGAL master equation, Governance Visibility Transition Theorem.
+— §82 (CTGPSR), §83 (CTGPSRB) cited for loop structure, buffer variable, avalanche
+  statistics, five-phase governance diagram, Storm Onset Theorem.
+
+**Affective Gain Module**
+
+Seol, B. (2026).
+*The Affective Gain Principle v4.3: Gain-Modulated Adaptive Stability Theory.*
+Component of the Deficit-Fractal Governance (DFG) Framework.
+— §15.9 (AGM-TLG Coupling) cited in Sections 3.5, 3.9 for: τ1–τ4 threshold-θ_d
+  correspondence; authority separation at single-agent level; Vectorization Lifecycle;
+  θ_d three-phase bootstrapping; Processing Isolation mechanisms.
+— §15.11 (AGM-GGT Coupling) cited in Section 3.9 for: affective ℓ_c modulation;
+  Δℓ_c as Silent Criticality metric; regulatory cascade three-stage Λ(t) acceleration;
+  GGT-AGM differentiation unification; n*_AGM = N*_GGT consistency condition;
+  cross-theory predictions AGM-GGT-1–5.
+— §8 (Broken Ruler, Phantom Buffer Surplus) cited in Section 3.5 as parallel
+  identification of Self-Calibration Collapse mechanism in single-agent AGM context.
+— §13.10 (Cyclothymic) cited in Section 3.11 for NESS-IV identification.
+
+**Fractal Governance Scaling**
+
+Seol, B. (2026).
+*Fractal Governance Scaling v2.4: Quantum-Neural Structural Analogies, Neuroplasticity,
+and Gain-Modulated Multi-Agent Coordination.*
+Component of the Deficit-Fractal Governance (DFG) Framework.
+— §36U (Temporal Governance Geometry) cited in Section 3.10 as primary source for:
+  Temporal Manifold Decomposition; Temporal Synchronization Operator; Governance Nyquist
+  Theorem; TMI Temporal Misalignment Index; Governance Latency and Dead-Time Problem;
+  Temporal Budget Allocation; Temporal Fractal Consistency; Testable Predictions U1–U4.
+— §15.3 (Inter-Layer Coupling: Gating Not Commanding) cited in Section 3.7 for CTGPSR
+  correspondence check and Middle Layer gating primacy.
+— §15.6 (Upward Blindness) cited in Sections 3.7, 3.10 for dual-mechanism derivation
+  (targeting null-space + temporal budget over-allocation).
+— §7.6 (Silent Criticality) cited in Section 3.7 for Mode III structural correspondence;
+  in Section 3.9 for Δℓ_c measurement protocol.
+
+**Network Architecture Theory**
+
+Seol, B. (2026).
+*Network Architecture Theory v2.2: Data Flow, Escalation Design, and Expansion Principles
+in Multi-Agent Systems.*
+Component of the Deficit-Fractal Governance (DFG) Framework.
+— §4.9.1 (Adversarial Governance Architecture) cited in Section 3.11 for:
+  G1 Metric Poisoning = Cramér-Rao false completion identification; G2 Coupling Attack =
+  CTGPSR supercritical induction; G3 Isolation Attack = Markov blanket degradation;
+  Four structural manipulation-resistance principles; SDI monitoring as D_cross parallel.
+— §5.5 (Middle Layer Relationship Topology) cited in Section 3.7 for Middle Layer
+  dual-observability as formal basis for CTGPSR (G,P) packet accumulation.
+— §3.0.0 (Terrain-Layer Correspondence and Governance Ratio κ) cross-referenced with
+  Section 3.7 CTGPSR regime sequence (κ = Correction/Storm ratio).
+
+**Environment Design Theory**
+
+Seol, B. (2026).
+*Environment Design Theory v4.0 final: Terrain Cultivation, Phase-Gated Seeding, and
+Branching Manifold Architecture.*
+Component of the Deficit-Fractal Governance (DFG) Framework.
+— §3.5 (Reference Drift, Broken Ruler) cited in Section 3.5 as EDT-level parallel
+  for Self-Calibration Collapse: A(t) drift → δ underestimates actual load → phantom
+  buffer surplus → intervention gate healthy while system approaches M < M_c.
+— §0.5 (Dual Stability Criterion) cross-referenced with Section 3.11 four-criterion
+  τ4 entry requirement as parallel completeness architecture.
+— §9.7 (Three-Alarm Operational Detection) cited in Section 3.9 as EDT precursor
+  to three-stage regulatory cascade detection.
+— §52.8 (Non-Equilibrium Landscape Physics) cited in Section 3.11 for thermodynamic
+  grounding of Governance Landauer Bound.
+
+## 27C. Extended References (v2.9 Additions)
+
+*(RBIT deep integration citations)*
+
+**Resolution-Based Interpretation Theory (RBIT)**
+
+Seol, B. (2026).
+*Resolution-Based Interpretation Theory (RBIT): A Multi-Scale Framework for Governance
+Health Monitoring in Complex Adaptive Systems.*
+Component of the Deficit-Fractal Governance (DFG) Framework. (version with EDT, FCC, NAT,
+VST deep integration)
+— §Theorem 1 (Resolution Asymmetry Inevitability) cited in Section 3.12 as primary
+  derivation source for TLG three-layer structural necessity: three resolution tiers
+  (Tier 1/2/3 = Bottom/Middle/Top) are not architectural preference but consequence of
+  finite-time intent replacement under sustained Δρ < 0.
+— §F_RBIT Health Vector cited in Section 3.12 for (f₁,f₂,f₃,f₄,f₅) ↔ CTGPSR (C,T,G,P,R)
+  full correspondence; Triple-Failure storm onset criterion; layer-specific F_RBIT assignment.
+— §Resolution Gap and §The Resolution Gap cited in Sections 3.12, 3.13 for Δρ as θ_d
+  calibration substrate; SCM as self-referential Δρ loop; External Reference Channel necessity.
+— §Silent Criticality (ODE Formal Conditions and RBIT v_class Prediction) cited in Section
+  3.12 for Silent Criticality = RBIT geodesic drift on statistical manifold; v_class
+  drift-resistance; PRR ↔ TLG Probe Injection Test identity; Staged Alarm Protocol.
+— §Information Geometry — Fisher Information as v_class Detection Threshold cited in
+  Section 3.12 for Fisher information collapse as observability horizon; five early-warning
+  indicators comparative table; information geometry statement on metric drift.
+— §25.2 (CTGPSR Five-State System as Resolution Micro-Dynamics) cited in Sections 3.7
+  and 3.12 for full CTGPSR ↔ F_RBIT variable mapping and governing equation RBIT interpretation.
+— §25.3 (CTGPSR Main Theorems — RBIT Formal Bridges) cited in Section 3.12 for:
+  Theorem 25.3.3 Triple-Failure Storm onset criterion; Theorem 25.3.4 Recovery-Renormalization
+  → DDD E3 criterion (C_new* > C_old*); Theorem 25.3.5 F_RBIT co-variation (partial
+  degradation not stable).
+— §25.4 (Four-Theory Criticality Equivalence) cited in Section 3.13 for four-channel TLG
+  monitoring portfolio (Π_eff = 1 ↔ Π_G = 1 ↔ χ_TBG = θ ↔ C_A = 1).
+— §31.3 (Temporal Stratification Theory) cited in Section 3.12 for four-stratum temporal
+  architecture ↔ TLG layer timescales; Temporal Boundary Layer TB1–TB4 as TMI crisis
+  mechanisms; Chronotopic Governance constraints on DDD timing.
+— §32.1 (Affective Terrain Coupling) cited in Section 3.13 for Resolution Palimpsest
+  formula; Heritage Asymmetry (α_neg < α_pos); r_positive,min derivation; GCET adiabatic
+  limit constraint on DDD E3 verification timing.
+— §32.2 (Attractor Landscape Grammar) cited in Section 3.12 for Attractor Grammar TLG
+  regime classification; NF1 (Resonance Capture), NF2 (Grammar Incompleteness), NF3
+  (Attractor Proliferation Overflow) as novel TLG failure modes; governance over-complexity
+  signature (f₄ ↑, f₅ ↑ with f₁,f₂ normal).
+— §33.1 (Scale-Invariant Coupling κ(t)) cited in Section 3.12 for κ(t) = f₂·f₃·M_RBIT
+  unified governance stress scalar; Three Paths to Criticality (1: direct overload, 2: lock
+  accumulation, 3: terrain erosion invisible); F_RBIT path-specific diagnostic signatures;
+  triangular (Φ,L,q) three-timescale feedback loop.
+— §33.2 (Fractal Governance Necessity) cited in Section 3.12 for k* = (n²/2γ)^{1/3}
+  structural necessity; T_collapse ≤ (κ_c − κ(0))/δ as DDD urgency clock; Minimum
+  Fractal Depth L_min ≥ log χ₀ confirming three-layer TLG requirement from first principles.
+— §33.3 (Phase Boundary Revival Trajectories) cited in Section 3.12 for three revival
+  cases (A: near-critical, B: exhaustion, C: nucleation); Fisher-KPP revival front speed
+  c_min; multi-scale revival propagation as Bottom-Up Recovery formal derivation;
+  Conley index topological necessity of revival trajectories.
+— §Structural Damage Ratchet cited in Section 3.12 for R1/R2/R3 damage class taxonomy;
+  ratchet mechanism θ_c drift; joint Landauer+Ratchet accounting.
+— §Terrain-Governance Duality (TLG §24.1 Integration) and §GCC Operationalization cited in
+  Section 3.13 for GCC₁–GCC₇ RBIT proxies; AND-gate path structure grounding; GCS scoring.
+— §34 Novel Contributions (NC-EDT2-RBIT-1 through NC-EDT2-RBIT-20) cited across Sections
+  3.12–3.13 for all numbered RBIT novel contributions imported into TLG.
