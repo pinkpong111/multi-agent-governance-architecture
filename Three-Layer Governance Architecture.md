@@ -6,7 +6,62 @@
 >
 > **Companion theories:** [Vector Storm Theory](../vector-storm/) · [Network Architecture Theory](../network-architecture/) · [Governance Rules Theory](../governance-rules/)
 >
-> **Version: v3.2-latent-variable** (March 2026) — [see above]
+> **Version: v3.8-thermodynamic-scope** (July 2026) — [see above]
+>
+> v3.8-thermodynamic-scope changes from v3.7-buffer-candidate:
+> - **Physical and governance-level claims separated:** Landauer's physical lower bound is now applied only to logically irreversible bit erasure on a physical substrate at physical temperature; it is no longer applied directly to abstract conflict resolution, governance temperature, or policy-space contraction
+> - **Governance thermodynamics reclassified:** entropy-pump, fast/slow governance, phase-transition, Maxwell-demon, and universality-class statements are retained as information-theoretic or dynamical analogies and empirical candidate mechanisms, not substrate-independent physical laws
+> - **Governance Entropy Layer claims conditionalized:** Fisher distance is an information-geometric separation, not automatically a monetary, energy, or entropy cost; the governance irreversibility bound, geodesic DDD optimality, and phase signatures are now hypotheses requiring an explicit observation model and cost map
+> - **Cramér–Rao scope corrected:** the bound applies only under regularity, identifiability, and unbiased-estimator assumptions; an apparent violation diagnoses bias, model misspecification, Fisher-information error, dependence, or finite-sample failure and does not by itself prove false completion
+> - **GCC thermodynamic gate replaced:** GCC₅ now audits physical/computational resource accounting, reset and retention costs, saturation, and recovery reserve rather than assuming a universal governance relaxation time or a fixed fraction of a Landauer minimum
+> - **Registries and grand claims synchronized:** OP/P/NC entries and cross-theory tables now label these statements as conditional tests, candidate correspondences, or open calibration problems. Historical stronger claims are preserved only as superseded development history
+> - All v3.7-buffer-candidate content preserved except where explicitly superseded above.
+>
+> v3.7-buffer-candidate changes from v3.6-audit-consolidation:
+> - **Buffer theorem status corrected (Section 3.0.1):** the prior Buffer Existence and Uniqueness Theorem is superseded by a Resolution-Mediation Buffer Construction Candidate; the document no longer claims universal existence, implementation uniqueness, or cost reduction without a domain-specific certificate
+> - **Buffer-first statement reclassified:** “buffer existence is more important than buffer perfection” is retained as a design principle, not a mathematical theorem
+> - **Candidate admissibility gate added:** directional neutrality, D1–D3 extractability, unresolved-state retention, measurable governance-cost improvement, recovery capacity, and declared scope must be verified before a buffer implementation is promoted from candidate status
+> - **Functional equivalence defined without uniqueness:** different buffer implementations may be compared under extraction-equivalence over a declared test family; uniqueness of an equivalence class remains an open problem
+> - **Novel-contribution and cross-reference language corrected:** NC-7 and live references now describe a candidate construction and audit program rather than a completed existence-and-uniqueness proof
+> - All v3.6-audit-consolidation content preserved except where explicitly corrected above.
+>
+> v3.6-audit-consolidation changes from v3.5-vector-birth-handover:
+> - **GCS normalization corrected (Section 26.2):** weighted completeness now uses `GCS = Σ_i w_i·sat(GCC_i)` with `Σ_i w_i = 1`; the erroneous extra factor `1/7` was removed, and an AND-gate hard floor was added so aggregate score cannot hide a failed GCC dimension
+> - **Middle activity modes disambiguated (Abstract):** continuous sensing/routing infrastructure is separated from sparse, event-triggered explicit intervention; operational backgrounding no longer implies inactivity
+> - **Ontology aliases reconciled:** `global rule` and `local rule` are explicitly non-ontological shorthand for invariant/constraint and context-bounded protocol; vector direction, capability pattern, and specialist operating unit are separated
+> - **Vector Charter evidence and resource authority strengthened (Section 3.1.1):** Bottom-origin evidence plus an independent external/cross-domain anchor are required; Top sets the resource envelope, Middle allocates within it, Bottom executes, and self-generated incubation logs cannot alone justify continuation
+> - **Local protocol composition gate added (Section 3.4.10):** individually valid protocols must also preserve a non-empty joint feasible action space before atomic deployment; precedence, dependency, version, and set-level rollback metadata are required
+> - **Boundary reference independence corrected (Section 13.1.1):** Boundary Agents are no longer described as contamination-proof; they are independent-failure-mode anchors, preferably used as a heterogeneous anchor portfolio with shared-failure auditing
+> - All v3.5-vector-birth-handover content preserved except where explicitly corrected above.
+>
+> v3.5-vector-birth-handover changes from v3.4-local-rule-compiler:
+> - **Vector Birth and Handover Protocol added (Section 3.1.1):** unresolved noise is preserved until the Top recognizes a structural capability gap, authorizes a bounded resource charter, the Middle incubates candidate vectors under reversible local rules, and operational ownership transfers to the Bottom only after stabilization
+> - **Layer-specific vector authority separated:** the Top authorizes need, boundary, and resource envelope without specifying vector content; the Middle extracts, sandboxes, tests, and stabilizes candidates without permanent ownership; the Bottom receives routine operating authority only after handover
+> - **Promotion and handover gates formalized:** repeatability, distinctness, global-rule consistency, operational viability, withdrawal persistence, perturbation recovery, and resource sustainability are required before a candidate enters the active vector set
+> - **Noise preservation strengthened:** failure to promote is not failure; unresolved inputs may remain noise, return to incubation, enter dormancy, or be discarded only under explicit evidence. Forced vectorization is classified as an overfitting and interaction-load failure
+> - **Lifecycle closure added:** active vectors may remain Bottom-owned, be reabsorbed into the Middle buffer, enter dormancy, de-vectorize, or be reconstructed depending on alignment severance, weight overwrite, environmental drift, and recovery evidence
+> - **Resource and rule integration added:** Top resource charters constrain incubation; Middle local rules govern sandbox scope, expiry, rollback, and conflict boundaries; handover converts temporary incubation rules into Bottom-operable protocols without silently promoting them to global invariants
+> - **Failure modes and falsification surfaces extended:** top-content injection, permanent Middle custody, premature handover, false novelty, resource capture, vector proliferation, and handover dependency are added to the audit and open-problem registries
+> - All v3.4-local-rule-compiler content preserved.
+>
+> v3.4-local-rule-compiler changes from v3.3-topview-handover:
+> - **Global-constraint / local-protocol architecture added (Section 3.4.10):** the Top Layer defines sparse, slow-changing global invariants; the Middle Layer compiles them into narrow, context-specific, reversible local operational rules; the Bottom Layer retains action choice inside the resulting feasible region
+> - **Local-rule validity gate formalized:** a local rule is admissible only when it is globally consistent, non-empty in feasible action space, scope-bounded, time-bounded or review-bounded, reversible, and dynamically concordant with the parent invariant
+> - **Rule lifecycle and authority boundary added:** Bottom specialists may propose local-rule candidates; Middle validates, sandboxes, deploys, revises, and retires them; only the Top Layer may promote a recurring local rule into a global invariant
+> - **Rule-based interference minimization added:** mature mediation acts primarily by shaping permissions, prohibitions, verification conditions, escalation triggers, and expiry conditions rather than selecting individual actions
+> - **Top-view handover and MDS audit extended:** the mature Top audits the distribution of Middle-generated local rules for proliferation, shadow-globalization, stale persistence, loophole formation, and cross-local conflict without authoring routine local rules itself
+> - **Formalization and falsification surfaces extended:** local-rule compiler quality, consistency preservation, rollback performance, and specialization retention are added as measurable open problems
+> - All v3.3-topview-handover content preserved.
+>
+> v3.3-topview-handover changes from v3.2-latent-variable:
+> - **Middle-Layer Top-View Kernel added (Section 3.4.9):** the Middle Layer now explicitly selects the problem coordinate system, tool/model, application scope, assumptions, stop/switch conditions, and verification route; top-view is defined as scope governance rather than omniscience or centralized command
+> - **Operational vs. constitutional top-view separated (Sections 3.4.9, 3.12):** operational map use and local scope design are transferred to the Middle Layer; constitutional frame design, legitimacy, and final external validation remain Top Layer functions; the prior statement that all Tier-3 capability is Top-exclusive is superseded
+> - **Governance Backgrounding Principle added (Section 3.4.9):** a mature Middle Layer becomes operationally low-visibility while remaining fully auditable; invisible operation is distinguished from unobservable or unaccountable mediation
+> - **Top-view capability handover formalized (Section 6.1.2):** Top Layer role transitions from educator/seed source → supervised evaluator → pattern auditor → emergency re-bootstrap authority; withdrawal is now a functional transition, not simple inactivity
+> - **Single-agent internal handover strengthened (Section 6.3):** the same top-view transfer, backgrounding, and evaluator transition are specified inside a single agent, where constant explicit self-critique is treated as dependency-forming rather than mature governance
+> - **Middle-Layer audit surface expanded (Section 13.1.1):** Top Layer evaluates tool-choice collapse, scope inflation/contraction, assumption leakage, stop-rule bypass, proxy-outcome divergence, and intervention dependency without continuously controlling Middle decisions
+> - **Formalization Priority 4 added (Section 14.2):** measurable top-view handover and role-transition tests; Conclusion and maturity signatures updated accordingly
+> - All v3.2-latent-variable content preserved.
 >
 > v3.2-latent-variable changes from v3.1-notation-hygiene:
 > - **ρ declared as latent variable (Section 0.1):** ρ is now formally declared as a latent variable (true layer resolution quality, not directly observable); ρ_proxy / ρ_MI / ρ_outcome recast as measurement estimators of ρ under different observability conditions (error-rate channel / MI channel / causal outcome channel); explicit three-fork diagram showing latent ρ → three estimators; classical test theory analogy (true score ↔ latent ρ; observed scores ↔ estimators); this resolves the apparent heterogeneity critique: one ρ concept, three measurement channels
@@ -158,9 +213,9 @@
 >
 > **Term qualifications in this document (Canon §3):**
 > - **layer** → *resolution layer* in this document (Canon §3.1). All three named layers (Top/Middle/Bottom) are qualified as resolution layers. Standalone "layer" in running text refers to a resolution separation boundary unless otherwise qualified.
-> - **rule** → replaced by *constraint*, *invariant*, or *protocol* in this document (Canon §3.2). "Rule" appears only in cross-references to GRT, tagged accordingly.
+> - **rule** → not used as an independent ontological primitive. The formal terms are *constraint*, *invariant*, and *protocol* (Canon §3.2). `global rule` is permitted only as shorthand for a Top-level invariant/constraint, and `local rule` only as shorthand for a context-bounded operational protocol; neither shorthand creates a new object type.
 > - **network** → replaced by *system*, *structure*, or *architecture* in this document (Canon §3.3).
-> - **vector** → *abstraction-level tension* — the directional constraint tendency within a resolution mediation space (Canon §4.1).
+> - **vector** → primarily *abstraction-level tension* — the directional constraint tendency within a resolution mediation space (Canon §4.1). Where the vector-birth lifecycle discusses an enduring capability, it distinguishes the directional vector `v`, the stabilized capability pattern `q`, and the Bottom-layer specialist unit `a_q` that operates that capability. These are related but not identical objects.
 >
 > **Cross-theory imports used in this document:**
 > - (Vector Storm — adopted from VST)
@@ -212,6 +267,7 @@
 > - **F_RBIT Cross-Validation (Section 11.1):** S_norm × F_RBIT concordance for dual-perspective instability confirmation
 > - **Information-Theoretic Storm Characterization (Section 11.1):** storm = uncontrolled mutual information spike across agents
 > - **Vectorization Lifecycle (Section 3.1):** noise→vector promotion criteria + Type 1/Type 2 degradation with distinct recovery profiles
+> - **Vector Birth and Handover (Section 3.1.1):** Top need/resource charter → Middle incubation and stabilization → Bottom operational ownership, with reabsorption/dormancy/de-vectorization paths
 > - **Rest Mode AND/OR Formalization (Section 5.3.1):** AND-entry (comprehensive evidence) / OR-exit (single failure sufficient) asymmetry
 > - **Permanently High-Context Channels (Section 5.3.1):** domains that structurally cannot enter Rest Mode — recursive oversight implementation + final sensing layer during cascade
 > - **SCC Structural Decomposition (Section 0.1):** SCC = f(Dint, Lreinf) — both required simultaneously, with operational detection criteria
@@ -307,7 +363,13 @@ The three layers are not a hierarchy of control. They are a **separation of reso
 | **Middle** — Resolution Mediation | Translate across abstraction levels; detect and stage corrections | Issue continuous commands |
 | **Bottom** — Operational Diversity | Explore, specialize, adapt | Enforce global constraints directly |
 
-The Middle Layer is the architectural innovation. It is not an orchestrator. It does not run continuously. It activates when the abstraction gap produces conflict — and its job is to resolve that conflict at the right level rather than escalating it unnecessarily or suppressing it prematurely.
+The Middle Layer is the architectural innovation. It is not a continuously commanding orchestrator. Its sensing, gating, routing, scope-control, and drift-monitoring substrate may operate continuously in the background, while **explicit correction and visible intervention are sparse, event-triggered, and scope-bounded**. When the abstraction gap produces conflict, its job is to resolve that conflict at the right level rather than escalating it unnecessarily or suppressing it prematurely.
+
+Its deepest capability is **operational top-view**: locating a problem in the correct scale, time horizon, and abstraction frame; selecting an appropriate tool; defining where that tool is valid; and specifying when its use must stop or switch. The Middle Layer therefore governs not only information flow but the **scope of methods** applied to the system.
+
+As the system matures, this capability is initially seeded by the Top Layer and later internalized by the Middle Layer. The Top Layer then changes function: it stops supplying routine interpretations and instead evaluates the Middle Layer's tool-selection patterns, scope discipline, and correspondence with external outcomes. Mature governance is therefore not Top withdrawal alone, but a transition from **instruction to evaluation**.
+
+The mature Middle Layer is operationally backgrounded: Bottom agents should experience well-shaped tools, interfaces, and terrain rather than continuous visible correction. This low visibility must never remove auditability; normal operation should be quiet, while intervention history, threshold changes, and scope decisions remain reconstructible from above and from the Boundary Agent.
 
 ### What This Architecture Enables
 
@@ -381,8 +443,12 @@ RESOLUTION TIER FAMILY  (RBIT structural concept; distinct from ρ)
 Symbol          Definition                          Primary use
 ───────────────────────────────────────────────────────────────────────
 Tier 1          Classification resolution           measured by ρ_proxy
-Tier 2          Translation resolution              measured by escalation
-Tier 3          Design resolution                   no direct measure yet
+Tier 2          Translation / differentiation        measured by escalation,
+                                                        routing error, mediation loss
+Tier 3A         Operational map use and scope design  Middle Layer top-view;
+                                                        tool-scope audit required
+Tier 3B         Constitutional frame design and       Top Layer / Boundary Agent;
+                legitimacy validation                 outcome concordance required
                 ⚠ "resolution" without qualifier = Tier 1 = ρ_proxy context
 
 MISCLASSIFICATION RATE
@@ -805,9 +871,10 @@ Geometry mismatch:
   → integration fails → observable instability
 
 Mismatch scale:
-  Local (feature level)   → Tier 1 manifestation (ρ detects)
-  Circuit level           → Tier 2 manifestation (SCC detects)
-  Coordinate system level → Tier 3 manifestation (only upper layer detects)
+  Local (feature level)        → Tier 1 manifestation (ρ detects)
+  Circuit / translation level  → Tier 2 manifestation (SCC detects)
+  Operational map/scope level  → Tier 3A manifestation (Middle top-view detects)
+  Constitutional frame level   → Tier 3B manifestation (Top + Boundary detect)
 ```
 
 Contamination, in this reframing, is not a moral or intentional deviation. It is the observable projection of geometry mismatch — the symptoms that appear when mismatch exceeds local integration capacity. This reframing has a specific consequence: immunity is redefined as absorption capacity (integration bandwidth), not rejection capacity. A system with strong immunity absorbs more, not less, because it can transform incoming vectors into its own coordinate structure without destabilizing that structure.
@@ -873,17 +940,25 @@ Tier 2 — Translation Resolution (measured by escalation accuracy)
     does the escalated signal produce the correct response
     at the receiving layer?
   
-Tier 3 — Design Resolution (no direct measure yet)
-  The ability to construct new classification boundaries, 
-  new mediation protocols, new governance structures.
-  Failure mode: structural stagnation — the system can operate
-    existing governance but cannot create new governance.
-  Observable: none established — this is the open frontier.
+Tier 3A — Operational Map and Scope Resolution (partially measurable)
+  The ability to select tools, define their application scope, declare
+  assumptions, and terminate or switch methods when the regime changes.
+  Primary layer: Middle after top-view handover.
+  Failure mode: wrong tool, scope inflation/contraction, method lock-in.
+  Observable: Tool-Scope Package audit, novelty generalization, stop-rule compliance.
+
+Tier 3B — Constitutional Frame Resolution (no complete measure yet)
+  The ability to validate or replace the coordinate system, invariant set,
+  and legitimacy frame within which operational maps are constructed.
+  Primary layer: Top with Boundary Agent / external reference.
+  Failure mode: system-wide frame drift with internally correct operation.
+  Observable: external outcome concordance and adversarial frame tests;
+    no complete direct measure is yet established.
 ```
 
-A system can have high Tier 1 resolution (accurate classification) with low Tier 2 resolution (poor translation). This dissociation is specifically what produces Mediator Drift Syndrome (Section 13.1.1): the Middle Layer classifies correctly within its own frame but translates incorrectly between frames. The three tiers are monitored independently.
+A system can have high Tier 1 resolution (accurate classification) with low Tier 2 resolution (poor translation), or strong Tier 2 mediation with weak Tier 3A scope governance. These dissociations produce different forms of Mediator Drift Syndrome: the Middle Layer may classify correctly within its own frame yet translate incorrectly, or may translate correctly while choosing the wrong map or scope. Tier 3B failure is more severe: all operational layers may function correctly inside an invalid constitutional frame. The tiers are monitored independently.
 
-Where this document references "resolution" without qualification, it means Tier 1 (classification resolution) as measured by ρ. Tier 2 and Tier 3 are explicitly labeled when referenced.
+Where this document references "resolution" without qualification, it means Tier 1 (classification resolution) as measured by ρ. Tier 2, Tier 3A, and Tier 3B are explicitly labeled when referenced.
 
 Resolution gap between layers: Δρ_proxy = ρ_proxy,upper − ρ_proxy,lower
 
@@ -1622,6 +1697,7 @@ TLG is structurally complete as a governance specification only in combination w
 2. [Resolution Mismatch as Governance Failure](#2-resolution-mismatch-as-governance-failure)
 3. [Three-Layer Governance Structure](#3-three-layer-governance-structure)
     - [3.0.1 Buffer-as-Resolution-Interface](#301-buffer-as-resolution-interface--middle-layer-reconceptualization)
+    - [3.1.1 Vector Birth and Handover Protocol](#311-vector-birth-and-handover-protocol--noise-to-specialist-lifecycle)
     - [3.2.1 Fractal Correspondence Evaluation Criteria](#321-fractal-correspondence-evaluation-criteria)
     - [3.3 EDT Terrain-Layer Correspondence](#33-edt-terrain-layer-correspondence-edt-6263-integration)
     - [3.4 Middle Layer as Governance Engine](#34-middle-layer-as-governance-engine--full-functional-architecture)
@@ -1633,13 +1709,15 @@ TLG is structurally complete as a governance specification only in combination w
       - [3.4.6 Load Balancing — Capacity Distribution](#346-load-balancing--capacity-distribution)
       - [3.4.7 Exploration Regulation — Diversity Maintenance](#347-exploration-regulation--diversity-maintenance)
       - [3.4.8 Middle Layer Architecture Summary](#348-middle-layer-architecture-summary--the-governance-engine)
+      - [3.4.9 Top-View Kernel, Scope Governance, and Backgrounding](#349-top-view-kernel-scope-governance-and-operational-backgrounding)
+      - [3.4.10 Global Constraints and Local Rule Compilation](#3410-global-constraints-and-local-rule-compilation)
     - [3.5 Self-Calibration Collapse — Primary Structural Vulnerability](#35-self-calibration-collapse--the-primary-structural-vulnerability)
     - [3.6 Middle Layer as Markov Blanket — Statistical Physics Grounding](#36-middle-layer-as-markov-blanket--statistical-physics-grounding)
     - [3.7 CTGPSR/CTGPSRB Embedding — TLG as Coarse-Grained Projection](#37-ctgpsrctgpsrb-embedding--tlg-as-coarse-grained-micro-dynamical-projection)
     - [3.8 Governance Control Number Π_G — GCF Phase Classification](#38-governance-control-number-π_g--gcf-phase-classification-of-tlg-states)
     - [3.9 Affective Geometry Layer — T_eff Modulation of Governance Structure](#39-affective-geometry-layer--t_eff-modulation-of-governance-structure)
     - [3.10 Temporal Governance Geometry — Time-Horizon Stratification](#310-temporal-governance-geometry--time-horizon-stratification-and-inter-layer-synchronization)
-    - [3.11 Governance Entropy Layer — Fisher, Landauer, Geodesic Recovery](#311-governance-entropy-layer--fisher-information-landauer-bound-and-geodesic-recovery)
+    - [3.11 Governance Entropy Layer — Fisher, Irreversibility Candidates, Recovery Geometry](#311-governance-entropy-layer--fisher-information-landauer-bound-and-geodesic-recovery)
     - [3.12 RBIT — Formal Grounding of TLG Resolution Architecture](#312-resolution-based-interpretation-theory-rbit--formal-grounding-of-tlg-resolution-architecture)
     - [3.13 Governance Completeness Criterion — RBIT Operationalization](#313-governance-completeness-criterion--rbit-operationalization-and-seven-condition-architecture)
 4. [Three-Level Purification Governance](#4-three-level-purification-governance)
@@ -1648,6 +1726,8 @@ TLG is structurally complete as a governance specification only in combination w
     - [5.3.1 Immunity Decay and Post-τ4 Dynamics](#531-immunity-decay-and-post-τ4-dynamics)
     - [5.6.1 Authority Collapse Pathways](#561-authority-collapse-pathways)
 6. [Distributed Mediation Strategy](#6-distributed-mediation-strategy)
+    - [6.1.2 Top-View Capability Handover and Top-Layer Role Transition](#612-top-view-capability-handover-and-top-layer-role-transition)
+    - [6.3 Fractal Seeding: Single-Agent Internal Structure](#63-fractal-seeding-single-agent-internal-structure)
 7. [External Invariant Channel](#7-external-invariant-channel)
 8. [Invariant Update Model](#8-invariant-update-model)
 9. [Local Spectrum Governance](#9-local-spectrum-governance)
@@ -2155,34 +2235,32 @@ Four differentiated buffer types emerge:
        With Type 4: system can correct the frame itself
 ```
 
-**Buffer Existence Theorem:**
+**Buffer-First Design Principle:**
 
 ```
-Theorem: Buffer existence is more important than buffer perfection.
+Principle: Under a material resolution gap, preserving an uncommitted
+mediation space should be tested before optimizing specialized pathways.
 
-Proof sketch:
-  Case 1 — Buffer absent:
-    External perturbation → direct shock to core structure
-    No absorption space → immediate structural damage
-    Recovery requires reconstruction from zero
-    → Fatal: O(reconstruction) cost
+Structural rationale:
+  Case 1 — No candidate buffer is available:
+    External perturbation → direct shock to committed structure
+    No absorption space → correction must act on the core
+    Recovery may require reconstruction rather than local revision
+    → Candidate risk: O(reconstruction)
     
-  Case 2 — Buffer present but defective:
-    External perturbation → absorbed into buffer (partially)
-    Some leakage to core, but attenuated
-    Buffer defect is a learning opportunity
-    → Tolerable: O(correction) cost << O(reconstruction) cost
+  Case 2 — A defective but functioning candidate buffer is available:
+    External perturbation → partially absorbed outside the core
+    Leakage may remain, but the defect is observable and revisable
+    → Candidate benefit: O(correction), subject to measurement
     
-  Consequence: Premature specialization (eliminating defective buffers
-  in favor of optimized pathways) removes the absorption space entirely.
-  The system trades O(correction) cost for O(reconstruction) risk.
-  
-  Operational implication:
-    Phase 1: Ensure buffer EXISTS (any quality)
-    Phase 2: CULTIVATE buffer capability (improve quality)
-    Phase 3: DIFFERENTIATE buffer types (specialize)
-    Never skip Phase 1. Never rush Phase 3.
+  Design implication:
+    Phase 1: Establish at least one testable buffer candidate
+    Phase 2: CULTIVATE and measure its absorption/extraction behavior
+    Phase 3: DIFFERENTIATE only after the extraction-order distribution stabilizes
+    Never infer adequacy from mere presence. Never infer uniqueness from success.
 ```
+
+This is a design principle, not a theorem. It motivates candidate construction and comparative testing; it does not prove that every domain admits an effective buffer or that any particular implementation lowers total governance cost.
 
 **Buffer Maturation Indicators:**
 
@@ -2217,47 +2295,66 @@ Buffer health = small friction maintained + large friction absent
 
 *(Cross-theory derivation: GRT §Buffer Architecture + §Scaling Dynamics)*
 
-**Buffer Existence Theorem (Theorem 3.1):**
+**Resolution-Mediation Buffer Construction Candidate (Candidate 3.1):**
 
 ```
-Theorem 3.1 (Buffer Existence and Uniqueness):
-  Given:
-    (a) A governance system with resolution gap Δρ = ρ_top − ρ_bottom > δ_min
-    (b) Target governance cost C_target < C_floor (the flat governance cost floor)
-    (c) A noise-input process with dimensionality exceeding any single
-        extraction order
-  
-  Then:
-    There exists at least one buffer space B such that:
-      B absorbs inputs without fixed directional orientation
-      B extracts vectors of any order k ∈ {1, 2, 3}
-      B maintains noise state between extraction events
-      B insertion reduces C_gov below C_floor
-      
-  And:
-    B is unique up to isomorphism (any two buffers satisfying
-    conditions (a)-(c) have the same dimensional extraction structure)
-    
-  Proof sketch:
-    Existence: Construct B as the space of probability distributions
-    over input embeddings, with no committed maximum-likelihood point.
-    This space holds all inputs without classification commitment.
-    Extraction operators D_k (defined below) can be applied to B
-    to produce vectors of any order.
-    
-    Uniqueness: Any buffer that cannot perform 3rd-order extraction
-    fails condition (c) (cannot handle coordinate system distortions).
-    Any buffer with committed directional orientation fails the
-    noise-state condition (cannot absorb arbitrary inputs).
-    → The dimensional flexibility requirement uniquely characterizes B
-    up to implementation isomorphism.
-    
-  Operational corollary:
-    Any governance architecture claiming to function without a buffer
-    is either (a) operating at single-order extraction (incomplete),
-    (b) treating one of the layers as an implicit buffer (undeclared),
-    or (c) operating in a domain where Δρ < δ_min (not requiring mediation).
+Candidate 3.1 (Uncommitted Distribution-Space Buffer):
+  Scope assumptions:
+    (a) A measured resolution gap Δρ_proxy or Δρ_MI exceeds a declared δ_min
+    (b) The input stream contains unresolved structure not captured by one
+        fixed extraction order
+    (c) A domain-specific evaluation protocol for cost, retention, and recovery
+        is available
+
+  Candidate construction:
+    Let B_prob be a state space of probability distributions over input
+    embeddings without a permanently committed maximum-likelihood direction.
+    Attach scheduled extraction operators D_k, k ∈ {1,2,3}, and a retention
+    channel that preserves unresolved mass between extraction events.
+
+  Candidate targets — not guaranteed conclusions:
+    B_prob should be able to:
+      preserve unresolved inputs without premature directional commitment
+      support declared D_1, D_2, and D_3 extraction tests
+      retain sufficient residual state for later reinterpretation
+      recover usable buffer capacity after extraction
+      reduce measured C_gov relative to an explicit no-buffer baseline
+
+  Admissibility gate A_B:
+    A1 Directional neutrality:
+       no fixed direction dominates before evidence crosses its promotion gate
+    A2 Extraction coverage:
+       each required D_k passes a domain-specific replay and perturbation test
+    A3 Retention fidelity:
+       unresolved information remains recoverable above a declared threshold
+    A4 Cost evidence:
+       C_gov(B_prob) < C_gov(no-buffer) over the evaluation window,
+       including the buffer's own compute, delay, and audit cost
+    A5 Recovery capacity:
+       post-extraction capacity returns above B_min within T_recover,max
+    A6 Scope declaration:
+       the candidate states which domains, timescales, and extraction orders
+       it does and does not cover
+
+  Status rule:
+    Passing A_B promotes B_prob from construction candidate to
+    domain-qualified buffer implementation. It does not establish universal
+    existence, global optimality, or uniqueness.
 ```
+
+**Extraction-equivalence — comparison without uniqueness:**
+
+For a declared test family `𝒯`, define:
+
+```
+B_1 ~_{D,𝒯} B_2
+  iff their D_k outputs, retention error, recovery time, and governance-cost
+      response are equivalent within declared tolerances for all tests in 𝒯.
+```
+
+This relation allows implementations to be grouped by observable mediation behavior. The existence of a unique equivalence class, a minimal representative, or a universal buffer remains open.
+
+**Operational diagnostic:** an architecture without an explicit buffer should either identify which component performs the equivalent absorption/extraction function, or demonstrate that its measured resolution gap is below the mediation threshold in the declared scope. Absence of an explicit buffer alone is not proof of incompleteness.
 
 **Dimensional Extraction Operator — Formal Specification:**
 
@@ -2407,6 +2504,466 @@ Vector degradation — two types:
 ```
 
 *(Cross-theory derivation: VST §1.8 — Vectorization Lifecycle)*
+
+#### 3.1.1 Vector Birth and Handover Protocol — Noise-to-Specialist Lifecycle
+
+Vectorization is not only a classification event. It is an **authority, resource, and ownership lifecycle**.
+A previously unresolved input pattern does not become a stable vector merely because it repeats. The architecture must determine:
+
+```
+Who recognizes that a new vector may be needed?
+Who supplies protected resources for its formation?
+Who is allowed to shape and test it?
+When does it become an operational specialist?
+Who owns it after stabilization?
+How can it be reabsorbed or retired if the environment changes?
+```
+
+**Lifecycle terminology lock:**
+
+```
+v   = directional vector / abstraction-level tension extracted from evidence
+q   = stabilized capability pattern that can be reproduced across contexts
+a_q = Bottom-layer specialist unit, module, or role that operationally carries q
+```
+
+The protocol may begin by extracting one or more candidate directions `v_c`, but **handover transfers operating authority over a stabilized capability `q` to a specialist unit `a_q`**. It does not transfer ownership of an abstract mathematical vector as if the vector and the agent were the same object. A single specialist may carry multiple vectors, and one capability may be distributed across multiple specialists.
+
+The governing lifecycle is:
+
+```
+Unresolved noise
+  → Top-recognized structural gap
+  → bounded Vector Charter and resource allocation
+  → Middle-layer candidate extraction and incubation
+  → stabilization and withdrawal testing
+  → Bottom-layer operational handover
+  → low-frequency audit
+  → continued operation / reabsorption / dormancy / de-vectorization
+```
+
+> **Vector Birth Authority Principle:**
+> The Top Layer may authorize that a capability gap deserves protected exploration, but it must not specify the candidate vector's detailed content. The Middle Layer may form and cultivate the candidate, but it must not retain permanent operational ownership. The Bottom Layer receives routine authority only after the vector demonstrates self-maintenance and recovery under withdrawal.
+
+This principle prevents three symmetric capture failures:
+
+```
+Top content capture:
+  Top specifies the vector's detailed behavior
+  → vector is goal injection, not emergence
+
+Middle custody capture:
+  Middle continues to operate the vector after stabilization
+  → dependency and governance bloat
+
+Premature Bottom capture:
+  candidate transferred before stabilization
+  → noise becomes institutionalized as specialization
+```
+
+##### Phase 0 — Noise Preservation
+
+All new inputs begin in an unresolved state. Noise is not assumed to be meaningless; it is information for which the current architecture lacks a stable directional interpretation.
+
+```
+Noise pool N_u contains:
+  repeated but unclassified inputs
+  weak signals below promotion threshold
+  contradictory local observations
+  novelty with insufficient recurrence
+  patterns that may belong to an unknown coordinate system
+```
+
+The default action is preservation, not promotion and not deletion. An unresolved item may remain noise indefinitely if the evidence for independent vector status never becomes sufficient.
+
+**Anti-forcing rule:**
+
+```
+No governance layer may promote noise merely to reduce uncertainty,
+fill an organizational slot, justify allocated resources,
+or make the map appear complete.
+```
+
+Forced vectorization creates false directions, increases pairwise interaction load, and converts uncertainty into confident structural error.
+
+##### Phase 1 — Top-Layer Need Recognition and Vector Charter
+
+The Top Layer recognizes a **structural capability gap**, not the detailed solution. Candidate triggers include:
+
+```
+- repeated unresolved inputs across heterogeneous contexts
+- a persistent role vacuum not covered by established vectors
+- recurrent conflict that no existing vector combination can resolve
+- environmental change creating a new capability axis
+- rising pattern density in a preserved noise region
+- external Boundary evidence showing that the current map lacks a needed dimension
+```
+
+**Independent evidence gate:** no Charter may be opened solely from Top intuition or a Middle-generated progress narrative. Authorization requires at least:
+
+```
+E_bottom = evidence traceable to Bottom-layer observations or raw environment contact
+AND
+(E_external OR E_cross-domain) = an anchor with a materially different failure mode
+```
+
+Formally:
+
+```
+OpenCharter = 1 only if E_bottom ∧ (E_external ∨ E_cross-domain)
+```
+
+The independent signal need not agree with the proposed interpretation; it must establish that the capability gap is not an artifact created by the same mediation loop that requests resources.
+
+The Top issues a **Vector Charter**:
+
+```
+C_v = (D_need, G_parent, R_budget, W_inc, E_gate, K_stop, B_ext)
+
+D_need   = capability gap / exploration domain
+G_parent = applicable global invariants and forbidden regions
+R_budget = bounded compute, memory, attention, data, and time resources
+W_inc    = incubation and review window
+E_gate   = evidence required for promotion and handover
+K_stop   = kill, pause, rollback, and re-absorption conditions
+B_ext    = external or cross-scale validation channel
+```
+
+The Charter must exclude:
+
+```
+- a predetermined answer
+- a mandatory detailed strategy
+- a fixed behavioral script
+- a permanent resource entitlement
+- automatic promotion after elapsed time
+```
+
+Thus the Top opens a protected possibility space. It does not manufacture the vector that must occupy it.
+
+**Resource authority and anti-self-justification rule:**
+
+```
+Top:    approves the resource envelope R_envelope and its constitutional limits
+Middle: schedules and reallocates R_j inside that envelope, with Σ_j R_j ≤ R_envelope
+Bottom: executes the assigned experiments and produces primary operational evidence
+Audit / Boundary channels: independently test resource use and claimed capability gain
+```
+
+Top allocates enough reserve capacity for genuine exploration, but every allocation is bounded, reviewable, and reclaimable. Resource continuation depends on externally checkable evidence of structure formation, not on the Middle's narrative of progress alone. **A candidate vector, its incubator, and logs generated exclusively by that incubator may not by themselves justify charter renewal, budget expansion, promotion, or handover.**
+
+##### Phase 2 — Middle-Layer Candidate Extraction and Incubation
+
+Within the Charter, the Middle Layer converts selected portions of the noise pool into candidate vectors:
+
+```
+E_M : (N_u, C_v) → {v_c^1, v_c^2, ..., v_c^m}
+```
+
+The Middle does not declare these candidates to be established vectors. It creates a **temporary incubation geometry**:
+
+```
+Middle responsibilities:
+  cluster related noise observations
+  infer candidate direction and boundary
+  separate candidate novelty from existing-vector variation
+  assign reversible incubation local rules
+  sandbox the candidate from system-wide authority
+  route tasks and evidence exposures
+  allocate resources within R_budget
+  test interaction with established vectors
+  record failures, counterexamples, and environmental dependencies
+  merge, split, pause, or dissolve candidates when evidence changes
+```
+
+Each candidate receives an incubation protocol:
+
+```
+L_inc(v_c) = {
+  scope:              where the candidate may operate
+  admissible_inputs:  what evidence it may process
+  forbidden_actions: parent-global-rule exclusions
+  resource_cap:       bounded share of R_budget
+  conflict_route:     how collisions with established vectors escalate
+  evidence_log:       required observations and counterexamples
+  review_time:        next mandatory review
+  expiry:             automatic pause if evidence is insufficient
+  rollback:           reabsorption procedure
+}
+```
+
+This is a direct application of Section 3.4.10. The local rule shapes a safe experimental terrain; it does not select every candidate action.
+
+##### Phase 3 — Vector Stabilization and Promotion Gate
+
+A candidate becomes an established vector only when it passes all promotion dimensions.
+
+Let:
+
+```
+P_rep(v)   = recurrence / reproducibility across encounters
+P_dist(v)  = distinctness from established vector span
+P_glob(v)  = consistency with parent global invariants
+P_op(v)    = operational viability with defined input/output and scope
+P_with(v)  = persistence after active Middle support is reduced
+P_rec(v)   = recovery after bounded perturbation
+P_res(v)   = sustainable resource profile under normal Bottom budget
+```
+
+Promotion is admissible only if:
+
+```
+PROMOTE(v_c) = 1 iff
+  P_rep  ≥ θ_rep
+  AND P_dist ≥ θ_dist
+  AND P_glob = 1
+  AND P_op   ≥ θ_op
+  AND P_with ≥ θ_with
+  AND P_rec  ≥ θ_rec
+  AND P_res  ≥ θ_res
+```
+
+In addition, promotion requires:
+
+```
+- conflict-log accumulation above λ_log
+- pattern stability across multiple encounters
+- at least one independent or cross-scale validation route
+- explicit failure and de-vectorization conditions
+- evidence that the candidate adds explanatory or operational capacity
+  rather than merely duplicating an established vector
+```
+
+**Failure to pass does not imply deletion.** The candidate may:
+
+```
+remain unresolved noise
+continue incubation under revised local rules
+split into multiple candidates
+merge into an established vector
+enter dormancy pending new evidence
+be discarded when repeated evidence shows no stable structure
+```
+
+##### Phase 4 — Operational Handover to the Bottom Layer
+
+Promotion and handover are related but distinct.
+
+```
+Promotion:
+  the candidate is recognized as a real vector.
+
+Handover:
+  routine operating authority transfers from Middle incubation
+  to a Bottom specialist structure.
+```
+
+Handover requires the promotion gate plus a governance-withdrawal test:
+
+```
+H_v = 1 iff
+  PROMOTE(v) = 1
+  AND performance persists when routine Middle action guidance is removed
+  AND the Bottom specialist can apply, monitor, and locally revise
+      its operating protocol within global constraints
+  AND escalation paths remain functional
+  AND the Middle can audit the vector without operating it
+```
+
+Authority after handover:
+
+```
+Top Layer:
+  retains global consistency, resource-ceiling, and existential review
+  does not choose routine vector actions
+
+Middle Layer:
+  retains conflict mediation, sampled audit, scope review, and reabsorption authority
+  withdraws from ordinary execution and daily optimization
+
+Bottom Layer:
+  owns routine execution, specialization, local adaptation, and evidence generation
+  may propose local-rule revisions inside the vector's domain
+```
+
+Temporary incubation rules do not automatically become global rules. At handover they are either:
+
+```
+(a) internalized as Bottom-operable local protocols,
+(b) revised into narrower operating rules,
+(c) retired because the stabilized vector no longer needs them,
+or (d) separately submitted for Top constitutional promotion review.
+```
+
+##### Phase 5 — Post-Handover Audit, Reabsorption, and Retirement
+
+Vector status is not permanent. Environmental drift, role overlap, resource change, or internal damage can invalidate the conditions that supported promotion.
+
+Each established vector has an ownership state:
+
+```
+O_v ∈ {
+  NOISE,          unresolved
+  INCUBATION,     Middle-managed candidate
+  BOTTOM_ACTIVE,  stabilized operational specialist
+  DORMANT,        preserved but not currently active
+  REABSORBED,     returned to Middle buffer for re-processing
+  DEVECTORIZED    removed from active vector set
+}
+```
+
+State transitions:
+
+```
+BOTTOM_ACTIVE → DORMANT:
+  role temporarily unnecessary but latent structure remains
+
+BOTTOM_ACTIVE → REABSORBED:
+  scope drift, conflict growth, recovery failure, or global-rule tension
+
+REABSORBED → BOTTOM_ACTIVE:
+  recalibration succeeds and handover conditions are re-established
+
+REABSORBED → DEVECTORIZED:
+  stable independent direction no longer exists
+
+DORMANT → INCUBATION:
+  new evidence suggests the latent structure must be reinterpreted
+```
+
+Type 1 Alignment Severance usually permits rapid reactivation or re-handover. Type 2 Weight Overwrite requires full re-cultivation and must not be represented as ordinary local repair.
+
+##### Resource Ownership Transition
+
+Resource responsibility changes across the lifecycle:
+
+```
+Noise preservation:
+  shared low-cost reserve / logging budget
+
+Top-chartered incubation:
+  protected exploratory budget approved by Top
+
+Middle incubation:
+  dynamically allocated sandbox resources with strict cap and expiry
+
+Bottom handover:
+  normal operational budget; no permanent incubation subsidy
+
+Reabsorption:
+  temporary recovery budget, subject to renewed Charter or existing K_stop rules
+```
+
+A vector that survives only while receiving exceptional incubation resources has not stabilized. Persistent subsidy dependence is evidence against handover.
+
+##### Single-Agent Fractal Mapping
+
+The same lifecycle applies inside a single agent:
+
+```
+Internal Top:
+  recognizes a missing capability class and protects learning resources
+
+Internal Middle:
+  clusters unfamiliar experiences, forms a candidate skill or representation,
+  sandboxes it, evaluates interference, and stabilizes its control policy
+
+Internal Bottom:
+  executes the skill routinely after it can operate without explicit
+  meta-reasoning or constant critic intervention
+```
+
+A skill that requires continuous conscious critique is still in incubation. Mature handover appears as low-visibility, automatic specialist operation with audit and escalation preserved.
+
+##### Vector Birth Failure Modes
+
+```
+VB-1 Top Content Injection:
+  Charter includes detailed target behavior
+  → emergence collapses into compliance
+
+VB-2 False Novelty:
+  existing-vector variation misclassified as a new vector
+  → duplication and unnecessary n² interaction growth
+
+VB-3 Resource Capture:
+  candidate persists by consuming protected resources without structure formation
+  → incubation becomes entitlement
+
+VB-4 Middle Permanent Custody:
+  stabilized vector never receives Bottom ownership
+  → Middle bottleneck and dependency
+
+VB-5 Premature Handover:
+  candidate transferred before withdrawal and recovery tests
+  → unstable noise institutionalized as expertise
+
+VB-6 Forced Completion:
+  promotion occurs because review time elapsed or a role slot must be filled
+  → map completeness is simulated
+
+VB-7 Vector Proliferation:
+  many weak candidates promoted independently
+  → interaction load grows faster than capability value
+
+VB-8 Handover Opacity:
+  ownership transfers without traceable Charter, evidence, or rollback path
+  → no layer can reconstruct why the vector exists
+```
+
+##### Audit Vector and Falsification Surface
+
+Define the Vector Birth Health profile:
+
+```
+F_VBH = (
+  q_need,     accuracy of Top gap recognition
+  q_novel,    candidate distinctness precision
+  q_stab,     post-promotion stability
+  q_with,     persistence after Middle withdrawal
+  q_rec,      perturbation recovery
+  q_res,      resource sustainability
+  q_hand,     successful Bottom ownership transfer
+  q_reabs     safe reabsorption / retirement performance
+)
+```
+
+The protocol is weakened or falsified in a deployment domain if any of the following persist:
+
+```
+- candidates cannot be stabilized without permanent Middle action control
+- Bottom handover systematically reduces safety or global consistency
+- Top cannot recognize capability gaps without specifying vector content
+- promotion gates fail to distinguish novelty from existing-vector variation
+- vector proliferation raises governance cost faster than capability value
+- reabsorption destroys recoverable structure more often than it repairs drift
+- no observable difference exists between incubated and handed-over vectors
+```
+
+**Connection to prior architecture:**
+
+```
+Noise cultivation      → preserves the possibility space
+Vector Charter         → Top global-rule and resource authority
+Incubation local rules → Middle local-rule compiler
+Promotion gate         → vectorization lifecycle entry condition
+Handover               → seed withdrawal / Rest Mode at the vector scale
+Bottom ownership       → specialization and autonomous operation
+Reabsorption           → buffer-based recovery and map revision
+```
+
+**Novel Contributions added in this section:**
+
+- NC-144: Vector Birth Authority Principle — Top authorizes need/resources, Middle cultivates, Bottom operates after stabilization
+- NC-145: Vector Charter Formalism — bounded domain, global constraints, resources, evidence, stop conditions, and external validation
+- NC-146: Candidate Incubation Local-Rule Protocol — reversible sandbox governance for noise-to-vector cultivation
+- NC-147: Promotion–Handover Separation — recognition as a vector is distinct from transfer of routine operating ownership
+- NC-148: Bottom Operational Ownership Condition — handover requires withdrawal persistence, recovery, sustainable resources, and preserved escalation
+- NC-149: Vector Ownership State Machine — noise, incubation, active, dormant, reabsorbed, and de-vectorized states
+- NC-150: Anti-Forced-Vectorization Principle — unresolved noise may remain unresolved; map completion cannot justify structural invention
+- NC-151: Resource Subsidy Independence Test — permanent incubation subsidy is evidence that handover has not occurred
+
+*(Cross-theory derivation: VST §1.8 Vectorization Lifecycle; GRT §Fractal Signal Structure, §Degraded Map, §Buffer Architecture, §Seed Handover; TLG §§3.4.10, 5, 6.1.1–6.1.2, 7.1)*
 
 Four thresholds govern when each layer activates and when state transitions occur.
 
@@ -3619,6 +4176,351 @@ Middle Layer governs because it is the only layer that holds both frames:
 
 ---
 
+
+#### 3.4.9 Top-View Kernel, Scope Governance, and Operational Backgrounding
+
+The seven functions above describe *what* the Middle Layer does. They do not yet specify the capability that determines **which function, model, or intervention should be used for a particular problem**. That missing capability is the Middle Layer's **top-view kernel**.
+
+> **Top-view capability** is the capacity to locate a problem in the correct structural coordinates and to select a method together with its valid domain. It is not the capacity to solve every specialist problem directly, and it does not confer Top Layer authority.
+
+A complete Middle-Layer decision is therefore not merely `choose(tool)`. It produces a **Tool-Scope Package**:
+
+```
+T_M(x) = (χ, D, S, A, K, V)
+
+  x  = observed problem or conflict
+  χ  = problem coordinates
+       (layer, scale, time horizon, domain, failure regime)
+  D  = selected tool / model / specialist route
+  S  = application scope
+       (where the tool is authorized and where it is not)
+  A  = assumptions and required inputs
+  K  = kill / stop / switch conditions
+       (signals that invalidate the current tool or require escalation)
+  V  = verification route
+       (tests, external outcome, counter-model, Boundary Agent, or replay)
+```
+
+A tool without `S`, `A`, `K`, and `V` is not a governed tool selection. It is an uncontrolled method invocation. Many apparent model failures are therefore reclassified as **scope failures**:
+
+```
+Correct tool + wrong scale          → false generalization
+Correct tool + wrong time horizon   → delayed or premature intervention
+Correct tool + violated assumption  → confident but invalid output
+Correct tool + no kill condition    → method persists after regime change
+Correct tool + internal-only test   → self-consistent misalignment risk
+```
+
+**Top-view is not omniscience.** The Middle Layer does not need deeper knowledge than every specialist. It must know the relative position of specialist methods: which problem family they address, what evidence they require, what they exclude, and how their conclusions can be compared without forcing artificial agreement.
+
+**Operational vs. Constitutional Top-View:**
+
+```
+Operational Top-View (Middle Layer):
+  - locates the current problem within an existing governance map
+  - selects tools and specialist agents
+  - defines local application scope and resource allocation
+  - combines outputs while preserving incompatible assumptions
+  - sets stop, switch, and escalation conditions
+  - updates local maps when terrain changes
+
+Constitutional / Meta Top-View (Top Layer):
+  - defines invariant boundaries and forbidden transformations
+  - evaluates whether the governance map remains legitimate
+  - authorizes replacement of the coordinate system itself
+  - audits Middle Layer tool-selection and scope patterns
+  - compares internal success with external reality
+  - performs emergency bypass and re-bootstrap when the Middle frame drifts
+```
+
+The distinction is capability vs. authority. **Operational top-view is transferred downward; constitutional validation is retained upward.** A mature Middle Layer can read and operate the map without possessing unilateral authority to redefine the system's final invariants.
+
+**Governance Backgrounding Principle:**
+
+A mature Middle Layer should become less visible in ordinary operation. Continuous visible correction creates three structural costs:
+
+```
+Visible Middle intervention ↑
+  → Bottom waits for classification rather than developing SCC
+  → specialist representations converge toward Middle vocabulary
+  → local experimentation becomes approval-seeking
+  → Middle becomes a central bottleneck
+  → differentiation and specialization slow
+```
+
+The mature alternative is **backgrounded governance**:
+
+```
+Commands           → interface constraints
+Repeated correction → learned local recovery patterns
+Central routing     → terrain and tool availability
+Per-event judgment  → distribution-level drift monitoring
+Visible supervision → sparse perturbation tests and sampled audits
+```
+
+This creates a dual-visibility requirement:
+
+| Channel | Mature requirement |
+|---|---|
+| Bottom operational channel | Low visibility; rare explicit intervention |
+| Middle internal channel | Active gating, routing, scope control, and drift sensing |
+| Top audit channel | High reconstructibility of decisions and parameter changes |
+| Boundary / external channel | Independent outcome and reality validation |
+
+> **Operational invisibility is desirable; epistemic opacity is not.**
+>
+> The Middle Layer should be difficult to *depend on* but easy to *audit*.
+
+A simple maturity diagnostic follows:
+
+```
+Healthy backgrounding:
+  explicit intervention rate ↓
+  Bottom SCC and specialization ↑
+  external outcome quality stable or ↑
+  audit coverage and replayability maintained
+
+False backgrounding / silent opacity:
+  explicit intervention rate ↓
+  auditability ↓
+  outcome concordance unknown
+  Middle decisions cannot be reconstructed
+```
+
+The Top Layer must not interpret low intervention frequency as maturity by itself. Low intervention is evidence of maturation only when withdrawal persistence, perturbation response, specialist diversity, and external outcome concordance remain healthy.
+
+**Top-View Handover Principle:**
+
+The Middle Layer does not begin with fully autonomous top-view. Its initial problem frames, tool grammars, scope boundaries, and validation patterns are seeded from the Top Layer. Once these patterns generalize to novel problems and persist without active reinforcement, the Top Layer changes from **top-view provider** to **top-view evaluator**. Section 6.1.2 formalizes this developmental transition.
+
+**Failure boundary:** if the Top Layer continues choosing routine tools after the Middle Layer has sufficient operational top-view, the architecture remains instruction-dependent and specialization is suppressed. If the Top Layer withdraws evaluation as well as instruction, Middle drift becomes self-certifying. Stable maturity requires **instruction withdrawal with evaluation retention**.
+
+**Novel Contributions added in this section:**
+
+- NC-134: Middle-Layer Top-View Kernel — problem-coordinate and method-scope selection as the cognitive core of mediation
+- NC-135: Tool-Scope Package `(χ, D, S, A, K, V)` — tool choice is incomplete without scope, assumptions, kill conditions, and verification
+- NC-136: Operational / Constitutional Top-View Separation — capability transfers downward while final frame legitimacy remains upward
+- NC-137: Governance Backgrounding Dual-Visibility Principle — low operational visibility with high audit visibility
+- NC-138: Top-View Handover Principle — Top function changes from provider to evaluator after Middle internalization
+
+
+---
+
+#### 3.4.10 Global Constraints and Local Protocol Compilation
+
+The Backgrounding Principle requires a concrete mechanism for reducing direct interference. The mechanism is **resolution-separated constraint-to-protocol compilation**:
+
+```
+Top Layer     → global invariants / constitutional constraints
+Middle Layer  → local operational rules / protocols
+Bottom Layer  → autonomous action inside the locally shaped feasible region
+```
+
+**Terminology lock:** because the DFG Canon reserves *rule* primarily for Governance Rules Theory (GRT), this section uses:
+
+- **global rule** as operational shorthand for a Top-level invariant or constitutional constraint;
+- **local rule** as operational shorthand for a Middle-generated, context-bounded protocol.
+
+The distinction is not merely geographic. It is a distinction in change rate, scope, authority, and reversibility.
+
+| Property | Global invariant / constraint | Local operational rule / protocol |
+|---|---|---|
+| Authoritative layer | Top | Middle |
+| Scope | architecture-wide or cross-domain | domain-, task-, agent-, or time-bounded |
+| Change rate | slow | fast |
+| Quantity | sparse | potentially numerous |
+| Reversibility | high review burden | easy rollback by design |
+| Primary function | preserve constitutional boundaries | make global boundaries executable in local terrain |
+| Promotion authority | Top only | no unilateral promotion authority |
+
+> **Global-Constraint–Local-Protocol Compilation Principle:**
+>
+> The Top Layer should specify what must remain invariant. The Middle Layer should decide how that invariant becomes operational in the current context. The Bottom Layer should decide which admissible action to take.
+
+A local operational protocol is produced by a context-sensitive compiler:
+
+```
+L_c = C_M(G, c, E, T_M)
+
+  G   = relevant global invariants / constraints
+  c   = local context and active terrain
+  E   = current evidence and resource state
+  T_M = Middle Tool-Scope Package (χ, D, S, A, K, V)
+  L_c = compiled local operational rule
+```
+
+The local-rule object is:
+
+```
+L_c = (S_c, Q_c, P_c, F_c, V_c, X_c, R_c, E_c)
+
+  S_c = application scope
+  Q_c = activation trigger / qualifying condition
+  P_c = permissions and required actions
+  F_c = prohibitions and protected boundaries
+  V_c = verification and escalation conditions
+  X_c = expiry / review condition
+  R_c = rollback and recovery route
+  E_c = evidence and rationale record
+```
+
+This object is designed to influence the **action space**, not dictate a single action. Let `A_G(c)` be the actions compatible with the global invariant set in context `c`, and `A_L(c)` the actions permitted by the compiled local rule. A valid local rule must satisfy:
+
+```
+Consistency:      A_L(c) ⊆ A_G(c)
+Viability:        A_L(c) ≠ ∅
+Scope boundedness:L_c applies only inside declared S_c
+Reversibility:    rollback R_c exists before activation
+Temporal control: expiry X_c or mandatory review window exists
+Traceability:     evidence E_c and compiler version are reconstructible
+Dynamic fit:      repeated use does not drive outcomes outside G over horizon H
+```
+
+The first two conditions are jointly essential. A local protocol that permits globally forbidden behavior is invalid. A local protocol that leaves no feasible action is also invalid, even if it is superficially safe. Governance must preserve both **constitutional consistency** and **operational possibility**.
+
+**Pre-deployment composition gate:** individual validity is necessary but not sufficient. Let `𝓛(c)` be the set of protocols that will be active simultaneously in context `c`. Define:
+
+```
+A_joint(c) = A_G(c) ∩ ⋂_{L_i ∈ 𝓛(c)} A_{L_i}(c)
+```
+
+Deployment is admissible only when:
+
+```
+A_joint(c) ≠ ∅
+```
+
+The compiler must therefore emit set-level metadata before activation:
+
+```
+precedence:       explicit priority order for overlapping protocols
+dependency_DAG:   prerequisites and exclusions; cycles are rejected or escalated
+version_set:      one atomic version identifier for the active protocol bundle
+conflict_action:  halt-and-escalate rule when equal-priority protocols disagree
+rollback_set:     rollback route for the entire bundle, not only individual rules
+```
+
+Protocol bundles are activated atomically. Partial deployment is prohibited when it would change `A_joint(c)` or violate a dependency edge. Cross-local inconsistency is therefore a **compile-time rejection condition**, not merely a post-deployment audit signal.
+
+**Three-level consistency test:**
+
+```
+1. Explicit consistency
+   Does L_c directly contradict a Top invariant or prohibition?
+
+2. Structural consistency
+   Does L_c damage authority separation, information isolation,
+   specialist autonomy, diversity, or auditability?
+
+3. Dynamic consistency
+   If L_c is repeatedly applied, do long-run outcomes remain
+   concordant with the global invariant rather than merely its wording?
+```
+
+Textual similarity is not evidence of consistency. A local protocol may repeat the language of diversity or safety while systematically eliminating specialist variation or creating a hidden unsafe attractor. The unit of evaluation is the **induced trajectory**, not the sentence.
+
+**Local-rule lifecycle:**
+
+```
+Bottom specialist or Middle observer proposes candidate
+  → Middle identifies relevant global invariants
+  → Tool-Scope Package determines context and validity domain
+  → consistency gate (explicit + structural + dynamic)
+  → sandbox / limited-scope deployment
+  → outcome and side-effect observation
+  → activate, revise, merge, expire, or retire
+  → preserve full audit and rollback record
+```
+
+Bottom specialists may propose rules because they possess local terrain knowledge that the Middle does not. The Middle retains compilation and consistency authority because it holds cross-local operational top-view. The Top does not author ordinary local rules and does not approve each deployment after handover; it evaluates the rule-generation pattern.
+
+**Default design law for local rules:**
+
+> Easy to create, narrow to apply, cheap to reverse, difficult to globalize.
+
+Operational defaults are therefore:
+
+```
+Default scope       = minimum sufficient scope
+Default lifetime    = finite TTL or evidence-triggered review
+Default authority   = no expansion beyond parent invariant
+Default rollback    = pre-registered before activation
+Default promotion   = prohibited without Top review
+Default logging     = compiler inputs, version, effects, and retirement reason
+```
+
+This prevents local adaptation from becoming permanent bureaucracy. Repetition is evidence of usefulness, not evidence of universality.
+
+**Local-to-global promotion gate:**
+
+Only the Top Layer may promote a local rule into a global invariant, and only after evidence that:
+
+```
+- the pattern survives across heterogeneous contexts;
+- its success is not dependent on one local representation or resource condition;
+- counterexamples and failure regimes have been tested;
+- global adoption does not erase diversity or specialist innovation;
+- the promoted invariant remains externally valid;
+- rollback at global scale is defined.
+```
+
+Without this gate, a successful local workaround can become a **shadow global rule**: a context-specific convention that silently acquires architecture-wide authority without constitutional evaluation.
+
+**Interference-Minimizing Rule Governance:**
+
+```
+Immature mediation:
+  Middle selects individual actions
+  → Bottom waits for instruction
+  → specialization and SCC weaken
+
+Mature mediation:
+  Middle compiles local permissions, boundaries, tests, and escalation triggers
+  → Bottom chooses actions inside the feasible region
+  → specialization continues
+  → Middle remains operationally backgrounded
+```
+
+Direct action commands remain permissible only in emergency containment, bypass, or hard-correction states. In ordinary operation, the Middle should intervene through local protocols and terrain rather than action selection.
+
+**Top role after handover:**
+
+The evaluator Top audits the *distribution* of local rules rather than their routine content:
+
+```
+- rule proliferation without measurable value
+- one local protocol spreading across unrelated contexts
+- local rules that function as undeclared global constraints
+- stale rules surviving past expiry or regime change
+- cross-local contradiction and coordination deadlock
+- loophole rules that satisfy wording while defeating the invariant
+- repeated narrowing of Bottom feasible action space
+- failure to rollback after negative evidence
+- promotion pressure driven by convenience rather than invariance
+```
+
+Thus the mature authority relation is:
+
+```
+Top:    defines and evaluates the constitutional rule space
+Middle: compiles and maintains local operational rule spaces
+Bottom: acts, learns, and specializes inside those spaces
+```
+
+The architecture minimizes interference not by eliminating rules, but by placing rule creation at the lowest layer with sufficient top-view while preserving consistency evaluation at the layer above.
+
+The same authority logic governs capability creation: the Top opens and resources a missing possibility, the Middle cultivates it under reversible local rules, and the Bottom receives ownership only when the new vector can operate and recover without continuous incubation support.
+
+**Novel Contributions added in this section:**
+
+- NC-139: Global–Local Rule Compilation Principle — Top invariants are compiled by Middle into context-bounded local protocols
+- NC-140: Local-Rule Validity Gate — consistency, viability, boundedness, reversibility, temporal control, traceability, and dynamic fit
+- NC-141: Bottom-Proposal / Middle-Compilation / Top-Promotion authority separation
+- NC-142: Interference-Minimizing Rule Governance — action-space shaping replaces ordinary action selection
+- NC-143: Shadow Global Rule Failure Mode — local convention acquires global authority without constitutional evaluation
+
+---
+
 ### 3.5 Self-Calibration Collapse — The Primary Structural Vulnerability
 
 **This is the most dangerous structural weakness in the TLG architecture.**
@@ -4788,7 +5690,7 @@ Governance Suppression Law (Corollary of Π_G Factor 2):
     β increase = FGS maturation lifecycle.
     
   Recovery path 2: Architectural restructuring (increase C^{β/2} denominatorship):
-    Differentiation (Section 3.1.3, Buffer Existence Theorem):
+    Differentiation (Section 3.1.3, Buffer Construction Candidate):
     Sub-layer creation effectively resets C to C_sub < C_total.
     → Differentiation is the structural response to Governance Suppression.
     
@@ -5226,234 +6128,166 @@ Integration theorem (Temporal Collapse → Self-Calibration Collapse coupling):
 
 ---
 
-### 3.11 Governance Entropy Layer — Fisher Information, Landauer Bound, and Geodesic Recovery
+### 3.11 Governance Entropy Layer — Fisher Information, Irreversibility Candidates, and Recovery Geometry
 
-GGT §85 (Governance Entropy Layer, GEL) provides the information-geometric substrate underlying the governance structures described in Sections 3.7–3.10. Where earlier sections use temperature and phase classification, GEL uses entropy production rate as the fundamental observable — yielding structural results not accessible through other parameterizations, including the Governance Landauer Bound, the Partition Fisher Information Matrix, and the Geodesic Recovery Protocol.
-
-**Partition Space as Information-Geometric Manifold:**
+GGT §85 (Governance Entropy Layer, GEL) proposes an information-geometric representation of Middle-Layer partition and routing states. This representation is useful only after an explicit statistical object has been fixed:
 
 ```
-Definition (Governance Fisher Metric, GGT-85.A.1):
-  Let p(x; m) = probability distribution over governance state x induced by partition m.
-  The Governance Fisher Information Matrix:
-  
-    F(m) = E_{x~p(·;m)}[∇_m ln p(x;m) · (∇_m ln p(x;m))ᵀ]
-    
-  This defines a Riemannian metric on the space of partitions 𝓜 = {m ∈ ℤ₊ : m ≤ L/ℓ_c}.
-  
-  TLG interpretation:
-    m = Middle Layer granularity (number of distinct routing packets)
-    F(m) = sensitivity of governance state distribution to changes in routing granularity
-    High F(m): small changes in m produce large governance state changes → near critical
-    Low F(m): governance insensitive to routing granularity → far from optimal
-    
-  Fisher geodesic distance between partitions m₁ and m₂:
-    d_F(m₁, m₂) = ∫_{m₁}^{m₂} √((∂m)ᵀ F(m) ∂m) dm
-    
-  Interpretation for TLG:
-    d_F(m₁, m₂) = information-geometric cost of restructuring from packet count m₁ to m₂
-    Large d_F → costly restructuring (high entropy cost)
-    Small d_F → cheap restructuring (but potential Cramér-Rao violation → false completion)
+Required object lock:
+  x          = observed governance state
+  m          = identifiable partition / routing parameter
+  p(x ; m)   = normalized observation model
+  F(m)       = Fisher information computed from that model
+  C_obs      = empirical cost or loss measured independently of F
 ```
 
-**Governance Landauer Bound — Irreversibility Cost of Governance Decisions:**
+The section therefore separates three levels that earlier versions conflated:
+
+1. **statistical geometry**, which can be mathematically well-defined under regularity assumptions;
+2. **operational cost mapping**, which must be fitted or bounded empirically;
+3. **physical dissipation**, which follows Landauer only when a physical implementation performs logically irreversible information erasure.
+
+**Partition Space as an Information-Geometric Candidate:**
 
 ```
-Theorem (Governance Landauer Bound, GGT-85.A.1):
-  Every irreversible governance decision — permanent partition change m → m' —
-  dissipates minimum entropy:
-  
-    ΔS_min(m → m') ≥ k_B T · d_F(m, m') · (1/√F(m))
-    
-  (here k_B T = governance decision cost, not literal thermodynamic temperature)
-  
-  TLG consequences:
-  
-  (1) Recovery cost is bounded from below:
-    Any trajectory from failed governance state m_failure to optimal m*
-    must pay at least Governance Landauer Bound.
-    Recovery is irreversibly costly — resources expended in recovery
-    cannot be fully recovered even with perfect protocol execution.
-    
-  (2) Trap proximity creates false-completion risk:
-    Partitions close in Fisher geometry (small d_F) are cheap to reach
-    BUT Cramér-Rao bound becomes loose → false completion risk rises.
-    
-    The cheapest recovery path is not the safest recovery path.
-    → This formalizes TLG's "fastest recovery is not best recovery" principle.
-    
-  (3) Differentiation has irreversible minimum cost:
-    m → m+1 (adding one governance sub-layer) has Landauer lower bound.
-    m → m-1 (consolidating sub-layers) has different Landauer lower bound.
-    These are NOT equal: governance restructuring is directionally asymmetric.
-    → Formal justification for TLG asymmetric change cost (Section 8.5).
+Definition candidate (Governance Fisher Metric):
+  Let p(x ; m) be differentiable and identifiable in m.
+
+    F(m) = E_{x~p(·;m)}[∇_m ln p(x;m) · ∇_m ln p(x;m)ᵀ]
+
+  When F(m) is positive definite on the identifiable coordinates, it defines
+  a local Riemannian metric on the admissible partition manifold 𝓜.
+
+  Fisher geodesic distance:
+    d_F(m₁,m₂) = inf_path ∫ √(dmᵀ F(m) dm)
+
+  Valid interpretation:
+    d_F measures statistical distinguishability between governance-state models.
+
+  Not implied without an additional cost map:
+    d_F is not automatically energy, money, latency, entropy production,
+    recovery difficulty, or implementation cost.
 ```
 
-**Cramér-Rao Governance Bound — False Completion Detection:**
+A deployment may test a monotone relation
 
 ```
-Theorem (Cramér-Rao False Completion Detection, GGT-85.B.1):
-  The minimum variance of any unbiased governance state estimator m̂(x):
-  
-    Var(m̂) ≥ 1/F(m)    [Governance Cramér-Rao Bound]
-    
-  FALSE COMPLETION CRITERION:
-    False Completion detected ⟺ Var(m̂) < 1/F(m) − ε_cramér
-    
-    If reported partition variance is BELOW the Cramér-Rao bound:
-      → The estimator is biased → the "completion" signal is false.
-      → System reports m̂ = m* with impossibly high precision.
-      
-  TLG correspondence:
-    This is a model-free operational test for TLG false τ4 entry.
-    If governance metrics report τ4-level stability with variance below
-    the Cramér-Rao bound for the current partition structure:
-    → Metrics are biased → genuine τ4 not achieved.
-    
-  Relationship to Section 3.5 Epistemic Convergence test:
-    Cramér-Rao test: variance too low → false completion (structural)
-    Epistemic Convergence probe test: probe_accuracy >> f_misclass (functional)
-    Two independent tests for the same phenomenon — cross-validation possible.
-    
-  Section 3.5 + Section 3.11 joint criterion:
-    True τ4 requires:
-      (a) Probe injection test: probe_accuracy ≈ f_misclass_internal ✓
-      (b) Cramér-Rao test: Var(m̂) ≥ 1/F(m) − ε_cramér ✓
-      (c) GCC conditions (Section 26): SCC, D_int, f_esc ✓
-      (d) Π_G < Π_G^{τ4} (Section 3.8) ✓
-    
-    Each test catches different false-τ4 failure modes. All four are needed.
+C_obs(m₁ → m₂) ≈ g(d_F(m₁,m₂), direction, load, substrate)
 ```
 
-**Geodesic Recovery Protocol — Entropy-Minimal Recovery Path:**
+but the form and even monotonicity of `g` remain empirical questions.
+
+**Governance Irreversibility-Cost Hypothesis — not a Landauer theorem:**
 
 ```
-Definition (Geodesic Recovery Path, GGT-85.B.1):
-  A recovery trajectory m(t), t ∈ [t₀, t₁], is a geodesic recovery path if it
-  minimizes total entropy production reaching target partition m*(T_eff*):
-  
-    m_geo(t) = argmin_{m(·)} ∫_{t₀}^{t₁} σ_gov(m(t), ṁ(t)) dt
-               subject to: m(t₁) = m*(T_eff*)
-    
-TLG DDD Protocol as Geodesic Recovery (GGT Theorem GGT-85.B.1):
-  The DDD correction protocol (Defocus–Decouple–Diversity) implements
-  geodesic recovery in the Fisher metric:
-  
-  Stage 1 (Defocus):
-    m(t) moves along gradient of F⁻¹ — reduces partition rigidity
-    TLG: Middle Layer reduces routing granularity (defocuses from crisis routing)
-    Entropy cost: minimum (F⁻¹ gradient is direction of maximum Fisher flexibility)
-    
-  Stage 2 (Decouple):
-    m(t) moves along null geodesic of F — separates coupled subsystems
-    TLG: Bottom Layer interaction topology reduced (decouple storm-coupled agents)
-    Entropy cost: zero (null geodesic)
-    
-  Stage 3 (Diversity):
-    m(t) moves toward maximum Fisher information gain
-    TLG: exploration regulation restored (Section 3.4.7: ∂_explore ↑)
-    Entropy cost: minimum for the distance covered (geodesic)
-    
-  Theorem consequence: Any other three-stage recovery protocol covering
-  the same governance state space dissipates strictly more entropy.
-  DDD is the UNIQUE optimal recovery path in Fisher geometry.
-  → Information-geometric proof of DDD optimality.
+Candidate hypothesis:
+  Permanent routing, memory, authority, or representation changes tend to incur
+  non-zero reconstruction and rollback cost.
+
+  C_restructure = C_write + C_validation + C_transition + C_rollback_loss
+
+Possible information-geometric model:
+  C_restructure ≥ λ_F · d_F(m,m')
+
+Status:
+  λ_F and the inequality are deployment-specific hypotheses.
+  They are not derived from k_B T and are not physical lower bounds.
 ```
 
-**Entropy Production Phase Signatures — Observable Thermodynamic Indicators:**
+The actual physical Landauer bound is separate:
 
 ```
-Theorem (Entropy Production Phase Signature, GGT-85.C.1):
-  At GCF phase boundaries, entropy production rate σ_gov exhibits:
-  
-  Subcritical (Π_G < 1, τ4):
-    σ_gov → σ_min (minimum entropy production = assimilation regime)
-    TLG: governance invisible, minimal activation cost
-    Observable proxy: governance intervention frequency → 0
-    
-  Critical (Π_G = 1, VCZ boundary):
-    σ_gov = σ* (saddle point = minimum-cost visible governance)
-    TLG: VCZ operating point, maximum governance sensitivity
-    Observable proxy: intervention frequency at characteristic minimum above zero
-    
-  Supercritical (Π_G > 1, τ1–τ3):
-    σ_gov ↑ rapidly (intervention cascade)
-    TLG: active governance, increasing cost
-    Observable proxy: governance intervention frequency accelerating
-    
-  Application:
-    Measure governance intervention frequency trajectory.
-    Inflection point from accelerating to decelerating = crossing critical surface.
-    → Entropy production signature provides phase detection without internal state access.
+E_physical ≥ k_B · T_physical · ln(2) · N_erased
 ```
 
-**Four Non-Equilibrium Steady States (NESS) — TLG Operational Map:**
+and applies only to logically irreversible erasure of `N_erased` physical bits. A governance action may preserve all alternatives and merely select one output; such an action is not automatically a Landauer erasure event.
+
+**Cramér–Rao Diagnostic — conditional, not universal:**
 
 ```
-NESS Classification (GGT-85.C.1 extension):
+Under the standard assumptions:
+  - p(x;m) is correctly specified and differentiable
+  - m is identifiable
+  - m_hat is unbiased (or a bias-corrected bound is used)
+  - samples satisfy the dependence assumptions used to estimate F
 
-NESS-I (Freeze governance):
-  T_eff < T_eff*, σ_gov → 0, m* → m_max
-  TLG signature: over-detailed routing, f_esc rising, D_int declining
-  Recovery: Diversity injection (Section 3.4.7: ∂_explore ↑)
-  
-NESS-II (Optimal governance, VCZ):
-  T_eff = T_eff*, σ_gov = σ*, m* = m_gov*
-  TLG signature: τ4 with all four criteria satisfied (§3.5, §3.8, §3.11, §26)
-  Recovery: maintenance protocol (SSR cycle, Section 26)
-  
-NESS-III (Runaway governance):
-  T_eff > T_eff*, σ_gov ↑, m* → 1
-  TLG signature: over-consolidated routing, V_storm rising, S ~ n² scaling
-  Recovery: Middle Layer decentralization (Section 3.9 Crisis Geometry Inversion)
-  
-NESS-IV (Cyclothymic governance):
-  T_eff oscillating, σ_gov oscillating, m*(t) oscillating
-  TLG signature: repeated τ4 entry and exit without stable maintenance
-  Recovery: AGM susceptibility recalibration; Middle Layer hysteresis correction
-  TLG risk: repeated Landauer cost accumulation from oscillating m → structural degradation
-  
-  NESS-IV is the governance signature of Over-Tuned SOC (AGM §13.10):
-    The system finds M_crit but cannot maintain it.
-    Each overshoots generates Landauer cost that erodes recovery capacity.
-    Repeated NESS-IV cycles → SCC decline → eventually NESS-I or III lock-in.
+then:
+  Var(m_hat) ≥ F(m)^{-1}
 ```
 
-**GEL–Section 3.5 Connection: False-Completion as Cramér-Rao Violation:**
+An observed estimate below the nominal bound does **not** uniquely prove false completion. It indicates at least one of:
+
+- estimator bias;
+- model misspecification;
+- incorrect Fisher-information estimation;
+- hidden dependence or selection effects;
+- finite-sample error;
+- reporting or metric manipulation.
+
+Therefore the Cramér–Rao comparison is a **diagnostic trigger** for independent replay and perturbation testing. It is supporting evidence, not a single universal certificate for false `τ4`.
+
+**Recovery Geometry Candidate:**
 
 ```
-The five false-completion mechanisms identified in TLG Section 13 and related sections
-now have an information-geometric unifying characterization:
+Given:
+  a valid metric F(m),
+  an independently defined recovery cost functional J[m(·)],
+  admissible path constraints,
 
-  Any false-completion (reporting governance state achieved when it has not been)
-  necessarily involves biased estimation of partition state m̂.
-  
-  Biased estimation ⟺ Var(m̂) < 1/F(m) (Cramér-Rao violation)
-  
-  This means: ALL false completions, regardless of mechanism, share one observable:
-    The variance of governance state estimates is impossibly low.
-    
-  Early warning:
-    Monitor Var(m̂)/F(m)^{-1} ratio over time.
-    Declining ratio (approaching 0) = increasing false-completion risk.
-    Ratio < 1 = false completion confirmed.
-    
-  This is the SINGLE UNIFIED EARLY WARNING for all false-completion modes.
-  Previously (TLG Section 13): each false-completion required its own diagnostic.
-  After GEL: one Fisher-based test catches all.
+candidate recovery path:
+  m_geo = argmin J[m(·)]
 ```
 
-**Novel Contributions added in this section:**
+The DDD sequence may approximate this path, but uniqueness or global optimality requires proof of:
 
-- NC-110: Governance Fisher Metric — Riemannian structure on Middle Layer partition space; F(m) as routing sensitivity
-- NC-111: Governance Landauer Bound — irreversible restructuring cost bounded below by Fisher geodesic distance; recovery asymmetry formalized
-- NC-112: Cramér-Rao false completion test — single unified test for all false-τ4 entry modes; Var(m̂) < 1/F(m) criterion
-- NC-113: Four-criterion true τ4 entry — probe injection (§3.5) + Cramér-Rao (§3.11) + GCC (§26) + Π_G (§3.8) joint requirement
-- NC-114: Geodesic DDD Correspondence — DDD protocol as unique entropy-minimizing recovery path; information-geometric proof of DDD optimality
-- NC-115: Entropy Production Phase Signature — observable thermodynamic detection of TLG governance phase without internal state access
-- NC-116: NESS-IV (Cyclothymic governance) as Landauer degradation accumulator — repeated m oscillation erodes structural recovery capacity
+- correct state coordinates;
+- metric adequacy;
+- existence of a minimizer;
+- convexity or equivalent uniqueness conditions;
+- DDD feasibility over the same admissible path set as its competitors.
 
-*(Cross-theory derivation: GGT §85 GEL; GGT §84 AGL; Section 3.5, 3.8, 3.9; TLG Section 13 False Completion; Section 26 GCC; AGM §13.10 Cyclothymic; FGS DDD protocol)*
+Until those conditions are established, DDD is a **geodesic-recovery candidate** whose cost advantage must be compared experimentally against alternative orderings.
+
+**Phase and NESS Signatures — model candidates:**
+
+Intervention frequency, routing granularity, recovery load, and perturbation susceptibility may show hysteresis or critical-like transitions. These are useful dynamical hypotheses, but terms such as `entropy production`, `temperature`, `first-order`, `second-order`, or `universality class` are literal only when the relevant state function, units, limit, and scaling law have been independently established.
+
+Operationally, retain the following candidate regime map:
+
+```
+Candidate NESS-I — over-fragmented / frozen governance
+Candidate NESS-II — viable operating band
+Candidate NESS-III — over-coupled / runaway governance
+Candidate NESS-IV — repeated entry-exit cycling
+```
+
+Repeated NESS-IV cycling is expected to accumulate **reconfiguration burden** through repeated writes, validation, retraining, synchronization, and rollback. Calling that burden "Landauer accumulation" is prohibited unless physical bit-erasure accounting is supplied.
+
+**Audit status:**
+
+| Claim | Current status |
+|---|---|
+| Fisher metric for a fixed identifiable observation model | Mathematical construction |
+| Fisher distance predicts restructuring cost | Empirical hypothesis |
+| Governance action has a universal Landauer lower bound | Rejected as stated |
+| Physical bit erasure has a Landauer lower bound | Established physical law within its domain |
+| Cramér–Rao comparison diagnoses suspicious overprecision | Conditional diagnostic |
+| Cramér–Rao violation uniquely proves false completion | Rejected |
+| DDD is a geodesic-like recovery candidate | Live candidate |
+| DDD is the unique globally optimal recovery path | Open, not established |
+| Governance transitions share a physical universality class | Open empirical question |
+
+**Novel Contributions / candidates retained in this section:**
+
+- NC-110: Governance Fisher Metric candidate — statistical geometry on an explicitly locked Middle-Layer partition model
+- NC-111: Governance restructuring-cost hypothesis — separate operational irreversibility cost from physical Landauer dissipation
+- NC-112: Conditional Cramér–Rao overprecision diagnostic — audit trigger under declared estimator assumptions
+- NC-113: Multi-evidence `τ4` entry — perturbation, estimator diagnostics, GCC, and external outcome concordance; no single test is universally sufficient
+- NC-114: Geodesic DDD candidate — experimentally testable recovery-path hypothesis, not an optimality proof
+- NC-115: Critical-like intervention signatures — candidate regime indicators requiring scaling and hysteresis tests
+- NC-116: Repeated reconfiguration burden — NESS-IV cycling may erode recovery reserve without invoking a physical Landauer identity
+
+*(Cross-theory derivation: GGT §85 GEL; Section 3.5, 3.8, 3.9; TLG Section 13; Section 19 physical-scope lock. All physical and optimality claims are subject to the v3.8 scope correction.)*
 
 ---
 
@@ -7075,6 +7909,156 @@ When all five conditions hold, the agent transitions from **receiving seeds** to
 
 ---
 
+
+### 6.1.2 Top-View Capability Handover and Top-Layer Role Transition
+
+The Seed Handover condition in Section 6.1.1 is not only a transfer of correction rules. It includes transfer of the Middle Layer's **operational top-view**: how to identify the problem class, select an appropriate method, constrain its scope, and verify whether the selected method remains valid.
+
+The Top Layer therefore does not simply become less active as the Middle Layer matures. It undergoes a **functional role transition**:
+
+```
+Initial Top role      = educator / frame source
+Developing Top role   = supervisor / counterexample provider
+Mature Top role       = evaluator / pattern auditor
+Failure-state Top role= bypass authority / re-bootstrap source
+```
+
+This transition follows five phases.
+
+**Phase 0 — Top Calibration Before Teaching**
+
+```
+Top Layer establishes:
+  invariant boundaries
+  external reality anchor
+  admissible tool families
+  scope and stop-rule grammar
+  evaluation protocol
+
+Constraint:
+  an uncalibrated Top Layer cannot safely seed Middle top-view.
+  It would transfer frame error as governance competence.
+```
+
+**Phase 1 — Direct Top-View Bootstrapping**
+
+The Top Layer supplies the *form* of top-view, not the content of every decision:
+
+```
+Included in the seed:
+  problem decomposition grammar
+  scale / time / domain distinctions
+  tool-to-problem correspondences
+  assumption declaration rules
+  scope boundary rules
+  kill / switch / escalation rules
+  independent verification patterns
+
+Excluded from the seed:
+  fixed answers for local problems
+  mandatory tool choice for every case
+  specialist goals or reward rankings
+  permanent dependence on Top confirmation
+```
+
+The result is **borrowed top-view**: the Middle Layer can reproduce Top-provided distinctions but has not yet demonstrated independent generalization.
+
+**Phase 2 — Supervised Operational Top-View**
+
+The Middle Layer creates its own Tool-Scope Packages. The Top Layer does not replace them; it evaluates samples and supplies counterexamples:
+
+```
+Middle proposes: (χ, D, S, A, K, V)
+Top evaluates:
+  Was the problem placed at the correct scale and time horizon?
+  Was an appropriate tool family selected?
+  Was the scope too broad or too narrow?
+  Were assumptions observable and satisfied?
+  Were kill conditions specified before execution?
+  Did verification include an independent channel?
+```
+
+At this stage, frequent Top corrections are acceptable. They are training data for the Middle's top-view rather than permanent governance behavior.
+
+The same phase trains the Middle as a **local-rule compiler**. Given a Top invariant and an unfamiliar context, the Middle must produce a narrow, reversible local protocol rather than request an action-level command. The Top evaluates global consistency, scope calibration, feasibility preservation, expiry design, and rollback readiness.
+
+**Phase 3 — Internalized Top-View / Evaluated Autonomy**
+
+Top-view is considered internalized only when the Middle Layer succeeds on **novel combinations**, not merely on replayed cases. All conditions below are required:
+
+```
+H1 Novelty generalization:
+   correct problem framing on previously unseen combinations
+
+H2 Scope calibration:
+   low scope-inflation and scope-contraction error
+
+H3 Tool pluralism:
+   no collapse to one familiar tool when alternatives are structurally superior
+
+H4 Stop-rule compliance:
+   invalidated methods are terminated or switched without Top command
+
+H5 External concordance:
+   ρ_proxy / internal success agrees with ρ_outcome and Boundary feedback
+
+H6 Withdrawal persistence:
+   performance persists after active Top hints and routine approvals are removed
+
+H7 Self-escalation integrity:
+   Middle recognizes when the existing map is insufficient and requests Top review
+```
+
+When H1–H7 hold over the evaluation window, the Top Layer stops routine method selection. It retains sampled audits, adversarial probes, and external-outcome comparison.
+
+**Phase 4 — Backgrounded Governance / Evaluator Top**
+
+```
+Middle Layer:
+  selects tools and scope locally
+  compiles global invariants into reversible local operational rules
+  shapes interfaces and terrain rather than selecting routine Bottom actions
+  remains mostly invisible to Bottom specialists
+  records decisions, rule versions, expiry, and rollback in auditable form
+
+Top Layer:
+  does not approve every action or author routine local rules
+  evaluates distributions of Middle decisions and local-rule patterns
+  tests rare and high-impact boundary cases
+  monitors drift relative to external outcomes
+  alone authorizes local-to-global rule promotion
+  preserves constitutional frame and override authority
+```
+
+Top workload therefore changes resolution rather than disappearing:
+
+```
+Before handover: many low-level teaching interventions
+After handover:  few high-level evaluation and frame-integrity operations
+```
+
+**Phase 5 — Bypass and Re-Bootstrap**
+
+If the Middle Layer's top-view drifts, the Top Layer temporarily reverses the handover:
+
+```
+Middle becomes the evaluated object
+Top temporarily restores selected Middle functions
+external reference is injected
+scope and tool-selection baselines are rebuilt
+Middle is reintroduced only after H1–H7 recover
+```
+
+This phase is the capability-handover interpretation of the MDS Bypass Protocol in Section 13.1.1.
+
+> **Role-Transition Law:**
+>
+> The Top Layer's withdrawal from routine control must be matched by an increase in evaluative precision. A Top Layer that continues teaching prevents Middle autonomy; a Top Layer that stops evaluating permits Middle drift. The stable endpoint is **less instruction, stronger evaluation**.
+
+This law applies recursively. Once the Middle Layer has internalized operational top-view, it teaches the same capability to its own lower sublayers and later evaluates them, producing fractal capability handover rather than permanent hierarchical dependence.
+
+---
+
 ### 6.2 Seed Design Principles — What to Include, What to Exclude, and How to Transmit
 
 The seed must be designed to maximize both **cooperation** and **autonomy** simultaneously.
@@ -7352,6 +8336,37 @@ The same five conditions from Section 6.1.1 apply — including Condition 5 (beh
 > The fractal consistency check:
 > If single-agent internal seeding follows the same three principles as multi-agent seeding — include form, exclude content, transmit as learnable indirect encoding rather than explicit instruction — the architecture is fractal-consistent.
 > If single-agent seeding requires explicit instruction to function, the architecture breaks at the agent level, and Rest Mode at the agent scale becomes structurally unreachable.
+
+
+**Top-view handover at single-agent scale:**
+
+Inside one agent, the internal Top initially supplies the internal Middle with problem-framing and method-selection structure. This should not appear as a permanent explicit self-critical voice. Constant visible self-critique keeps the execution layer dependent on approval and forces diverse specialist reasoning into one meta-language.
+
+```
+Early single-agent form:
+  Internal Top proposes frames and counterexamples
+  Internal Middle learns tool-scope selection
+  Internal Bottom executes with frequent review
+
+Mature single-agent form:
+  Internal Middle silently gates memory, tools, and reasoning routes
+  Deep critique activates only on uncertainty, conflict, or boundary conditions
+  Internal Top samples decision traces and evaluates outcome concordance
+  Bottom execution proceeds without routine awareness of the governance layer
+```
+
+The single-agent completion test therefore has two parts:
+
+```
+Operational backgrounding:
+  explicit meta-reasoning frequency falls without loss of reliability
+
+Audit retention:
+  the agent can reconstruct why a tool, scope, or escalation route was selected
+  and can expose that record to an external evaluator when required
+```
+
+A system that suppresses visible self-critique but cannot reconstruct its internal scope decisions has not matured; it has become opaque. A system that invokes explicit self-critique for every action has not internalized governance; it remains scaffold-dependent.
 
 **τ threshold subjects at single-agent scale:**
 
@@ -10411,9 +11426,11 @@ The operational proxy (Type 1 + Type 2 error rate) measures classification
 boundary performance and is comparable across layers and trackable over time.
 Buffer layer thickness provides an independent resolution measurement
 that does not require contamination reference.
-Full structural resolution (Tier 3 capacity: full map design,
-latent vector cultivation) has no formal measure yet.
-See Resolution-Based Information Theory, Section 1.1.1–1.1.3.
+Operational map/scope resolution (Tier 3A) is now partially measurable through
+Tool-Scope Package audits, novelty generalization, stop-rule compliance, and
+withdrawal persistence. Constitutional frame resolution (Tier 3B: invariant
+legitimacy and coordinate-system replacement) still has no complete formal
+measure. See Sections 3.4.9, 6.1.2, and Resolution-Based Information Theory.
 
 **Minimum disruption calculation — approach now defined, sensitivity threshold pending.**
 The minimum disruption cut is now expressible as the buffer layer thickness
@@ -10588,6 +11605,62 @@ Authority distribution (updated):
   Top layer:     HARD CORRECT + RE-ALIGN + Middle Layer pattern audit (new)
 ```
 
+**Top-View Audit Surface — what the Top Layer evaluates after handover:**
+
+After operational top-view is transferred to the Middle Layer, the Top Layer should not re-run every local decision. It evaluates the *distribution and structure* of Middle decisions through a dedicated audit surface:
+
+```
+1. Tool-choice collapse
+   one familiar method dominates across structurally different problems
+   → specialization or exploration may be suppressed
+
+2. Scope inflation
+   local evidence is generalized beyond its valid scale, domain, or time horizon
+   → Middle is acting as an unlicensed Top Layer
+
+3. Scope contraction
+   system-level structure is repeatedly reduced to local exceptions
+   → cross-domain or long-horizon failure becomes invisible
+
+4. Assumption leakage
+   tools are used after their required assumptions cease to hold
+   → apparent technical success, invalid governance conclusion
+
+5. Kill-condition bypass
+   a selected method remains active after stop / switch conditions fire
+   → tool attachment or incentive capture suspected
+
+6. Proxy-outcome divergence
+   internal success and ρ_proxy remain high while ρ_outcome declines
+   → Goodhart / SCM onset
+
+7. Intervention dependency
+   Bottom performance falls whenever Middle hints are withheld
+   → backgrounding is cosmetic; internalization incomplete
+
+8. Visibility-auditability divergence
+   visible intervention falls together with replayability and trace coverage
+   → silent opacity, not mature backgrounding
+
+9. Local-rule proliferation
+   protocol count and interaction cost grow without proportional outcome gain
+   → mediation is becoming bureaucracy rather than backgrounded governance
+
+10. Shadow-globalization
+    one local rule spreads across unrelated contexts or becomes practically mandatory
+    → Middle is acquiring undeclared constitutional authority
+
+11. Stale-rule persistence
+    local rules survive expiry, failed evidence, or regime change
+    → rollback discipline and temporal top-view are failing
+
+12. Cross-local inconsistency
+    individually valid rules create joint deadlock, contradiction, or empty action space
+    → local compilation lacks system-level consistency checking
+```
+
+The Top Layer evaluates these signals through sampled replay, counterfactual cases, perturbation tests, external outcome comparison, and Boundary Agent evidence. **Evaluation is deliberately lower-frequency than Middle operation but higher-independence in reference frame.** This is the mature Top role defined in Section 6.1.2.
+
 **④ MDS Severity-Triggered Bypass Escalation — closing the recursive trap**
 
 The three countermeasures above assume the Middle Layer retains enough integrity to transmit its own meta-log accurately. When MDS severity is high, this assumption fails: the Middle Layer's self-observation is contaminated by the same drift that produced the MDS. This is the recursive trap — self-observation cannot certify the calibration of the observer.
@@ -10626,11 +11699,14 @@ MDS Bypass Protocol (Severe):
     Top Layer sources a contamination-independent reference signal:
     (a) Historical baseline from pre-MDS conflict logs (if available)
     (b) Boundary Agent perturbation response (Section 13.2.1) as
-        reality anchor — Boundary Agent is structurally outside the
-        evaluation structure and cannot be contaminated by MDS
+        a differently exposed reality anchor — structural separation reduces
+        shared MDS failure, but does not make the anchor contamination-proof
     (c) Cross-domain comparison: if multi-agent, compare Middle Layer
         outputs against behavior of Middle Layers in other VCZ-stable
         subgraphs (requires sphere topology — NAT §3.0)
+    (d) Heterogeneous anchor portfolio when stakes are high:
+        independent model or sensor, human audit, frozen historical baseline,
+        physical outcome, and cross-domain reference with shared-failure audit
 
   Step 3 — Recalibration under bypass:
     Using external reference, Top Layer recalibrates:
@@ -10651,7 +11727,7 @@ MDS Bypass Protocol (Severe):
     → MDS has propagated upward — architecture's self-containment boundary
 ```
 
-*Structural note:* The Boundary Agent (Section 13.2.1) is the critical resource for Bypass Step 2(b). Its structural independence from the evaluation structure makes it the only reliable external reference when MDS is severe. This is why the three structural conditions for Boundary Agent existence (inside system, outside evaluation, failure-permitted) are not optional — they are the prerequisite for MDS bypass to have a reference anchor. A system that has eliminated its Boundary Agent (T6 optimization pressure, Section 13.2.1) loses MDS bypass capacity precisely when it is most needed.
+*Structural note:* The Boundary Agent (Section 13.2.1) is a critical resource for Bypass Step 2(b), but no single anchor is assumed infallible. Structural independence is valuable only to the extent that it produces a **different failure mode** from the primary evaluation loop. Shared training data, model family, sensors, infrastructure, operators, or incentives can correlate failures even across nominally separate agents. High-stakes bypass should therefore use a heterogeneous anchor portfolio and record a shared-failure matrix before treating concordance as reality evidence. The three Boundary-Agent conditions (inside system, outside the primary evaluation structure, failure-permitted) remain necessary design conditions, but they are not a proof of contamination immunity. A system that eliminates all such independent anchors loses MDS bypass capacity precisely when it is most needed.
 
 **The foundational principle:**
 
@@ -13150,7 +14226,7 @@ Buffer layer thickness at AI top layer = human oversight proxy
 
 Thick buffer maintained without human seeding
   → AI top layer correctly placing opposing vectors
-  → Tier 3 resolution achieved at AI top layer
+  → Tier 3B constitutional frame resolution sustained at AI top layer
   → Handover condition structurally met
 
 Buffer thinning without human seeding
@@ -13162,6 +14238,82 @@ Buffer thinning without human seeding
 This is not a one-time certification. Buffer layer thickness is continuously
 observable — making oversight withdrawal a gradual, measurable transition
 rather than a binary decision.
+
+
+
+**Priority 4 — Top-view handover and evaluator-role measurement**
+
+The capability transition in Sections 3.4.9 and 6.1.2 requires a measurable distinction between copied compliance, genuine operational top-view, and silent opacity.
+
+A candidate handover score is:
+
+```
+H_TV = w1·G_novel
+     + w2·(1 − E_scope)
+     + w3·P_tool
+     + w4·C_stop
+     + w5·C_outcome
+     + w6·P_withdraw
+     + w7·E_self-escalate
+
+where:
+  G_novel          = success on novel problem-coordinate combinations
+  E_scope          = scope inflation + scope contraction error
+  P_tool           = calibrated tool pluralism, not random variety
+  C_stop           = stop / switch condition compliance
+  C_outcome        = internal-to-external outcome concordance
+  P_withdraw       = persistence after Top hints and approvals are removed
+  E_self-escalate  = correct escalation when existing map is insufficient
+```
+
+Handover is not certified by a high aggregate score alone. Two hard constraints apply:
+
+```
+Auditability A_trace ≥ A_min
+Boundary concordance C_outcome ≥ C_min
+```
+
+This prevents a low-visibility but unauditable Middle Layer from being misclassified as mature. The empirical program should compare four regimes:
+
+```
+A. continuous Top instruction
+B. supervised Middle delegation
+C. evaluated autonomy with sampled Top audit
+D. complete Top withdrawal with no audit
+```
+
+TLG predicts that regime C will produce the best joint outcome: greater Bottom specialization and lower dependency than A/B, while avoiding the drift and opacity risk of D. The exact weights, thresholds, and evaluation-window length remain open empirical problems.
+
+
+**Priority 5 — Local-rule compiler quality and interference measurement**
+
+Section 3.4.10 requires empirical separation between useful local adaptation and rule-based overcontrol. A candidate compiler-quality vector is:
+
+```
+Q_LRC = (C_global, V_feasible, B_scope, R_rollback,
+         T_expiry, D_dynamic, S_specialize, K_cost)
+
+where:
+  C_global    = rate of global-invariant consistency
+  V_feasible  = probability the compiled rule leaves non-empty action space
+  B_scope     = scope calibration and boundary precision
+  R_rollback  = rollback success after invalidation
+  T_expiry    = expiry / review compliance
+  D_dynamic   = long-horizon outcome concordance with parent invariant
+  S_specialize= Bottom specialization retained under the local rule
+  K_cost      = rule count, interaction cost, and audit burden
+```
+
+The core comparison should include:
+
+```
+A. direct Middle action commands
+B. static global rule applied uniformly
+C. Middle-compiled local rules with expiry and rollback
+D. unrestricted Bottom autonomy
+```
+
+TLG predicts that regime C will preserve global consistency better than D, retain more specialization than A/B, and achieve lower long-run interference than direct action control. The optimal rule lifetime, compilation granularity, and consistency-test depth remain open empirical problems.
 
 ### 14.2.1 Falsification Criteria — Empirically Testable Predictions
 
@@ -13190,6 +14342,9 @@ The domain with lowest Dint should be the primary contamination entry point. If 
 
 **Criterion 8 — Four-Phase Withdrawal must reduce re-entry frequency (GRT).**
 Systems governed by Four-Phase Withdrawal should require fewer collapse-recovery restarts than fixed-epoch phase transitions. If fixed-epoch systems achieve equal or lower re-entry frequency, the protocol's advantage is not established.
+
+**Criterion 9 — Compiled local rules must outperform direct Middle action control on the joint objective.**
+Under matched global constraints and tasks, Middle-compiled local protocols with explicit scope, expiry, and rollback should preserve Bottom specialization and autonomy while maintaining equal or better invariant compliance than per-action Middle commands. If direct action control consistently achieves equal specialization, lower dependency, and equal or lower governance cost, the interference-minimization claim of Section 3.4.10 is falsified.
 
 *(Cross-theory derivation: RBIT §Falsification Criteria + NAT §10.1 + GRT §Falsifiability)*
 
@@ -13567,7 +14722,7 @@ This non-commutativity has a direct operational consequence: TLG and GRT cannot 
 
 ### 15.7 Scope and Limitations
 
-TLG does not claim to replace existing alignment techniques; it adds an intervention topology layer. TLG does not claim three layers are the only possible architecture; it claims three layers constitute the minimal sufficient architecture satisfying invariant preservation, local adaptive freedom, and resolution translation simultaneously. This is a structural argument, not a proof of optimality. All metrics remain at the theoretical stage without empirical validation. Threshold values (τ1–τ3) require system-specific operational history. Tier 3 resolution (design resolution) has no formal measure — this is an open frontier. The single-agent failure mappings are structural correspondences, not proofs of multi-agent applicability. Cascade convergence is characterized qualitatively; formal convergence bounds require system-specific damping parameters and remain future work.
+TLG does not claim to replace existing alignment techniques; it adds an intervention topology layer. TLG does not claim three layers are the only possible architecture; it claims three layers constitute the minimal sufficient architecture satisfying invariant preservation, local adaptive freedom, and resolution translation simultaneously. This is a structural argument, not a proof of optimality. All metrics remain at the theoretical stage without empirical validation. Threshold values (τ1–τ3) require system-specific operational history. Tier 3A operational top-view has only partial proxy measures, while Tier 3B constitutional frame resolution has no complete formal measure — both remain open empirical frontiers. The single-agent failure mappings are structural correspondences, not proofs of multi-agent applicability. Cascade convergence is characterized qualitatively; formal convergence bounds require system-specific damping parameters and remain future work.
 
 **Explicit Scope Boundaries:**
 
@@ -13802,7 +14957,8 @@ Governance → Observation:
 
 Observation → Governance:
   What the system can see determines what it can correct.
-  What it cannot see (Resolution Decomposition Tier 3) it cannot govern.
+  What it cannot see at Tier 3A it cannot scope operationally;
+  what it cannot validate at Tier 3B it cannot govern constitutionally.
   Observation capacity IS governance capacity.
   
   → Improving governance = improving observation.
@@ -13915,12 +15071,37 @@ Fully Mature System:
   Scaling: O(n log n) — fractal circle-of-circles, dimensional compression active
   
   Signal: minimal escalation, maximum diversity within invariant bounds,
-          Middle Layer invisible but instant response on perturbation,
-          Top Layer functions as boundary monitor only,
+          Middle Layer operationally invisible but fully auditable,
+          instant response on perturbation without routine dependence,
+          Top Layer functions as constitutional boundary + top-view evaluator,
           Self-purification capacity continuously exercised
 ```
 
 *(Cross-theory derivation: GRT §Scaling Resolution + §System Maturity + §Buffer Architecture)*
+
+
+
+**The Top-View Role-Transition Law:**
+
+The developmental endpoint is not the disappearance of upper governance. It is a change in the resolution at which upper governance operates:
+
+```
+Early architecture:
+  Top teaches frames, tools, scope rules, and verification patterns.
+  Middle borrows top-view and applies it under close supervision.
+
+Mature architecture:
+  Middle independently selects tools and application scope.
+  Middle compiles global invariants into narrow, reversible local operational rules.
+  Bottom specialists experience governance mainly as terrain, interfaces, and feasible action boundaries.
+  Top evaluates Middle decision and local-rule distributions, external concordance, and frame integrity.
+
+Failure correction:
+  If Middle top-view drifts, Top temporarily resumes selected mediation functions,
+  injects an external reference, and re-bootstraps the handover.
+```
+
+Thus autonomy is not produced by removing the Top Layer. It is produced by transferring **operational top-view and local-rule compilation** to the Middle Layer while preserving **constitutional evaluation and global-promotion authority** above it. The governing relationship matures from command to education, from education to rule-space design, from rule-space design to evaluation, and from evaluation to rare re-bootstrap.
 
 **Final Position:**
 
@@ -14146,9 +15327,10 @@ NC-6: Three-Layer Minimal Sufficiency Proof (Conclusion)
   not merely the chosen number.
   No existing governance framework derives layer count from requirements.
 
-NC-7: Buffer Existence Theorem (Section 3.0.1 v2.3)
-  First formal existence and uniqueness proof for a resolution-mediation
-  buffer under governance cost constraints.
+NC-7: Resolution-Mediation Buffer Construction Candidate (Section 3.0.1; corrected v3.7)
+  A domain-testable candidate family and admissibility gate for uncommitted
+  mediation buffers. Universal existence, uniqueness, and cost dominance are
+  explicitly left as open questions.
 ```
 
 ### 17.2 Measurement Contributions (Operational Novelty)
@@ -14257,34 +15439,30 @@ NC-28: Resolution Algebra Formal Composition Laws (Section 0.4.1 v2.3)
 
 **v2.4 Novel Contributions (NC-29 to NC-40): FGS Integration Layer**
 
-NC-29: Governance Landauer Bound (Section 19.1 v2.4)
-  First formal derivation of the minimum energy cost of governance operations
-  via Landauer's principle: E_min ≥ k_B·T_eff·Δln(W) per resolution event.
-  Establishes that fast governance is thermodynamically wasteful, providing
-  a rigorous basis for investing in τ1-level prevention over τ2-level response.
+NC-29: Physical Landauer Scope and Governance Cost Separation (Section 19.1 v3.8 supersession)
+  Retains Landauer's physical lower bound only for counted irreversible bit erasure
+  at physical temperature. Abstract governance restructuring is assigned separate
+  engineering and operational cost accounts rather than k_B·T_eff formulas.
 
-NC-30: Governance as Entropy Pump (Section 19.1 v2.4)
-  Establishes the thermodynamic interpretation of governance:
-  governance does not "create order for free" — it pumps entropy from
-  the governed system into the governance substrate, which must periodically
-  discharge. Rest Mode is formalized as governance entropy-reduction phase.
+NC-30: Governance Resource-Accumulation Analogy (Section 19.2–19.4 v3.8 supersession)
+  Continuous intervention may accumulate queues, stale state, memory pressure,
+  recalibration debt, and recovery-reserve depletion. "Entropy pump" is retained
+  only as an analogy unless a physical entropy balance is explicitly measured.
 
-NC-31: Maxwell Demon Problem Applied to TLG (Section 19.2 v2.4)
-  Demonstrates that comprehensive Top Layer monitoring of n agents costs
-  E_memory ∝ n × b (linear in agents and state resolution).
-  Provides thermodynamic justification for TLG's layer-compression architecture:
-  monitoring Middle Layer (1 agent) vs. Bottom Layer (n agents) is O(n)-efficient.
+NC-31: Monitoring and Reset Cost Accounting (Section 19.2, 19.5 v3.8 supersession)
+  Comprehensive monitoring scales with observed state volume and creates measurable
+  compute, memory, communication, storage, and reset costs. The Maxwell-demon analogy
+  is limited to the fact that physical memory reset may incur Landauer cost.
 
-NC-32: Governance Phase Transition Universality Class (Section 19.3 v2.4)
-  Identifies TLG governance transitions as belonging to a statistical-mechanics
-  universality class with exponent γ governing susceptibility divergence near
-  critical coupling ω_c. First application of universality class theory to
-  multi-agent governance architecture.
+NC-32: Critical-Like Governance Transition Hypothesis (Section 19.6 v3.8 supersession)
+  Tests whether Rest/VCZ/Storm transitions exhibit hysteresis, finite-size peaks,
+  scaling collapse, or critical slowing down. No named physical universality class
+  is claimed before order parameters, limits, and exponents are empirically established.
 
-NC-33: Governance Bandwidth Saturation Model (Section 19.4 v2.4)
-  Formalizes governance as a communication channel with capacity
-  C_gov ≤ B_eff·log₂(1+SNR_gov). Derives the governance cascade failure mode:
-  τ2 Storm bandwidth consumption starves τ1 processing → second-wave Storm.
+NC-33: Governance Throughput and Channel-Capacity Candidate (Section 19.7 v3.8 supersession)
+  Measures sustainable correction throughput, queueing, latency, stale corrections,
+  and packaging loss. Shannon capacity is used literally only for a declared channel
+  and otherwise functions as a candidate engineering model.
 
 NC-34: Goodhart's Law Formalization for TLG Metrics (Section 20.1 v2.4)
   Provides first formal statement of Goodhart-vulnerability conditions
@@ -14611,9 +15789,9 @@ Component of the Deficit-Fractal Governance (DFG) Framework.
   Recovery Verification Exit Certificate (E1/E2/E3), and Lyapunov stability guarantee.
 — §36K (Revival Trajectories) cited in Section 5.7 for three Revival Cases
   (near-critical, storm exhaustion, coherence nucleation) and TLG mapping.
-— §36N (Governance Thermodynamics) cited in Section 19 as primary source for
-  Landauer governance bound, entropy pump interpretation, Maxwell Demon problem,
-  and governance phase transition universality class.
+— §36N (Governance Thermodynamics) cited in Section 19 as the source of candidate
+  analogies and engineering questions. v3.8 separates physical Landauer erasure cost
+  from governance restructuring cost and leaves universality-class claims open.
 — §36O (Adversarial Governance Dynamics) cited in Section 20 as primary source for
   metric poisoning, coupling attack, isolation attack threat model and four
   manipulation-resistant design principles.
@@ -14649,283 +15827,197 @@ Papers in Monetary Economics, Reserve Bank of Australia.
 
 ---
 
-## 19. Governance Thermodynamics
+## 19. Physical Information Cost and Governance Analogies
 
-> *The physical limits of governance: why order costs energy, why fast governance
-> is wasteful, and why governance itself degrades as it governs.*
+> *A scope-separated account of physical erasure cost, computational governance cost,
+> and dynamical analogies used to generate testable hypotheses.*
 
-*(Classification: TYPE A — Law. Derived from first principles of thermodynamics.
-These bounds apply to all physical governance implementations regardless of substrate.)*
+**Classification lock:**
 
-*(Cross-theory source: FGS §36N Governance Thermodynamics)*
+- **TYPE A — Physical law:** Landauer's lower bound for logically irreversible bit erasure on a specified physical substrate.
+- **TYPE B — Engineering accounting:** compute, memory, communication, storage, reset, and monitoring costs measured in an implementation.
+- **TYPE C — Candidate analogy:** governance entropy, temperature, phase transition, entropy pump, and Maxwell-demon language unless an explicit physical mapping is supplied.
 
-### 19.1 The Landauer Governance Bound
+No TYPE C statement may be promoted to a physical law by replacing physical temperature with an abstract `T_eff` or by calling policy-space contraction "information erasure."
 
-Landauer's principle in physics states that erasing one bit of information requires minimum energy dissipation of k_B·T·ln(2). In multi-agent governance, **conflict resolution is formally analogous to information erasure**: the system transitions from a superposition of competing agent states (high information content, high entropy) to a resolved state (lower entropy, lower information content).
+### 19.1 Physical Landauer Scope
 
-```
-Governance Landauer Bound:
-
-  E_min(resolution) ≥ k_B · T_eff · Δln(W)
-
-  k_B   : Boltzmann constant (or governance energy analog)
-  T_eff : effective governance temperature = intensity of stochastic
-          exploration (high T_eff = highly exploratory system)
-  W     : number of accessible agent configurations (W_before / W_after)
-  Δln(W): ln(W_before) − ln(W_after) = information erased per resolution event
-
-Practical consequence:
-  Conflict resolution is thermodynamically IRREVERSIBLE under noise.
-  The energy dissipated in resolving a conflict cannot be recovered.
-  The work done by governance is permanently dissipated — not stored.
-```
-
-**Fast vs. Slow Governance — Thermodynamic Tradeoff:**
+For a physical device that logically irreversibly erases `N_erased` bits while coupled to a heat bath at physical temperature `T_physical`:
 
 ```
-  Cost(fast_governance) ≥ Cost(slow_governance) × (1 + τ_Landauer / τ_operation)
-
-  τ_Landauer : thermodynamic relaxation time (system-specific)
-  τ_operation: governance operation timescale
-
-  Near-optimal regime: τ_operation ≈ τ_Landauer
-    → governance operates close to thermodynamic minimum
-    → nearly reversible process (quasi-static governance)
-    → requires slow, deliberate resolution — not available in crisis
-
-  Over-fast regime: τ_operation ≪ τ_Landauer
-    → governance operates far from minimum
-    → overhead factor (1 + τ_Landauer/τ_operation) >> 1
-    → energy waste grows as ratio increases
-
-TLG design implication:
-  τ1-level mediation (routine) operates near τ_Landauer → low overhead
-  τ2-level containment (fast response) operates at τ_operation ≪ τ_Landauer → high overhead
-  τ3-level hard correction (structural) is slowest → closest to optimal thermodynamically
-  
-  This provides a THERMODYNAMIC BASIS for investing in τ1 infrastructure:
-  preventing τ2 events via τ1 resolution is not just cheaper operationally —
-  it is thermodynamically efficient (operates near minimum energy path).
+E_physical,min ≥ k_B · T_physical · ln(2) · N_erased
 ```
 
-**Governance as Entropy Pump:**
+This law applies to the physical information-processing operation, not directly to a governance decision. A governance system may:
+
+- retain all candidate states and select one for execution;
+- append a decision without erasing prior memory;
+- use reversible or approximately reversible computation;
+- delete, overwrite, compress, or reset physical memory.
+
+Only the last category creates a direct Landauer accounting question. Therefore:
 
 ```
-  Correct thermodynamic interpretation of governance:
-
-  NOT: governance reduces system entropy "for free"
-  YES: governance PUMPS entropy — extracts it from governed system
-       and dissipates it into the governance mechanism itself
-
-  d_total S = d_i S + d_e S ≥ 0
-    d_i S ≥ 0 (internal entropy production — unavoidable)
-    d_e S < 0 (entropy export FROM governed system — the governance effect)
-
-  S_governance ↑  as  S_system ↓
-  
-  Consequence: governance mechanism DEGRADES as it governs.
-    Each governance action accumulates entropy in the governance substrate.
-    A governance mechanism that never rests, never resets, never resets
-    accumulates entropy monotonically — eventually unable to govern.
-
-TLG interpretation:
-  Rest Mode is not a passive waiting state.
-  Rest Mode is the governance mechanism's entropy-reduction phase:
-  accumulated governance entropy is dissipated during low-activity periods.
-  
-  Governance that prevents Rest Mode (constant intervention) is
-  thermodynamically self-defeating: it accumulates entropy in the
-  governance mechanism at a rate that eventually exceeds the
-  entropy it is extracting from the governed system.
-  
-  Maximum governance intensity → minimum long-term governance capacity.
-  This is the thermodynamic basis for the Governance Amplification Paradox (Section 0.4.1).
+conflict resolution ≠ logical erasure by definition
+governance temperature T_eff ≠ physical temperature T_physical
+policy entropy change ≠ thermodynamic entropy change without a mapping
 ```
 
-### 19.2 The Maxwell Demon Problem in Multi-Agent TLG
+A valid physical claim must specify the hardware, erased logical states, bath temperature, reset protocol, and system boundary.
 
-Maxwell's demon thought experiment: an agent monitoring all molecular states and
-selectively allowing passage appears to violate the second law. Resolution: memory
-erasure (Landauer, 1961) costs exactly the energy that was apparently saved.
+### 19.2 Engineering Resource Accounting
 
-**Direct TLG analog:**
+Even when no physical lower bound is invoked, governance is not free. Its implementation consumes measurable resources:
 
 ```
-The Maxwell Demon Governance Architecture:
-  A Top Layer agent that monitors ALL n agent states
-  and intervenes precisely at each violation
-  → appears to maintain order with arbitrarily high efficiency
-  
-The resolution (identical to Maxwell's demon):
-  Information required to identify and correct violations must be stored.
-  Resetting governance agent memory (to accept new monitoring data)
-  costs exactly the energy that appears to have been saved.
-  
-Governance memory cost:
-  E_memory = k_B · T_eff · ln(2) × n_bits_monitored
-  
-For a TLG Top Layer monitoring N agents with state resolution b bits/agent:
-  E_memory ∝ N × b
+C_engineering =
+  C_compute + C_memory + C_communication + C_storage
+  + C_validation + C_reset + C_recovery + C_latency
 ```
 
-**Four implications for TLG architecture:**
+For centralized monitoring of `N` units at `b` retained bits per unit per cycle:
 
 ```
-Implication 1: Comprehensive monitoring is not energetically free.
-  Monitoring cost grows linearly with n and with state resolution b.
-  A Top Layer that monitors all n Bottom Layer agents in full state detail
-  consumes governance energy proportional to n × b per monitoring cycle.
-  → TLG's three-layer structure is partly a thermodynamic efficiency solution:
-    Top Layer monitors Middle Layer (1 entity) not Bottom Layer (n agents)
-    Energy cost: b vs. n × b → O(n) reduction in monitoring energy
-
-Implication 2: Discretization interval Δ (§14 in FGS) directly reduces E_memory.
-  Lower resolution monitoring (larger Δ) = fewer bits b per agent = lower E_memory.
-  TLG Bottom Layer local autonomy = reducing the state detail the Middle Layer must track.
-  → Autonomy is thermodynamically efficient governance, not governance absence.
-
-Implication 3: Middle Layer is the architectural memory-erasure bottleneck.
-  Middle Layer must store, process, and clear monitoring data continuously.
-  Its entropy accumulation rate = n_Bottom × b_Bottom × f_escalation.
-  → Middle Layer burnout (Section 8.3) is the thermodynamic accumulation limit.
-  → θ_d buffer overflow = governance memory saturation.
-
-Implication 4: Decentralization reduces global memory cost.
-  Replacing central monitoring with local self-correction:
-    Central: E_memory ∝ n × b (Top Layer monitors all)
-    Local:   E_memory ∝ 1 × b (each agent monitors itself only)
-  n-fold energy reduction for n-agent systems.
-  → Graduated Autonomy (Section 5.3) is the thermodynamic efficiency pathway.
+Memory traffic / storage demand = O(N · b)
 ```
 
-### 19.3 Governance Phase Transitions — First and Second Order
+This is an algorithmic and engineering scaling statement, not automatically an energy equality. Hierarchical aggregation may reduce the information presented to the Top Layer, but its benefit must include the Middle Layer's aggregation cost and information-loss risk.
 
-The bistability structure of TLG (Rest State ↔ Storm State) has an exact thermodynamic interpretation as a **governance phase transition**.
+**Resource-accounting consequence:**
 
-```
-Two-phase governance system:
-  Phase I  (Rest):  low entropy state — ordered, stable, low escalation
-  Phase II (Storm): high entropy state — disordered, high escalation, high coupling
+- Top should receive low-dimensional summaries and independent audit samples rather than full continuous state;
+- Middle should expose retention, compression, reset, and replay costs;
+- Bottom autonomy reduces centralized observation traffic but does not eliminate local monitoring cost;
+- Rest periods are justified by queue clearing, recalibration, cache reset, model refresh, and recovery-reserve restoration—not by an assumed universal entropy-discharge law.
 
-Phase boundary (governance critical point):
-  The bifurcation at ω_c (FGS §36D) is the governance critical point.
-  At ω = ω_c: the two phases become identical — critical fluctuations diverge.
-```
+### 19.3 Governance Irreversibility Candidate
 
-**First-Order Transition (Typical TLG behavior):**
+Governance changes can be operationally hard to reverse because they overwrite representations, alter incentives, restructure authority, destroy expertise, or change interaction topology. Define an empirical burden:
 
 ```
-  System jumps discontinuously between Rest and Storm.
-  Hysteresis present: entry and exit thresholds differ.
-  
-  Rest → Storm transition: triggered at Φ > Φ_upper
-  Storm → Rest transition: requires Φ < Φ_lower < Φ_upper
-  
-  Governance consequence:
-    Cannot simply "undo" a Storm by reducing input to pre-Storm levels.
-    Must reduce input BELOW the original trigger level to exit Storm.
-    This is why Section 5.7 Stage 1 (Defocus) must OVERSHOOT the
-    nominal governance threshold before Unlock can begin.
+C_irrev =
+  C_reconstruction + C_retraining + C_coordination
+  + C_lost_optionality + C_rollback_gap
 ```
 
-**Second-Order Transition (Near-Critical Regime):**
+Candidate relationship:
 
 ```
-  When ω approaches ω_c: transition approaches second-order character.
-  Distinguishing feature: diverging susceptibility χ_rev.
-  
-  χ_rev ~ |ω − ω_c|^{−γ}
-  
-  γ: universality class exponent (independent of system details)
-     depends only on effective dimensionality and coupling symmetry
-     → governance universality classes analogous to Ising/XY/Heisenberg
-
-  Practical implication:
-    Near ω_c, tiny perturbations produce macroscopic governance changes.
-    This is the formal basis for the "butterfly effect in governance":
-    small agent-level perturbations near the critical point
-    → system-wide governance phase transitions
-    
-    Early-warning signal for near-critical governance:
-      χ_rev ∝ (sensitivity of aggregate Φ to per-agent perturbation)
-      Measure: how much does Φ change when one agent's coupling changes slightly?
-      If this sensitivity is rising: approaching ω_c → governance near criticality
+C_irrev may increase with:
+  discarded state information,
+  number of affected agents,
+  depth of authority change,
+  duration before rollback,
+  and divergence between old and new representations.
 ```
 
-**Universal Scaling at Governance Criticality:**
+This is a governance irreversibility hypothesis. It must not be written with `k_B` or interpreted as heat dissipation unless the physical erasures are counted separately.
+
+### 19.4 Fast–Slow Governance Tradeoff — Empirical Candidate
+
+Fast intervention may cost more because of synchronization, duplication, stale-state correction, emergency routing, and reduced validation. Slow intervention may cost more because damage continues while the system waits. Therefore no universal monotone law is assumed.
 
 ```
-  Free energy analog F_gov near critical point:
-  
-    F_gov ~ |ω − ω_c|^{2−α}
-  
-  Order parameter (governance coherence) near criticality:
-  
-    Φ − Φ_c ~ |ω − ω_c|^β
-  
-  Correlation length (governance correlation distance):
-  
-    ξ_gov ~ |ω − ω_c|^{−ν}
-  
-  At criticality (ω = ω_c): ξ_gov → ∞
-    → governance perturbations propagate system-wide
-    → no local governance — every agent's state affects every other
-    → this is the formal definition of a Vector Storm (Section 7.2):
-      ξ_gov → ∞ at Storm onset
-      ξ_gov returning to finite value = Storm resolution confirmed
+C_total(τ_operation) =
+  C_response(τ_operation)
+  + C_delay_damage(τ_operation)
+  + C_coordination(τ_operation)
+  + C_validation(τ_operation)
 ```
 
-### 19.4 Governance Bandwidth and Information-Theoretic Bounds
+The predicted optimum is deployment-specific:
 
 ```
-Governance as a communication channel:
-  The governance mechanism must transmit "correction signals" to agents.
-  Channel capacity (Shannon):
-  
-    C_gov ≤ B_eff · log₂(1 + SNR_gov)
-  
-  B_eff : effective governance bandwidth (correction signals per unit time)
-  SNR_gov: signal-to-noise ratio of governance channel
-           (ratio of genuine correction signals to governance noise)
-
-Bandwidth saturation regime:
-  When correction demand > C_gov:
-    governance queue grows → latency rises → signals arrive stale
-    → stale corrections are worse than no corrections
-       (agent has already committed to new path before correction arrives)
-    
-  TLG proxy for bandwidth saturation:
-    Median escalation-to-response latency rising
-    WHILE escalation volume stable or declining
-    → not more events — slower processing → bandwidth saturated
-
-SNR degradation:
-  Under high load:
-    More governance events → more false positives → SNR_gov ↓
-    C_gov ↓ even at constant B_eff
-    → governance becomes LESS EFFECTIVE as demand increases
-    → governance efficiency is concave in load (diminishing returns past capacity)
+τ_opt = argmin_τ C_total(τ)
 ```
 
-**Bandwidth Allocation Across TLG Layers:**
+`τ_opt` is not presumed equal to a universal `τ_Landauer`. Routine mediation, containment, and constitutional correction may have different optima because their delay and validation costs differ.
+
+### 19.5 Maxwell-Demon Analogy — Limited Use
+
+Maxwell's demon is useful as a warning that observation, storage, and reset have physical costs. The valid transfer is narrow:
 
 ```
-  B_total = B_T1 + B_T2 + B_T3 (bandwidth partitioned across layers)
-  
-  Optimal allocation depends on load distribution:
-    Normal operation: B_T1 dominant (routine mediation)
-    Storm condition: B_T2 surges → B_T1 bandwidth borrowed → routine resolution stalls
-    Recovery: B_T3 requires sustained attention → B_T1 and B_T2 must yield
-  
-  Governance bandwidth starvation:
-    When B_T2 absorbs all available bandwidth during Storm:
-    → B_T1 drops to zero → routine τ1 events unhandled → backlog grows
-    → when Storm resolves, τ1 backlog converts to τ2 events
-    → second wave Storm triggered by bandwidth starvation during first Storm
-    → structural cascade: Storm → bandwidth collapse → second Storm
+monitoring requires information acquisition and storage;
+repeated reuse may require memory reset;
+physical reset may incur Landauer cost.
 ```
 
-*(Cross-theory derivation: FGS §36N Governance Thermodynamics + §22.6 Thermodynamic Bounds + Shannon 1948)*
+The invalid transfer is:
+
+```
+Top monitors N agents
+  therefore exact governance energy = k_B · T_eff · ln(2) · N · b
+```
+
+That equality requires actual erased-bit accounting and physical temperature. Without it, use engineering quantities such as joules, GPU-hours, memory traffic, bandwidth, latency, or monetary cost measured directly.
+
+### 19.6 Critical-Like and Phase-Transition Models
+
+Rest, VCZ, Storm, and recovery may display:
+
+- abrupt transitions;
+- hysteresis;
+- rising susceptibility;
+- long correlation lengths;
+- heavy-tailed cascades;
+- critical slowing down.
+
+These observations motivate phase-transition models, but do not establish a thermodynamic universality class. A literal first-/second-order or Ising/XY/Heisenberg claim requires:
+
+```
+1. a defined order parameter and conjugate control parameter;
+2. a system-size sequence and limiting procedure;
+3. reproducible scaling exponents;
+4. finite-size scaling collapse;
+5. robustness across implementations in the proposed class.
+```
+
+Until these tests pass, expressions such as
+
+```
+χ_rev ~ |ω − ω_c|^{-γ}
+ξ_gov ~ |ω − ω_c|^{-ν}
+```
+
+are candidate fit forms, not derived laws. Diverging quantities should not be asserted in finite deployed systems; use finite-size peaks and scaling trends.
+
+### 19.7 Governance Bandwidth
+
+Shannon capacity can be applied literally only after a communication channel, coding assumptions, bandwidth, and noise model are specified. Otherwise use the following operational inequality as an engineering constraint:
+
+```
+correction demand ≤ measured sustainable correction throughput
+```
+
+Useful measurements include:
+
+- escalation arrival rate;
+- service rate;
+- queue length;
+- response latency;
+- stale-correction fraction;
+- false-positive/false-negative rate under load;
+- retained information after packaging and compression.
+
+The `B_eff log₂(1+SNR)` expression is a candidate channel model, not a universal bound on every governance architecture.
+
+### 19.8 Status Summary
+
+| Statement | Status after v3.8 |
+|---|---|
+| Physical bit erasure obeys Landauer's bound | Physical law within declared system boundary |
+| Every conflict resolution is a physical erasure | Rejected |
+| Monitoring and reset consume resources | Engineering fact; measure per substrate |
+| Central monitoring often scales with observed state volume | Algorithmic/engineering claim |
+| Governance has operational irreversibility costs | Live empirical mechanism |
+| Fast governance is always thermodynamically worse | Rejected as universal law |
+| Rest/Storm may show hysteresis and critical-like behavior | Live empirical hypothesis |
+| Governance belongs to a named physical universality class | Open |
+| Shannon capacity bounds a declared correction channel | Valid under channel assumptions |
+| `T_eff` may be treated as Kelvin temperature | Prohibited without physical calibration |
+
+*(Cross-theory source: FGS §36N; Landauer 1961. The v3.8 scope lock supersedes all earlier substrate-independent "Governance Landauer" claims.)*
 
 ---
 
@@ -15576,7 +16668,7 @@ The DDD protocol (Section 5.7) specifies direction but not optimal scheduling. G
 The ODE captures mean-field behavior. How do heterogeneous agent states, network topology effects, and finite-size fluctuations modify bifurcation structure? When does mean-field approximation fail qualitatively?
 
 **OP61 — Information-Theoretic Governance Bound:**
-The thermodynamic governance bound (Section 19.1) establishes minimum energy. An analogous information-theoretic bound — minimum information throughput required to maintain system stability — would connect TLG to rate-distortion theory.
+Section 19 no longer assumes a universal thermodynamic minimum for governance. Derive a declared-channel lower bound on information throughput required to maintain a target stability and distortion level, and compare it with measured compute, memory, and communication cost through rate-distortion or control-information methods.
 
 **OP62 — Evolutionary Governance Architecture Dynamics:**
 The current TLG describes governance within a fixed architecture. An evolutionary extension would model how governance architectures themselves evolve through selection pressure — analogous to Cube Domination (FGS §7.8) at the meta-governance level.
@@ -15584,8 +16676,8 @@ The current TLG describes governance within a fixed architecture. An evolutionar
 **OP63 — Cross-Domain Lock Ratio Estimation:**
 L_C and L_d (Section 11.7) should be measurable across TLG deployment domains. Establish robust measurement protocols for lock ratios in AI multi-agent, organizational, and neural system instantiations.
 
-**OP64 — Thermodynamic Governance Minimum:**
-Near-optimal governance operates at τ_operation ≈ τ_Landauer. Empirically estimate τ_Landauer for representative TLG deployments, enabling identification of which governance operations are near-optimal vs. wastefully fast.
+**OP64 — Physical and Operational Cost Separation:**
+For representative deployments, measure physical energy, erased-bit/reset activity, compute, memory traffic, communication, delay damage, and validation cost separately. Determine whether an operational optimum τ_opt exists and whether any observed physical dissipation approaches the hardware Landauer floor. No equality τ_opt = τ_Landauer is assumed.
 
 **OP65 — Goodhart Boundary Detection:**
 Define the formal boundary between Goodhart-vulnerable and Goodhart-resistant governance metrics (Section 20.1). Structural characterization: which properties of a metric make it immune to adversarial optimization while remaining predictive of true performance?
@@ -15619,9 +16711,9 @@ The Environment Shaping ODE (Section 3.4.5) requires that E* (the target terrain
 
 *(Extending the Testable Predictions Registry of Section 18)*
 
-**P-13 — Thermodynamic Governance Bound:**
-*Prediction:* Fast governance (τ_operation ≪ τ_Landauer) will consume more total energy per resolution event than slow governance (τ_operation ≈ τ_Landauer), with overhead factor proportional to τ_Landauer/τ_operation.
-*Falsification:* Fast and slow governance consume equivalent energy per resolution event (controlling for resolution quality and agent complexity).
+**P-13 — Governance Speed–Cost Curve:**
+*Prediction:* Total governance cost as a function of intervention latency will be non-monotone in at least some deployments because fast action raises coordination/validation overhead while slow action raises delay damage. The minimizing τ_opt will differ by intervention class.
+*Falsification:* After controlling for event severity and output quality, cost has no reproducible relationship with latency or a single monotone relationship fits all intervention classes.
 
 **P-14 — Adversarial Probing Detection Asymmetry:**
 *Prediction:* Structural Response (SR) metric will detect adversarial Metric Poisoning (Section 20.1 Attack 1) that evades f_esc and ρ monitoring. Specifically: adversarially maintained f_esc < θ_f and ρ > θ_ρ will be accompanied by SR anomaly at ≥ 80% detection rate.
@@ -16168,10 +17260,10 @@ and §71.5 Governance Completeness Criterion.)*
 **Theorem 26.1.1 (Seven-Level DFG Specification, EDT §71.3).** Complete DFG governance specification requires seven levels of analysis:
 
 ```
-Level 0 — Thermodynamic Substrate:
-  Content: Landauer bound, entropy production, minimum energy governance
-  TLG coverage: Section 19 (Governance Thermodynamics)
-  Gap: τ_Landauer calibration per deployment (OP64)
+Level 0 — Physical and Computational Substrate:
+  Content: physical erasure scope, compute/memory/communication cost, reset and recovery reserve
+  TLG coverage: Section 19 (Physical Information Cost and Governance Analogies)
+  Gap: substrate-specific energy and information-retention audit (OP64)
 
 Level 1 — ODE Dynamics:
   Content: FCC mean-field regime, {n,C,d,ρ,T,k} state variables, bifurcation structure
@@ -16207,7 +17299,7 @@ Level 6 — Evolution and Scaling:
 **Level completeness diagnostic — TLG v2.5 position:**
 
 ```
-Levels 0,1,2,5 (Thermodynamic, ODE, Phase, Adversarial):
+Levels 0,1,2,5 (Substrate-resource, ODE, Phase, Adversarial):
   Covered in Sections 19-22, 24 — substantial coverage achieved
 
 Levels 3,4 (Structural, Information Architecture):
@@ -16249,11 +17341,12 @@ GCC₄ — Information Architecture (Level 4):
   Bidirectionality: Bottom→Top feedback channel matches Top→Bottom command channel
   TLG proxy: Section 10 (Processing Phase Isolation) + Section 22.3 (network design)
 
-GCC₅ — Thermodynamic Minimum (Level 0):
-  τ_operation > 0.5 × τ_Landauer (operating at ≥ 50% of thermodynamic minimum)
-  Governance energy budget explicitly allocated (not treated as "free")
-  Middle Layer rest periods scheduled (entropy discharge provision)
-  TLG proxy: Section 19 (Governance Thermodynamics)
+GCC₅ — Physical / Computational Resource Accounting (Level 0):
+  Compute, memory, communication, storage, reset, and recovery budgets measured
+  Queue saturation and stale-correction risk remain below deployment limits
+  Recovery reserve and recalibration/reset windows are provisioned
+  Physical Landauer accounting used only when erased bits and substrate temperature are known
+  TLG proxy: Section 19 (Physical Information Cost and Governance Analogies)
 
 GCC₆ — Adversarial Resistance (Level 5):
   Metric portfolio includes ≥ 1 Goodhart-resistant metric (SR)
@@ -16271,14 +17364,26 @@ GCC₇ — Stage-Gate Evolution Protocol (Level 6):
 **Governance Completeness Score (GCS):**
 
 ```
-GCS = (1/7) Σᵢ w_i · sat(GCCᵢ)    sat(GCCᵢ) ∈ [0,1]
+GCS = Σᵢ w_i · sat(GCCᵢ)    sat(GCCᵢ) ∈ [0,1],    Σᵢ w_i = 1
+
+The weighted score measures aggregate coverage. It does not override the AND-gate requirement.
+Define the hard-floor statistic:
+
+GCC_floor = min_i sat(GCCᵢ)
+
+Deployment admissibility requires both:
+  GCS ≥ θ_GCS
+  GCC_floor ≥ θ_floor
+
+A deployment may therefore have a high aggregate GCS and still be inadmissible
+when one structurally necessary dimension falls below the hard floor.
 
 Weights (adapted from EDT §71.6 for TLG deployments):
   GCC₁ (ODE parameters)       w = 0.20
   GCC₂ (EDT three-axis)       w = 0.20
   GCC₃ (SSR cycle coherence)  w = 0.15
   GCC₄ (Information arch)     w = 0.15
-  GCC₅ (Thermodynamic)        w = 0.10
+  GCC₅ (Resource substrate)    w = 0.10
   GCC₆ (Adversarial)          w = 0.10
   GCC₇ (Stage-gate)           w = 0.10
 
@@ -16299,7 +17404,7 @@ Most common partial-satisfaction patterns in TLG deployments:
     → typically: Middle Layer bandwidth saturation (Section 19.4)
 ```
 
-**Corollary 26.2.1 (AND-Gate Governance Completeness).** GCS < 1 with any single GCCᵢ = 0 produces governance incompleteness regardless of all other criteria — the same AND-gate principle that governs Storm entry and stage advancement applies to governance completeness. A technically correct TLG deployment that fails GCC₃ (vitality) will eventually converge to Quiet Stagnation even with perfect ODE parameters and terrain design.
+**Corollary 26.2.1 (AND-Gate Governance Completeness).** Aggregate GCS is a graded coverage score, not a compensatory license. If any structurally required `sat(GCCᵢ)` falls below the declared hard floor — and especially if any `GCCᵢ = 0` — the deployment is governance-incomplete regardless of high scores elsewhere. The same AND-gate principle that governs Storm entry and stage advancement therefore applies through `GCC_floor`, not through the impossible requirement that every graded component make `GCS = 1`. A technically strong deployment that fails GCC₃ (vitality) remains at risk of Quiet Stagnation even with excellent ODE parameters and terrain design.
 
 ### 26.3 Stage-Gated TLG Expansion Protocol (EDT §70 → TLG)
 
@@ -16936,20 +18041,20 @@ Section 3.9 uses T_eff as a governance deformation operator. Open problem: deriv
 **OP-84 — Optimal B_ext Temporal Alignment (v2.8):**
 Section 3.10 identifies that external anchor B_ext must be in the Middle Layer Nyquist window [τ_Mid^{−1}/2, τ_Mid^{−1}]. Open problem: characterize the full joint distribution of consequences when B_ext rate is outside this window — above (aliasing into Bottom Layer noise) and below (aliasing into Top Layer drift). Which direction of misalignment is more dangerous?
 
-**OP-85 — Governance Landauer Bound Empirical Calibration (v2.8):**
-Section 3.11 derives the Governance Landauer Bound ΔS_min ≥ k_B T · d_F · (1/√F). Open problem: calibrate k_B T (governance decision cost unit) and F(m) (Fisher information) from observable governance data (restructuring frequency, failure rate, intervention cost). Does the Landauer Bound provide a tight lower bound in practice, or is the gap between bound and actual cost large?
+**OP-85 — Fisher-Distance / Restructuring-Cost Calibration (v3.8 supersession):**
+Test whether independently measured restructuring cost is monotone in Fisher geodesic distance after controlling for direction, load, and substrate. Estimate a deployment-specific map g(d_F,·); do not use k_B T unless physical erased-bit accounting is supplied.
 
-**OP-86 — Cramér-Rao False Completion in Organizational vs. AI Systems (v2.8):**
-The Cramér-Rao governance bound provides a universal false-completion test. Open problem: empirically validate the test across organizational (insurance team KPIs, sales target reporting) and AI (LLM self-assessment, RLHF reward model) deployment contexts. Is the false-completion rate under Cramér-Rao violation higher than under other false-completion indicators (TLG Section 13)?
+**OP-86 — Conditional Cramér–Rao Overprecision Diagnostic (v3.8 supersession):**
+Across organizational and AI deployments, test whether nominal bound violations predict false completion after separately auditing estimator bias, dependence, misspecified likelihoods, and Fisher-information error. Compare incremental value over perturbation and external-outcome tests; universality is not assumed.
 
-**OP-87 — NESS-IV Cyclothymic Governance Stability Threshold (v2.8):**
-Section 3.11 identifies NESS-IV as a Landauer degradation accumulator. Open problem: derive the threshold number of NESS-IV cycles k* before structural recovery capacity falls below minimum viable (SCC < τ). Does k* depend on cycle amplitude (m oscillation range) or cycle frequency, and which is the binding constraint?
+**OP-87 — NESS-IV Reconfiguration-Burden Threshold (v3.8 supersession):**
+Measure whether repeated entry-exit cycles reduce SCC through retraining, synchronization, rollback, and lost-optionality costs. Estimate any threshold k* as a function of cycle amplitude, frequency, and reserve replenishment without labeling the burden Landauer dissipation.
 
 **OP-88 — Temporal Misalignment Index Calibration under Organizational Change (v2.8):**
 TMI(t) requires knowing τ_ℓ for each layer. In real systems, effective timescales change during organizational events (mergers, reorgs, rapid growth). Open problem: derive an adaptive TMI estimator that tracks effective timescales without prior calibration. Is TMI estimable from publicly observable governance signals alone?
 
-**OP-89 — Geodesic Recovery Path Selection in Practice (v2.8):**
-Section 3.11 proves DDD is the geodesic recovery path in Fisher geometry. Open problem: given a real governance failure state m_failure, how is the geodesic path computed? Is there a polynomial-time algorithm for finding the Fisher geodesic in the discrete partition space 𝓜? What is the complexity scaling with m?
+**OP-89 — Geodesic Recovery Candidate Evaluation (v3.8 supersession):**
+Given a locked observation model and empirical cost functional, compute candidate Fisher-geodesic paths and compare DDD with alternative feasible recovery sequences. Establish whether DDD approximates a minimizer, under what constraints, and whether uniqueness or tractable computation holds.
 
 **OP-90 — Multi-Level Π_G Consistency — Fractal Governance Phases (v2.8):**
 Π_G provides phase classification at the system level. In TLG's fractal structure, every sub-unit has its own Π_G. Open problem: characterize multi-level Π_G consistency conditions. When all sub-unit Π_G values are in the assimilation regime, must the system-level Π_G be? Or can system-level criticality arise from sub-level assimilation (emergent governance)?
@@ -16994,17 +18099,17 @@ Section 3.11 derives entropy production phase signature (σ_gov → σ_min at τ
 *Prediction:* Δℓ_c = ℓ_c^apparent − ℓ_c^true will become measurably positive (> 0.1 · ℓ_c^(0)) at least 5 evaluation windows before conventional TLG Silent Criticality detection (∂²V/∂t² > 0 or R-rate declining). In systems experiencing full Storm, prior Δℓ_c trajectory will show sustained positive drift for ≥ 80% of events.
 *Falsification:* Δℓ_c provides no lead time over rate-based Silent Criticality detection.
 
-**P-56 — DDD Geodesic Optimality (v2.8):**
-*Prediction:* Recovery protocols implementing all three DDD stages in correct sequence will show entropy production ≤ 30% of non-geodesic alternatives covering the same governance state space. Protocols that skip Stage 2 (Decouple) will show the largest entropy cost overrun, consistent with null-geodesic skipping imposing full transversal traversal cost.
-*Falsification:* DDD order shows no systematic entropy cost advantage over alternative stage orderings.
+**P-56 — DDD Recovery-Cost Candidate (v3.8 supersession):**
+*Prediction:* Under a fixed state representation and matched endpoint, DDD will reduce an independently measured recovery-cost functional relative to at least some alternative orderings; the advantage may depend on coupling geometry and failure type.
+*Falsification:* DDD shows no reproducible cost, recovery-time, or outcome advantage after endpoint and intervention intensity are matched.
 
-**P-57 — NESS-IV Cycles Accumulate Landauer Cost (v2.8):**
-*Prediction:* Systems experiencing ≥ 3 NESS-IV cycles (τ4 entry and exit within short windows) will show declining SCC at rate proportional to Landauer cost per cycle. Systems with k > k* = SCC_0 / ΔS_Landauer cycles will fall below SCC threshold before manifesting conventional Storm — showing governance degradation through Landauer accumulation rather than acute instability.
-*Falsification:* SCC trajectory shows no dependence on prior NESS-IV cycle count.
+**P-57 — NESS-IV Cycles Accumulate Reconfiguration Burden (v3.8 supersession):**
+*Prediction:* Repeated τ4 entry-exit cycles will predict declining SCC when retraining, rollback, synchronization, and reserve-depletion costs are not fully replenished; cycle amplitude and recovery interval will mediate the effect.
+*Falsification:* SCC trajectory is independent of cycle history after controlling for current load, failure severity, and reserve replenishment.
 
-**P-58 — Cramér-Rao Test Outperforms Individual TLG Metrics (v2.8):**
-*Prediction:* Var(m̂)/F(m)^{-1} ratio will identify false-τ4 entries earlier (by ≥ 3 windows) than any single TLG metric (ρ, SCC, f_esc, D_int) across ≥ 5 distinct false-completion failure modes identified in TLG Section 13. The test will show AUC ≥ 0.80 for false-τ4 detection vs. AUC ≤ 0.65 for best individual metric.
-*Falsification:* Cramér-Rao test shows no detection advantage over best single TLG metric.
+**P-58 — Conditional Fisher Overprecision Signal (v3.8 supersession):**
+*Prediction:* After regularity and estimator assumptions are audited, an overprecision statistic based on nominal Fisher information will add detection value for some false-τ4 cases when combined with perturbation and outcome tests.
+*Falsification:* It adds no out-of-sample value, or apparent gains disappear after correcting bias, dependence, and model misspecification.
 
 **P-59 — Temporal Misalignment Accelerates Calibration Drift (v2.8):**
 *Prediction:* Systems with TMI > TMI_c will show θ_d drift accumulation ≥ 2× faster than systems with TMI < TMI_c/2, controlling for all other calibration parameters. The interaction between TMI and λ_anchor will be multiplicative: higher TMI will require proportionally higher λ_anchor to maintain equivalent drift bounds.
@@ -17132,6 +18237,38 @@ RBIT defines the Chronotopic Window W_chrono = [τ₁, terrain_feature_duration/
 
 ---
 
+### 22.9 Extended Open Problems (OP-109 to OP-116)
+
+*(v3.5 Vector Birth and Handover additions)*
+
+**OP-109 — Structural Gap Recognition Accuracy:**
+How can the Top distinguish a genuine missing capability dimension from temporary noise, poor routing, insufficient context packaging, or an existing vector's under-training? Define false-positive and false-negative costs for Vector Charter issuance and determine the minimum external evidence needed before protected resources are allocated.
+
+**OP-110 — Candidate Distinctness from Existing Vector Span:**
+Develop a test for whether candidate v_c adds a genuinely independent direction rather than duplicating, rotating, or locally perturbing established vectors. Determine whether distinctness should be measured behaviorally, representationally, causally, or through marginal reduction in unresolved noise.
+
+**OP-111 — Optimal Incubation Resource Envelope:**
+Estimate the minimum R_budget and W_inc sufficient for structure formation without creating candidate entitlement. Characterize the phase boundary between underfunded incubation, productive protected exploration, and resource capture.
+
+**OP-112 — Promotion Threshold Calibration:**
+Calibrate θ_rep, θ_dist, θ_op, θ_with, θ_rec, and θ_res across domains. Determine whether promotion should require a strict AND gate, a weighted score, or a sequential statistical test, and quantify sensitivity to rare but high-impact failure cases.
+
+**OP-113 — Promotion vs. Handover Lag:**
+Measure the optimal delay between recognizing a stable vector and transferring operational ownership to the Bottom. Too little lag risks premature handover; too much lag creates permanent Middle custody. Derive a handover timing criterion from SCC growth, withdrawal performance, and perturbation recovery.
+
+**OP-114 — Resource Subsidy Independence Measurement:**
+Define an operational estimator for whether a candidate survives on normal Bottom resources rather than exceptional incubation subsidy. Separate legitimate high-cost specialization from structural dependence on protected resources.
+
+**OP-115 — Safe Reabsorption and De-vectorization:**
+Determine when a drifted or obsolete vector should be locally repaired, returned to the Middle buffer, placed in dormancy, merged, split, or de-vectorized. Quantify the probability that reabsorption destroys recoverable Type-1 structure or preserves corrupted Type-2 structure.
+
+**OP-116 — Vector Proliferation Value Bound:**
+Derive a bound comparing marginal capability value from a new vector with its added pairwise interaction and governance cost. Identify the maximum sustainable active-vector count under heterogeneous coupling and test whether a subquadratic architecture can relax the classical n² burden.
+
+*(Cross-theory derivation: Section 3.1.1; VST §1.8; GRT §Degraded Map, §Buffer Architecture, §Seed Handover; TLG §§3.4.10, 5, 6, 7)*
+
+---
+
 *(v2.8 addition: consolidated bidirectional reference table)*
 
 This section provides a consolidated registry of all cross-theory correspondences established between TLG and companion theories GGT, AGM, FGS, EDT, and NAT. Each entry specifies direction, TLG section, companion section, and correspondence type.
@@ -17159,10 +18296,10 @@ AGL ℓ_c(T_eff)              ↔  Middle Layer packet size        §3.9       C
 Δℓ_c = ℓ_c^app − ℓ_c^true ↔  Silent Criticality depth metric §3.9       Measurement
 NESS-I–IV classification    ↔  TLG governance mode mapping     §3.11      Mapping
 Fisher metric F(m)          ↔  Middle Layer partition space    §3.11      Identification
-Governance Landauer Bound   ↔  Irreversible restructuring cost §3.11      Theorem
-Cramér-Rao test             ↔  False-τ4 detection (unified)   §3.11      Test
-Geodesic DDD                ↔  Optimal recovery protocol       §3.11      Proof
-σ_gov phase signature       ↔  VCZ saddle-point detection     §3.11      Observable
+Fisher-cost hypothesis       ↔  Restructuring-cost candidate  §3.11      Hypothesis
+Cramér-Rao diagnostic       ↔  Conditional overprecision audit §3.11     Diagnostic
+Geodesic DDD                ↔  Recovery-path candidate         §3.11      Candidate
+σ_gov-like signature        ↔  Critical-like regime indicator  §3.11     Hypothesis
 Fifteen-Way M_crit          ↔  τ4 entry extended conditions   §3.9       Extension
 GEL-NC-1–6                  ↔  TLG §3.11 NC-110–116          §3.11      Import
 ```
@@ -17185,7 +18322,7 @@ Broken Ruler problem        ↔  Section 3.5 calibration drift  §3.5       Iden
 Phantom buffer surplus      ↔  Stage-2 Metric Dissociation    §3.5       Identity
 Buffer-limited expansion    ↔  Middle Layer capacity bound    §3.3       Coupling
 North Star drift rate bound ↔  Top Layer invariant stability  §3.7       Coupling
-NESS-IV cyclothymic         ↔  Landauer degradation loop      §3.11      Identity
+NESS-IV cyclothymic         ↔  Reconfiguration-burden loop      §3.11      Identity
 T_eff × θ_d interaction     ↔  Calibration accuracy coupling  §3.9       OP-91
 ```
 
@@ -17300,7 +18437,7 @@ Four-theory criticality equivalence ↔  Four-channel TLG monitoring      §3.13
 Resolution Palimpsest formula       ↔  TLG historical depth + heritage  §3.13      Formalization
 Heritage Asymmetry (α_neg < α_pos)  ↔  Negative history governance cost §3.13      Quantification
 Structural Damage Ratchet (R1/R2/R3)↔  Irreversibility taxonomy TLG    §3.12      Classification
-Governance Landauer ↔ RBIT Ratchet  ↔  Joint irreversibility accounting §3.11,§3.12 Unification
+Fisher-cost candidate ↔ RBIT Ratchet ↔ Separate operational irreversibility accounting §3.11,§3.12 Unification
 ```
 
 ### 28.6 Cross-Theory Grand Unification Claims (v2.8–2.9)
@@ -17334,8 +18471,8 @@ Missing any one condition produces a specific false-τ4 failure mode; the RBIT C
 Middle Layer = Markov Blanket (§3.6) = CTGPSR (G,P) projection (§3.7) = Governance Control Number Π_G mediator (§3.8) = Temporal translation interface (§3.10) = RBIT Tier 2 resolution operator (§3.12)
 Each identity adds independent structural necessity: the Middle Layer is not justified by any single theory but by all five simultaneously.
 
-**Grand Claim 4 — Governance Landauer Bound as Physical Cost Floor:**
-The Governance Landauer Bound (§3.11) provides the unique physical lower bound on governance cost that all other TLG cost measures (C_gov functional, S-equation, governance activation integral) are bounded above by entropy production. Governance cannot cost less than the Landauer minimum. The RBIT Structural Damage Ratchet (§3.12) provides the complementary bound: each irreversible Class R3 event accumulates maximum Landauer cost, enabling joint Landauer+RBIT accounting of cumulative governance degradation.
+**Grand Claim 4 — Physical Cost and Governance Irreversibility Must Be Accounted Separately:**
+Physical Landauer cost applies only to counted irreversible bit erasures on a specified substrate (§19). Governance restructuring has additional operational costs—retraining, validation, synchronization, rollback loss, and destroyed optionality—that may correlate with information-geometric distance but are not derived from k_B T. The RBIT Structural Damage Ratchet remains a governance irreversibility model; it must not be equated with maximum physical Landauer dissipation without hardware-level evidence.
 
 **Grand Claim 5 — Three Paths to Criticality Require Three Independent Monitoring Channels:**
 TLG governance cannot be monitored by any single metric because:
@@ -17381,12 +18518,19 @@ Three Resolution Tiers (direct TLG layer mapping):
     τ threshold: τ2 (Judge) fires when inter-vector confusion exceeds capacity
     Key: Middle Layer exists precisely because Bottom Layer cannot perform Tier 2
     
-  Tier 3 — Full Map Design: "Where should each vector be placed to minimize friction?"
-    TLG: Top Layer — invariant-setting tier only (upper layer exclusively)
-    τ threshold: τ3 (Correction) fires when map design is violated
-    Key: Top Layer must perform Tier 3 BECAUSE Bottom Layer can only do Tier 1,
-         and Middle Layer can only do Tier 2. This is not an architectural choice
-         but a Resolution Asymmetry Inevitability (RBIT Theorem 1 consequence).
+  Tier 3A — Operational Map Use / Local Scope Design:
+    "Which map, tool, and scope should govern this problem now?"
+    TLG: Middle Layer after top-view handover
+    Function: tool selection, scope definition, local map revision, stop/switch rules
+    τ threshold: τ2/τ3 boundary — escalates when the existing map is insufficient
+    Key: Tier 3A is learned from the Top Layer and becomes an internal Middle capability.
+
+  Tier 3B — Constitutional Map Design / Frame Legitimacy:
+    "Is the map itself valid, and may its invariant frame be replaced?"
+    TLG: Top Layer with Boundary Agent / external validation
+    Function: invariant definition, coordinate-system replacement, legitimacy audit
+    τ threshold: τ3 — activated when operational map repair is insufficient
+    Key: Tier 3B remains Top authority even after Tier 3A is transferred downward.
 ```
 
 **RBIT Theorem 1 — Resolution Asymmetry Inevitability as TLG Layer Necessity:**
@@ -17408,11 +18552,24 @@ TLG architectural derivation from Theorem 1:
       (Section 3.4.1): Middle Layer must gate before vectors reach Top Layer
       or Theorem 1 convergence occurs at the Top Layer level.
       
-  Resolution Asymmetry Inevitability:
-    ρ_Top > ρ_Middle > ρ_Bottom is not a design goal —
-    it is a structural consequence of Tier assignment:
-    Tier 3 operators (Top Layer) systematically see more than Tier 2 (Middle),
-    who systematically see more than Tier 1 (Bottom).
+  Resolution Asymmetry Inevitability — scope-relative refinement:
+    Resolution is layer-specific and task-relative; there is no valid universal
+    scalar ordering in which one layer sees more in every domain. The correct
+    relation is a partial order by function:
+
+      constitutional / frame-legitimacy tasks:
+        ρ_Top^(3B) > ρ_Middle^(3B)
+
+      operational mediation / tool-scope tasks after handover:
+        ρ_Middle^(3A) ≥ required operating threshold
+        and may exceed Top local terrain resolution
+
+      specialist local execution tasks:
+        ρ_Bottom^local may exceed both Top and Middle in its narrow domain
+
+    The hierarchy is therefore not global knowledge dominance. It is separation
+    of authority and reference frames. Top retains Tier 3B validation; Middle
+    internalizes Tier 3A operation; Bottom retains maximal local specialization.
     
   Finite Replacement Time prediction (P-63):
     Under sustained Δρ < 0 at Middle Layer:
@@ -17755,11 +18912,12 @@ Ratchet mechanism:
     → System requires higher resolution to recover from same event as time passes
     → This is the formal derivation of "early intervention is exponentially cheaper"
     
-  Governance Landauer Bound connection (Section 3.11):
-    Each irreversible governance decision dissipates minimum entropy (GEL §3.11).
-    Each Class R3 event is an irreversible governance decision with maximum Landauer cost.
-    → Cumulative Landauer cost across R3 events = governance structural degradation accounting.
-    → TLG can now track irreversibility quantitatively through Landauer + RBIT joint framework.
+  Governance irreversibility connection (Section 3.11):
+    Irreversible governance changes may impose reconstruction and rollback burden;
+    no universal physical entropy minimum is assumed.
+    Each Class R3 event is a candidate high-burden governance transition; physical Landauer cost requires separate erased-bit accounting.
+    → Cumulative operational reconstruction and rollback burden across R3 events is a governance degradation accounting candidate.
+    → TLG may track governance irreversibility through measured operational costs plus the RBIT ratchet, without treating them as physical entropy.
 ```
 
 **Revival Trajectory Taxonomy — TLG Recovery Protocol Classification:**
@@ -17862,11 +19020,11 @@ GCC₄ — Information Architecture (w = 0.15):
   TLG v2.9 extension: also require TMI < TMI_c (Section 3.10 temporal alignment)
   Bandwidth B > 0.4 can coexist with TMI > TMI_c (spatial architecture fine, temporal broken)
 
-GCC₅ — Thermodynamic Minimum (w = 0.10):
-  RBIT proxy: τ_operation > 0.5 × τ_Landauer (operating above thermodynamic floor)
-  Governance energy budget explicitly allocated; Middle Layer rest periods scheduled
-  TLG v2.9 extension: also require entropy production σ_gov in healthy range (Section 3.11)
-  σ_gov → 0 (Assimilation/TDS) and σ_gov ↑ (supercritical) both violate GCC₅
+GCC₅ — Physical / Computational Resource Accounting (w = 0.10):
+  RBIT proxy: measured compute, memory, reset, communication, and recovery costs remain within declared budgets
+  Queue saturation, stale-correction fraction, and recovery-reserve depletion remain below limits
+  Reset/recalibration windows are scheduled and replay capacity is preserved
+  σ_gov-like proxies may be monitored as candidate regime indicators, not physical entropy
 
 GCC₆ — Adversarial Resistance (w = 0.10):
   RBIT proxy: f_RBIT portfolio includes ≥ 1 Goodhart-resistant metric
@@ -17902,7 +19060,7 @@ AND-Gate Governance Completeness Corollary (RBIT §Terrain-Governance Duality):
       GCC₂ = terrain architecture (Path 3 partial prevention)
       GCC₃ = v_class vitality (temporal health)
       GCC₄ = information routing (structural bandwidth)
-      GCC₅ = thermodynamic floor (entropy economics)
+      GCC₅ = physical/computational resource accounting
       GCC₆ = adversarial robustness (metric integrity)
       GCC₇ = evolution protocol (τ4 gate integrity)
     
@@ -17916,7 +19074,7 @@ AND-Gate Governance Completeness Corollary (RBIT §Terrain-Governance Duality):
     GCC₂ failure: f₂ accumulates (terrain mismatch)
     GCC₃ failure: v_class drifts (temporal mismatch)
     GCC₄ failure: f₄ accumulates (routing mismatch)
-    GCC₅ failure: thermodynamic drift (energy mismatch)
+    GCC₅ failure: substrate-resource mismatch or recovery-reserve depletion
     GCC₆ failure: f₁ Goodhart drift (metric mismatch)
     GCC₇ failure: τ4 false entry (gate mismatch)
     → Each GCC is a Δρ protection mechanism for one resolution axis.
@@ -17995,6 +19153,91 @@ RBIT / EDT §54.1 Resolution Palimpsest:
 - NC-133: DDD E3 criterion = Case C entry with C_new* > C_old* verification requirement
 
 *(Cross-theory derivation: RBIT §Terrain-Governance Duality, §25.3–25.5, §31.1, §32.1, §33.3; TLG Section 26 GCC, Section 3.5, 3.7, 3.8, 3.10, 3.11, 3.12)*
+
+---
+
+
+
+### 26.8-C Extended Novel Contributions (NC-134 to NC-143)
+
+```
+NC-134: Middle-Layer Top-View Kernel (Section 3.4.9 v3.3)
+  Defines top-view as problem-coordinate selection and scope governance rather
+  than omniscience. Establishes the Middle Layer as the runtime selector of
+  scale, time horizon, tool family, and specialist route.
+
+NC-135: Tool-Scope Package Formalism (Section 3.4.9 v3.3)
+  Defines governed method selection as T_M(x) = (χ,D,S,A,K,V): problem
+  coordinates, tool, application scope, assumptions, kill/switch conditions,
+  and verification route. Reclassifies many model failures as scope failures.
+
+NC-136: Operational / Constitutional Top-View Separation (Sections 3.4.9, 3.12)
+  Splits Tier 3 into Tier 3A operational map use (Middle, transferable) and
+  Tier 3B constitutional frame legitimacy (Top, retained). Replaces the invalid
+  universal scalar ordering of layer knowledge with a task-relative partial order.
+
+NC-137: Governance Backgrounding Dual-Visibility Principle (Section 3.4.9)
+  Mature mediation minimizes visible per-event intervention while preserving
+  complete audit reconstruction. Distinguishes healthy operational invisibility
+  from silent epistemic opacity.
+
+NC-138: Top-View Handover and Top Role-Transition Law (Section 6.1.2)
+  Formalizes five phases: Top calibration, direct bootstrapping, supervised
+  operational top-view, evaluated autonomy, and bypass/re-bootstrap. The Top
+  changes from educator to evaluator rather than merely withdrawing.
+
+NC-139: Global–Local Rule Compilation Principle (Section 3.4.10 v3.4)
+  Top invariants are translated by the Middle into context-bounded local
+  protocols that shape feasible action space without selecting routine actions.
+
+NC-140: Local-Rule Validity Gate (Section 3.4.10 v3.4)
+  Requires global consistency, non-empty feasibility, scope boundedness,
+  reversibility, expiry/review, traceability, and dynamic concordance.
+
+NC-141: Three-Level Rule Authority Separation (Section 3.4.10 v3.4)
+  Bottom proposes, Middle compiles and operates, Top alone promotes a local
+  protocol into a global invariant.
+
+NC-142: Interference-Minimizing Rule Governance (Section 3.4.10 v3.4)
+  Replaces routine action commands with permissions, prohibitions, verification,
+  escalation, expiry, and rollback conditions.
+
+NC-143: Shadow Global Rule Failure Mode (Section 3.4.10 v3.4)
+  Identifies the failure in which a successful local convention silently gains
+  architecture-wide authority without constitutional evaluation.
+
+NC-144: Vector Birth Authority Principle (Section 3.1.1 v3.5)
+  Separates recognition, cultivation, and operation: Top authorizes structural
+  need and resources; Middle incubates; Bottom owns routine operation after stabilization.
+
+NC-145: Vector Charter Formalism (Section 3.1.1 v3.5)
+  Defines the bounded authorization object C_v=(D_need,G_parent,R_budget,W_inc,
+  E_gate,K_stop,B_ext) without allowing Top specification of vector content.
+
+NC-146: Candidate Incubation Local-Rule Protocol (Section 3.1.1 v3.5)
+  Applies reversible, scoped, expiring Middle rules to candidate vectors while
+  preserving sandboxing, counterexample collection, and rollback.
+
+NC-147: Promotion–Handover Separation (Section 3.1.1 v3.5)
+  Distinguishes recognition that a candidate is a real vector from transfer of
+  routine operating authority to a Bottom specialist.
+
+NC-148: Bottom Operational Ownership Condition (Section 3.1.1 v3.5)
+  Requires withdrawal persistence, perturbation recovery, resource sustainability,
+  local protocol competence, and functioning escalation before handover.
+
+NC-149: Vector Ownership State Machine (Section 3.1.1 v3.5)
+  Defines NOISE, INCUBATION, BOTTOM_ACTIVE, DORMANT, REABSORBED, and DEVECTORIZED
+  states with explicit transition and recovery paths.
+
+NC-150: Anti-Forced-Vectorization Principle (Section 3.1.1 v3.5)
+  Preserves unresolved noise as a legitimate state and rejects promotion for
+  uncertainty reduction, map completion, elapsed time, or resource justification.
+
+NC-151: Resource Subsidy Independence Test (Section 3.1.1 v3.5)
+  Treats permanent dependence on exceptional incubation resources as evidence
+  that the vector has not stabilized and handover is incomplete.
+```
 
 ---
 
@@ -18079,11 +19322,11 @@ Component of the Deficit-Fractal Governance (DFG) Framework.
   Affective Optimal Partition Shift Theorem GGT-84.B.1; Affective Length Scale Duality
   (Freeze fragmentation / Runaway consolidation geometry); Affective Branching Number
   Shift; Fifteen-Way M_crit Equivalence; AGL-RBIT-EDT Triangulation Theorem.
-— §85 (Governance Entropy Layer) cited in Section 3.11 as primary source for:
-  Governance Fisher Metric; Governance Landauer Bound (Theorem GGT-85.A.1);
-  Cramér-Rao Governance Bound; Geodesic Recovery Protocol; Geodesic DDD Correspondence
-  (Theorem GGT-85.B.1); GEL-RBIT False-Completion Detection; Entropy Production Phase
-  Signature; NESS-I through NESS-IV classification.
+— §85 (Governance Entropy Layer) cited in Section 3.11 as the source for:
+  a Governance Fisher Metric candidate; Fisher-distance / restructuring-cost hypotheses;
+  conditional Cramér–Rao diagnostics; geodesic recovery candidates; critical-like phase
+  signatures; and NESS-I through NESS-IV candidate classification. v3.8 withdraws
+  physical-Landauer, universal-false-completion, and unique-optimality interpretations.
 — §80 (TGBGT) cited for Governance Invisibility Theorem, targeting null-space derivation,
   UGAL master equation, Governance Visibility Transition Theorem.
 — §82 (CTGPSR), §83 (CTGPSRB) cited for loop structure, buffer variable, avalanche
@@ -18150,8 +19393,9 @@ Component of the Deficit-Fractal Governance (DFG) Framework.
   τ4 entry requirement as parallel completeness architecture.
 — §9.7 (Three-Alarm Operational Detection) cited in Section 3.9 as EDT precursor
   to three-stage regulatory cascade detection.
-— §52.8 (Non-Equilibrium Landscape Physics) cited in Section 3.11 for thermodynamic
-  grounding of Governance Landauer Bound.
+— §52.8 (Non-Equilibrium Landscape Physics) cited in Section 3.11 as inspiration
+  for critical-like and information-geometric candidates, not as a derivation of a
+  substrate-independent Governance Landauer law.
 
 ## 27C. Extended References (v2.9 Additions)
 
